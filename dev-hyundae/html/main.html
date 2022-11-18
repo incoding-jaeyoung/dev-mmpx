@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="중소벤처기업진흥공단" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+<meta property="og:image" content="../img/img-og.png">
+<meta property="og:url" content="">
+<meta property="og:description" content="">
+<meta property="og:title" content="중소벤처기업진흥공단">
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<title>중소벤처기업진흥공단</title>
+<link rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script src="../js/imagesloaded.pkgd.min.js"></script>
+<script src="../js/gsap.min.js"></script>
+<script src="../js/ScrollTrigger.min.js"></script>
+<script src="../js/swiper-bundle.min.js"></script>
+<script src="../js/ScrollToPlugin3.min.js"></script>
+<script src="../js/zoom.js"></script>
+<script src="../js/ui.js"></script>
+</head>
+
+<body> 
+<div class="accessbility"><a href="#contents">본문바로가기</a></div>
+<div id="wrapper">
+    <aside id="top-aside"></aside>
+    <header id="header"></header>
+    <div class="nav-area"></div>
+    <div class="full-menu"></div>
+    <div class="m-menu"></div>
+    <section id="contents">
+    <!-- contents -->
+        <div class="index-visual">
+            <div class="visual-bg">
+                <span class="circle-01 move"></span>
+                <span class="circle-02 move"></span>
+            </div>
+            <div class="row">
+                <div class="slider-top">
+                    <h2 class="slide-up">중소기업에 희망을, <br class="mob-view"> 벤처기업에 날개를, <br> 청년들에게 일자리와 꿈을</h2>
+                    <div class="slider-con">
+                        <button type="button" class="stop"><img src="../img/ico-stop.svg" alt="정지"></button>
+                        <button type="button" class="play"><i class="fa-solid fa-play"></i></button>
+                        <div class="swiper-pagination"></div>
+                        <button type="button" class="view-all">모아보기</button>
+                    </div>
+                </div>
+                <div class="index-slider">
+                    <div class="swiper indexSwiper slide-up">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/@img-banner.png" style="width:128rem ;" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/@img-banner-00.png" style="width:128rem ;" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-00.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-01.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-02.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-03.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-01.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-01.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-01.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-01.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-04.png" alt=""></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <script>
+                    var indexSwiper = new Swiper(".indexSwiper", {
+                        speed: 1000,
+                        autoplay: {
+                            delay:5000,
+                        },
+                        slidesPerGroup: 1,
+                        slidesPerView: "auto",
+                        spaceBetween: 20,
+                        
+                        navigation: {
+                            nextEl: ".index-slider .swiper-button-next",
+                            prevEl: ".index-slider .swiper-button-prev",
+                        },
+                        breakpoints: {
+                            0: {
+                                slidesPerGroup: 1,
+                                spaceBetween: 14,
+                                navigation: false,
+                                centeredSlides: true,
+                                pagination: {
+                                    el: ".swiper-pagination",
+                                    type: "bullets",
+                                },
+                            },
+                            600: {
+                                slidesPerGroup: 1,
+                                spaceBetween: 20,
+                                pagination: {
+                                    el: ".swiper-pagination",
+                                    type: "fraction",
+                                    formatFractionCurrent: function (number) {
+                                        return '0' + number;
+                                    },
+                                    formatFractionTotal: function (number) {
+                                        return '0' + (number);
+                                    }
+                                },
+                            },
+                        },
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="notice-wrap">
+            <div class="row">
+                <div class="notice-block">
+                    <div class="notice-head">
+                        <ul class="tab-ui">
+                            <li class="active"><button type="button">공지사항</button></li>
+                            <li><button type="button">보도자료</button></li>
+                            <li><button type="button">입찰정보</button></li>
+                            <li><button type="button">채용공고</button></li>
+                        </ul>
+                        <p><a href="#" class="more-text pc-view">전체보기 +</a></p>
+                    </div>
+                    <div class="notice-list-block tab-ui-con">
+                        <div class="notice-list up-slide-stagger active">
+                            <div class="notice-con">
+                                <p class="tag"><span>새소식</span></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"><span>새소식</span></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <p class="btn-all mob-view"><a href="#">전체보기 +</a></p>
+                        </div>
+                        <div class="notice-list up-slide-stagger">
+                            <div class="notice-con">
+                                <p class="tag"><span>새소식</span></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>222 [연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"><span>새소식</span></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <p class="btn-all mob-view"><a href="#">전체보기 +</a></p>
+                        </div>
+                        <div class="notice-list up-slide-stagger">
+                            <div class="notice-con">
+                                <p class="tag"><span>새소식</span></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>333[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"><span>새소식</span></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <p class="btn-all mob-view"><a href="#">전체보기 +</a></p>
+                        </div>
+                        <div class="notice-list up-slide-stagger">
+                            <div class="notice-con">
+                                <p class="tag"><span>새소식</span></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>444[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"><span>새소식</span></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <div class="notice-con">
+                                <p class="tag"></p>
+                                <a href="#">
+                                    <dl>
+                                        <dt>[연수] 2022년 스마트공장 재직자 장기심화과정2차 교육생 모집 안내  장기심화과정2차 교육생 모집 안내</dt>
+                                        <dd>스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장스마트공장 도입기업의 사내 전문가 양성을 지원하기 위하여 "2022년 스마트공장...</dd>
+                                    </dl>
+                                </a>
+                                <p class="date">2022-07-01</p>
+                            </div>
+                            <p class="btn-all mob-view"><a href="#">전체보기 +</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="kosmes-news">
+                    <h2 class="sub-title"><em>중진공</em>김학도가 간다!</h2>
+                    <div class="swiper kosmesSwiper slide-up">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="image">
+                                    <img src="../img/thumb/thumb-02.png" alt="">
+                                    <p class="title"><span>유엔헤비타트와 청년 창업 활성화 협약 유엔헤비타트와 청년 창업 활성화 협약</span></p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="image">
+                                    <img src="../img/thumb/thumb-02.png" alt="">
+                                    <p class="title"><span>유엔헤비타트와 청년 창업 활성화 협약</span></p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="image">
+                                    <img src="../img/thumb/thumb-02.png" alt="">
+                                    <p class="title"><span>유엔헤비타트와 청년 창업 활성화 협약</span></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <script>
+                        var kosmesSwiper = new Swiper(".kosmesSwiper", {
+                            speed: 1000,
+                            loop:true,
+                            spaceBetween: 10,
+                            autoplay: {
+                                delay:5000,
+                            },
+                            navigation: {
+                                nextEl: ".kosmes-news .swiper-button-next",
+                                prevEl: ".kosmes-news .swiper-button-prev",
+                            },
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="banner-block">
+            <div class="row">
+                <div class="banner-head">
+                    <h2 class="sub-title"><em>KOSME </em>배너존</h2>
+                    <a href="#" class="pc-view more-text">전체보기 +</a>
+                </div>
+                <div class="banner-slider slide-up">
+                    <div class="swiper bannerSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-05.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-06.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-05.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-06.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-05.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="image over"><img src="../img/thumb/thumb-06.png" alt=""></a></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    
+                </div>
+                <p class="btn-all mob-view"><a href="#">전체보기 +</a></p>
+                <script>
+                    var bannerSwiper = new Swiper(".bannerSwiper", {
+                        speed: 1000,
+                        loop:true,
+                        slidesPerView: "auto",
+                        spaceBetween: 20,
+                        navigation: {
+                            nextEl: ".banner-slider .swiper-button-next",
+                            prevEl: ".banner-slider .swiper-button-prev",
+                        },
+                        breakpoints: {
+                            0: {
+                                spaceBetween: 14,
+                                navigation: false,
+                                pagination: {
+                                    el: ".swiper-pagination",
+                                    type: "bullets",
+                                },
+                            },
+                            600: {
+                                spaceBetween: 20,
+                            },
+                        },
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="community-block">
+            <div class="row">
+                <div class="title-head">
+                    <h2 class="sub-title"><em>#소통하는 </em>중진공</h2>
+                    <ul class="sns-list up-slide-stagger">
+                        <li><a href="#"><img src="../img/blog.svg" alt=""></a></li>
+                        <li><a href="#"><img src="../img/post.svg" alt=""></a></li>
+                        <li><a href="#"><img src="../img/insta.svg" alt=""></a></li>
+                        <li><a href="#"><img src="../img/facebook.svg" alt=""></a></li>
+                        <li><a href="#"><img src="../img/youtube.svg" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="bbs-list">
+                    <div class="swiper bbsSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="bbs-con">
+                                    <p class="tag"><img src="../img/ico-youtube.svg" alt=""></p>
+                                    <p class="img"><a href="#" class="image movie"><img src="../img/thumb/thumb-03.png" alt=""></a></p>
+                                    <p class="title"><span>중소기업 재직자도 크리에이터 되는 법! 중진공 마이크로러닝으로 손쉽게 영상 콘리에이터 되는 법</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bbs-con">
+                                    <p class="tag"><img src="../img/ico-post.svg" alt=""></p>
+                                    <p class="img"><a href="#" class="image"><img src="../img/thumb/thumb-04.png" alt=""></a></p>
+                                    <p class="title"><span>중소기업 재직자도 크리에이터 되는 법! 중진공 마이크로러닝으로 손쉽게 영상 콘텐츠 만들어보자! 기업 재직자도 크리에이터 되는 법</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bbs-con">
+                                    <p class="tag"><img src="../img/ico-youtube.svg" alt=""></p>
+                                    <p class="img"><a href="#" class="image"><img src="../img/thumb/thumb-05.png" alt=""></a></p>
+                                    <p class="title"><span>중소기업 재직자도 크리에이터 되는 법! 중진공 마이크로러닝으로 손쉽게 영상 콘텐츠 만들어보자! 기업 재직자도 크리에이터 되는 법</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bbs-con">
+                                    <p class="tag"><img src="../img/ico-youtube.svg" alt=""></p>
+                                    <p class="img"><a href="#" class="image"><img src="../img/thumb/thumb-05.png" alt=""></a></p>
+                                    <p class="title"><span>중소기업 재직자도 크리에이터 되는 법! 중진공 마이크로러닝으로 손쉽게 영상 콘텐츠 만들어보자! 기업 재직자도 크리에이터 되는 법</span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bbs-con">
+                                    <p class="tag"><img src="../img/ico-youtube.svg" alt=""></p>
+                                    <p class="img"><a href="#" class="image"><img src="../img/thumb/thumb-05.png" alt=""></a></p>
+                                    <p class="title"><span>중소기업 재직자도 크리에이터 되는 법! 중진공 마이크로러닝으로 손쉽게 영상 콘텐츠 만들어보자! 기업 재직자도 크리에이터 되는 법</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <script>
+                    var bbsSwiper = new Swiper(".bbsSwiper", {
+                        speed: 1000,
+                        loop:true,
+                        slidesPerView: "auto",
+                        spaceBetween: 20,
+                        navigation: {
+                            nextEl: ".bbs-list .swiper-button-next",
+                            prevEl: ".bbs-list .swiper-button-prev",
+                        },
+                        
+                        breakpoints: {
+                            0: {
+                                spaceBetween: 14,
+                                navigation: false,
+                                pagination: {
+                                    el: ".swiper-pagination",
+                                    type: "bullets",
+                                },
+                            },
+                            600: {
+                                spaceBetween: 20,
+                            },
+                        },
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="work-block">
+            <div class="row">
+                <div class="title-head">
+                    <h2 class="sub-title">주요 지원사업</h2>
+                </div>
+                <div class="work-list">
+                    <ul class="up-slide-stagger">
+                        <li><a href="#"><img src="../img/ico-product-01.svg" alt="">내일채움 공제사업 <i class="fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#"><img src="../img/ico-product-02.svg" alt="">사업지원 전환사업 <i class="fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#"><img src="../img/ico-product-03.svg" alt="">무역조정 지원사업 <i class="fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#"><img src="../img/ico-product-04.svg" alt="">제조중소기업혁신바우처사업 <i class="fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#"><img src="../img/ico-product-05.svg" alt="">재기지원사업 <i class="fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#"><img src="../img/ico-product-06.svg" alt="">스마트공장 AS 지원사업 <i class="fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#"><img src="../img/ico-product-07.svg" alt="">주요기업기술사업화 역량강화사업 <i class="fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="#"><img src="../img/ico-product-08.svg" alt="">중소기업탄소중립전환지원 <i class="fa-solid fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="digital-block">
+            <div class="row">
+                <div class="digital-head">
+                    <div class="title-head">
+                        <h2 class="sub-title">디지털지점 바로가기</h2>
+                    </div>
+                    <p><a href="#" class="btn btn-m btn-blue">디지털지점 방문<i class="fa-solid fa-angle-right"></i></a></p>
+                </div>
+                <div class="digital-con">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <dl>
+                                    <dt>정책자금 온라인 신청<i class="fa-solid fa-angle-right"></i></dt>
+                                    <dd>상담 예약부터 신청서 작성까지 온라인으로 
+                                        한 번에 진행</dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <dl>
+                                    <dt>전자약정<i class="fa-solid fa-angle-right"></i></dt>
+                                    <dd>정책자금 온라인 신청 후 약정 
+                                        내역을 확인</dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <dl>
+                                    <dt>대출내역조회<i class="fa-solid fa-angle-right"></i></dt>
+                                    <dd>대출금 상환내역, 현황 조회 및 납임대상 조회 등 
+                                        모든 내역 확인</dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <dl>
+                                    <dt>사후관리 신청<i class="fa-solid fa-angle-right"></i></dt>
+                                    <dd>상담 예약부터 신청서 작성까지 온라인으로 
+                                        한 번에 진행</dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <dl>
+                                    <dt>지역본지부<i class="fa-solid fa-angle-right"></i></dt>
+                                    <dd>정책자금 온라인 신청 후 약정 
+                                        내역을 확인</dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <dl>
+                                    <dt>대출내역조회<i class="fa-solid fa-angle-right"></i></dt>
+                                    <dd>상담 예약부터 신청서 작성까지 온라인으로 
+                                        한 번에 진행</dd>
+                                </dl>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    <!-- //contents -->
+    </section>
+    <footer id="footer">
+        <div class="site-link">
+            <div class="row">
+                <div class="swiper familySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-01.png" alt="산업융합 신제품 적합성 인증 기한없음"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-02.png" alt="정부24"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-03.png" alt="중소벤처기업부"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-04.png" alt="중소기업유통센터"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-05.png" alt="한국벤처투자"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-06.png" alt="에스비씨인증원"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-07.png" alt="내일채움공제"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-08.png" alt="기업마당"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-09.png" alt="알리오"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-10.png" alt="벤처확인 공시시스템"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-11.png" alt="안전신문고"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-12.png" alt="수출입은행"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="../img/ico-company-13.png" alt="대한민국 법원 등기정보광장"></a></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <script>
+                var familyswiper = new Swiper(".familySwiper", {
+                    slidesPerView: "auto",
+                    spaceBetween: 8,
+                    navigation: {
+                        nextEl: ".familySwiper .swiper-button-next",
+                        prevEl: ".familySwiper .swiper-button-prev",
+                    },
+                });
+                </script>
+            </div>
+        </div>
+        <div class="footer-con"></div>
+    </footer>
+</div>
+<div class="view-layer">
+    <div class="row">
+        <div class="view-head">
+            <h2>중진공 팝업 소식존</h2>
+            <p class="close-layer"><button type="button"><i class="fa-solid fa-xmark"></i></button></p>
+            <div class="banner-thumb-list"></div>
+        </div>
+    </div>
+</div>
+<div class="page-aside"></div>
+<script>
+    $(document).ready(function () {
+        $('.slider-con .stop').on('click',function(){
+            $(this).hide()
+            $('.slider-con .play').show()    
+            indexSwiper.autoplay.stop()
+        })
+        $('.slider-con .play').on('click',function(){
+            $(this).hide()
+            $('.slider-con .stop').show()    
+            indexSwiper.autoplay.start()
+        })
+        $('.view-all').on('click',function(){
+            var bannerList = $('.indexSwiper a').clone()
+            $('.banner-thumb-list').append(bannerList)
+            $('.view-layer').show()
+            $('html, body').addClass('fixed')
+        })
+        $('.view-layer .close-layer button').on('click',function(){
+            $('.banner-thumb-list').empty()
+            $('.view-layer').hide()
+            $('html, body').removeClass('fixed')
+        })
+    });
+</script>
+</body>
+</html>
