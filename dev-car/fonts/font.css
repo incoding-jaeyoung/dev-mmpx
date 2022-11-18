@@ -7,9 +7,6 @@
   font-style: normal;
   src:local('※'),  
   url('Lato/Lato-Light.ttf') format('truetype'), /* Safari, Android, iOS */
-  url(Lato/Lato-Light.woff2) format('woff'),
-  url(Lato/Lato-Light.woff) format('woff'),
-  url(Lato/Lato-Light.otf) format('opentype');
   font-weight: 100;
 }
 /* Lato-Regular */
@@ -18,9 +15,6 @@
   font-style: normal;
   src:local('※'),  
   url('Lato/Lato-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-  url(Lato/Lato-Regular.woff2) format('woff'),
-  url(Lato/Lato-Regular.woff) format('woff'),
-  url(Lato/Lato-Regular.otf) format('opentype');
   font-weight: 300;
 }
 
@@ -30,9 +24,6 @@
   font-style: normal;
   src:local('※'),  
   url('Lato/Lato-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
-  url(Lato/Lato-Medium.woff2) format('woff'),
-  url(Lato/Lato-Medium.woff) format('woff'),
-  url(Lato/Lato-Medium.otf) format('opentype');
   font-weight: 400;
 }
 
@@ -42,9 +33,6 @@
   font-style: normal;
   src:local('※'),  
   url('Lato/Lato-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
-  url(Lato/Lato-Bold.woff2) format('woff'),
-  url(Lato/Lato-Bold.woff) format('woff'),
-  url(Lato/Lato-Bold.otf) format('opentype');
   font-weight: 500;
 }
 
