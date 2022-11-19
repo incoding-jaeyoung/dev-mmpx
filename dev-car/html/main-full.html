@@ -35,7 +35,8 @@
 <div class="accessbility"><a href="#contents">본문바로가기</a></div>
 <div id="wrapper">
     <header id="header">
-        <h1><a href="#"><img src="../img/img-logo.png" alt=""></a></h1>
+        <h1><a href="#">쌍용자동차</a></h1>
+        <p class="back"><a href="#"><img src="../img/ico-prev.svg" alt="뒤로"></a></p>
         <ul class="step-line">
             <li class="active">STEP 1 : 내 차 디자인</li>
             <li>STEP 2 : 옵션 및 결제 방법</li>
@@ -47,26 +48,87 @@
     <section id="contents">
     <!-- contents -->
         <div class="car-list">
-            <ul>
-                <li><a href="#">TORRES</a></li>
-                <li><a href="#">TIVOLI</a></li>
-                <li><a href="#">TIVOLI air</a></li>
-                <li><a href="#">KORANDO</a></li>
-                <li class="active"><a href="#">REXTON SPORTS</a></li>
-                <li><a href="#">REXTON SPORTS KHAN</a></li>
-            </ul>
+            <div class="swiper carSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">TORRES</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">TIVOLI</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">TIVOLI air</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">KORANDO</a>
+                    </div>
+                    <div class="swiper-slide active">
+                        <a href="#">REXTON SPORTS</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">REXTON SPORTS KHAN</a>
+                    </div>
+                </div>
+                <script>
+                    var tabswiper = new Swiper(".carSwiper", {
+                        slidesPerView: "auto",
+                        spaceBetween: 0,
+                        breakpoints: {
+                            600: {
+                                spaceBetween: 0,
+                            },
+                        },
+                    });
+                    tabswiper.slideTo(4)
+                </script>
+            </div>
         </div>
         <div class="total-price">
             <p class="name">와일드</p>
-            <p class="price">29,900,000 원 ~ <a href="#"><img src="../img/ico-down.svg" alt=""></a></p>
+            <p class="price">29,900,000 원 ~ <a href="#"><img src="../img/ico-down-s.svg" alt=""></a></p>
+        </div>
+        <div class="select-block mob-view">
+            <h2>REXTON SPORTS</h2>
+            <div class="radio-select">
+                <dl>
+                    <dt>유종</dt>
+                    <dd>
+                        <p class="radio-btn">
+                            <input type="radio" name="type-01-m" id="type-01-01-m" checked><label for="type-01-01-m">가솔린</label>
+                            <input type="radio" name="type-01-m" id="type-01-02-m"><label for="type-01-02-m">디젤</label>
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>변속기</dt>
+                    <dd>
+                        <p class="radio-btn">
+                            <input type="radio" class="radio-box" name="type-02-m" id="type-02-01-m" checked><label for="type-02-01-m">디젤</label>
+                            <input type="radio" class="radio-box" name="type-02-m" id="type-02-02-m"><label for="type-02-02-m">수동</label>
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>구동</dt>
+                    <dd>
+                        <p class="radio-btn">
+                            <input type="radio" class="radio-box" name="type-03-m" id="type-03-01-m" checked><label for="type-03-01-m">2WD</label>
+                            <input type="radio" class="radio-box" name="type-03-m" id="type-03-02-m"><label for="type-03-02-m">4WD</label>
+                            <input type="radio" class="radio-box" name="type-03-m" id="type-03-03-m"><label for="type-03-03-m">AWD</label>
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+            
         </div>
         <div class="option-select">
             <div class="viewer">
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/E11p66uJVMY?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> 
             </div>
+            <p class="caution-view mob-view">사이트 내 이미지는 참고용이며 실제 차량과는 다를 수 있습니다.</p>
             <div class="option-block">
                 <div class="option-contents">
-                    <div class="select-block">
+                    <div class="select-block pc-view">
                         <h2>REXTON SPORTS</h2>
                         <div class="radio-select">
                             <dl>
@@ -155,7 +217,7 @@
                                     <img src="../img/img-color-05.png" alt="">
                                     <p class="title">체리 레드 RAV</p>
                                     <p class="price">
-                                        0원
+                                        300,000원
                                         <button type="button"><img src="../img/info-icon.svg" alt=""></button>
                                     </p>
                                 </label> 
@@ -166,7 +228,7 @@
                                     <img src="../img/img-color-06.png" alt="">
                                     <p class="title">댄디 블루 BAS</p>
                                     <p class="price">
-                                        0원
+                                        300,000원
                                         <button type="button"><img src="../img/info-icon.svg" alt=""></button>
                                     </p>
                                 </label> 
@@ -177,7 +239,7 @@
                                     <img src="../img/img-color-07.png" alt="">
                                     <p class="title">스페이스 블랙 LAK</p>
                                     <p class="price">
-                                        0원
+                                        300,000원
                                         <button type="button"><img src="../img/info-icon.svg" alt=""></button>
                                     </p>
                                 </label> 
