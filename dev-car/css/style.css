@@ -47,14 +47,15 @@ input[type=radio]:checked+label:after{opacity: 1; background-color: #fff;}
 input[type=radio]:disabled+label:before{border: solid .1rem #dcdfe2; background-color: #f2f3f5; cursor:default;}
 input[type=radio]:disabled+label{cursor:default;}
 
-input[type=checkbox]{width: 2rem; height: 2rem; position: absolute; opacity: 0;}
-input[type=checkbox]+label{display: inline-flex; position: relative; cursor: pointer; align-items: center; vertical-align: middle; font-size: 1.6rem; color: #333333; }
+input[type=checkbox]{width: 1.1rem; height: 1.1rem; position: absolute; opacity: 0;}
+input[type=checkbox]+label{display: inline-flex; position: relative; cursor: pointer; align-items: center; vertical-align: middle; font-size: 1.6rem; color: #333333; position: relative}
 
-input[type=checkbox]+label:before{content: ""; display: inline-block; width: 2rem; height: 2rem;  border: solid 1px #ddd; background-color: #fff; cursor: pointer; position: relative; z-index: 1; margin-right: .4rem;  vertical-align: top; box-sizing: border-box; flex: none;}
-input[type=checkbox]:checked+label:before{background: url(../img/ico-checked.svg) no-repeat; border: none; background-size: 2rem;}
+input[type=checkbox]+label:before{content: ""; display: inline-block; width: 2rem; height: 2rem; border-radius: 4px;  border: solid 1px #ccc; background-color: #fff; cursor: pointer; position: relative; z-index: 1; margin-right: .4rem;  vertical-align: top; box-sizing: border-box; flex: none;}
+input[type=checkbox]:checked+label:after{content: ""; display: inline-block; width: 1.2rem; height: 1.2rem; border-radius: 2px; cursor: pointer; position: absolute; z-index: 2; box-sizing: border-box; flex: none; background-color: #4560d3;left: 1.9rem}
 
-input[type=checkbox]:disabled+label:before{border: solid .1rem #dcdfe2; background-color: #f2f3f5; cursor:default;}
-input[type=checkbox]:disabled+label{cursor:default;}
+
+/* input[type=checkbox]:disabled+label:before{border: solid .1rem #dcdfe2; background-color: #f2f3f5; cursor:default;}
+input[type=checkbox]:disabled+label{cursor:default;} */
 
 
 .radio-btn{ display: flex;}
@@ -284,7 +285,7 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .car-list {padding: 0 4rem; background-color: #f5f6f7; overflow: hidden;}
 .carSwiper {display: flex; align-items: center; justify-content: space-between;}
 .carSwiper .swiper-slide{width:28.4rem; margin: 0 1rem;}
-.carSwiper .swiper-slide.active a{border-bottom: 2px solid #000e3d; color: #000e3d;}
+.carSwiper .swiper-slide.active a{border-bottom: 3px solid #000e3d; color: #000e3d;}
 .carSwiper .swiper-slide a{display: flex; width: 100%; border-bottom: 2px solid #f5f6f7; height: 7rem; align-items: center; justify-content: center; color: #8a8f9c;}
 
 .total-price{border-bottom: 1px solid #ccc; padding: 0 5rem; display: flex; align-items: center; justify-content: space-between; height: 7rem;}
@@ -419,3 +420,19 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
     .inter-list li label .price img{width: 4.4rem; margin-bottom: -1.5rem;}
     .inter-list li input:checked+label{border: solid 1px #4560d3;}
 }
+
+
+/* step 2 */
+.step2 {width: 118rem;margin: 0 auto;display: flex;flex-direction: row;justify-content: space-between; margin-top: 4.3rem;}
+.step2 .left-wrap {width: 78.1rem;}
+.step2 .right-wrap {width: 36rem;border: solid 1px #ccc;}
+.step2 .info-box {padding: 1.4rem 2.5rem;background-color: #fffaf3;font-size: 1.6rem;color: #7a4d05;font-weight: 400; line-height: 2.4rem;}
+.step2 .select-box {margin-top: 6rem}
+.step2 .select-box .top-title {font-size: 3rem;font-weight: 600;}
+.step2 .select-box .check-wrap{display: flex;flex-direction: row;justify-content: space-between;margin-top: 3rem;flex-wrap: wrap;}
+.step2 .select-box .check-list{width:38rem;margin: 1rem 0;display: flex; align-items: center}
+.step2 .select-box .check-list label{width: 100%;box-sizing: border-box; padding: 1.5rem 0 1.5rem 1.5rem;border: solid 1px #ccc;height:6rem}
+.step2 .select-box .check-list input[type="checkbox"]:checked+label{border-color: #4560d3;}
+.step2 .select-box .check-list .info{width: 100%;position: relative;line-height: 6rem}
+.step2 .select-box .check-list .title{float:left;margin-left: 1rem;font-size: 1.8rem;font-weight: 400;}
+.step2 .select-box .check-list .price {float: right;text-align: right;font-family: 'Lato';font-size: 1.8rem;font-weight: 600;}

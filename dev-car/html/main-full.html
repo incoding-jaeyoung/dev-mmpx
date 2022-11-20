@@ -1,366 +1,391 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="Author" content="Raiseme" />
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-<meta property="og:image" content="../img/img-og.png">
-<meta property="og:url" content="">
-<meta property="og:description" content="">
-<meta property="og:title" content="Raiseme">
 
-<!--[if lt IE 9]>
+<head>
+   <meta charset="UTF-8">
+   <meta name="Author" content="쌍용자동차" />
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+   <meta property="og:image" content="../img/img-og.png">
+   <meta property="og:url" content="">
+   <meta property="og:description" content="">
+   <meta property="og:title" content="쌍용자동차">
+
+   <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
-<title>쌍용자동차</title>
-<link rel="stylesheet" href="../css/style.css" />
+   <title>쌍용자동차</title>
+   <link rel="stylesheet" href="../css/style.css" />
 
-<script src="../js/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-<script src="../js/imagesloaded.pkgd.min.js"></script>
-<script src="../js/gsap.min.js"></script>
-<script src="../js/ScrollTrigger.min.js"></script>
-<script src="../js/swiper-bundle.min.js"></script>
-<script src="../js/ScrollToPlugin3.min.js"></script>
-<script src="../js/zoom.js"></script>
-<script src="../js/ui.js"></script>
+   <script src="../js/jquery-3.3.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+   <script src="../js/imagesloaded.pkgd.min.js"></script>
+   <script src="../js/gsap.min.js"></script>
+   <script src="../js/ScrollTrigger.min.js"></script>
+   <script src="../js/swiper-bundle.min.js"></script>
+   <script src="../js/ScrollToPlugin3.min.js"></script>
+   <script src="../js/zoom.js"></script>
+   <script src="../js/ui.js"></script>
 </head>
 
-<body> 
-<div class="accessbility"><a href="#contents">본문바로가기</a></div>
-<div id="wrapper">
-    <header id="header">
-        <h1><a href="#">쌍용자동차</a></h1>
-        <p class="back"><a href="#"><img src="../img/ico-prev.svg" alt="뒤로"></a></p>
-        <ul class="step-line">
+<body>
+   <div class="accessbility"><a href="#contents">본문바로가기</a></div>
+   <div id="wrapper">
+      <header id="header">
+         <h1><a href="#">쌍용자동차</a></h1>
+         <p class="back"><a href="#"><img src="../img/ico-prev.svg" alt="뒤로"></a></p>
+         <ul class="step-line">
             <li class="active">STEP 1 : 내 차 디자인</li>
             <li>STEP 2 : 옵션 및 결제 방법</li>
             <li>STEP 3 : 계약서 작성</li>
             <li>STEP 4 : 계약금 결제</li>
-        </ul>
-        <div class="blur"></div>
-    </header>
-    <section id="contents">
-    <!-- contents -->
-        <div class="car-list">
+         </ul>
+         <div class="blur"></div>
+      </header>
+      <section id="contents">
+         <!-- contents -->
+         <div class="car-list">
             <div class="swiper carSwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#">TORRES</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">TIVOLI</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">TIVOLI air</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">KORANDO</a>
-                    </div>
-                    <div class="swiper-slide active">
-                        <a href="#">REXTON SPORTS</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">REXTON SPORTS KHAN</a>
-                    </div>
-                </div>
-                <script>
-                    var tabswiper = new Swiper(".carSwiper", {
-                        slidesPerView: "auto",
-                        spaceBetween: 0,
-                        breakpoints: {
-                            600: {
-                                spaceBetween: 0,
-                            },
-                        },
-                    });
-                    tabswiper.slideTo(4)
-                </script>
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <a href="#">TORRES</a>
+                  </div>
+                  <div class="swiper-slide">
+                     <a href="#">TIVOLI</a>
+                  </div>
+                  <div class="swiper-slide">
+                     <a href="#">TIVOLI air</a>
+                  </div>
+                  <div class="swiper-slide">
+                     <a href="#">KORANDO</a>
+                  </div>
+                  <div class="swiper-slide active">
+                     <a href="#">REXTON SPORTS</a>
+                  </div>
+                  <div class="swiper-slide">
+                     <a href="#">REXTON SPORTS KHAN</a>
+                  </div>
+               </div>
             </div>
-        </div>
-        <div class="total-price">
+         </div>
+         <div class="total-price">
             <p class="name">와일드</p>
             <p class="price">29,900,000 원 ~ <a href="#"><img src="../img/ico-down-s.svg" alt=""></a></p>
-        </div>
-        <div class="select-block mob-view">
+         </div>
+         <div class="select-block mob-view">
             <h2>REXTON SPORTS</h2>
             <div class="radio-select">
-                <dl>
-                    <dt>유종</dt>
-                    <dd>
-                        <p class="radio-btn">
-                            <input type="radio" name="type-01-m" id="type-01-01-m" checked><label for="type-01-01-m">가솔린</label>
-                            <input type="radio" name="type-01-m" id="type-01-02-m"><label for="type-01-02-m">디젤</label>
-                        </p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>변속기</dt>
-                    <dd>
-                        <p class="radio-btn">
-                            <input type="radio" class="radio-box" name="type-02-m" id="type-02-01-m" checked><label for="type-02-01-m">디젤</label>
-                            <input type="radio" class="radio-box" name="type-02-m" id="type-02-02-m"><label for="type-02-02-m">수동</label>
-                        </p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>구동</dt>
-                    <dd>
-                        <p class="radio-btn">
-                            <input type="radio" class="radio-box" name="type-03-m" id="type-03-01-m" checked><label for="type-03-01-m">2WD</label>
-                            <input type="radio" class="radio-box" name="type-03-m" id="type-03-02-m"><label for="type-03-02-m">4WD</label>
-                            <input type="radio" class="radio-box" name="type-03-m" id="type-03-03-m"><label for="type-03-03-m">AWD</label>
-                        </p>
-                    </dd>
-                </dl>
+               <dl>
+                  <dt>유종</dt>
+                  <dd>
+                     <p class="radio-btn">
+                        <input type="radio" name="type-01-m" id="type-01-01-m" checked><label
+                           for="type-01-01-m">가솔린</label>
+                        <input type="radio" name="type-01-m" id="type-01-02-m"><label for="type-01-02-m">디젤</label>
+                     </p>
+                  </dd>
+               </dl>
+               <dl>
+                  <dt>변속기</dt>
+                  <dd>
+                     <p class="radio-btn">
+                        <input type="radio" class="radio-box" name="type-02-m" id="type-02-01-m" checked><label
+                           for="type-02-01-m">디젤</label>
+                        <input type="radio" class="radio-box" name="type-02-m" id="type-02-02-m"><label
+                           for="type-02-02-m">수동</label>
+                     </p>
+                  </dd>
+               </dl>
+               <dl>
+                  <dt>구동</dt>
+                  <dd>
+                     <p class="radio-btn">
+                        <input type="radio" class="radio-box" name="type-03-m" id="type-03-01-m" checked><label
+                           for="type-03-01-m">2WD</label>
+                        <input type="radio" class="radio-box" name="type-03-m" id="type-03-02-m"><label
+                           for="type-03-02-m">4WD</label>
+                        <input type="radio" class="radio-box" name="type-03-m" id="type-03-03-m"><label
+                           for="type-03-03-m">AWD</label>
+                     </p>
+                  </dd>
+               </dl>
             </div>
-            
-        </div>
-        <div class="option-select">
+
+         </div>
+         <div class="option-select">
             <div class="viewer">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/E11p66uJVMY?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> 
+               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/E11p66uJVMY?autoplay=1&mute=1"
+                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen=""></iframe>
             </div>
             <p class="caution-view mob-view">사이트 내 이미지는 참고용이며 실제 차량과는 다를 수 있습니다.</p>
             <div class="option-block">
-                <div class="option-contents">
-                    <div class="select-block pc-view">
-                        <h2>REXTON SPORTS</h2>
-                        <div class="radio-select">
-                            <dl>
-                                <dt>유종</dt>
-                                <dd>
-                                    <p class="radio-btn">
-                                        <input type="radio" name="type-01" id="type-01-01" checked><label for="type-01-01">가솔린</label>
-                                        <input type="radio" name="type-01" id="type-01-02"><label for="type-01-02">디젤</label>
-                                    </p>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>변속기</dt>
-                                <dd>
-                                    <p class="radio-btn">
-                                        <input type="radio" class="radio-box" name="type-02" id="type-02-01" checked><label for="type-02-01">디젤</label>
-                                        <input type="radio" class="radio-box" name="type-02" id="type-02-02"><label for="type-02-02">수동</label>
-                                    </p>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>변속기</dt>
-                                <dd>
-                                    <p class="radio-btn">
-                                        <input type="radio" class="radio-box" name="type-03" id="type-03-01" checked><label for="type-03-01">2WD</label>
-                                        <input type="radio" class="radio-box" name="type-03" id="type-03-02"><label for="type-03-02">4WD</label>
-                                        <input type="radio" class="radio-box" name="type-03" id="type-03-03"><label for="type-03-03">AWD</label>
-                                    </p>
-                                </dd>
-                            </dl>
-                        </div>
-                        
-                    </div>
-                    <hr>
-                    <div class="select-block">
-                        <h2>색상 <span class="badge">인기 있는 색상</span></h2>
-                        <h3>1 TONE</h3>
-                        <ul class="color-list">
-                            <li>
-                                <input type="radio" name="color-type" id="color-01" checked>
-                                <label for="color-01">
-                                    <img src="../img/img-color-01.png" alt="">
-                                    <p class="title">그랜드 화이트 WAA</p>
-                                    <p class="price">
-                                        0원
-                                        <button type="button" onclick="alert('정보?')"><img src="../img/info-icon.svg" alt=""></button>
-                                    </p>
-                                </label> 
-                            </li>
-                            <li>
-                                <input type="radio" name="color-type" id="color-02">
-                                <label for="color-02">
-                                    <img src="../img/img-color-02.png" alt="">
-                                    <p class="title">아이언 메탈 ADE</p>
-                                    <p class="price">
-                                        0원
-                                        <button type="button"><img src="../img/info-icon.svg" alt=""></button>
-                                    </p>
-                                </label> 
-                            </li>
-                            <li>
-                                <input type="radio" name="color-type" id="color-03">
-                                <label for="color-03">
-                                    <img src="../img/img-color-03.png" alt="">
-                                    <p class="title">플래티넘 그레이 ADA</p>
-                                    <p class="price">
-                                        0원
-                                        <button type="button"><img src="../img/info-icon.svg" alt=""></button>
-                                    </p>
-                                </label> 
-                            </li>
-                            <li>
-                                <input type="radio" name="color-type" id="color-04">
-                                <label for="color-04">
-                                    <img src="../img/img-color-04.png" alt="">
-                                    <p class="title">포레스트 그린 GAO</p>
-                                    <p class="price">
-                                        0원
-                                        <button type="button"><img src="../img/info-icon.svg" alt=""></button>
-                                    </p>
-                                </label> 
-                            </li>
-                            <li>
-                                <input type="radio" name="color-type" id="color-05">
-                                <label for="color-05">
-                                    <img src="../img/img-color-05.png" alt="">
-                                    <p class="title">체리 레드 RAV</p>
-                                    <p class="price">
-                                        300,000원
-                                        <button type="button"><img src="../img/info-icon.svg" alt=""></button>
-                                    </p>
-                                </label> 
-                            </li>
-                            <li>
-                                <input type="radio" name="color-type" id="color-06">
-                                <label for="color-06">
-                                    <img src="../img/img-color-06.png" alt="">
-                                    <p class="title">댄디 블루 BAS</p>
-                                    <p class="price">
-                                        300,000원
-                                        <button type="button"><img src="../img/info-icon.svg" alt=""></button>
-                                    </p>
-                                </label> 
-                            </li>
-                            <li>
-                                <input type="radio" name="color-type" id="color-07">
-                                <label for="color-07">
-                                    <img src="../img/img-color-07.png" alt="">
-                                    <p class="title">스페이스 블랙 LAK</p>
-                                    <p class="price">
-                                        300,000원
-                                        <button type="button"><img src="../img/info-icon.svg" alt=""></button>
-                                    </p>
-                                </label> 
-                            </li>
-                        </ul>
-                        <hr>
-                        <h3>2 TONE</h3>
-                        <ul class="color-list">
-                            <li>
-                                <input type="radio" name="color-type" id="color-08">
-                                <label for="color-08">
-                                    <img src="../img/img-color-08.png" alt="">
-                                    <p class="title">그랜드 화이트 WAA</p>
-                                    <p class="price">
-                                        0원
-                                        <button type="button"><img src="../img/info-icon.svg" alt=""></button>
-                                    </p>
-                                </label> 
-                            </li>
-                            <li>
-                                <input type="radio" name="color-type" id="color-09">
-                                <label for="color-09">
-                                    <img src="../img/img-color-09.png" alt="">
-                                    <p class="title">아이언 메탈 ADE</p>
-                                    <p class="price">
-                                        0원
-                                        <button type="button"><img src="../img/info-icon.svg" alt=""></button>
-                                    </p>
-                                </label> 
-                            </li>
-                            <li>
-                                <input type="radio" name="color-type" id="color-10">
-                                <label for="color-10">
-                                    <img src="../img/img-color-10.png" alt="">
-                                    <p class="title">플래티넘 그레이 ADA</p>
-                                    <p class="price">
-                                        0원
-                                        <button type="button"><img src="../img/info-icon.svg" alt=""></button>
-                                    </p>
-                                </label> 
-                            </li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="select-block">
-                        <h2>인테리어</h2>
-                        <ul class="inter-list ">
-                            <li>
-                                <input type="radio" name="color-type-01" id="inter-01" checked>
-                                <label for="inter-01">
-                                    <img src="../img/img-inter-01.png" alt="">
-                                    <div class="info">
-                                        <p class="title">라이트 그레이(Light Gray) 인테리어</p>
-                                        <p class="price">
-                                            0원
-                                            <button type="button" onclick="alert('정보?')"><img src="../img/info-icon.svg" alt=""></button>
-                                        </p>
-                                    </div>
-                                </label> 
-                            </li>
-                            <li>
-                                <input type="radio" name="color-type-01" id="inter-02" checked>
-                                <label for="inter-02">
-                                    <img src="../img/img-inter-02.png" alt="">
-                                    <div class="info">
-                                        <p class="title">블랙(Black) 인테리어</p>
-                                        <p class="price">
-                                            0원
-                                            <button type="button" onclick="alert('정보?')"><img src="../img/info-icon.svg" alt=""></button>
-                                        </p>
-                                    </div>
-                                </label> 
-                            </li>
-                            <li>
-                                <input type="radio" name="color-type-01" id="inter-03" checked>
-                                <label for="inter-03">
-                                    <img src="../img/img-inter-03.png" alt="">
-                                    <div class="info">
-                                        <p class="title">브라운(Brown) 인테리어</p>
-                                        <p class="price">
-                                            0원
-                                            <button type="button" onclick="alert('정보?')"><img src="../img/info-icon.svg" alt=""></button>
-                                        </p>
-                                    </div>
-                                </label> 
-                            </li>
-                            <li>
-                                <input type="radio" name="color-type-01" id="inter-04" checked>
-                                <label for="inter-04">
-                                    <img src="../img/img-inter-04.png" alt="">
-                                    <div class="info">
-                                        <p class="title">카키(Khaki) 인테리어</p>
-                                        <p class="price">
-                                            0원
-                                            <button type="button" onclick="alert('정보?')"><img src="../img/info-icon.svg" alt=""></button>
-                                        </p>
-                                    </div>
-                                </label> 
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="caution">
-                        나만의 차를 만들기 위한 선택을 완료하셨나요?  <br>
-                        <b>[다음]</b> 버튼을 선택하여 보증연장, 결제 수단, 탁송/부대 비용, 등록관련/공채 등을 선택하여 내 차의 견적을 완성해 주세요.
-                    </div>
-                </div>
-                <div class="submit-block">
-                    <p class="price-info">선택 차량 가격 <b>33,710,000 원</b> <a href="#"><img src="../img/ico-price-up.svg" alt=""></a></p>
-                    <p class="btn-select">
-                        <button type="button">취소</button>
-                        <button type="button">다음</button>
-                    </p>
-                </div>
+               <div class="option-contents">
+                  <div class="select-block pc-view">
+                     <h2>REXTON SPORTS</h2>
+                     <div class="radio-select">
+                        <dl>
+                           <dt>유종</dt>
+                           <dd>
+                              <p class="radio-btn">
+                                 <input type="radio" name="type-01" id="type-01-01" checked><label
+                                    for="type-01-01">가솔린</label>
+                                 <input type="radio" name="type-01" id="type-01-02"><label for="type-01-02">디젤</label>
+                              </p>
+                           </dd>
+                        </dl>
+                        <dl>
+                           <dt>변속기</dt>
+                           <dd>
+                              <p class="radio-btn">
+                                 <input type="radio" class="radio-box" name="type-02" id="type-02-01" checked><label
+                                    for="type-02-01">디젤</label>
+                                 <input type="radio" class="radio-box" name="type-02" id="type-02-02"><label
+                                    for="type-02-02">수동</label>
+                              </p>
+                           </dd>
+                        </dl>
+                        <dl>
+                           <dt>변속기</dt>
+                           <dd>
+                              <p class="radio-btn">
+                                 <input type="radio" class="radio-box" name="type-03" id="type-03-01" checked><label
+                                    for="type-03-01">2WD</label>
+                                 <input type="radio" class="radio-box" name="type-03" id="type-03-02"><label
+                                    for="type-03-02">4WD</label>
+                                 <input type="radio" class="radio-box" name="type-03" id="type-03-03"><label
+                                    for="type-03-03">AWD</label>
+                              </p>
+                           </dd>
+                        </dl>
+                     </div>
+
+                  </div>
+                  <hr>
+                  <div class="select-block">
+                     <h2>색상 <span class="badge">인기 있는 색상</span></h2>
+                     <h3>1 TONE</h3>
+                     <ul class="color-list">
+                        <li>
+                           <input type="radio" name="color-type" id="color-01" checked>
+                           <label for="color-01">
+                              <img src="../img/img-color-01.png" alt="">
+                              <p class="title">그랜드 화이트 WAA</p>
+                              <p class="price">
+                                 0원
+                                 <button type="button" onclick="alert('정보?')"><img src="../img/info-icon.svg"
+                                       alt=""></button>
+                              </p>
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="color-type" id="color-02">
+                           <label for="color-02">
+                              <img src="../img/img-color-02.png" alt="">
+                              <p class="title">아이언 메탈 ADE</p>
+                              <p class="price">
+                                 0원
+                                 <button type="button"><img src="../img/info-icon.svg" alt=""></button>
+                              </p>
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="color-type" id="color-03">
+                           <label for="color-03">
+                              <img src="../img/img-color-03.png" alt="">
+                              <p class="title">플래티넘 그레이 ADA</p>
+                              <p class="price">
+                                 0원
+                                 <button type="button"><img src="../img/info-icon.svg" alt=""></button>
+                              </p>
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="color-type" id="color-04">
+                           <label for="color-04">
+                              <img src="../img/img-color-04.png" alt="">
+                              <p class="title">포레스트 그린 GAO</p>
+                              <p class="price">
+                                 0원
+                                 <button type="button"><img src="../img/info-icon.svg" alt=""></button>
+                              </p>
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="color-type" id="color-05">
+                           <label for="color-05">
+                              <img src="../img/img-color-05.png" alt="">
+                              <p class="title">체리 레드 RAV</p>
+                              <p class="price">
+                                 300,000원
+                                 <button type="button"><img src="../img/info-icon.svg" alt=""></button>
+                              </p>
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="color-type" id="color-06">
+                           <label for="color-06">
+                              <img src="../img/img-color-06.png" alt="">
+                              <p class="title">댄디 블루 BAS</p>
+                              <p class="price">
+                                 300,000원
+                                 <button type="button"><img src="../img/info-icon.svg" alt=""></button>
+                              </p>
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="color-type" id="color-07">
+                           <label for="color-07">
+                              <img src="../img/img-color-07.png" alt="">
+                              <p class="title">스페이스 블랙 LAK</p>
+                              <p class="price">
+                                 300,000원
+                                 <button type="button"><img src="../img/info-icon.svg" alt=""></button>
+                              </p>
+                           </label>
+                        </li>
+                     </ul>
+                     <hr>
+                     <h3>2 TONE</h3>
+                     <ul class="color-list">
+                        <li>
+                           <input type="radio" name="color-type" id="color-08">
+                           <label for="color-08">
+                              <img src="../img/img-color-08.png" alt="">
+                              <p class="title">그랜드 화이트 WAA</p>
+                              <p class="price">
+                                 0원
+                                 <button type="button"><img src="../img/info-icon.svg" alt=""></button>
+                              </p>
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="color-type" id="color-09">
+                           <label for="color-09">
+                              <img src="../img/img-color-09.png" alt="">
+                              <p class="title">아이언 메탈 ADE</p>
+                              <p class="price">
+                                 0원
+                                 <button type="button"><img src="../img/info-icon.svg" alt=""></button>
+                              </p>
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="color-type" id="color-10">
+                           <label for="color-10">
+                              <img src="../img/img-color-10.png" alt="">
+                              <p class="title">플래티넘 그레이 ADA</p>
+                              <p class="price">
+                                 0원
+                                 <button type="button"><img src="../img/info-icon.svg" alt=""></button>
+                              </p>
+                           </label>
+                        </li>
+                     </ul>
+                  </div>
+                  <hr>
+                  <div class="select-block">
+                     <h2>인테리어</h2>
+                     <ul class="inter-list ">
+                        <li>
+                           <input type="radio" name="color-type-01" id="inter-01" checked>
+                           <label for="inter-01">
+                              <img src="../img/img-inter-01.png" alt="">
+                              <div class="info">
+                                 <p class="title">라이트 그레이(Light Gray) 인테리어</p>
+                                 <p class="price">
+                                    0원
+                                    <button type="button" onclick="alert('정보?')"><img src="../img/info-icon.svg"
+                                          alt=""></button>
+                                 </p>
+                              </div>
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="color-type-01" id="inter-02" checked>
+                           <label for="inter-02">
+                              <img src="../img/img-inter-02.png" alt="">
+                              <div class="info">
+                                 <p class="title">블랙(Black) 인테리어</p>
+                                 <p class="price">
+                                    0원
+                                    <button type="button" onclick="alert('정보?')"><img src="../img/info-icon.svg"
+                                          alt=""></button>
+                                 </p>
+                              </div>
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="color-type-01" id="inter-03" checked>
+                           <label for="inter-03">
+                              <img src="../img/img-inter-03.png" alt="">
+                              <div class="info">
+                                 <p class="title">브라운(Brown) 인테리어</p>
+                                 <p class="price">
+                                    0원
+                                    <button type="button" onclick="alert('정보?')"><img src="../img/info-icon.svg"
+                                          alt=""></button>
+                                 </p>
+                              </div>
+                           </label>
+                        </li>
+                        <li>
+                           <input type="radio" name="color-type-01" id="inter-04" checked>
+                           <label for="inter-04">
+                              <img src="../img/img-inter-04.png" alt="">
+                              <div class="info">
+                                 <p class="title">카키(Khaki) 인테리어</p>
+                                 <p class="price">
+                                    0원
+                                    <button type="button" onclick="alert('정보?')"><img src="../img/info-icon.svg"
+                                          alt=""></button>
+                                 </p>
+                              </div>
+                           </label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="caution">
+                     나만의 차를 만들기 위한 선택을 완료하셨나요? <br>
+                     <b>[다음]</b> 버튼을 선택하여 보증연장, 결제 수단, 탁송/부대 비용, 등록관련/공채 등을 선택하여 내 차의 견적을 완성해 주세요.
+                  </div>
+               </div>
+               <div class="submit-block">
+                  <p class="price-info">선택 차량 가격 <b>33,710,000 원</b> <a href="#"><img src="../img/ico-price-up.svg"
+                           alt=""></a></p>
+                  <p class="btn-select">
+                     <button type="button">취소</button>
+                     <button type="button">다음</button>
+                  </p>
+               </div>
             </div>
-        </div>
-    <!-- //contents -->
-    </section>
-</div>
-<!-- POPUP -->
-<div class="popup-wrap" id="popup" tabindex="0"></div>
-<!-- //POPUP -->
-<div class="overlay" onclick="closeLayer();"><span>닫기</span></div>
+         </div>
+         <!-- //contents -->
+      </section>
+   </div>
+   <!-- POPUP -->
+   <div class="popup-wrap" id="popup" tabindex="0"></div>
+   <!-- //POPUP -->
+   <div class="overlay" onclick="closeLayer();"><span>닫기</span></div>
+
+   <script>
+      var tabswiper = new Swiper(".carSwiper", {
+         slidesPerView: "auto",
+         spaceBetween: 0,
+         breakpoints: {
+            600: {
+               spaceBetween: 0,
+            },
+         },
+      });
+      tabswiper.slideTo(4)
+   </script>
+   
 </body>
+
 </html>
