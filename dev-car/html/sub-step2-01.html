@@ -75,7 +75,9 @@
             </div>
          </div>
 
+         <!-- step2 -->
          <div class="step2">
+            <!-- left-wrap -->
             <div class="left-wrap">
                <div class="info-box">옵션, 커스터마이징, 보증연장, 결제 수단, 탁송/부대 비용, 등록관련/공채 등을 선택하여 지불조건을 포함하는 상세 견적을 작성하실 수 있습니다.</div>
 
@@ -413,13 +415,13 @@
                <!-- //탁송/부대비용 -->
 
                <!-- 취득세/공채/기타비용 -->
-               <div class="select-box small">
+               <div class="select-box small noline">
                   <div class="top-title underline">
                      취득세/공채/기타비용
                      <span class="top-price">1,905,500 원</span>
                   </div>
                   <div class="list-wrap">
-                     <dl>
+                     <dl class="underline">
                         <dt>등록 용도/지역</dt>
                         <dd>
                            <div class="field-areas">
@@ -436,29 +438,340 @@
                                  </select>
                               </div>
                            </div>
+                        </dd>
+                     </dl>
+                     <dl class="underline">
+                        <dt>취득세<span class="star">*</span></dt>
+                        <dd>
                            <div class="field-areas ver">
                               <div class="area">
-                                 <p>등록 용도</p>
+                                 <p>면제 사유</p>
                                  <select>
                                     <option disabled selected>선택해 주세요.</option>
                                  </select>
                               </div>
                               <div class="area">
-                                 <p>등록 지역</p>
-                                 <select>
-                                    <option disabled selected>선택해 주세요.</option>
-                                 </select>
+                                 <p>취득세</p>
+                                 <input type="text" value="1,905,500 원" readonly>
                               </div>
                            </div>
+                        </dd>
+                     </dl>
+                     <dl class="underline">
+                        <dt>공채<span class="star">*</span></dt>
+                        <dd>
+                           <div class="radio-con">
+                              <input type="radio" name="bond-radio" id="bond-radio-01" checked>
+                              <label for="bond-radio-01"><span>공채 면제</span></label>
+                           </div>
+                           <div class="radio-con">
+                              <input type="radio" name="bond-radio" id="bond-radio-02">
+                              <label for="bond-radio-02"><span>공채 매입</span></label>
+                           </div>
+                           <div class="field-areas ml">
+                              <div class="area">
+                                 <p>공채율(%)</p>
+                                 <input type="text" value="3.0 %" readonly>
+                              </div>
+                              <div class="area">
+                                 <p>공채매입금액</p>
+                                 <input type="text" value="570,000 원" readonly>
+                              </div>
+                           </div>
+                           <div class="radio-con">
+                              <input type="radio" name="bond-radio" id="bond-radio-03">
+                              <label for="bond-radio-03"><span>공채 할인</span></label>
+                           </div>
+                           <div class="field-areas ml">
+                              <div class="area">
+                                 <p>공채매입금액</p>
+                                 <input type="text" value="1,000,000 원" readonly>
+                              </div>
+                              <div class="area">
+                                 <p>공채할인율(%)</p>
+                                 <input type="text" value="25.00 %" readonly>
+                              </div>
+                           </div>
+                           <div class="field-areas ml">
+                              <div class="area">
+                                 <p>공채할인금액</p>
+                                 <input type="text" value="250,000 원" readonly>
+                              </div>
+                           </div>
+                        </dd>
+                     </dl>
+                     <dl>
+                        <dt>기타비용</dt>
+                        <dd>
+                           <div class="field-areas">
+                              <div class="area">
+                                 <p>등록 대행</p>
+                                 <input type="text" value="30,000 원" readonly>
+                              </div>
+                              <div class="area">
+                                 <p>인지/증지대</p>
+                                 <input type="text" value="2,000 원" readonly>
+                              </div>
+                           </div>
+                           <div class="field-areas">
+                              <div class="area">
+                                 <p>번호판대</p>
+                                 <input type="text" value="20,000 원" readonly>
+                              </div>
+                           </div>
+                           <p class="ex-info">
+                              <font color="#973937">※ 고객님의 이해를 돕기 위한 가상 견적으로 기본적인 할부 상품만 확인 가능합니다.</font><br />
+                              ※ 해당 항목에 관한 상세 부연 설명을 기술합니다.
+                           </p>
                         </dd>
                      </dl>
                   </div>
                </div>
                <!-- //취득세/공채/기타비용 -->
                
+               <!-- bottom-guide -->
+               <div class="bottom-guide">
+                  <dl>
+                     <dt>할인 및 결제 내역의 선택을 완료하셨나요?</dt>
+                     <dd><strong>[견적서 저장]</strong> 버튼을 선택하시면 로그인 후, 지금 선택한 내용을 마이페이지에서 확인하실 수 있습니다.  </dd>
+                  </dl>
+                  <dl>
+                     <dt><strong>[계약서 작성]</strong> 버튼을 선택하시면 현재 견적내역으로 온라인 계약서를 작성하실 수 있습니다</dt>
+                     <dd></dd>
+                  </dl>
+               </div>
+               <!-- //bottom-guide -->
+               
             </div>
-            <div class="right-wrap"></div>
+            <!-- //left-wrap -->
+            <!-- right-wrap -->
+            <div class="right-wrap">
+               <div class="order-wrap">
+
+                  <div class="order-box">
+                     <div class="badge">STEP 2</div>
+                     <h4 class="car-title">REXTON SPORTS</h4>
+                     <p class="car-desc">
+                        노블레스<br />
+                        그랜드 화이트
+                     </p>
+                     <div class="car-img">
+                        <img src="../img/thumb/@rexton-grand-white.png" alt="REXTON SPORTS" />
+                     </div>
+                  </div>
+
+                  <div class="order-list">
+                     <!-- 차량 금액 합계 -->
+                     <div class="accodion">
+                        <div class="accodion-header">
+                           <div>
+                              <div class="text">차량 금액 합계</div>
+                              <div class="price">33,710,000 원</div>
+                           </div>
+                        </div>
+                        <div class="accodion-body">
+                           <ul>
+                              <li>
+                                 <div class="text">노블레스 + 파퓰러 패키지</div>
+                                 <div class="price">
+                                    27,400,000 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li>
+                                 <div class="text">그랜드 화이트</div>
+                                 <div class="price">
+                                    0 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li>
+                                 <div class="text">라이트 그레이(Light Gray) 인테리어</div>
+                                 <div class="price">
+                                    500,000 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- //차량 금액 합계 -->
+                     <!-- 옵션 + 보증연장 합계 -->
+                     <div class="accodion">
+                        <div class="accodion-header">
+                           <div>
+                              <div class="text">옵션 + 보증연장 합계</div>
+                              <div class="price">+ 4,750,000 원</div>
+                           </div>
+                        </div>
+                        <div class="accodion-body">
+                           <ul>
+                              <li>
+                                 <div class="text">노블레스 + 파퓰러 패키지</div>
+                                 <div class="price">
+                                    27,400,000 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li>
+                                 <div class="text">그랜드 화이트</div>
+                                 <div class="price">
+                                    0 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li>
+                                 <div class="text">라이트 그레이(Light Gray) 인테리어</div>
+                                 <div class="price">
+                                    500,000 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- //옵션 + 보증연장 합계 -->
+                     <div class="accodion">
+                        <div class="accodion-header">
+                           <div>
+                              <div class="text">인수조건</div>
+                              <div class="price">할부</div>
+                           </div>
+                        </div>
+                        <div class="accodion-body">
+                           <ul>
+                              <li>
+                                 <div class="text">노블레스 + 파퓰러 패키지</div>
+                                 <div class="price">
+                                    27,400,000 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li>
+                                 <div class="text">그랜드 화이트</div>
+                                 <div class="price">
+                                    0 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li>
+                                 <div class="text">라이트 그레이(Light Gray) 인테리어</div>
+                                 <div class="price">
+                                    500,000 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- 탁송료/보험료 합계 -->
+                     <div class="accodion">
+                        <div class="accodion-header">
+                           <div>
+                              <div class="text">탁송료/보험료 합계</div>
+                              <div class="price">+ 155,130 원</div>
+                           </div>
+                        </div>
+                        <div class="accodion-body">
+                           <ul>
+                              <li>
+                                 <div class="text">노블레스 + 파퓰러 패키지</div>
+                                 <div class="price">
+                                    27,400,000 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li>
+                                 <div class="text">그랜드 화이트</div>
+                                 <div class="price">
+                                    0 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li>
+                                 <div class="text">라이트 그레이(Light Gray) 인테리어</div>
+                                 <div class="price">
+                                    500,000 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- //탁송료/보험료 합계 -->
+                     <!-- 취득세/공채/기타비용 합계 -->
+                     <div class="accodion">
+                        <div class="accodion-header">
+                           <div>
+                              <div class="text">취득세/공채/기타비용 합계</div>
+                              <div class="price">+ 188,000 원</div>
+                           </div>
+                        </div>
+                        <div class="accodion-body">
+                           <ul>
+                              <li>
+                                 <div class="text">노블레스 + 파퓰러 패키지</div>
+                                 <div class="price">
+                                    27,400,000 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li>
+                                 <div class="text">그랜드 화이트</div>
+                                 <div class="price">
+                                    0 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li>
+                                 <div class="text">라이트 그레이(Light Gray) 인테리어</div>
+                                 <div class="price">
+                                    500,000 원
+                                    <p><a href="javascript:void(0);">변경하기</a></p>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- //취득세/공채/기타비용 합계 -->
+                  </div>
+
+                  <div class="order-total">
+                     <div>
+                        <div class="text">총 견적 합계</div>
+                        <div class="price">38,615,130 원</div>
+                     </div>
+                  </div>
+                  
+                  <div class="order-btns">
+                     <button class="btn">견적서 저장</button>
+                     <button class="btn">계약서 작성</button>
+                  </div>
+               </div>
+            </div>
+            <!-- //right-wrap -->
          </div>
+         <!-- step2 -->
          
          <!-- //contents -->
       </section>

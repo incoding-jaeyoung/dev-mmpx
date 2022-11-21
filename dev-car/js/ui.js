@@ -599,6 +599,23 @@ function counter() {
     }
 }
 
+function setAcoddion() {
+    $(".accodion").each(function () {
+        var owner = $(this);
+        var header = $(this).find(".accodion-header");
+        var body = $(this).find(".accodion-body");
+        header.on("click", function () {
+            if(!owner.is(".active")){
+                owner.addClass("active");
+                body.slideDown();
+            } else {
+                owner.removeClass("active");
+                body.slideUp();
+            }
+        });
+    })
+}
+
 $(document).ready(function(){
     var winWidth = $(window).width()
     if(winWidth <= 600){
@@ -608,6 +625,7 @@ $(document).ready(function(){
       new Zooming({
       }).listen('.zoom img')
     }
+    setAcoddion();
 });
 
 

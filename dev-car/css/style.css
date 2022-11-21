@@ -425,11 +425,13 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 /* step 2 */
 .step2 {width: 118rem;margin: 0 auto;display: flex;flex-direction: row;justify-content: space-between; margin-top: 4.3rem;}
 .step2 .left-wrap {width: 78.1rem;}
-.step2 .right-wrap {width: 36rem;border: solid 1px #ccc;}
-.step2 .info-box {padding: 1.4rem 2.5rem;background-color: #fffaf3;font-size: 1.6rem;color: #7a4d05;font-weight: 400; line-height: 2.4rem;}
+.step2 .right-wrap {width: 36rem}
+.step2 .info-box {position: relative;padding: 1.4rem 2.7rem;background-color: #fffaf3;font-size: 1.6rem;color: #7a4d05;font-weight: 400; line-height: 2.4rem;}
+.step2 .info-box:before{content:'*';position: absolute;left: 1.5rem;top: 1.7rem;}
 
 .step2 .select-box {margin-top: 6rem;padding-bottom: 6rem;border-bottom: solid 5px #edeef0}
 .step2 .select-box.small{padding-bottom: 2rem;}
+.step2 .select-box.noline{border-bottom: none}
 .step2 .select-box .top-title {font-size: 3rem;font-weight: 600;}
 .step2 .select-box .top-title.underline{border-bottom: solid 1px rgba(0,0,0,0.5);padding-bottom: 2rem}
 .step2 .select-box .top-price {float: right; font-size: 3rem;font-weight:600;font-family: 'Lato';}
@@ -460,7 +462,7 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2 .select-box .list-wrap .tab-btns .btn{display:inline-block;width:18rem;height:4.1rem;border: solid 1px #d6d6d7;border-radius: 0.4rem;font-size: 1.4rem;font-weight: 500;color: rgba(0,0,0,0.5)}
 .step2 .select-box .list-wrap .tab-btns .btn:first-child{margin-right: 2rem;}
 .step2 .select-box .list-wrap .tab-btns .btn.active{background-color: #1b1c1d;color:#fff}
-.step2 .select-box .list-wrap .field-areas{display: flex;flex-direction: row;justify-content: space-between;margin-top: 2rem}
+.step2 .select-box .list-wrap .field-areas{display: flex;flex-direction: row;justify-content: space-between;margin-top: 2rem;flex-wrap: wrap;}
 .step2 .select-box .list-wrap .field-areas:first-child{margin-top: 0;}
 .step2 .select-box .list-wrap .field-areas .area{width: 28rem}
 .step2 .select-box .list-wrap .field-areas .area > p{font-size: 16px;font-weight: 400;color: rgba(0, 0, 0, 0.8);margin-bottom: 1rem;}
@@ -469,9 +471,51 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2 .select-box .list-wrap .field-areas.ver{flex-direction: column;}
 .step2 .select-box .list-wrap .field-areas.ver .area{margin-top: 2rem}
 .step2 .select-box .list-wrap .field-areas.ver .area:first-child{margin-top: 0}
+.step2 .select-box .list-wrap .field-areas.ml{margin-left: 4.2rem}
+.step2 .select-box .list-wrap .field-areas.ml .area{width:26rem}
 .step2 .select-box .list-wrap .check-con{position: relative;margin-top: 2.5rem}
 .step2 .select-box .list-wrap .check-con label{text-indent: 0.8rem;vertical-align: top;font-size: 1.6rem;font-weight: 400}
 .step2 .select-box .list-wrap .check-con label:after{background: url(../img/ico-chk-black.png) no-repeat; background-size: 100%;width: 2rem; height: 2rem; overflow: hidden; border-radius: 4px;left: 0}
 .step2 .select-box .list-wrap .blue-box{padding: 3rem;background-color: #f7f9fa;margin-top: 3.5rem}
 .step2 .select-box .list-wrap .blue-box > p{font-size: 16px;font-weight: 400;color: rgba(0, 0, 0, 0.8);margin-bottom: 1rem;}
 .step2 .select-box .list-wrap .blue-box input[type="text"]{text-align: right;padding: 2rem;font-family: Lato;font-size: 1.6rem;font-weight: bold;color: #0b0b1b;width:33.5rem}
+.step2 .select-box .list-wrap .radio-con{margin-top: 3rem}
+.step2 .select-box .list-wrap .radio-con:first-child{margin-top:0}
+.step2 .select-box .list-wrap .radio-con > label > span{position:relative;top: -0.1rem;margin-left: 1.7rem}
+
+.step2 .bottom-guide{padding: 4rem 6rem;background-color: #f5f5f5;margin-bottom: 10rem}
+.step2 .bottom-guide > dl {font-size: 1.4rem;font-weight: 400;color:#6f6f6f;margin-top:2rem}
+.step2 .bottom-guide > dl:first-child{margin-top: 0}
+.step2 .bottom-guide > dl > dt:before{content:'';display: inline-block;width:2rem;height:2rem;background: url('../img/info-light-icon.svg') no-repeat;background-size: 100%;vertical-align: middle;margin-right: 0.3rem}
+.step2 .bottom-guide > dl > dd{padding-left: 2.5rem}
+.step2 .bottom-guide > dl strong{color: 000;font-weight: 600;}
+
+.step2 .order-wrap{border: solid 1px #ccc;}
+.step2 .order-box{padding: 4rem 2.9rem;}
+.step2 .order-box .badge{line-height: 1.6rem;height: 2.4rem;border-radius: 1.2rem;background-color: #20bbe5;padding: 0.4rem 1.2rem 0.5rem 1.3rem;display: inline-block;color: #fff;font-family: 'Lato';font-size: 1.2rem;font-weight: 500;}
+.step2 .order-box .car-title{font-family: Lato;font-size: 2.4rem;font-weight: 800;margin-top: 1.5rem}
+.step2 .order-box .car-desc{font-size: 1.6rem;font-weight: 400;margin-top: 1.5rem;line-height: 1.5;}
+.step2 .order-box .car-img > img{width: 30rem;height: 20rem}
+.step2 .order-list{margin-top: 2rem}
+.step2 .order-list .accodion-header{padding:0 2.9rem;cursor: pointer;position: relative}
+.step2 .order-list .accodion-header:after{position: absolute;content:'';width:2rem;height:2rem;background: url('../img/ico-arrow.svg') no-repeat;right: 2rem;top: 1.8rem;}
+.step2 .order-list .accodion.active .accodion-header:after{transform: rotate(180deg);}
+.step2 .order-list .accodion-header > div{display: flex;flex-direction: row;border-top: solid 1px #f2f2f2;padding:1.5rem 0}
+.step2 .order-list .accodion:first-child .accodion-header > div{border-top: none}
+.step2 .order-list .accodion-header .text{flex: 1;font-size: 1.6rem;font-weight: 400;position: relative}
+.step2 .order-list .accodion-header .price{width:12.6rem;text-align: right;padding-right: 1.5rem;font-family: 'Lato';font-size: 1.6rem;font-weight: 600;}
+.step2 .order-list .accodion-body{background-color:#f7f9fa;padding:0 3.9rem;display: none;}
+.step2 .order-list .accodion-body ul{border-top: solid 1px #f2f2f2}
+.step2 .order-list .accodion-body ul:first-child{border-top: none}
+.step2 .order-list .accodion-body li{padding: 1rem 0;display: flex;flex-direction: row;line-height: 2rem;}
+.step2 .order-list .accodion-body li .text{font-size: 13px; font-weight: 300;flex:1}
+.step2 .order-list .accodion-body li .price{font-size: 13px; font-family: 'Lato'; font-weight: 600;width:9rem;text-align: right}
+.step2 .order-list .accodion-body li .price a{font-size: 1.1rem;font-weight: 300;color: #67abf1;text-decoration: underline;}
+.step2 .order-total{padding: 1rem 2.5rem;}
+.step2 .order-total > div {padding: 2.5rem 0 1rem 0;border-top: solid 2px rgba(0,0,0,0.5);display: flex;flex-direction: row;justify-content: space-between;}
+.step2 .order-total .text{font-size: 1.6rem;font-weight: 500;}
+.step2 .order-total .price{font-family: Lato;font-size: 2.2rem;font-weight: 800;}
+.step2 .order-btns{display: flex;flex-direction: row;}
+.step2 .order-btns > button{flex: 1;height: 6rem;background-color: #0c0d0e;font-size: 1.6rem;font-weight: 500;color: #fff}
+.step2 .order-btns > button:nth-child(2){background-color: #233975;}
+
