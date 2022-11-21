@@ -51,7 +51,7 @@ input[type=checkbox]{width: 1.1rem; height: 1.1rem; position: absolute; opacity:
 input[type=checkbox]+label{display: inline-flex; position: relative; cursor: pointer; align-items: center; vertical-align: middle; font-size: 1.6rem; color: #333333; position: relative}
 
 input[type=checkbox]+label:before{content: ""; display: inline-block; width: 2rem; height: 2rem; border-radius: 4px;  border: solid 1px #ccc; background-color: #fff; cursor: pointer; position: relative; z-index: 1; margin-right: .4rem;  vertical-align: top; box-sizing: border-box; flex: none;}
-input[type=checkbox]:checked+label:after{content: ""; display: inline-block; width: 1.2rem; height: 1.2rem; border-radius: 2px; cursor: pointer; position: absolute; z-index: 2; box-sizing: border-box; flex: none; background-color: #4560d3;left: 1.9rem}
+input[type=checkbox]:checked+label:after{content: ""; display: inline-block; width: 1.3rem; height: 1.3rem; border-radius: 2px; cursor: pointer; position: absolute; z-index: 2; box-sizing: border-box; flex: none; background-color: #4560d3;left: 1.9rem}
 
 
 /* input[type=checkbox]:disabled+label:before{border: solid .1rem #dcdfe2; background-color: #f2f3f5; cursor:default;}
@@ -427,7 +427,8 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2 .left-wrap {width: 78.1rem;}
 .step2 .right-wrap {width: 36rem;border: solid 1px #ccc;}
 .step2 .info-box {padding: 1.4rem 2.5rem;background-color: #fffaf3;font-size: 1.6rem;color: #7a4d05;font-weight: 400; line-height: 2.4rem;}
-.step2 .select-box {margin-top: 6rem}
+
+.step2 .select-box {margin-top: 6rem;padding-bottom: 6rem;border-bottom: solid 5px #edeef0}
 .step2 .select-box .top-title {font-size: 3rem;font-weight: 600;}
 .step2 .select-box .check-wrap{display: flex;flex-direction: row;justify-content: space-between;margin-top: 3rem;flex-wrap: wrap;}
 .step2 .select-box .check-list{width:38rem;margin: 1rem 0;display: flex; align-items: center}
@@ -436,3 +437,12 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2 .select-box .check-list .info{width: 100%;position: relative;line-height: 6rem}
 .step2 .select-box .check-list .title{float:left;margin-left: 1rem;font-size: 1.8rem;font-weight: 400;}
 .step2 .select-box .check-list .price {float: right;text-align: right;font-family: 'Lato';font-size: 1.8rem;font-weight: 600;}
+.step2 .select-box .check-list.image label{height: 13.8rem}
+.step2 .select-box .check-list.image .thumb{width: 15.7rem;height: 9.7rem;margin-left: 1.2rem;}
+.step2 .select-box .check-list.image .thumb > img{width: 9.7rem;height: 9.7rem;}
+.step2 .select-box .check-list.image .thumb.no-image{background: url('../img/no-image.png') no-repeat;background-size: 9.7rem 9.7rem;}
+.step2 .select-box .check-list.image .info{line-height: 1.8rem;}
+.step2 .select-box .check-list.image .title{float: none;height: 10rem;margin-left: 1.5rem;display: block;}
+.step2 .select-box .check-list.image .price{float: none;text-align: left;position: absolute;left: 1.5rem;top: 7rem;width: 100%;}
+.step2 .select-box .check-list.image .price button{position: absolute;left: 17rem;top: -1rem;}
+.step2 .select-box .ex-info{margin-top: 20px;font-size: 15px;color: #6f6f6f;font-weight: 300}
