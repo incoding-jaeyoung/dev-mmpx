@@ -465,6 +465,7 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2 .select-box .list-wrap .field-areas{display: flex;flex-direction: row;justify-content: space-between;margin-top: 2rem;flex-wrap: wrap;}
 .step2 .select-box .list-wrap .field-areas:first-child{margin-top: 0;}
 .step2 .select-box .list-wrap .field-areas .area{width: 28rem}
+.step2 .select-box .list-wrap .field-areas .area.large{width: 100%;}
 .step2 .select-box .list-wrap .field-areas .area > p{font-size: 16px;font-weight: 400;color: rgba(0, 0, 0, 0.8);margin-bottom: 1rem;}
 .step2 .select-box .list-wrap .field-areas input[type="text"]{text-align: right;padding: 2rem;font-family: Lato;font-size: 1.6rem;font-weight: bold;color: #0b0b1b;}
 .step2 .select-box .list-wrap .field-areas input:disabled{color: rgba(11, 11, 27, 0.6);font-weight: 400;}
@@ -475,7 +476,8 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2 .select-box .list-wrap .field-areas.ml .area{width:26rem}
 .step2 .select-box .list-wrap .check-con{position: relative;margin-top: 2.5rem}
 .step2 .select-box .list-wrap .check-con label{text-indent: 0.8rem;vertical-align: top;font-size: 1.6rem;font-weight: 400}
-.step2 .select-box .list-wrap .check-con label:after{background: url(../img/ico-chk-black.png) no-repeat; background-size: 100%;width: 2rem; height: 2rem; overflow: hidden; border-radius: 4px;left: 0}
+.step2 .select-box .list-wrap .check-con label:before{border-radius: 2px;}
+.step2 .select-box .list-wrap .check-con label:after{background: url('../img/ico-chk-black.png') no-repeat; background-size: 100%;width: 2rem; height: 2rem; overflow: hidden; border-radius: 2px;left: 0}
 .step2 .select-box .list-wrap .blue-box{padding: 3rem;background-color: #f7f9fa;margin-top: 3.5rem}
 .step2 .select-box .list-wrap .blue-box > p{font-size: 16px;font-weight: 400;color: rgba(0, 0, 0, 0.8);margin-bottom: 1rem;}
 .step2 .select-box .list-wrap .blue-box input[type="text"]{text-align: right;padding: 2rem;font-family: Lato;font-size: 1.6rem;font-weight: bold;color: #0b0b1b;width:33.5rem}
