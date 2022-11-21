@@ -1,12 +1,11 @@
-@import url(reset.css);
+@import url('reset.css');
 @import url('style-common.css');
 @import url('../fonts/fontawesome/css/all.min.css');
 @import url('../fonts/font.css');
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap'); */
-
 @import url('swiper-bundle.min.css');
 @import url('../js/jquery-ui/jquery-ui.min.css');
 @import url('../js/jquery-ui/datepicker-theme/datepicker-theme.css');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap'); */
 
 html,
 body {
@@ -24,19 +23,17 @@ body {
 /* common */
 * { -webkit-overflow-scrolling: touch;  word-break: keep-all; box-sizing: border-box;}
 input[type=text].datepicker{display: inline-flex; position: relative; background: url(../img/calendar.svg) no-repeat right 0.8rem center;}
-input[type=text],input[type=email],input[type=password],textarea, select {-webkit-appearance: none; border: .1rem solid #ddd; background-color: #fff; height: 4.8rem; padding: 0 1rem; font-size: 1.6rem; box-sizing: border-box; font-family:'Lato', 'Noto Sans KR', sans-serif; width: 100%;  vertical-align: middle; color:#333;}
-input[type=text]:disabled,input[type=password]:disabled,select:disabled{background-color: #ECECEC;}
+input[type=text],input[type=email],input[type=password],textarea, select {-webkit-appearance: none; border: .1rem solid #d6d6d7; background-color: #fff; height: 4.8rem; padding: 0 1rem; font-size: 1.6rem; box-sizing: border-box; font-family:'Lato', 'Noto Sans KR', sans-serif; width: 100%;  vertical-align: middle; color:#333;}
+input[type=text]:disabled,input[type=password]:disabled,select:disabled{background-color: #f8f8f8;color:#0b0b1b}
 textarea{width: 100%; padding-top: 1.3rem;  padding-bottom: 1.3rem; height:30rem; font-size: 1.4rem; background: none; border: none; border: 1px solid #ddd;}
 select::-ms-expand {display: none;}
 button{outline: none; box-shadow: none; border: none; background: none;font-family:'Lato', 'Noto Sans KR', sans-serif; cursor: pointer; transition: all 0.2s ease;}
-button:focus{outline: none; box-shadow: none;}
-button:hover{color: #0a64bf;}
-button.active{color: #0a64bf;}
 .clearfix:after{content: ""; display: block; clear: both;}
 em{font-style: normal;}
-input:focus,textarea:focus, select:focus{outline: none; box-shadow: none; border-color: #5A88D1;}
+input:focus,textarea:focus, select:focus{outline: none !important; box-shadow: none; border-color: #888;}
+input:read-only,textarea:read-only{pointer-events: none;}
 input.error{border: 1px solid #E60021;}
-select{background:#fff url(../img/ico-arrow-bottom.svg) no-repeat right 1rem center; padding-right: 3.5rem; color: #555; background-size: 2.4rem 2.4rem;}
+select{background:#fff url(../img/ico-arrow-bottom.svg) no-repeat right 1rem center; padding-right: 3rem; color: rgba(11, 11, 27, 0.5); background-size: 5rem 5rem}
 input[type=radio]{width: 1.8rem; height: 1.8rem; position: absolute; opacity: 0;}
 input[type=radio]+label:before{content: ""; display: inline-block; width: 1.8rem; height: 1.8rem; border-radius: 50%; border: .1rem solid #ddd; background-color: #fff; cursor: pointer; position: relative; z-index: 1; margin-right: 0.4rem;  vertical-align: top; flex: none;}
 input[type=radio]+label:after{content: ""; display: block; position: absolute; width: 0.8rem; height: 0.8rem; border-radius: 50%; background-color: #ddd; left: .6rem; top: .6rem; z-index: 1; transition: all 0.2s ease; }
@@ -51,7 +48,7 @@ input[type=checkbox]{width: 1.1rem; height: 1.1rem; position: absolute; opacity:
 input[type=checkbox]+label{display: inline-flex; position: relative; cursor: pointer; align-items: center; vertical-align: middle; font-size: 1.6rem; color: #333333; position: relative}
 
 input[type=checkbox]+label:before{content: ""; display: inline-block; width: 2rem; height: 2rem; border-radius: 4px;  border: solid 1px #ccc; background-color: #fff; cursor: pointer; position: relative; z-index: 1; margin-right: .4rem;  vertical-align: top; box-sizing: border-box; flex: none;}
-input[type=checkbox]:checked+label:after{content: ""; display: inline-block; width: 1.3rem; height: 1.3rem; border-radius: 2px; cursor: pointer; position: absolute; z-index: 2; box-sizing: border-box; flex: none; background-color: #4560d3;left: 1.9rem}
+input[type=checkbox]:checked+label:after{content: ""; display: inline-block; width: 1.3rem; height: 1.3rem; border-radius: 2px; cursor: pointer; position: absolute; z-index: 2; box-sizing: border-box; flex: none; background-color: #4560d3;left: 0.4rem}
 
 
 /* input[type=checkbox]:disabled+label:before{border: solid .1rem #dcdfe2; background-color: #f2f3f5; cursor:default;}
@@ -260,11 +257,14 @@ a:hover{color:#003994;}
 ::-webkit-scrollbar-thumb {background: #4560d3; border-radius: 10px; }
 ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2);}
 
+
 /* layout */
 html, body {scroll-behavior:smooth; color: #303030;} 
 body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04rem; }
 #wrapper{width: 100%; }
 #wrapper.car-select{overflow: hidden;}
+
+
 
 /* 서브 */
 #header {padding: 0 5rem; height: 7rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ccc; flex: none;}
@@ -285,7 +285,7 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .car-list {padding: 0 4rem; background-color: #f5f6f7; overflow: hidden;}
 .carSwiper {display: flex; align-items: center; justify-content: space-between;}
 .carSwiper .swiper-slide{width:28.4rem; margin: 0 1rem;}
-.carSwiper .swiper-slide.active a{border-bottom: 3px solid #000e3d; color: #000e3d;}
+.carSwiper .swiper-slide.active a{border-bottom: 2px solid #000e3d; color: #000e3d;}
 .carSwiper .swiper-slide a{display: flex; width: 100%; border-bottom: 2px solid #f5f6f7; height: 7rem; align-items: center; justify-content: center; color: #8a8f9c;}
 
 .total-price{border-bottom: 1px solid #ccc; padding: 0 5rem; display: flex; align-items: center; justify-content: space-between; height: 7rem;}
@@ -429,10 +429,14 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2 .info-box {padding: 1.4rem 2.5rem;background-color: #fffaf3;font-size: 1.6rem;color: #7a4d05;font-weight: 400; line-height: 2.4rem;}
 
 .step2 .select-box {margin-top: 6rem;padding-bottom: 6rem;border-bottom: solid 5px #edeef0}
+.step2 .select-box.small{padding-bottom: 2rem;}
 .step2 .select-box .top-title {font-size: 3rem;font-weight: 600;}
+.step2 .select-box .top-title.underline{border-bottom: solid 1px rgba(0,0,0,0.5);padding-bottom: 2rem}
+.step2 .select-box .top-price {float: right; font-size: 3rem;font-weight:600;font-family: 'Lato';}
 .step2 .select-box .check-wrap{display: flex;flex-direction: row;justify-content: space-between;margin-top: 3rem;flex-wrap: wrap;}
 .step2 .select-box .check-list{width:38rem;margin: 1rem 0;display: flex; align-items: center}
 .step2 .select-box .check-list label{width: 100%;box-sizing: border-box; padding: 1.5rem 0 1.5rem 1.5rem;border: solid 1px #ccc;height:6rem}
+.step2 .select-box .check-list label:after{left: 1.8rem}
 .step2 .select-box .check-list input[type="checkbox"]:checked+label{border-color: #4560d3;}
 .step2 .select-box .check-list .info{width: 100%;position: relative;line-height: 6rem}
 .step2 .select-box .check-list .title{float:left;margin-left: 1rem;font-size: 1.8rem;font-weight: 400;}
@@ -446,3 +450,28 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2 .select-box .check-list.image .price{float: none;text-align: left;position: absolute;left: 1.5rem;top: 7rem;width: 100%;}
 .step2 .select-box .check-list.image .price button{position: absolute;left: 17rem;top: -1rem;}
 .step2 .select-box .ex-info{margin-top: 20px;font-size: 15px;color: #6f6f6f;font-weight: 300}
+.step2 .select-box .list-wrap{margin-top: 3rem}
+.step2 .select-box .list-wrap > dl{display: flex;flex-direction: row;padding: 3.5rem 0;}
+.step2 .select-box .list-wrap > dl > dt{width:20rem;padding-top: 0.7rem;font-size: 20px;font-weight: 500}
+.step2 .select-box .list-wrap > dl > dt .star{position: relative;top: 0.3rem; margin-left: 0.8rem;color: #4560d3;font-size: 1.6rem;}
+.step2 .select-box .list-wrap > dl > dd{flex: 1}
+.step2 .select-box .list-wrap > dl.underline{border-bottom: solid 1px #ccc}
+.step2 .select-box .list-wrap .tab-btns{display: flex;flex-direction: row;}
+.step2 .select-box .list-wrap .tab-btns .btn{display:inline-block;width:18rem;height:4.1rem;border: solid 1px #d6d6d7;border-radius: 0.4rem;font-size: 1.4rem;font-weight: 500;color: rgba(0,0,0,0.5)}
+.step2 .select-box .list-wrap .tab-btns .btn:first-child{margin-right: 2rem;}
+.step2 .select-box .list-wrap .tab-btns .btn.active{background-color: #1b1c1d;color:#fff}
+.step2 .select-box .list-wrap .field-areas{display: flex;flex-direction: row;justify-content: space-between;margin-top: 2rem}
+.step2 .select-box .list-wrap .field-areas:first-child{margin-top: 0;}
+.step2 .select-box .list-wrap .field-areas .area{width: 28rem}
+.step2 .select-box .list-wrap .field-areas .area > p{font-size: 16px;font-weight: 400;color: rgba(0, 0, 0, 0.8);margin-bottom: 1rem;}
+.step2 .select-box .list-wrap .field-areas input[type="text"]{text-align: right;padding: 2rem;font-family: Lato;font-size: 1.6rem;font-weight: bold;color: #0b0b1b;}
+.step2 .select-box .list-wrap .field-areas input:disabled{color: rgba(11, 11, 27, 0.6);font-weight: 400;}
+.step2 .select-box .list-wrap .field-areas.ver{flex-direction: column;}
+.step2 .select-box .list-wrap .field-areas.ver .area{margin-top: 2rem}
+.step2 .select-box .list-wrap .field-areas.ver .area:first-child{margin-top: 0}
+.step2 .select-box .list-wrap .check-con{position: relative;margin-top: 2.5rem}
+.step2 .select-box .list-wrap .check-con label{text-indent: 0.8rem;vertical-align: top;font-size: 1.6rem;font-weight: 400}
+.step2 .select-box .list-wrap .check-con label:after{background: url(../img/ico-chk-black.png) no-repeat; background-size: 100%;width: 2rem; height: 2rem; overflow: hidden; border-radius: 4px;left: 0}
+.step2 .select-box .list-wrap .blue-box{padding: 3rem;background-color: #f7f9fa;margin-top: 3.5rem}
+.step2 .select-box .list-wrap .blue-box > p{font-size: 16px;font-weight: 400;color: rgba(0, 0, 0, 0.8);margin-bottom: 1rem;}
+.step2 .select-box .list-wrap .blue-box input[type="text"]{text-align: right;padding: 2rem;font-family: Lato;font-size: 1.6rem;font-weight: bold;color: #0b0b1b;width:33.5rem}
