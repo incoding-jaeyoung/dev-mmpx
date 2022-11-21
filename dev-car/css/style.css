@@ -491,12 +491,12 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2 .bottom-guide > dl strong{color: 000;font-weight: 600;}
 
 .step2 .order-wrap{border: solid 1px #ccc;}
-.step2 .order-box{padding: 4rem 2.9rem;}
+.step2 .order-box{padding: 4rem 2.9rem 2rem 2.9rem;}
 .step2 .order-box .badge{line-height: 1.6rem;height: 2.4rem;border-radius: 1.2rem;background-color: #20bbe5;padding: 0.4rem 1.2rem 0.5rem 1.3rem;display: inline-block;color: #fff;font-family: 'Lato';font-size: 1.2rem;font-weight: 500;}
 .step2 .order-box .car-title{font-family: Lato;font-size: 2.4rem;font-weight: 800;margin-top: 1.5rem}
 .step2 .order-box .car-desc{font-size: 1.6rem;font-weight: 400;margin-top: 1.5rem;line-height: 1.5;}
 .step2 .order-box .car-img > img{width: 30rem;height: 20rem}
-.step2 .order-list{margin-top: 2rem}
+
 .step2 .order-list .accodion-header{padding:0 2.9rem;cursor: pointer;position: relative}
 .step2 .order-list .accodion-header:after{position: absolute;content:'';width:2rem;height:2rem;background: url('../img/ico-arrow.svg') no-repeat;right: 2rem;top: 1.8rem;}
 .step2 .order-list .accodion.active .accodion-header:after{transform: rotate(180deg);}
