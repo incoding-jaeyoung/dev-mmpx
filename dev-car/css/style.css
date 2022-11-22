@@ -582,3 +582,9 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2.open .select-box .check-list input[type=checkbox]:checked+label:before{background-color: #4560d3;}
 .step2.open .select-box .check-list input[type=checkbox]+label:after{border-radius: 50%;background-color: #fff;width: 1rem;height: 1rem;left: 2rem}
 
+@media (min-width: 768px) and (max-width: 1200px){
+    .step2 {flex-direction: column;padding:0 5rem;margin-top: 3rem;width: 100%}
+    .step2 .left-wrap {width: 100%}
+    .step2 .right-wrap {width: 100%}
+    .step2 .select-box .check-list{width: calc(50% - 1rem)}
+}
