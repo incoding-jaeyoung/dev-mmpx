@@ -11,11 +11,8 @@ html,
 body {
   font-size: 62.5%;
 }
-@media all and (max-width: 1400px) {
-    html {font-size:45%;}
- }
- @media all and (max-width: 900px) {
-    html {font-size:35%;}
+ @media all and (max-width: 1000px) {
+    html {font-size:50%;}
  }
  @media all and (max-width: 600px) {
     html {font-size:62.5%;}
@@ -264,7 +261,8 @@ html, body {scroll-behavior:smooth; color: #303030;}
 body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04rem; }
 #wrapper{width: 100%; }
 #wrapper.car-select{overflow: hidden;}
-
+.mob-view {display:block;}
+.pc-view{display: none;}
 
 
 /* 서브 */
@@ -346,7 +344,61 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .inter-list li label .price img{width: 4.4rem; margin-bottom: -1.5rem;}
 .inter-list li input:checked+label{border: solid 1px #4560d3;}
 
-@media (max-width: 600px) {
+@media (min-width: 768px) and (max-width: 1200px){
+    .mob-view {display:block;}
+    .pc-view{display: none;}
+    #header {justify-content:flex-start;}
+    #header h1 a{width: 5rem; margin-right: 7rem;}
+    #header .back{display:none;}
+    #header .blur{display: none;}
+    .step-line{display: flex; font-size: 1.6rem;}
+    .carSwiper .swiper-slide{width:auto; margin: 0;}
+    .carSwiper .swiper-slide.active a{border-bottom: 2px solid #000e3d; color: #000e3d;}
+    .carSwiper .swiper-slide a{display: flex; width: auto; padding: 0 2rem; border-bottom: 2px solid #f5f6f7; align-items: center; justify-content: center; color: #8a8f9c; font-size: 2rem;}
+    .option-contents .select-block{padding-top: 4rem;}
+    .select-block {padding: 4rem 5rem;}
+    .option-contents .select-block hr{height: 0.1rem; margin-top: 3.5rem; margin-bottom: 3rem;}
+    .radio-select{display: flex; flex-wrap: wrap; justify-content:flex-start; padding-right:0;}
+    .radio-select dl{margin-right: 2rem;}
+    .radio-select dl:last-of-type{margin-top: 0rem;}
+    .caution-view{font-size: 1.2rem; display: flex; align-items: center; justify-content: center; padding: 2rem 0; color: #6f6f6f;}
+    .option-select{display: flex;  position: relative; flex-direction: column; overflow: hidden;}
+    .option-select hr{background-color: #edeef0; height: 0.5rem;}
+    .option-select .viewer{ background-color:#fafafa; width: 100%; height:63rem; }
+    .option-select .viewer img{}
+    .option-select .option-block{display: flex; width:100%; flex: none;  flex-direction: column; padding-bottom:0;}
+    .option-select .option-block .option-contents{height:auto; overflow-y: auto; }
+    .option-select .option-block .submit-block{position:static; width:100%; right: 0; bottom: 0; padding-top: 3rem; padding-bottom: 12rem; padding-left: 4rem; padding-right: 4rem;}
+    .option-select .option-block .submit-block .price-info{display: flex; height:6rem; color: #fff; align-items: center; background-color: #000e3d; font-weight: 300; font-size: 2rem; align-items: center; justify-content: center; position: fixed; bottom: 0; z-index: 10; left: 0; right: 0;}
+    .option-select .option-block .submit-block .price-info b{margin-left: 1rem;}
+    .option-select .option-block .submit-block .price-info a{margin-left: 0rem; position: absolute; width: 8rem; height: 2.4rem; border-radius:2px 2px 0 0;
+        background-color: #dbdbdb; top: -2.4rem; display: flex; align-items: center; justify-content: center;}
+    .option-select .option-block .submit-block .price-info a img{ width: 2.4rem;}
+    .option-select .option-block .submit-block .btn-select{display: flex;}
+    .option-select .option-block .submit-block .btn-select button{ color: #fff; width: 100%; height:6rem; align-items: center;  margin: 0 1rem;}
+    .option-select .option-block .submit-block .btn-select button:first-of-type{background-color:#0c0d0e ;}
+    .option-select .option-block .submit-block .btn-select button:last-of-type{background-color:#233975 ;}
+    .option-select .caution{padding:4rem 5rem; background-color: #f5f5f5; color: #6f6f6f;  line-height: 1.63; font-size: 1.4rem;}
+
+    .color-list {width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;}
+    .color-list li {width: 49%;}
+    .color-list li label{display: flex; border: 1px solid #ddd; height: 6rem; padding-left: 1.4rem; justify-content: space-between; align-items: center;flex: none;}
+    .color-list li label::after{left: 2rem; top: 50%; transform: translateY(-50%); transition: all 0.4s ease;}
+    .color-list li label *{ line-height: 100%;}
+    .color-list li label .price img{width: 4.4rem; margin-left: 0;}
+    .color-list li input:checked+label{border: solid 1px #4560d3;}
+
+    .inter-list {width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;}
+    .inter-list li {margin-top: 1rem; width: 49%;}
+    .inter-list li label{display: flex; border: 1px solid #ddd; height: 14rem; padding-left: 1.4rem; align-items: center; padding-top: 2rem; padding-bottom: 2rem;}
+    .inter-list li label::before{flex: none;}
+    .inter-list li label::after{left: 2rem; top: 50%; transform: translateY(-50%); transition: all 0.4s ease; flex: none;}
+    .inter-list li label *{ line-height: 100%;}
+    .inter-list li label img{width: 9.7rem; margin-left: 1.3rem;}
+    .inter-list li label .info{margin-left: 1.3rem; height: 100%; display: flex; flex-direction: column; justify-content:space-between;  width:auto; padding:0 0 0.5rem 0; flex: 1;}
+}
+
+@media (max-width: 767px) {
     #header {padding: 0 2rem; justify-content:flex-start;}
     #header h1 a{width: 5rem;}
     #header .back{display:inline-flex;}
@@ -376,8 +428,8 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
     .select-block h3{font-size: 1.6rem; margin-top: 1.5rem; letter-spacing: -0.05rem;}
     .option-contents .select-block hr{height: 0.1rem; margin-top: 3.5rem; margin-bottom: 3rem;}
     .radio-select{display: flex; flex-wrap: wrap; justify-content:flex-start; padding-right:0;}
-    .radio-select dl{margin-right: 1.2rem;}
-    .radio-select dl:last-of-type{margin-top: 1rem;}
+    .radio-select dl{margin-right: 1.2rem; margin-bottom: 1rem;}
+    .radio-select dl:last-of-type{margin-top: 0rem; margin-bottom: 0;}
     .caution-view{font-size: 1.2rem; display: flex; align-items: center; justify-content: center; padding: 2rem 0; color: #6f6f6f;}
     .option-select{display: flex;  position: relative; flex-direction: column; overflow: hidden;}
     .option-select hr{background-color: #edeef0; height: 0.5rem;}
