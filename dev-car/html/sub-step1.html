@@ -389,7 +389,10 @@
             },
          },
       });
-      tabswiper.slideTo(4)
+      var idx = $(".carSwiper .swiper-slide.active").index();
+      var len = $(".carSwiper .swiper-slide").length - tabswiper.snapGrid.length;
+      if(idx == 0) tabswiper.slideTo(0);
+      else if(len < idx) tabswiper.slideTo(idx - len);
    </script>
    
 </body>
