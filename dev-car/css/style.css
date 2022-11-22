@@ -424,11 +424,13 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 
 
 /* step 2 */
+.car-list.pin{position: sticky; top:0;z-index: 9;}
 .step2 {width: 118rem;margin: 0 auto;display: flex;flex-direction: row;justify-content: space-between; margin-top: 4.3rem;}
 .step2 .left-wrap {width: 78.1rem;}
 .step2 .right-wrap {width: 36rem}
 .step2 .info-box {position: relative;padding: 1.4rem 2.7rem;background-color: #fffaf3;font-size: 1.6rem;color: #7a4d05;font-weight: 400; line-height: 2.4rem;}
 .step2 .info-box:before{content:'*';position: absolute;left: 1.5rem;top: 1.7rem;}
+
 
 .step2 .select-box {margin-top: 6rem;padding-bottom: 6rem;border-bottom: solid 5px #edeef0}
 .step2 .select-box.small{padding-bottom: 2rem;}
@@ -496,7 +498,7 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2 .bottom-guide > dl > dd{padding-left: 2.5rem}
 .step2 .bottom-guide > dl strong{color: 000;font-weight: 600;}
 
-.step2 .order-wrap{border: solid 1px #ccc; position: sticky;top:0}
+.step2 .order-wrap{border: solid 1px #ccc; position: sticky;top: 7.8rem}
 .step2 .order-box{padding: 4rem 2.9rem 2rem 2.9rem;}
 .step2 .order-box .badge{line-height: 1.6rem;height: 2.4rem;border-radius: 1.2rem;background-color: #20bbe5;padding: 0.4rem 1.2rem 0.5rem 1.3rem;display: inline-block;color: #fff;font-family: 'Lato';font-size: 1.2rem;font-weight: 500;}
 .step2 .order-box .car-title{font-family: Lato;font-size: 2.4rem;font-weight: 800;margin-top: 1.5rem}
