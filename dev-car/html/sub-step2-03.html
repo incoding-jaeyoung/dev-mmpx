@@ -31,6 +31,48 @@
    <script src="../js/ScrollToPlugin3.min.js"></script>
    <script src="../js/zoom.js"></script>
    <script src="../js/ui.js"></script>
+   <script>
+      var tabswiper;
+      var isTab = false;
+      $(function () {
+         tabswiper = new Swiper(".carSwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 0,
+            freeMode: true,
+            breakpoints: {
+               600: {
+                  spaceBetween: 0,
+               },
+            },
+         });
+         $(window).on("scroll", function ( e ) {
+            if(isTab) return;
+            var winTop = $(window).scrollTop();
+            $(".step2 .select-box").each(function ( i ) {
+               var start =  i === 0 ? 0 : $(this).offset().top - 200;
+               var end = start + $(this).height();
+               if(winTop > start && winTop < end) {
+                  $(".carSwiper .swiper-slide").removeClass("active");
+                  $(".carSwiper .swiper-slide").eq(i).addClass("active");
+                  var len = $(".carSwiper .swiper-slide").length - tabswiper.snapGrid.length;
+                  if(i == 0) tabswiper.slideTo(0);
+                  else if(len < i) tabswiper.slideTo(i - len);
+               }
+            });
+         });
+      });
+      function changStep2Menu( num ) {
+         var box = $(".step2 .select-box").eq(num);
+         var top = box.offset().top - 100;
+         $(".carSwiper .swiper-slide").removeClass("active");
+         $(".carSwiper .swiper-slide").eq(num).addClass("active");
+         $("html,body").scrollTop(top);
+         isTab = true;
+         setTimeout(function () {
+            isTab = false;
+         }, 1100);
+      }
+   </script>
 </head>
 
 <body>
@@ -54,25 +96,25 @@
             <div class="swiper carSwiper">
                <div class="swiper-wrapper">
                   <div class="swiper-slide active">
-                     <a href="#">옵션</a>
+                     <a href="javascript: changStep2Menu(0);">옵션</a>
                   </div>
                   <div class="swiper-slide">
-                     <a href="#">커스터마이징</a>
+                     <a href="javascript: changStep2Menu(1);">커스터마이징</a>
                   </div>
                   <div class="swiper-slide">
-                     <a href="#">DECKTOP</a>
+                     <a href="javascript: changStep2Menu(2);">DECKTOP</a>
                   </div>
                   <div class="swiper-slide">
-                     <a href="#">보증연장</a>
+                     <a href="javascript: changStep2Menu(3);">보증연장</a>
                   </div>
                   <div class="swiper-slide">
-                     <a href="#">결제방법</a>
+                     <a href="javascript: changStep2Menu(4);">결제방법</a>
                   </div>
                   <div class="swiper-slide">
-                     <a href="#">탁송/부대비용</a>
+                     <a href="javascript: changStep2Menu(5);">탁송/부대비용</a>
                   </div>
                   <div class="swiper-slide">
-                     <a href="#">취득세/공채/기타비용</a>
+                     <a href="javascript: changStep2Menu(6);">취득세/공채/기타비용</a>
                   </div>
                </div>
             </div>
