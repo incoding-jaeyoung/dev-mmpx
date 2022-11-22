@@ -584,7 +584,7 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2.open .select-box .check-list.image .title{display: flex;align-items: center;}
 .step2 .m-total-price{display: none;align-items: center;position: fixed;width: 100%;height: 6rem;background-color: #000e3d;left: 0; bottom: 0;z-index: 8;color:#fff;justify-content: center;font-size: 2rem;font-weight: 300;}
 .step2 .m-total-price strong{font-family: 'Lato';font-size: 2rem;font-weight: bold;margin-left: 1.8rem}
-
+.step2 .m-total-price a{margin-left: 0rem; position: absolute; width: 8rem; height: 2.4rem; border-radius:2px 2px 0 0;background-color: #dbdbdb; top: -2.4rem; display: flex; align-items: center; justify-content: center;}
 @media (min-width: 768px) and (max-width: 1200px){
     .step2 {flex-direction: column;margin-top: 3rem;width: 100%}
     .step2 .left-wrap {width: 100%}
