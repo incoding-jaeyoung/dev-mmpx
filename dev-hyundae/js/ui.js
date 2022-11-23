@@ -4,23 +4,6 @@ if ('scrollRestoration' in history) {
 }
 gsap.registerPlugin(ScrollTrigger);
 // JavaScript Document
-$(document).ready(function () {
-    $('#top-aside').load("../html-inc/top-aside.html");
-    $('#header').load("../html-inc/header.html");
-    $('.nav-area').load("../html-inc/nav-area.html");
-    $('.full-menu').load("../html-inc/full-menu.html");
-    $('.m-menu').load("../html-inc/m-menu.html");
-    $('.footer-con').load("../html-inc/footer.html");
-    $('.page-aside').load("../html-inc/page-aside.html");
-
-    $('#header.digi').load("../html-inc-digital/header.html");
-    $('.nav-area.digi').load("../html-inc-digital/nav-area.html");
-    $('.full-menu.digi').load("../html-inc-digital/full-menu.html");
-    $('.m-menu.digi').load("../html-inc-digital/m-menu.html");
-
-    $('#header.my').load("../html-inc-mypage/header.html");
-    $('.nav-area.my').load("../html-inc-mypage/nav-area.html");
-});
 window.onload = function () {
     //$('body').imagesLoaded().done(function (instance) {
         commonTween()
@@ -616,6 +599,23 @@ function counter() {
     }
 }
 
+function setAcoddion() {
+    $(".accodion").each(function () {
+        var owner = $(this);
+        var header = $(this).find(".accodion-header");
+        var body = $(this).find(".accodion-body");
+        header.on("click", function () {
+            if(!owner.is(".active")){
+                owner.addClass("active");
+                body.slideDown();
+            } else {
+                owner.removeClass("active");
+                body.slideUp();
+            }
+        });
+    })
+}
+
 $(document).ready(function(){
     var winWidth = $(window).width()
     if(winWidth <= 600){
@@ -625,6 +625,7 @@ $(document).ready(function(){
       new Zooming({
       }).listen('.zoom img')
     }
+    setAcoddion();
 });
 
 
