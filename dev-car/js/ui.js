@@ -542,15 +542,20 @@ function navTrigger() {
 
 
 
-function openLayer(selector, href) {
+function openLayer(selector, href, animation) {
     var flag = selector,
         target = href;
     flag = $(flag);
     flag.load(href, function () {
         $(this).show();
+        $(this).find('.modal').css('transition', 'none');
         $(this).find('.modal').show().addClass('scroll')
         $('.overlay').show();
-        //        $('body').css('overflow','hidden');
+        $('body').css('overflow','hidden');
+        if(animation === 'up'){
+            gsap.set($(this).find('.modal'), {y: $(window).height()});
+            gsap.to($(this).find('.modal'), 0.8, { y: 0, ease: Cubic.easeInOut });
+        }
     });
     //    $('body').addClass('scroll')
     return false;
@@ -564,7 +569,7 @@ function closeLayer(no) {
         $('.popup-wrap').empty()
         $('.popup-wrap').removeAttr('style').hide();
         $('.overlay').hide().removeAttr('style');
-        //        $('body').css('overflow','').removeAttr('style');
+        $('body').css('overflow','');
     }
     //    $('body').removeClass('fixed')
 }
@@ -604,7 +609,7 @@ function setAcoddion() {
         var owner = $(this);
         var header = $(this).find(".accodion-header");
         var body = $(this).find(".accodion-body");
-        header.on("click", function () {
+        header.off("click").on("click", function () {
             if(!owner.is(".active")){
                 owner.addClass("active");
                 body.slideDown();
