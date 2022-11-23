@@ -201,6 +201,23 @@ a:hover{color:#003994;}
 .modal-body textarea{width: 100%; border: .1rem solid #ddd; border-radius: .4rem; padding: 1rem; height: 12rem;}
 .modal-body .foot-btn{margin-top: 3rem;text-align: center;}
 .modal-body .foot-btn button{background-color: #000e3d;padding: 1.5rem 2rem;box-sizing: border-box;width: 16.5rem;color: #fff;font-size: 1.4rem;font-weight: 500;}
+
+.modal-body .gallery{overflow: hidden;position: relative}
+.modal-body .gallery .swiper-slide img{width: 100%;height: auto}
+.modal-body .gallery .swiper-button-next{right: 0; width:4.4rem;height:4.4rem;background: url('../img/gallery-next.svg') no-repeat center rgba(255,255,255,0.5)}
+.modal-body .gallery .swiper-button-next:after{content:'';}
+.modal-body .gallery .swiper-button-prev{left: 0; width:4.4rem;height:4.4rem;background: url('../img/gallery-prev.svg') no-repeat center rgba(255,255,255,0.5)}
+.modal-body .gallery .swiper-button-prev:after{content:'';}
+.modal-body .pagination{text-align: right;margin-top: 1rem}
+.modal-body .pagination .button-next,
+.modal-body .pagination .button-prev{width: 4.4rem;height: 4.4rem}
+.modal-body .pagination .button-next{background: url('../img/gallery-next.svg') no-repeat center;background-size: 80%;position: relative;top: -0.2rem}
+.modal-body .pagination .button-prev{background: url('../img/gallery-prev.svg') no-repeat center;background-size: 80%;position: relative;top: -0.2rem}
+.modal-body .pagination .page{font-family: 'Lato';font-size: 1.6rem;font-weight: bold;margin: 0 0.2rem}
+.modal-body .pagination .page .center{margin: 0 0.2rem}
+.modal-body .pagination .swiper-pagination-total{color: #7f7f7f}
+
+
 .modal-footer{border-top: none; padding:0rem; justify-content:center; padding: 1.2rem; background: #ECECEC;}
 .modal-scroll-con{overflow-y: auto; max-height: 54rem; padding-right: 6rem; margin-right: -6rem; }
 .modal-scroll-con::-webkit-scrollbar {width: 0.5rem;}
@@ -232,6 +249,10 @@ a:hover{color:#003994;}
     .modal-dialog.modal-s .modal-header{border-radius: 0;}
     .modal-dialog.modal-s .modal-body{border-radius: 0; padding: 2.4rem 0 2.4rem 2.4rem}
     .modal-dialog.modal-s .modal-scroll-con{padding-right: 2.4rem;}
+    .modal-body .gallery .swiper-button-next,
+    .modal-body .gallery .swiper-button-prev{display: none;}
+    .modal-body .info-list{padding-bottom: 2rem;}
+    .modal-body .info-list dl{margin-top: 2rem;}
 }
 
 /* added:begin */
@@ -686,20 +707,20 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 
 
 .modal.step2-02 .modal-dialog {max-width: 92.4rem;}
-.modal.step2-02 .modal-body .gallery{overflow: hidden;position: relative}
-.modal.step2-02 .modal-body .swiper-slide img{width: 100%;height: auto}
-.modal.step2-02 .modal-body .swiper-button-next{right: 0; width:4.4rem;height:4.4rem;background: url('../img/gallery-next.svg') no-repeat center rgba(255,255,255,0.5)}
-.modal.step2-02 .modal-body .swiper-button-next:after{content:'';}
-.modal.step2-02 .modal-body .swiper-button-prev{left: 0; width:4.4rem;height:4.4rem;background: url('../img/gallery-prev.svg') no-repeat center rgba(255,255,255,0.5)}
-.modal.step2-02 .modal-body .swiper-button-prev:after{content:'';}
-.modal.step2-02 .modal-body .pagination{text-align: right;margin-top: 1rem}
-.modal.step2-02 .modal-body .pagination .button-next,
-.modal.step2-02 .modal-body .pagination .button-prev{width: 4.4rem;height: 4.4rem}
-.modal.step2-02 .modal-body .pagination .button-next{background: url('../img/gallery-next.svg') no-repeat center;background-size: 80%;position: relative;top: -0.2rem}
-.modal.step2-02 .modal-body .pagination .button-prev{background: url('../img/gallery-prev.svg') no-repeat center;background-size: 80%;position: relative;top: -0.2rem}
-.modal.step2-02 .modal-body .pagination .page{font-family: 'Lato';font-size: 1.6rem;font-weight: bold;margin: 0 0.2rem}
-.modal.step2-02 .modal-body .pagination .page .center{margin: 0 0.2rem}
-.modal.step2-02 .modal-body .pagination .swiper-pagination-total{color: #7f7f7f}
+.modal-body .gallery{overflow: hidden;position: relative}
+.modal-body .gallery .swiper-slide img{width: 100%;height: auto}
+.modal-body .gallery .swiper-button-next{right: 0; width:4.4rem;height:4.4rem;background: url('../img/gallery-next.svg') no-repeat center rgba(255,255,255,0.5)}
+.modal-body .gallery .swiper-button-next:after{content:'';}
+.modal-body .gallery .swiper-button-prev{left: 0; width:4.4rem;height:4.4rem;background: url('../img/gallery-prev.svg') no-repeat center rgba(255,255,255,0.5)}
+.modal-body .gallery .swiper-button-prev:after{content:'';}
+.modal-body .pagination{text-align: right;margin-top: 1rem}
+.modal-body .pagination .button-next,
+.modal-body .pagination .button-prev{width: 4.4rem;height: 4.4rem}
+.modal-body .pagination .button-next{background: url('../img/gallery-next.svg') no-repeat center;background-size: 80%;position: relative;top: -0.2rem}
+.modal-body .pagination .button-prev{background: url('../img/gallery-prev.svg') no-repeat center;background-size: 80%;position: relative;top: -0.2rem}
+.modal-body .pagination .page{font-family: 'Lato';font-size: 1.6rem;font-weight: bold;margin: 0 0.2rem}
+.modal-body .pagination .page .center{margin: 0 0.2rem}
+.modal-body .pagination .swiper-pagination-total{color: #7f7f7f}
 .modal.step2-02 .modal-body .info-list{padding-bottom:3rem}
 .modal.step2-02 .modal-body .info-list.nopadding{padding-bottom: 0;}
 .modal.step2-02 .modal-body .info-list dl{margin-top: 3rem;}
@@ -707,10 +728,10 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .modal.step2-02 .modal-body .info-list dt:before{content:'';width: 3px;height: 3px;border-radius: 50%;background-color: #000;position: absolute;left:0;top:1.3rem}
 .modal.step2-02 .modal-body .info-list dd{margin-left: 0.7rem;padding-left: 0.3rem;font-size: 1.6rem;font-weight: 400;color: rgba(0,0,0,0.6);margin-top: 0.7rem}
 @media (max-width: 767px) {
-    .modal.step2-02 .modal-body .swiper-button-next,
-    .modal.step2-02 .modal-body .swiper-button-prev{display: none;}
-    .modal.step2-02 .modal-body .info-list{padding-bottom: 2rem;}
-    .modal.step2-02 .modal-body .info-list dl{margin-top: 2rem;}
+    .modal-body .gallery .swiper-button-next,
+    .modal-body .gallery .swiper-button-prev{display: none;}
+    .modal-body .info-list{padding-bottom: 2rem;}
+    .modal-body .info-list dl{margin-top: 2rem;}
     .modal.step2-02 .modal-body .info-list dt{font-size: 1.2rem;}
     .modal.step2-02 .modal-body .info-list dd{font-size: 1.2rem}
     .modal.step2-02 .modal-body .pagination .button-next, 
