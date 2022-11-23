@@ -189,18 +189,43 @@ a:hover{color:#003994;}
     display: none;
     overflow: hidden;
     outline: 0;} 
+
 .modal.show{opacity: 1; transform: translateY(0);}
 .modal-dialog{max-width: none; margin-left: auto; margin-right: auto; z-index: 101; align-items: center; position: relative; display: flex; height: 100%; pointer-events: none; width: 98rem;}
 .modal-content{box-shadow: 0 .3rem 1rem 0 rgba(0, 0, 0, 0.3); border: none; position: relative; display: flex; background-color: #fff; flex-direction: column; width: 100%; pointer-events: auto; padding: 6rem;}
+.modal-dialog.fullsize{width: 100%;}
+.modal-dialog.fullsize .modal-content{width: 100%;height: 100%;padding: 3rem 4.5rem}
 .modal-header{display: flex; align-items: center; justify-content:center; flex-direction: column;}
 .modal-content .close{position: absolute; right: 3rem; top: 3rem;}
 .modal-content .close img{width: 4rem;}
-.modal-header h1{ text-align: center; font-size: 3rem; font-weight: bold; display: flex; align-items: center; justify-content: center; line-height: 100%; margin-bottom: 5rem;}
+.modal-header h1{ text-align: center; font-size: 3rem; font-weight: bold; display: flex; align-items: center; justify-content: center; line-height: 100%; margin-bottom: 5rem;margin-left: -2.5rem}
 .modal-header h1 img{width: 4rem; margin-right: 0.5rem;}
+.modal-dialog.fullsize .modal-header{justify-content: flex-start;align-items: flex-start;border-bottom: solid 1px rgba(0,0,0,0.6)}
+.modal-dialog.fullsize .modal-header h1{margin-left:0; margin-bottom: 3rem}
 .modal-body{border: none; outline: none; font-size: 1.4rem; line-height: 1.5;}
 .modal-body textarea{width: 100%; border: .1rem solid #ddd; border-radius: .4rem; padding: 1rem; height: 12rem;}
+.modal-body .foot-btn{margin-top: 3rem;text-align: center;}
+.modal-body .foot-btn button{background-color: #000e3d;padding: 1.5rem 2rem;box-sizing: border-box;width: 16.5rem;color: #fff;font-size: 1.4rem;font-weight: 500;}
+
+.modal-body .gallery{overflow: hidden;position: relative}
+.modal-body .gallery .swiper-slide img{width: 100%;height: auto}
+.modal-body .gallery .swiper-button-next{right: 0; width:4.4rem;height:4.4rem;background: url('../img/gallery-next.svg') no-repeat center rgba(255,255,255,0.5)}
+.modal-body .gallery .swiper-button-next:after{content:'';}
+.modal-body .gallery .swiper-button-prev{left: 0; width:4.4rem;height:4.4rem;background: url('../img/gallery-prev.svg') no-repeat center rgba(255,255,255,0.5)}
+.modal-body .gallery .swiper-button-prev:after{content:'';}
+.modal-body .pagination{text-align: right;margin-top: 1rem}
+.modal-body .pagination .button-next,
+.modal-body .pagination .button-prev{width: 4.4rem;height: 4.4rem}
+.modal-body .pagination .button-next{background: url('../img/gallery-next.svg') no-repeat center;background-size: 80%;position: relative;top: -0.2rem}
+.modal-body .pagination .button-prev{background: url('../img/gallery-prev.svg') no-repeat center;background-size: 80%;position: relative;top: -0.2rem}
+.modal-body .pagination .page{font-family: 'Lato';font-size: 1.6rem;font-weight: bold;margin: 0 0.2rem}
+.modal-body .pagination .page .center{margin: 0 0.2rem}
+.modal-body .pagination .swiper-pagination-total{color: #7f7f7f}
+
+
 .modal-footer{border-top: none; padding:0rem; justify-content:center; padding: 1.2rem; background: #ECECEC;}
-.modal-scroll-con{overflow-y: auto; max-height: 54rem; padding-right: 6rem; margin-right: -6rem; }
+.modal-scroll-con{overflow-y: auto; overflow-x: hidden;max-height: 54rem; padding-right: 6rem; margin-right: -6rem; }
+.modal-dialog.fullsize .modal-scroll-con{padding-top: 3rem}
 .modal-scroll-con::-webkit-scrollbar {width: 0.5rem;}
 .modal-scroll-con::-webkit-scrollbar-thumb {background-color: #4560d3;}
 .modal-scroll-con::-webkit-scrollbar-track {background-color: #fff;}
@@ -209,13 +234,17 @@ a:hover{color:#003994;}
 .modal-dialog.modal-s .modal-header{border-radius: 0; height: auto; min-height: 5.6rem; padding: 1.6rem 8rem; text-align: center;}
 .modal-dialog.modal-s .modal-body{border-radius: 0; padding: 4rem 0 4rem 1.6rem}
 .modal-dialog.modal-s .modal-scroll-con{padding-right: 1.6rem;}
+.modal-dialog.fullsize .modal-body{height: calc(100% - 3rem)}
+.modal-dialog.fullsize .modal-scroll-con{max-height: 100%;height: 100%;margin-right: -4.5rem}
 @media (max-width: 1200px) {
-    .modal-scroll-con{overflow-y: auto; max-height: 40rem;} 
+    .modal-scroll-con{overflow-y: auto; max-height: 40rem;}
+    .modal-dialog.fullsize .modal-scroll-con{max-height: 100%;height: 100%}
 }
 @media (max-width:767px) {
     .modal.show{opacity: 1; transform: translateY(0);}
     .modal-dialog{max-width: none; margin-left: auto; margin-right: auto; z-index: 101; align-items: center; position: relative; display: flex; height: 100%; pointer-events: none; width: 95%;}
     .modal-content{border-radius:0; box-shadow: 0 .3rem 1rem 0 rgba(0, 0, 0, 0.3); border: none; position: relative; display: flex; background-color: #fff; flex-direction: column; width: 100%; pointer-events: auto; max-height: 80%; padding: 4rem 2rem;}
+    .modal-dialog.fullsize .modal-content{width: 100%;height: 100%;padding: 2rem 2.5rem;max-height: 100%;}
     .modal-content .close{position: absolute; right: 2rem; top: 2rem;}
     .modal-content .close img{width: 2.4rem;}
     .modal-header h1{font-size: 1.8rem;margin-bottom:2rem;}
@@ -230,7 +259,13 @@ a:hover{color:#003994;}
     .modal-dialog.modal-s .modal-header{border-radius: 0;}
     .modal-dialog.modal-s .modal-body{border-radius: 0; padding: 2.4rem 0 2.4rem 2.4rem}
     .modal-dialog.modal-s .modal-scroll-con{padding-right: 2.4rem;}
+    .modal-dialog.fullsize .modal-scroll-con{margin-right: -2.5rem;padding-right: 2.5rem;}
+    .modal-dialog.fullsize .modal-body{overflow: visible;}
 
+    .modal-body .gallery .swiper-button-next,
+    .modal-body .gallery .swiper-button-prev{display: none;}
+    .modal-body .info-list{padding-bottom: 2rem;}
+    .modal-body .info-list dl{margin-top: 2rem;}
 }
 
 /* added:begin */
@@ -516,7 +551,8 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .step2 .select-box .check-list.image .title{float: none;height: 10rem;margin-left: 1.5rem;display: block;}
 .step2 .select-box .check-list.image .price{float: none;text-align: left;position: absolute;left: 1.5rem;top: 7rem;width: 100%;}
 .step2 .select-box .check-list.image .price button{position: absolute;right: 1.7rem;top: -1rem;}
-.step2 .select-box .ex-info{margin-top: 20px;font-size: 1.5rem;color: #6f6f6f;font-weight: 300}
+.step2 .select-box .ex-info{margin-top: 20px;font-size: 1.5rem;color: #6f6f6f;font-weight: 300;position: relative;padding-left: 1.7rem}
+.step2 .select-box .ex-info:before{content:'※';position: absolute;left:0rem;top:0rem}
 .step2 .select-box .list-wrap{margin-top: 3rem}
 .step2 .select-box .list-wrap > dl{display: flex;flex-direction: row;padding: 3.5rem 0;}
 .step2 .select-box .list-wrap > dl > dt{width:20rem;padding-top: 0.7rem;font-size: 20px;font-weight: 500}
@@ -668,3 +704,53 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 
 
 /* 팝업 */
+
+
+
+.modal.step2-01 .modal-dialog {max-width: 68.8rem;}
+.modal.step2-01 .modal-content {padding-left: 3rem;padding-right: 3rem}
+.modal.step2-01 .modal-header{border-bottom: solid 1px rgba(0,0,0,0.1)}
+.modal.step2-01 .modal-header h1{margin-bottom: 2.5rem;}
+.modal.step2-01 .modal-body .text{margin-top: 2.5rem;text-align: center;font-size:1.6rem;font-weight: 400;}
+.modal.step2-01 .modal-body .table{margin-top: 2rem;}
+.modal.step2-01 .modal-body .table thead td{text-align: center;background-color: #f9fafb;border: solid 1px #e2e2e3;padding: 1.2rem;font-family: 'Lato';font-size: 1.5rem; color: rgba(0,0,0,0.8)}
+.modal.step2-01 .modal-body .table tbody td{text-align: center;border: solid 1px #e2e2e3;padding: 1.2rem;font-family: 'Lato';font-size: 1.5rem; color: rgba(0,0,0,0.8)}
+@media (max-width: 767px) {
+    .modal.step2-01 .modal-body .text{font-size: 1.3rem;}
+    .modal.step2-01 .modal-body .table thead td,
+    .modal.step2-01 .modal-body .table tbody td{padding: 0.8rem;font-size: 1.2rem}
+}
+
+
+.modal.step2-02 .modal-dialog {max-width: 92.4rem;}
+.modal-body .gallery{overflow: hidden;position: relative}
+.modal-body .gallery .swiper-slide img{width: 100%;height: auto}
+.modal-body .gallery .swiper-button-next{right: 0; width:4.4rem;height:4.4rem;background: url('../img/gallery-next.svg') no-repeat center rgba(255,255,255,0.5)}
+.modal-body .gallery .swiper-button-next:after{content:'';}
+.modal-body .gallery .swiper-button-prev{left: 0; width:4.4rem;height:4.4rem;background: url('../img/gallery-prev.svg') no-repeat center rgba(255,255,255,0.5)}
+.modal-body .gallery .swiper-button-prev:after{content:'';}
+.modal-body .pagination{text-align: right;margin-top: 1rem}
+.modal-body .pagination .button-next,
+.modal-body .pagination .button-prev{width: 4.4rem;height: 4.4rem}
+.modal-body .pagination .button-next{background: url('../img/gallery-next.svg') no-repeat center;background-size: 80%;position: relative;top: -0.2rem}
+.modal-body .pagination .button-prev{background: url('../img/gallery-prev.svg') no-repeat center;background-size: 80%;position: relative;top: -0.2rem}
+.modal-body .pagination .page{font-family: 'Lato';font-size: 1.6rem;font-weight: bold;margin: 0 0.2rem}
+.modal-body .pagination .page .center{margin: 0 0.2rem}
+.modal-body .pagination .swiper-pagination-total{color: #7f7f7f}
+.modal.step2-02 .modal-body .info-list{padding-bottom:3rem}
+.modal.step2-02 .modal-body .info-list.nopadding{padding-bottom: 0;}
+.modal.step2-02 .modal-body .info-list dl{margin-top: 3rem;}
+.modal.step2-02 .modal-body .info-list dt{position: relative;font-size: 1.8rem;font-weight: 600;padding-left: 1rem}
+.modal.step2-02 .modal-body .info-list dt:before{content:'';width: 3px;height: 3px;border-radius: 50%;background-color: #000;position: absolute;left:0;top:1.3rem}
+.modal.step2-02 .modal-body .info-list dd{margin-left: 0.7rem;padding-left: 0.3rem;font-size: 1.6rem;font-weight: 400;color: rgba(0,0,0,0.6);margin-top: 0.7rem}
+@media (max-width: 767px) {
+    .modal-body .gallery .swiper-button-next,
+    .modal-body .gallery .swiper-button-prev{display: none;}
+    .modal-body .info-list{padding-bottom: 2rem;}
+    .modal-body .info-list dl{margin-top: 2rem;}
+    .modal.step2-02 .modal-body .info-list dt{font-size: 1.2rem;}
+    .modal.step2-02 .modal-body .info-list dd{font-size: 1.2rem}
+    .modal.step2-02 .modal-body .pagination .button-next, 
+    .modal.step2-02 .modal-body .pagination .button-prev{width: 3rem;height: 3rem;top: -0.3rem}
+    .modal.step2-02 .modal-body .pagination .page{margin: 0}
+}
