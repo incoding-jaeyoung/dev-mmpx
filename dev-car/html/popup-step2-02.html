@@ -1,0 +1,84 @@
+
+<body> 
+   <div class="modal modal-inside step2-02" tabindex="-1" aria-hidden="true">
+      <div class="overlay" onclick="closeModal();"><span>닫기</span></div>   
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h1 class="pop-title"><button type="button"><img src="../img/info.svg" alt=""></button> 4륜 구동 시스템</h1>
+            </div>
+            <div class="modal-body">
+               <div class="modal-scroll-con">
+                  <div class="swiper gallery">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../img/thumb/@interior_04.jpg" alt="" /></div>
+                        <div class="swiper-slide"><img src="../img/thumb/@interior_04.jpg" alt="" /></div>
+                        <div class="swiper-slide"><img src="../img/thumb/@interior_04.jpg" alt="" /></div>
+                        <div class="swiper-slide"><img src="../img/thumb/@interior_04.jpg" alt="" /></div>
+                        <div class="swiper-slide"><img src="../img/thumb/@interior_04.jpg" alt="" /></div>
+                     </div>
+                     <div class="swiper-button-next"></div>
+                     <div class="swiper-button-prev"></div>
+                  </div>
+                  <div class="pagination">
+                     <button class="button-prev"></button>
+                     <span class="page"></span>
+                     <button class="button-next"></button>
+                  </div>
+                  <div class="info-list">
+                     <dl>
+                        <dt>전자식 파워 스티어링 휠(R-EPS)</dt>
+                        <dd>유압식 스티어링 휠에서 한단계 업그레이드 된 R-EPS 적용으로 탁월한 핸들링과 응답성을 구현하였습니다.</dd>
+                     </dl>
+                     <dl>
+                        <dt>음성인식제어</dt>
+                        <dd>더 편리한 운전을 위해 음성으로 쉽고 편리하게 내비게이션, 공조장치, 엔터테인먼트 등을 제어할 수 있습니다.</dd>
+                     </dl>
+                     <dl>
+                        <dt>엔터테인먼트 서비스</dt>
+                        <dd>차 안에서도 다양한 엔터테인먼트를 즐길 수 있도록 음성 명령을 통해 정보 검색은 물론 지니 뮤직, 팟캐스트. 동화, 동요 등 다양한 컨텐츠를 이용할 수 있습니다.</dd>
+                     </dl>
+                  </div>
+               </div>
+               <div class="foot-btn">
+                  <button onclick="">추가</button>
+               </div>
+               <button type="button" class="close" onclick="closeModal();"><img src="../img/btn-close.svg" alt=""></button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript">
+      var gallerySwiper;
+      $(function (){
+         if(gallerySwiper) gallerySwiper.destroy(true, true);
+         gallerySwiper = new Swiper(".gallery", {
+            pagination: {
+               el: ".pagination .page",
+               type: "fraction",
+               formatFractionCurrent: function (number) {
+                  return ('0' + number).slice(-2);
+               },
+               formatFractionTotal: function (number) {
+                  return ('0' + number).slice(-2);
+               },
+               renderFraction: function (currentClass, totalClass) {
+                  return '<span class="' + currentClass + '"></span>' +
+                         '<span class="center">/</span>' +
+                         '<span class="' + totalClass + '"></span>';
+               }
+            },
+            navigation: {
+               nextEl: ".swiper-button-next",
+               prevEl: ".swiper-button-prev",
+            },
+         });
+         $(".pagination .button-prev").off("click").on("click", function () {
+            gallerySwiper.slidePrev();
+         });
+         $(".pagination .button-next").off("click").on("click", function () {
+            gallerySwiper.slideNext();
+         });
+      });
+   </script>
+</body>
