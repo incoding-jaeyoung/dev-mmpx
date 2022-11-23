@@ -701,7 +701,19 @@ body{font-size: 1.8rem; font-weight:500; line-height:160%; letter-spacing: -0.04
 .modal.step2-02 .modal-body .pagination .page .center{margin: 0 0.2rem}
 .modal.step2-02 .modal-body .pagination .swiper-pagination-total{color: #7f7f7f}
 .modal.step2-02 .modal-body .info-list{padding-bottom:3rem}
+.modal.step2-02 .modal-body .info-list.nopadding{padding-bottom: 0;}
 .modal.step2-02 .modal-body .info-list dl{margin-top: 3rem;}
 .modal.step2-02 .modal-body .info-list dt{position: relative;font-size: 1.8rem;font-weight: 600;padding-left: 1rem}
 .modal.step2-02 .modal-body .info-list dt:before{content:'';width: 3px;height: 3px;border-radius: 50%;background-color: #000;position: absolute;left:0;top:1.3rem}
-.modal.step2-02 .modal-body .info-list dd{margin-left: 0.7rem;padding-left: 0.3rem;font-size: 1.6rem;font-weight: 400;color: rgba(0,0,0,0.6)}
+.modal.step2-02 .modal-body .info-list dd{margin-left: 0.7rem;padding-left: 0.3rem;font-size: 1.6rem;font-weight: 400;color: rgba(0,0,0,0.6);margin-top: 0.7rem}
+@media (max-width: 767px) {
+    .modal.step2-02 .modal-body .swiper-button-next,
+    .modal.step2-02 .modal-body .swiper-button-prev{display: none;}
+    .modal.step2-02 .modal-body .info-list{padding-bottom: 2rem;}
+    .modal.step2-02 .modal-body .info-list dl{margin-top: 2rem;}
+    .modal.step2-02 .modal-body .info-list dt{font-size: 1.2rem;}
+    .modal.step2-02 .modal-body .info-list dd{font-size: 1.2rem}
+    .modal.step2-02 .modal-body .pagination .button-next, 
+    .modal.step2-02 .modal-body .pagination .button-prev{width: 3rem;height: 3rem;top: -0.3rem}
+    .modal.step2-02 .modal-body .pagination .page{margin: 0}
+}
