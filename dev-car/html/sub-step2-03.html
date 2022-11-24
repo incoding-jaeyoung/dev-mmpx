@@ -931,8 +931,8 @@
                   </div>
                   
                   <div class="order-btns">
-                     <button class="btn">견적서 저장</button>
-                     <button class="btn">계약서 작성</button>
+                     <button class="btn btn-black">견적서 저장</button>
+                     <button class="btn btn-blue">계약서 작성</button>
                   </div>
 
                </div>
@@ -951,20 +951,7 @@
    <!-- POPUP -->
    <div class="popup-wrap" id="popup" tabindex="0"></div>
    <!-- //POPUP -->
-   <a href="javascript:openLayer('#popup', 'popup-order-list.html', 'up');"><img src="../img/ico-price-up.svg" alt=""></a>
-
-   <script>
-      var tabswiper = new Swiper(".carSwiper", {
-         slidesPerView: "auto",
-         spaceBetween: 0,
-         freeMode: true,
-         breakpoints: {
-            600: {
-               spaceBetween: 0,
-            },
-         },
-      });
-   </script>
+   <a href="javascript:UI.openLayer('#popup', 'popup-order-list.html', 'up');"><img src="../img/ico-price-up.svg" alt=""></a>
 </body>
 
 </html>

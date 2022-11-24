@@ -31,6 +31,22 @@
    <script src="../js/ScrollToPlugin3.min.js"></script>
    <script src="../js/zoom.js"></script>
    <script src="../js/ui.js"></script>
+   <script>
+      $(function () {
+         var tabswiper = new Swiper(".carSwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 0,
+            breakpoints: {
+               600: {
+                  spaceBetween: 0,
+               },
+            },
+         });
+         var idx = $(".carSwiper .swiper-slide.active").index();
+         var len = $(".carSwiper .swiper-slide").length - tabswiper.snapGrid.length;
+         if(len < idx) tabswiper.slideTo(idx - len);
+      });
+   </script>
 </head>
 
 <body>
@@ -365,8 +381,8 @@
                   <p class="price-info">선택 차량 가격 <b>33,710,000 원</b> <a href="#"><img src="../img/ico-price-up.svg"
                            alt=""></a></p>
                   <p class="btn-select">
-                     <button type="button">취소</button>
-                     <button type="button">다음</button>
+                     <button class="btn btn-black" type="button">취소</button>
+                     <button class="btn btn-blue" type="button">다음</button>
                   </p>
                </div>
             </div>
@@ -377,23 +393,7 @@
    <!-- POPUP -->
    <div class="popup-wrap" id="popup" tabindex="0"></div>
    <!-- //POPUP -->
-   <div class="overlay" onclick="closeLayer();"><span>닫기</span></div>
-
-   <script>
-      var tabswiper = new Swiper(".carSwiper", {
-         slidesPerView: "auto",
-         spaceBetween: 0,
-         breakpoints: {
-            600: {
-               spaceBetween: 0,
-            },
-         },
-      });
-      var idx = $(".carSwiper .swiper-slide.active").index();
-      var len = $(".carSwiper .swiper-slide").length - tabswiper.snapGrid.length;
-      if(idx == 0) tabswiper.slideTo(0);
-      else if(len < idx) tabswiper.slideTo(idx - len);
-   </script>
+   <div class="overlay" onclick="UI.closeLayer();"><span>닫기</span></div>
    
 </body>
 
