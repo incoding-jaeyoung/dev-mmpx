@@ -1,65 +1,91 @@
 (function ($) {
-    'use strict'
+   'use strict'
 
-    $(document).ready(function() {
-        UI.setAcoddion();
-    });
+   $(document).ready(initUi);
 
-    var UI = UI || {
-        /*
-        * 레이어 팝업 오픈
-        * @prams
-        *   selector : string 팝업 로드 컨테이너
-        *   href : string 팝업 호출 경로
-        *   animation : 'up' 팝업 애니메이션
-        *
-        */
-        openLayer: function(selector, href, animation) {
-            var flag = selector;
-            flag = $(flag);
-            flag.load(href, function () {
-                $(this).show();
-                $(this).find('.modal').css('transition', 'none');
-                $(this).find('.modal').show().addClass('scroll')
-                $('.overlay').show();
-                $('body').css('overflow','hidden');
-                if(animation === 'up'){
-                    gsap.set($(this).find('.modal'), {y: $(window).height()});
-                    gsap.to($(this).find('.modal'), 0.8, { y: 0, ease: Cubic.easeInOut });
-                }
+   function initUi() {
+      UI.setAcoddion();
+      UI.setCustomSelect();
+   }
+
+   var UI = UI || {
+      /*
+      * 레이어 팝업 오픈
+      * @params
+      *   selector : string 팝업 로드 컨테이너
+      *   href : string 팝업 호출 경로
+      *   animation : 'up' 팝업 애니메이션
+      *
+      */
+      openLayer: function(selector, href, animation) {
+         var flag = selector;
+         flag = $(flag);
+         flag.load(href, function () {
+            $(this).show();
+            $(this).find('.modal').css('transition', 'none');
+            $(this).find('.modal').show().addClass('scroll')
+            $('.overlay').show();
+            $('body').css('overflow','hidden');
+            if(animation === 'up'){
+               gsap.set($(this).find('.modal'), {y: $(window).height()});
+               gsap.to($(this).find('.modal'), 0.8, { y: 0, ease: Cubic.easeInOut });
+            }
+            initUi();
+         });
+         return false;
+      },
+
+      /*
+      * 레이어 팝업 클로즈
+      */
+      closeLayer: function () {
+         $('.popup-wrap').empty()
+         $('.popup-wrap').removeAttr('style').hide();
+         $('.overlay').hide().removeAttr('style');
+         $('body').css('overflow','');
+      },
+
+      /*
+      * 아코디언 ui 생성
+      */
+      setAcoddion: function () {
+         $(".accodion").each(function () {
+            var owner = $(this);
+            var header = $(this).find(".accodion-header");
+            var body = $(this).find(".accodion-body");
+            header.off("click").on("click", function () {
+               if(!owner.is(".active")){
+                  owner.addClass("active");
+                  body.slideDown();
+               } else {
+                  owner.removeClass("active");
+                  body.slideUp();
+               }
             });
-            return false;
-        },
+         });
+      },
 
-        /*
-        * 레이어 팝업 클로즈
-        */
-        closeLayer: function () {
-            $('.popup-wrap').empty()
-            $('.popup-wrap').removeAttr('style').hide();
-            $('.overlay').hide().removeAttr('style');
-            $('body').css('overflow','');
-        },
+      /*
+      * 커스텀 셀렉트 ui 생성
+      */
+      setCustomSelect: function () {
 
-        /*
-        * 아코디언 ui 생성
-        */
-        setAcoddion: function () {
-            $(".accodion").each(function () {
-                var owner = $(this);
-                var header = $(this).find(".accodion-header");
-                var body = $(this).find(".accodion-body");
-                header.off("click").on("click", function () {
-                    if(!owner.is(".active")){
-                        owner.addClass("active");
-                        body.slideDown();
-                    } else {
-                        owner.removeClass("active");
-                        body.slideUp();
-                    }
-                });
-            });
-        }
+         $("select.custom-select").each(function () {
+            if(!$(this).data("customSelect")) {
+               let modifier = '';
+               if($(this).is(".select-s")) modifier += 'select-s ';
+               if($(this).attr("disabled")) modifier += 'disabled ';
+               $(this).customSelect({
+                  includeValue: true,
+                  transition: 200,
+                  modifier: modifier,
+                  placeholder: $(this).attr("placeholder") 
+                     ? `<span class="placeholder">${$(this).attr("placeholder")}</span>` 
+                     : undefined
+               });
+            }
+         });
+      }
     }
 
     window.UI = UI;
