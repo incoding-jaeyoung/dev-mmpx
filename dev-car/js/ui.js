@@ -1,20 +1,16 @@
 (function ($) {
    'use strict'
 
-   $(document).ready(initUi);
-
-   function initUi() {
-      UI.setAcoddion();
-      UI.setCustomSelect();
-   }
-
    var UI = UI || {
+
+      headerNaviSwiper: null,
+
       /*
       * 레이어 팝업 오픈
       * @params
       *   selector : string 팝업 로드 컨테이너
       *   href : string 팝업 호출 경로
-      *   animation : 'up' 팝업 애니메이션
+      *   animation : 'up' | null 팝업 애니메이션
       *
       */
       openLayer: function(selector, href, animation) {
@@ -39,10 +35,73 @@
       * 레이어 팝업 클로즈
       */
       closeLayer: function () {
-         $('.popup-wrap').empty()
+         $('.popup-wrap .gallery-swiper').each(function (){
+            $(this).data("gallerySwiper").destroy(true, true);
+         })
+         $('.popup-wrap').empty();
          $('.popup-wrap').removeAttr('style').hide();
          $('.overlay').hide().removeAttr('style');
          $('body').css('overflow','');
+      },
+
+      /*
+      * 헤더 네비 스와이퍼 생성
+      */
+      sethaderNavi: function () {
+         if($(".header-navi-swiper")) {
+            UI.headerNaviSwiper = new Swiper(".header-navi-swiper", {
+               slidesPerView: "auto",
+               spaceBetween: 0,
+               breakpoints: {
+                  600: {
+                     spaceBetween: 0,
+                  },
+               },
+               freeMode: true,
+            });
+            var idx = $(".header-navi-swiper .swiper-slide.active").index();
+            var len = $(".header-navi-swiper .swiper-slide").length - UI.headerNaviSwiper.snapGrid.length;
+            if(len < idx) UI.headerNaviSwiper.slideTo(idx - len, 0);
+         }
+      },
+
+      /*
+      * 갤러리 스와이퍼 생성
+      */
+      setGallerySwiper: function () {
+         $(".gallery-swiper").each(function () {
+            if(!$(this).data("gallerySwiper")){
+               var gallerySwiper = new Swiper($(this)[0], {
+                  pagination: {
+                     el:$(this).find(".pagination .page")[0],
+                     type: "fraction",
+                     formatFractionCurrent: function (number) {
+                        return ('0' + number).slice(-2);
+                     },
+                     formatFractionTotal: function (number) {
+                        return ('0' + number).slice(-2);
+                     },
+                     renderFraction: function (currentClass, totalClass) {
+                        return '<span class="' + currentClass + '"></span>' +
+                              '<span class="center">/</span>' +
+                              '<span class="' + totalClass + '"></span>';
+                     }
+                  },
+                  navigation: {
+                     nextEl: ".swiper-button-next",
+                     prevEl: ".swiper-button-prev",
+                  },
+               });
+               $(this).find(".pagination .button-prev").off("click").on("click", function () {
+                  gallerySwiper.slidePrev();
+               });
+               $(this).find(".pagination .button-next").off("click").on("click", function () {
+                  gallerySwiper.slideNext();
+               });
+
+               $(this).data("gallerySwiper", gallerySwiper);
+            }
+         });
       },
 
       /*
@@ -86,9 +145,24 @@
             }
          });
       }
-    }
+   }
 
-    window.UI = UI;
+   window.UI = UI;
+
+   $(document).ready(function () {
+      initUi();
+      UI.sethaderNavi();
+   });
+
+
+   function initUi() {
+      UI.setAcoddion();
+      UI.setCustomSelect();
+      UI.setGallerySwiper();
+   }
+
+
+   
 
 })(jQuery);
 

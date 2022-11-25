@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
                <div class="modal-scroll-con">
-                  <div class="swiper gallery">
+                  <div class="swiper gallery-swiper">
                      <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="../img/thumb/@interior_04.jpg" alt="" /></div>
                         <div class="swiper-slide"><img src="../img/thumb/@interior_04.jpg" alt="" /></div>
@@ -19,12 +19,13 @@
                      </div>
                      <div class="swiper-button-next"></div>
                      <div class="swiper-button-prev"></div>
+                     <div class="pagination">
+                        <button class="button-prev"></button>
+                        <span class="page"></span>
+                        <button class="button-next"></button>
+                     </div>
                   </div>
-                  <div class="pagination">
-                     <button class="button-prev"></button>
-                     <span class="page"></span>
-                     <button class="button-next"></button>
-                  </div>
+                  
                   <div class="info-list">
                      <dl>
                         <dt>전자식 파워 스티어링 휠(R-EPS)</dt>
@@ -48,37 +49,4 @@
          </div>
       </div>
    </div>
-   <script type="text/javascript">
-      var gallerySwiper;
-      $(function (){
-         if(gallerySwiper) gallerySwiper.destroy(true, true);
-         gallerySwiper = new Swiper(".gallery", {
-            pagination: {
-               el: ".pagination .page",
-               type: "fraction",
-               formatFractionCurrent: function (number) {
-                  return ('0' + number).slice(-2);
-               },
-               formatFractionTotal: function (number) {
-                  return ('0' + number).slice(-2);
-               },
-               renderFraction: function (currentClass, totalClass) {
-                  return '<span class="' + currentClass + '"></span>' +
-                         '<span class="center">/</span>' +
-                         '<span class="' + totalClass + '"></span>';
-               }
-            },
-            navigation: {
-               nextEl: ".swiper-button-next",
-               prevEl: ".swiper-button-prev",
-            },
-         });
-         $(".pagination .button-prev").off("click").on("click", function () {
-            gallerySwiper.slidePrev();
-         });
-         $(".pagination .button-next").off("click").on("click", function () {
-            gallerySwiper.slideNext();
-         });
-      });
-   </script>
 </body>
