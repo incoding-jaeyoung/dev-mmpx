@@ -69,213 +69,219 @@
 
          <!-- step3 -->
          <div class="step3">
-            <h2 class="top-title">개인정보수집·이용·제공 동의</h2>
-            <h4 class="sub-title">
-               개인정보보호법, 신용정보 이용 및 보호에 관한 법률 규정에 따라 개인정보의 수집ㆍ이용 및 제공 동의가 필요합니다.<br />
-               전체 동의 시 체크되는 동의 항목에는 선택 동의 항목이 포함되어 있으며, 아래 동의서를 각각 확인한 후 개별적으로 동의하실 수 있습니다.
-            </h4>
+            <form action="">
+            <fieldset>
+               <legend>개인정보수집 이용 제공 동의 폼</legend>
 
-            <div class="all-check">
-               <input type="checkbox" name="check-all" id="check-all">
-               <label class="round" for="check-all"><p>전체 항목에 동의합니다.</p></label>
-               <button class="btn"></button>
-            </div>
+               <h2 class="top-title">개인정보수집·이용·제공 동의</h2>
+               <h4 class="sub-title">
+                  개인정보보호법, 신용정보 이용 및 보호에 관한 법률 규정에 따라 개인정보의 수집ㆍ이용 및 제공 동의가 필요합니다.<br />
+                  전체 동의 시 체크되는 동의 항목에는 선택 동의 항목이 포함되어 있으며, 아래 동의서를 각각 확인한 후 개별적으로 동의하실 수 있습니다.
+               </h4>
 
-            <div class="agree-box">
-               <div class="box-head">
-                  <span>[필수]</span> 필수적 개인정보 수집·이용·제공에 대한 동의
-                  <button class="btn"></button>
+               <div class="chk-box all-check">
+                  <input type="checkbox" name="check-all" id="check-all">
+                  <label class="round" for="check-all"><p>전체 항목에 동의합니다.</p></label>
+                  <button class="btn" type="button"></button>
                </div>
-               <div class="box-content">
-                  <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 수집 · 이용 하는데 동의합니다.</div>
-                  <div class="radio-con">
-                     <div class="radio">
-                        <input type="radio" name="radio1" id="radio1-1">
-                        <label for="radio1-1"><p>동의함</p></label>
-                     </div>
-                     <div class="radio">
-                        <input type="radio" name="radio1" id="radio1-2">
-                        <label for="radio1-2"><p>동의하지 않음</p></label>
+
+               <div class="agree-box">
+                  <div class="box-head">
+                     <span>[필수]</span> 필수적 개인정보 수집·이용·제공에 대한 동의
+                     <button class="btn" type="button"></button>
+                  </div>
+                  <div class="box-content">
+                     <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 수집 · 이용 하는데 동의합니다.</div>
+                     <div class="radio-con">
+                        <div class="radio">
+                           <input type="radio" name="radio1" id="radio1-1">
+                           <label for="radio1-1"><p>동의함</p></label>
+                        </div>
+                        <div class="radio">
+                           <input type="radio" name="radio1" id="radio1-2">
+                           <label for="radio1-2"><p>동의하지 않음</p></label>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
 
-            <div class="agree-box">
-               <div class="box-head">
-                  <span>[필수]</span> 필수적 개인정보 수집·이용·제공에 대한 동의 (고유식별정보)
-                  <button class="btn"></button>
-               </div>
-               <div class="box-content">
-                  <div class="text">본인은 귀사가 상기 목적으로 상기 보유·이용 기간동안 본인의 고유식별정보(주민등록번호, 여권번호, 운전면허 번호, 외국인등록번호)를 수집·이용하는데 동의합니다</div>
-                  <div class="radio-con">
-                     <div class="radio">
-                        <input type="radio" name="radio2" id="radio2-1">
-                        <label for="radio2-1"><p>동의함</p></label>
-                     </div>
-                     <div class="radio">
-                        <input type="radio" name="radio2" id="radio2-2">
-                        <label for="radio2-2"><p>동의하지 않음</p></label>
+               <div class="agree-box">
+                  <div class="box-head">
+                     <span>[필수]</span> 필수적 개인정보 수집·이용·제공에 대한 동의 (고유식별정보)
+                     <button class="btn" type="button"></button>
+                  </div>
+                  <div class="box-content">
+                     <div class="text">본인은 귀사가 상기 목적으로 상기 보유·이용 기간동안 본인의 고유식별정보(주민등록번호, 여권번호, 운전면허 번호, 외국인등록번호)를 수집·이용하는데 동의합니다</div>
+                     <div class="radio-con">
+                        <div class="radio">
+                           <input type="radio" name="radio2" id="radio2-1">
+                           <label for="radio2-1"><p>동의함</p></label>
+                        </div>
+                        <div class="radio">
+                           <input type="radio" name="radio2" id="radio2-2">
+                           <label for="radio2-2"><p>동의하지 않음</p></label>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
 
-            <div class="agree-box">
-               <div class="box-head">
-                  <span>[필수]</span> 필수적 개인정보 제3자 제공에 대한 동의
-                  <button class="btn"></button>
-               </div>
-               <div class="box-content">
-                  <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 수집 · 이용 하는데 동의합니다.</div>
-                  <div class="radio-con">
-                     <div class="radio">
-                        <input type="radio" name="radio3" id="radio3-1">
-                        <label for="radio3-1"><p>동의함</p></label>
-                     </div>
-                     <div class="radio">
-                        <input type="radio" name="radio3" id="radio3-2">
-                        <label for="radio3-2"><p>동의하지 않음</p></label>
+               <div class="agree-box">
+                  <div class="box-head">
+                     <span>[필수]</span> 필수적 개인정보 제3자 제공에 대한 동의
+                     <button class="btn" type="button"></button>
+                  </div>
+                  <div class="box-content">
+                     <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 수집 · 이용 하는데 동의합니다.</div>
+                     <div class="radio-con">
+                        <div class="radio">
+                           <input type="radio" name="radio3" id="radio3-1">
+                           <label for="radio3-1"><p>동의함</p></label>
+                        </div>
+                        <div class="radio">
+                           <input type="radio" name="radio3" id="radio3-2">
+                           <label for="radio3-2"><p>동의하지 않음</p></label>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
 
-            <div class="agree-box">
-               <div class="box-head">
-                  <span>[필수]</span> 필수적 개인정보 제3자 제공에 대한 동의 (고유식별정보)
-                  <button class="btn"></button>
-               </div>
-               <div class="box-content">
-                  <div class="text">본인은 귀사가 상기 목적으로 상기 보유·이용 기간동안 본인의 고유식별정보(주민등록번호, 여권번호, 운전면허 번호, 외국인등록번호)를 제3자에게 제공하는데 동의합니다.</div>
-                  <div class="radio-con">
-                     <div class="radio">
-                        <input type="radio" name="radio4" id="radio4-1">
-                        <label for="radio4-1"><p>동의함</p></label>
-                     </div>
-                     <div class="radio">
-                        <input type="radio" name="radio4" id="radio4-2">
-                        <label for="radio4-2"><p>동의하지 않음</p></label>
+               <div class="agree-box">
+                  <div class="box-head">
+                     <span>[필수]</span> 필수적 개인정보 제3자 제공에 대한 동의 (고유식별정보)
+                     <button class="btn" type="button"></button>
+                  </div>
+                  <div class="box-content">
+                     <div class="text">본인은 귀사가 상기 목적으로 상기 보유·이용 기간동안 본인의 고유식별정보(주민등록번호, 여권번호, 운전면허 번호, 외국인등록번호)를 제3자에게 제공하는데 동의합니다.</div>
+                     <div class="radio-con">
+                        <div class="radio">
+                           <input type="radio" name="radio4" id="radio4-1">
+                           <label for="radio4-1"><p>동의함</p></label>
+                        </div>
+                        <div class="radio">
+                           <input type="radio" name="radio4" id="radio4-2">
+                           <label for="radio4-2"><p>동의하지 않음</p></label>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
 
-            <div class="agree-box">
-               <div class="box-head">
-                  <span>[필수]</span> 민감정보 수집·이용에 대한 동의
-                  <button class="btn"></button>
-               </div>
-               <div class="box-content">
-                  <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 수집 · 이용 하는데 동의합니다.</div>
-                  <div class="radio-con">
-                     <div class="radio">
-                        <input type="radio" name="radio5" id="radio5-1">
-                        <label for="radio5-1"><p>동의함</p></label>
-                     </div>
-                     <div class="radio">
-                        <input type="radio" name="radio5" id="radio5-2">
-                        <label for="radio5-2"><p>동의하지 않음</p></label>
+               <div class="agree-box">
+                  <div class="box-head">
+                     <span>[필수]</span> 민감정보 수집·이용에 대한 동의
+                     <button class="btn" type="button"></button>
+                  </div>
+                  <div class="box-content">
+                     <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 수집 · 이용 하는데 동의합니다.</div>
+                     <div class="radio-con">
+                        <div class="radio">
+                           <input type="radio" name="radio5" id="radio5-1">
+                           <label for="radio5-1"><p>동의함</p></label>
+                        </div>
+                        <div class="radio">
+                           <input type="radio" name="radio5" id="radio5-2">
+                           <label for="radio5-2"><p>동의하지 않음</p></label>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
 
-            <div class="agree-box">
-               <div class="box-head">
-                  <span>[필수]</span> 민감정보 제3자 제공에 대한 동의
-                  <button class="btn"></button>
-               </div>
-               <div class="box-content">
-                  <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 제3자에게 제공하는 것에 동의합니다.</div>
-                  <div class="radio-con">
-                     <div class="radio">
-                        <input type="radio" name="radio6" id="radio6-1">
-                        <label for="radio6-1"><p>동의함</p></label>
-                     </div>
-                     <div class="radio">
-                        <input type="radio" name="radio6" id="radio6-2">
-                        <label for="radio6-2"><p>동의하지 않음</p></label>
+               <div class="agree-box">
+                  <div class="box-head">
+                     <span>[필수]</span> 민감정보 제3자 제공에 대한 동의
+                     <button class="btn" type="button"></button>
+                  </div>
+                  <div class="box-content">
+                     <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 제3자에게 제공하는 것에 동의합니다.</div>
+                     <div class="radio-con">
+                        <div class="radio">
+                           <input type="radio" name="radio6" id="radio6-1">
+                           <label for="radio6-1"><p>동의함</p></label>
+                        </div>
+                        <div class="radio">
+                           <input type="radio" name="radio6" id="radio6-2">
+                           <label for="radio6-2"><p>동의하지 않음</p></label>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
 
-            <div class="agree-box">
-               <div class="box-head">
-                  <span class="choice">[선택]</span> 선택적 개인정보 수집·이용·제공에 대한 동의
-                  <button class="btn"></button>
-               </div>
-               <div class="box-content">
-                  <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 수집·이용하는데 동의합니다.</div>
-                  <div class="radio-con">
-                     <div class="radio">
-                        <input type="radio" name="radio7" id="radio7-1">
-                        <label for="radio7-1"><p>동의함</p></label>
-                     </div>
-                     <div class="radio">
-                        <input type="radio" name="radio7" id="radio7-2">
-                        <label for="radio7-2"><p>동의하지 않음</p></label>
+               <div class="agree-box">
+                  <div class="box-head">
+                     <span class="choice">[선택]</span> 선택적 개인정보 수집·이용·제공에 대한 동의
+                     <button class="btn" type="button"></button>
+                  </div>
+                  <div class="box-content">
+                     <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 수집·이용하는데 동의합니다.</div>
+                     <div class="radio-con">
+                        <div class="radio">
+                           <input type="radio" name="radio7" id="radio7-1">
+                           <label for="radio7-1"><p>동의함</p></label>
+                        </div>
+                        <div class="radio">
+                           <input type="radio" name="radio7" id="radio7-2">
+                           <label for="radio7-2"><p>동의하지 않음</p></label>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
 
-            <div class="agree-box">
-               <div class="box-head">
-                  <span class="choice">[선택]</span> 선택적 개인정보 제3자 제공에 대한 동의
-                  <button class="btn"></button>
-               </div>
-               <div class="box-content">
-                  <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 제3자에게 제공하는 것에 동의합니다.</div>
-                  <div class="radio-con">
-                     <div class="radio">
-                        <input type="radio" name="radio8" id="radio8-1">
-                        <label for="radio8-1"><p>동의함</p></label>
-                     </div>
-                     <div class="radio">
-                        <input type="radio" name="radio8" id="radio8-2">
-                        <label for="radio8-2"><p>동의하지 않음</p></label>
+               <div class="agree-box">
+                  <div class="box-head">
+                     <span class="choice">[선택]</span> 선택적 개인정보 제3자 제공에 대한 동의
+                     <button class="btn" type="button"></button>
+                  </div>
+                  <div class="box-content">
+                     <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 제3자에게 제공하는 것에 동의합니다.</div>
+                     <div class="radio-con">
+                        <div class="radio">
+                           <input type="radio" name="radio8" id="radio8-1">
+                           <label for="radio8-1"><p>동의함</p></label>
+                        </div>
+                        <div class="radio">
+                           <input type="radio" name="radio8" id="radio8-2">
+                           <label for="radio8-2"><p>동의하지 않음</p></label>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
 
-            <div class="agree-box">
-               <div class="box-head">
-                  <span class="choice">[선택]</span> 선택적 개인정보 제3자 제공에 대한 동의 (고유식별정보)
-                  <button class="btn"></button>
-               </div>
-               <div class="box-content">
-                  <div class="text">본인은 귀사가 상기 목적으로 상기 보유·이용 기간동안 본인의 고유식별정보(주민등록번호, 여권번호, 운전면허 번호, 외국인등록번호)를 제3자에게 제공하는데 동의합니다.</div>
-                  <div class="radio-con">
-                     <div class="radio">
-                        <input type="radio" name="radio9" id="radio9-1">
-                        <label for="radio9-1"><p>동의함</p></label>
-                     </div>
-                     <div class="radio">
-                        <input type="radio" name="radio9" id="radio9-2">
-                        <label for="radio8-2"><p>동의하지 않음</p></label>
+               <div class="agree-box">
+                  <div class="box-head">
+                     <span class="choice">[선택]</span> 선택적 개인정보 제3자 제공에 대한 동의 (고유식별정보)
+                     <button class="btn" type="button"></button>
+                  </div>
+                  <div class="box-content">
+                     <div class="text">본인은 귀사가 상기 목적으로 상기 보유·이용 기간동안 본인의 고유식별정보(주민등록번호, 여권번호, 운전면허 번호, 외국인등록번호)를 제3자에게 제공하는데 동의합니다.</div>
+                     <div class="radio-con">
+                        <div class="radio">
+                           <input type="radio" name="radio9" id="radio9-1">
+                           <label for="radio9-1"><p>동의함</p></label>
+                        </div>
+                        <div class="radio">
+                           <input type="radio" name="radio9" id="radio9-2">
+                           <label for="radio8-2"><p>동의하지 않음</p></label>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
 
-            <div class="agree-box">
-               <div class="box-head noline">
-                  개인정보의 취급·위탁
-                  <button class="btn"></button>
+               <div class="agree-box">
+                  <div class="box-head noline">
+                     개인정보의 취급·위탁
+                     <button class="btn" type="button"></button>
+                  </div>
                </div>
-            </div>
 
-            <div class="agree-box2">
-               <p class="text">본인은 본 동의서의 내용을 상세히 읽고 충분히 이해하였으므로, 이에 동의합니다.</p>
-               <p class="date">2022년 10월 4일</p>
-            </div>
+               <div class="agree-box2">
+                  <p class="text">본인은 본 동의서의 내용을 상세히 읽고 충분히 이해하였으므로, 이에 동의합니다.</p>
+                  <p class="date">2022년 10월 4일</p>
+               </div>
 
-            <div class="foot-btn t8">
-               <button class="btn btn-blue">다음</button>
-            </div>
+               <div class="foot-btn t8">
+                  <button class="btn btn-blue" type="sumit">다음</button>
+               </div>
+            </fieldset>
+            </form>
          </div>
          <!-- step3 -->
          

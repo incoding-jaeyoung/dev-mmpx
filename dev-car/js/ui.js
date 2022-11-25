@@ -10,7 +10,7 @@
       * @params
       *   selector : string 팝업 로드 컨테이너
       *   href : string 팝업 호출 경로
-      *   animation : 'up' 팝업 애니메이션
+      *   animation : 'up' | null 팝업 애니메이션
       *
       */
       openLayer: function(selector, href, animation) {
@@ -39,6 +39,27 @@
          $('.popup-wrap').removeAttr('style').hide();
          $('.overlay').hide().removeAttr('style');
          $('body').css('overflow','');
+      },
+
+      /*
+      * 헤더 네비 스와이퍼 생성
+      */
+      sethaderNavi: function () {
+         if($(".header-navi-swiper")) {
+            UI.headerNaviSwiper = new Swiper(".header-navi-swiper", {
+               slidesPerView: "auto",
+               spaceBetween: 0,
+               breakpoints: {
+                  600: {
+                     spaceBetween: 0,
+                  },
+               },
+               freeMode: true,
+            });
+            var idx = $(".header-navi-swiper .swiper-slide.active").index();
+            var len = $(".header-navi-swiper .swiper-slide").length - UI.headerNaviSwiper.snapGrid.length;
+            if(len < idx) UI.headerNaviSwiper.slideTo(idx - len, 0);
+         }
       },
 
       /*
@@ -88,23 +109,7 @@
 
    $(document).ready(function () {
       initUi();
-
-      if($(".header-navi-swiper")) {
-         UI.headerNaviSwiper = new Swiper(".header-navi-swiper", {
-            slidesPerView: "auto",
-            spaceBetween: 0,
-            breakpoints: {
-               600: {
-                  spaceBetween: 0,
-               },
-            },
-            freeMode: true,
-         });
-         var idx = $(".header-navi-swiper .swiper-slide.active").index();
-         var len = $(".header-navi-swiper .swiper-slide").length - UI.headerNaviSwiper.snapGrid.length;
-         if(len < idx) UI.headerNaviSwiper.slideTo(idx - len, 0);
-      }
-      
+      UI.sethaderNavi();
    });
 
 
