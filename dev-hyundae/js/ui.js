@@ -6,11 +6,68 @@ gsap.registerPlugin(ScrollTrigger);
 // JavaScript Document
 window.onload = function () {
     //$('body').imagesLoaded().done(function (instance) {
+        setTimeout(function(){
+            $('#header').addClass('load')
+        },500)
+        const sections = gsap.utils.toArray('.data-black-header');
+        sections.forEach(section => {
+            ScrollTrigger.create({
+                trigger: sections,
+                start: 'top 10%',
+                end: 'bottom 0%',
+                toggleClass: {
+                    targets: '#header',
+                    className: 'has-scrolled'
+                },
+                
+            })
+            
+        });
         commonTween()
         init();
+        // headerScroll();
         // navTrigger()
+        gsap.utils.toArray(".section").forEach((panel, i) => {
+            ScrollTrigger.create({
+              trigger: panel,
+              start: "bottom bottom", 
+              pin: true, 
+              pinSpacing: false,
+              //markers: true
+            });
+          });
+
+        $('.page-nav').each(function (e) {
+            gsap.to($(this), 0.5, {
+                scrollTrigger: {
+                    trigger: $('.section-content'),
+                    start: "0 50%", // 앞 : 객체 , 뒤 : 페이지 전체
+                    end: 'bottom 100%',
+                    // scrub: true, //스크롤에 반응 (없으면 자동재생)
+                    // markers: true,
+                    toggleActions: "play none none reverse",
+                    toggleClass: {targets:".page-nav", className: "active"},
+                },
+                ease: 'Power3.easeOut'
+            })
+        })
+        var winw = $(window).width();
+        if (winw > 768) {
+            
+        } else if (winw <= 768) {
+            $('.page-nav li.active').on('click',function (){
+                $('.page-nav').addClass('on')
+            });
+            $('.m-menu a').on('click',function (){
+                $('.mob-menu').addClass('active')
+            });
+            $('.mob-menu .close a').on('click',function (){
+                $('.mob-menu').removeClass('active')
+            });
+        }
     ///});
 }
+
 // 데이트피커
 $(document).ready(function () {
     $("body").append('<script src="../js/jquery-ui/jquery-ui.min.js"></script>');
@@ -28,6 +85,53 @@ $(document).ready(function () {
     });
     $('.datepicker').datepicker();
 })
+// 헤더 픽스
+function headerScroll() {
+    
+
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('#header').outerHeight();
+    
+    console.log(navbarHeight)
+    $(window).scroll(function (event) {
+        didScroll = true;
+    });
+
+    setInterval(function () {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+            
+        }
+    }, 0);
+
+    function hasScrolled() {
+        var st = $(window).scrollTop();
+        // Make sure they scroll more than delta
+        if (Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+        if (st > lastScrollTop && st > navbarHeight) {
+            // Scroll Down
+            
+            $('header').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if (st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+        lastScrollTop = st;
+        if (st <= 10) {
+            $('header').addClass('nav-default')
+        } else {
+            $('header').removeClass('nav-default')
+        }
+    }
+}
+
 function init() {
     ScrollTrigger.matchMedia({
         "(min-width:601px)": function () {
@@ -48,143 +152,6 @@ function init() {
         "(max-width:600px)": function () {
             
         },
-    })
-    $('.float dt button').on('click',function(){
-		$('.float').toggleClass('active')
-        $('.float p').removeClass('active')
-        $('.float.active dl dd').removeClass('over')
-        
-	})
-    $('.float .call').on('click',function(){
-		$(this).next().toggleClass('active')
-        $('.float.active dl dd').addClass('over')
-	})
-	$('.family-site dt').on('click',function(){
-		$('.family-site').toggleClass('active')
-	})
-	$('.menu-right .btn-search').on('click',function(){
-		$('.search-area').toggleClass('active')
-		$('html, body').toggleClass('fixed')
-	})
-	$('.search-area .over-bg').on('click',function(){
-		$('.search-area').removeClass('active')
-		$('html, body').removeClass('fixed')
-	})
-	$('.gnb li a').on('mouseover',function(){
-        var indexNum = $('.gnb li a').index(this)
-		$('.nav-area').show()
-        $('.nav-area .nav-block').hide()
-        $('.nav-area .nav-block').eq(indexNum).show()
-        
-	})
-    $('.btn-all-menu').on('click',function(){
-		$('.full-menu').addClass('active')
-	})
-    $('.full-menu .close-full button').on('click',function(){
-		$('.full-menu').removeClass('active')
-	})
-    $('.nav-area').on('mouseleave',function(){
-		$('.nav-area').hide()
-        $('.nav-area .nav-block').hide()
-	})
-    $('.btn-m-menu').on('click',function(){
-        $('.m-menu').toggleClass('active')
-        $('html').toggleClass('fixed')
-        return false;
-    })
-    $('.menu-close').on('click',function(){
-        $('.m-menu').removeClass('active')
-        $('html').removeClass('fixed')
-        return false;
-    })
-    $('.tab-m li button').on('click',function(){
-        var indexNum = $('.tab-m li button').index(this)
-        $('.tab-m li').removeClass('active')
-        $('.tab-m li').eq(indexNum).addClass('active')
-        $('.tab-ui-m > *').removeClass('active')
-        $('.tab-ui-m > *').eq(indexNum).addClass('active')
-        
-        ScrollTrigger.refresh();
-        swiper.update()
-    })
-    $('.tab-ui-con > *').eq(0).addClass('active')
-    $('.tab-ui li button').on('click',function(){
-        var indexNum = $('.tab-ui li button').index(this)
-        $('.tab-ui li').removeClass('active')
-        $('.tab-ui li').eq(indexNum).addClass('active')
-        $('.tab-ui-con > *').removeClass('active').hide()
-        $('.tab-ui-con > *').eq(indexNum).css({
-            "opacity":"0",
-            "display":"flex",
-        }).show().animate({opacity:1}).addClass('active')
-        $('.tab-ui-con.block > *').eq(indexNum).css({
-            "opacity":"0",
-            "display":"block",
-        }).show().animate({opacity:1}).addClass('active')
-        ScrollTrigger.refresh();
-    })
-    $('.menu-block dt ').on('click',function(){
-        $(this).parent().toggleClass('active')
-        $(this).parent().siblings('dl').removeClass('active')
-        return false;
-    })
-    $('.location dl dt button').on('click',function(){
-        $(this).parents('dl').siblings().removeClass('active')
-        $(this).parents('dl').toggleClass('active')
-        return false;
-    })
-    $('.location-menu dd').on('mouseleave',function(){
-        $(this).parents('dl').removeClass('active')
-        return false;
-    })
-    $('.slide-box .slide-box-head').on('click',function(){
-        $(this).parent().toggleClass('active')
-    })
-    $('.accordion-title').on('click',function(){
-        $(this).toggleClass('active')
-    })
-    $('.tab-style-m button').on('click',function(){
-        var tabName = $(this).text()
-        console.log(tabName)
-        $('.tab-style-m dt span').text(tabName)
-        $('.tab-style-m').removeClass('active')
-    })
-    $('.tab-style-m dt').on('click',function(){
-        $(this).parent().toggleClass('active')
-    })
-    $('.upfile').on('change',function(){
-        var name = this.value
-        $(this).prev().find('.name').text(name)
-        if(name == ''){
-            $(this).prev().find('.name').text('파일명이 표시됩니다')
-        }
-    })
-    $('.aside-right li > a').on('click',function(){
-        $(this).parent().siblings('li').find('.sub-menu').removeClass('active')
-        $(this).next().addClass('active')
-    })
-    $('.sub-menu').on('mouseleave',function(){
-        $(this).removeClass('active')
-    })
-    $('.faq-block dl dt').on('click',function(){
-        $(this).parent().siblings('dl').removeClass('active')
-        $(this).parent().addClass('active')
-    })
-    $('.time-select button').on('click',function(){
-        $('.time-select button').removeClass('active')
-        $(this).toggleClass('active')
-    })
-    $('.btn-active').on('click',function(){
-        $('.time-select button').removeClass('active')
-        $(this).toggleClass('active')
-    })
-    $('.active-toggle').on('click',function(){
-        $(this).toggleClass('active')
-    })
-    $('.accodian').each(function(){
-        $(this).children().eq(0).on('click',function(){
-            $(this).parent().toggleClass('active')
-        })
     })
     ScrollTrigger.matchMedia({
         "(min-width:851px)": function () {
@@ -288,8 +255,41 @@ function commonTween() {
         repeat:-1,
         repeatRefresh:true 
     })
-    $('.fade').each(function (e) {
+    
+
+
+    $('.tada').each(function (e) {
+        let tada = $(this)
+        gsap.set(tada, {
+            opacity: 0,
+            scale:0.5
+        })
+        const upmotion = gsap.timeline({
+            scrollTrigger: {
+                trigger: $(this),
+                start: "0% 80%", // 앞 : 객체 , 뒤 : 페이지 전체
+                end: "0% 50%%", // 앞 : 객체 , 뒤 : 페이지 전체
+                // scrub: true, //스크롤에 반응 (없으면 자동재생)
+                // markers: true,
+                toggleActions: "play  none none none",
+            },
+        });
+        upmotion.to(tada, 0.5, {
+            opacity: 1,
+            scale:1.2,
+            ease: "power3.out",
+        })
+        .to(tada, 0.5, {
+            scale:1,
+            ease: "power3.out",
+        })
+
+    })
+    $('.fade, .section h2').each(function (e) {
         let text = $(this)
+        gsap.set(text, {
+            opacity: 0,
+        })
         const upmotion = gsap.timeline({
             scrollTrigger: {
                 trigger: $(this),
@@ -300,9 +300,9 @@ function commonTween() {
                 toggleActions: "play complete none none",
             },
         });
-        upmotion.to(text, 2, {
+        upmotion.to(text, 1, {
             opacity: 1,
-            //            ease: "power3.out",
+            ease: "power3.out",
             onComplete: function () {
 
             }
@@ -331,7 +331,7 @@ function commonTween() {
         })
 
     })
-    $('.slide-up, .sub-title').each(function (e) {
+    $('.slide-up, .art-list li, .thumb-img-list li').each(function (e) {
         let text = $(this).wrapInner('<div class="over-text-con"></div>')
         let target = text.find('.over-text-con')
         gsap.set(target, {
@@ -359,7 +359,7 @@ function commonTween() {
 
     })
     ScrollTrigger.matchMedia({
-        "(min-width:851px)": function () {
+        "(min-width:768px)": function () {
             $('.left-slide').each(function (e) {
                 let text = $(this)
                 const leftMotion = gsap.timeline({
@@ -386,7 +386,7 @@ function commonTween() {
                 })
             })
         },
-        "(max-width:850px)": function () {
+        "(max-width:767px)": function () {
             $('.left-slide').each(function (e) {
                 let text = $(this)
                 const leftMotion = gsap.timeline({
@@ -415,7 +415,7 @@ function commonTween() {
         },
     })
     ScrollTrigger.matchMedia({
-        "(min-width:851px)": function () {
+        "(min-width:768px)": function () {
             $('.right-slide').each(function (e) {
                 let text = $(this)
                 const leftMotion = gsap.timeline({
@@ -423,13 +423,14 @@ function commonTween() {
                         trigger: $(this),
                         start: "0% 80%", // 앞 : 객체 , 뒤 : 페이지 전체
                         end: "0% 0%", // 앞 : 객체 , 뒤 : 페이지 전체
-                                        scrub: true, //스크롤에 반응 (없으면 자동재생)
-                        //markers: true,
+                        // scrub: true, //스크롤에 반응 (없으면 자동재생)
+                        // markers: true,
+                        
                         toggleActions: "play pause pause reverse",
                     },
                 });
                 gsap.set(text, {
-                    x: '200px',
+                    x: '50%',
                     opacity: 0,
                     onComplete: function () {
         
@@ -442,31 +443,28 @@ function commonTween() {
                 })
             })
         },
-        "(max-width:850px)": function () {
+        "(max-width:767px)": function () {
             $('.right-slide').each(function (e) {
-                let text = $(this)
-                const leftMotion = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: $(this),
-                        start: "0% 100%", // 앞 : 객체 , 뒤 : 페이지 전체
-                        end: "0% 50%", // 앞 : 객체 , 뒤 : 페이지 전체
-                                        scrub: true, //스크롤에 반응 (없으면 자동재생)
-                        // markers: true,
-                        toggleActions: "play pause pause reverse",
-                    },
-                });
-                gsap.set(text, {
-                    x: '200px',
+                var stagger = $(this)
+                gsap.set(stagger, {
                     opacity: 0,
                     onComplete: function () {
         
                     }
                 })
-                leftMotion.to(text, 1, {
-                    x: '0',
-                    opacity: 1,
-                    ease: 'power3.out'
+                gsap.to(stagger, {
+                    scrollTrigger: {
+                        trigger: $(this),
+                        start: "0 90%", // 앞 : 객체 , 뒤 : 페이지 전체
+                        // scrub: true, //스크롤에 반응 (없으면 자동재생)
+                        // markers: true,
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity:1,
+                    stagger: 0.1,
+                    ease: 'Power1.easeOut'
                 })
+                
             })
         },
     })
