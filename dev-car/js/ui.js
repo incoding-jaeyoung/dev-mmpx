@@ -35,7 +35,7 @@
       * 레이어 팝업 클로즈
       */
       closeLayer: function () {
-         $('.popup-wrap .gallery').each(function (){
+         $('.popup-wrap .gallery-swiper').each(function (){
             $(this).data("gallerySwiper").destroy(true, true);
          })
          $('.popup-wrap').empty();
@@ -69,7 +69,7 @@
       * 갤러리 스와이퍼 생성
       */
       setGallerySwiper: function () {
-         $(".gallery").each(function () {
+         $(".gallery-swiper").each(function () {
             if(!$(this).data("gallerySwiper")){
                var gallerySwiper = new Swiper($(this)[0], {
                   pagination: {
