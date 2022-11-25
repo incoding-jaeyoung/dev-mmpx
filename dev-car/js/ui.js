@@ -1,14 +1,10 @@
 (function ($) {
    'use strict'
 
-   $(document).ready(initUi);
-
-   function initUi() {
-      UI.setAcoddion();
-      UI.setCustomSelect();
-   }
-
    var UI = UI || {
+
+      headerNaviSwiper: null,
+
       /*
       * 레이어 팝업 오픈
       * @params
@@ -86,9 +82,39 @@
             }
          });
       }
-    }
+   }
 
-    window.UI = UI;
+   window.UI = UI;
+
+   $(document).ready(function () {
+      initUi();
+
+      if($(".header-navi-swiper")) {
+         UI.headerNaviSwiper = new Swiper(".header-navi-swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 0,
+            breakpoints: {
+               600: {
+                  spaceBetween: 0,
+               },
+            },
+            freeMode: true,
+         });
+         var idx = $(".header-navi-swiper .swiper-slide.active").index();
+         var len = $(".header-navi-swiper .swiper-slide").length - UI.headerNaviSwiper.snapGrid.length;
+         if(len < idx) UI.headerNaviSwiper.slideTo(idx - len, 0);
+      }
+      
+   });
+
+
+   function initUi() {
+      UI.setAcoddion();
+      UI.setCustomSelect();
+   }
+
+
+   
 
 })(jQuery);
 

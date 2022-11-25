@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="Author" content="쌍용자동차" />
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+   <meta property="og:image" content="../img/img-og.png">
+   <meta property="og:url" content="">
+   <meta property="og:description" content="">
+   <meta property="og:title" content="쌍용자동차">
+
+   <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+   <title>쌍용자동차</title>
+   <link rel="stylesheet" href="../css/style.css" />
+
+   <script src="../js/jquery-3.3.1.min.js"></script>
+   <script src="../js/gsap.min.js"></script>
+   <script src="../js/swiper-bundle.min.js"></script>
+   <script src="../js/jquery.custom-select.js"></script>
+   <script src="../js/ui.js"></script>
+</head>
+<body>
+   <div class="accessbility"><a href="#contents">본문바로가기</a></div>
+   <div id="wrapper">
+      <header id="header">
+         <h1><a href="#">쌍용자동차</a></h1>
+         <p class="back"><a href="#"><img src="../img/ico-prev.svg" alt="뒤로"></a></p>
+         <ul class="step-line">
+            <li><span>STEP 1 :</span> 내 차 디자인</li>
+            <li><span>STEP 2 :</span> 옵션 및 결제 방법</li>
+            <li class="active"><span>STEP 3 :</span> 계약서 작성</li>
+            <li><span>STEP 4 :</span> 계약금 결제</li>
+         </ul>
+         <div class="blur"></div>
+      </header>
+      <section id="contents">
+
+         <!-- contents -->
+         <div class="header-navi pin arrow">
+            <div class="swiper header-navi-swiper">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <a href="#">계약서 작성 안내</a>
+                  </div>
+                  <div class="swiper-slide ">
+                     <a href="#">개인정보수집 이용 제공 동의</a>
+                  </div>
+                  <div class="swiper-slide active">
+                     <a href="#">자동차 교환 환불 중재제도 안내</a>
+                  </div>
+                  <div class="swiper-slide">
+                     <a href="#">자동차 매매 계약서 계약 조항</a>
+                  </div>
+                  <div class="swiper-slide">
+                     <a href="#">자동차 매매 계약</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- step3 -->
+         <div class="step3">
+            <h2 class="top-title">자동차 교환 · 환불 중재제도 안내</h2>
+            <h4 class="sub-title">
+               자동차 교환·환불 중재제도 설명에 대한 이해 및 동 규정 수락여부에 관한 확인이 필요합니다.<br />
+               안내 내용을 확인하시고 확인 여부를 선택하실 수 있습니다.
+            </h4>
+
+            <div class="agree-box white">
+               <div class="box-head">
+                  <span>[필수]</span> 자동차 교환 · 환불 중재제도 요지 및 중요 안내사항
+                  <button class="btn"></button>
+               </div>
+               <div class="box-content">
+                  <div class="text">본인은 귀사로부터 자동차 교환 환불중재 제도 요지 및 중요 안내사항에 대한 설명을 듣고 충분히 이해하였음을 확인합니다.</div>
+                  <div class="check-con">
+                     <input type="checkbox" name="checkbox1" id="checkbox1">
+                     <label for="checkbox1"><p>설명을 듣고 이해하였음</p></label>
+                  </div>
+               </div>
+            </div>
+
+            <div class="agree-box white">
+               <div class="box-head">
+                  <span>[필수]</span> 자동차 교환 · 환불 중재제도 요지 및 중요 안내사항
+                  <button class="btn"></button>
+               </div>
+               <div class="box-content">
+                  <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 수집 · 이용 하는데 동의합니다.</div>
+                  <div class="check-con">
+                     <input type="checkbox" name="checkbox2" id="checkbox2">
+                     <label for="checkbox2"><p>본인은 자동차 교환·환불 중재 규정을 추후 중재 신청 시 수락하겠습니다.</p></label>
+                  </div>
+                  <div class="check-con">
+                     <input type="checkbox" name="checkbox3" id="checkbox3">
+                     <label for="checkbox3"><p>본인은 자동차 교환·환불중재 규정을 지금 수락하겠습니다. (수락시점 이후 법원에 소송제기 불가)</p></label>
+                  </div>
+               </div>
+            </div>
+
+            <div class="agree-box white">
+               <div class="box-head">
+                  <span class="choice">[선택]</span> 전자우편, 문자메시지, 팩스 등에 의한 통지 연락 수락 여부 확인
+                  <button class="btn"></button>
+               </div>
+               <div class="box-content">
+                  <div class="text">본인은 귀사가 상기 목적으로 본인의 개인정보를 수집 · 이용 하는데 동의합니다.</div>
+                  <div class="check-con">
+                     <input type="checkbox" name="checkbox4" id="checkbox4">
+                     <label for="checkbox4"><p>본인은 자동차 교환 환불중재 규정에 따른 통지 연락을 전자 우편, 문자메시지, 팩스 등을 통해 받겠습니다.</p></label>
+                  </div>
+               </div>
+            </div>
+
+            <div class="agree-box2">
+               <p class="text">본인은 본 동의서의 내용을 상세히 읽고 충분히 이해하였으므로, 이에 동의합니다.</p>
+               <p class="date">2022년 10월 4일</p>
+            </div>
+           
+
+            <div class="foot-btn t8">
+               <button class="btn btn-blue">다음</button>
+            </div>
+         </div>
+         <!-- step3 -->
+         
+         <!-- //contents -->
+      </section>
+   </div>
+   <!-- POPUP -->
+   <div class="popup-wrap" id="popup" tabindex="0"></div>
+   <!-- //POPUP -->
+   <div class="overlay" onclick="UI.closeLayer();"><span>닫기</span></div>
+
+   
+</body>
+
+</html>

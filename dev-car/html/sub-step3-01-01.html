@@ -27,22 +27,6 @@
    <script src="../js/swiper-bundle.min.js"></script>
    <script src="../js/jquery.custom-select.js"></script>
    <script src="../js/ui.js"></script>
-   <script>
-      $(function () {
-         var tabswiper = new Swiper(".carSwiper", {
-            slidesPerView: "auto",
-            spaceBetween: 0,
-            breakpoints: {
-               600: {
-                  spaceBetween: 0,
-               },
-            },
-         });
-         var idx = $(".carSwiper .swiper-slide.active").index();
-         var len = $(".carSwiper .swiper-slide").length - tabswiper.snapGrid.length;
-         if(len < idx) tabswiper.slideTo(idx - len);
-      });
-   </script>
 </head>
 <body>
    <div class="accessbility"><a href="#contents">본문바로가기</a></div>
@@ -51,18 +35,18 @@
          <h1><a href="#">쌍용자동차</a></h1>
          <p class="back"><a href="#"><img src="../img/ico-prev.svg" alt="뒤로"></a></p>
          <ul class="step-line">
-            <li>STEP 1 : 내 차 디자인</li>
-            <li>STEP 2 : 옵션 및 결제 방법</li>
-            <li class="active">STEP 3 : 계약서 작성</li>
-            <li>STEP 4 : 계약금 결제</li>
+            <li><span>STEP 1 :</span> 내 차 디자인</li>
+            <li><span>STEP 2 :</span> 옵션 및 결제 방법</li>
+            <li class="active"><span>STEP 3 :</span> 계약서 작성</li>
+            <li><span>STEP 4 :</span> 계약금 결제</li>
          </ul>
          <div class="blur"></div>
       </header>
       <section id="contents">
 
          <!-- contents -->
-         <div class="car-list pin">
-            <div class="swiper carSwiper">
+         <div class="header-navi pin arrow">
+            <div class="swiper header-navi-swiper">
                <div class="swiper-wrapper">
                   <div class="swiper-slide active">
                      <a href="#">계약서 작성 안내</a>
@@ -74,7 +58,7 @@
                      <a href="#">자동차 교환 환불 중재제도 안내</a>
                   </div>
                   <div class="swiper-slide">
-                     <a href="#">자동차 교환 환불 중재제도 안내</a>
+                     <a href="#">자동차 매매 계약서 계약 조항</a>
                   </div>
                   <div class="swiper-slide">
                      <a href="#">자동차 매매 계약</a>

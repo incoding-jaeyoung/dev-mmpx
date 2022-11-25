@@ -28,19 +28,9 @@
    <script src="../js/jquery.custom-select.js"></script>
    <script src="../js/ui.js"></script>
    <script>
-      var tabswiper;
       var isTab = false;
       $(function () {
-         tabswiper = new Swiper(".carSwiper", {
-            slidesPerView: "auto",
-            spaceBetween: 0,
-            freeMode: true,
-            breakpoints: {
-               600: {
-                  spaceBetween: 0,
-               },
-            },
-         });
+         
          $(window).on("scroll", function ( e ) {
             if(isTab) return;
             var winTop = $(window).scrollTop();
@@ -48,11 +38,11 @@
                var start =  i === 0 ? 0 : $(this).offset().top - 200;
                var end = start + $(this).height();
                if(winTop > start && winTop < end) {
-                  $(".carSwiper .swiper-slide").removeClass("active");
-                  $(".carSwiper .swiper-slide").eq(i).addClass("active");
-                  var len = $(".carSwiper .swiper-slide").length - tabswiper.snapGrid.length;
-                  if(i == 0) tabswiper.slideTo(0);
-                  else if(len < i) tabswiper.slideTo(i - len);
+                  $(".header-navi-swiper .swiper-slide").removeClass("active");
+                  $(".header-navi-swiper .swiper-slide").eq(i).addClass("active");
+                  var len = $(".header-navi-swiper .swiper-slide").length - UI.headerNaviSwiper.snapGrid.length;
+                  if(i == 0) UI.headerNaviSwiper.slideTo(0);
+                  else if(len < i) UI.headerNaviSwiper.slideTo(i - len);
                }
             });
          });
@@ -60,8 +50,8 @@
       function changStep2Menu( num ) {
          var box = $(".step2 .select-box").eq(num);
          var top = box.offset().top - 100;
-         $(".carSwiper .swiper-slide").removeClass("active");
-         $(".carSwiper .swiper-slide").eq(num).addClass("active");
+         $(".header-navi-swiper .swiper-slide").removeClass("active");
+         $(".header-navi-swiper .swiper-slide").eq(num).addClass("active");
          $("html,body").scrollTop(top);
          isTab = true;
          setTimeout(function () {
@@ -78,18 +68,18 @@
          <h1><a href="#">쌍용자동차</a></h1>
          <p class="back"><a href="#"><img src="../img/ico-prev.svg" alt="뒤로"></a></p>
          <ul class="step-line">
-            <li>STEP 1 : 내 차 디자인</li>
-            <li class="active">STEP 2 : 옵션 및 결제 방법</li>
-            <li>STEP 3 : 계약서 작성</li>
-            <li>STEP 4 : 계약금 결제</li>
+            <li><span>STEP 1 :</span> 내 차 디자인</li>
+            <li class="active"><span>STEP 2 :</span> 옵션 및 결제 방법</li>
+            <li><span>STEP 3 :</span> 계약서 작성</li>
+            <li><span>STEP 4 :</span> 계약금 결제</li>
          </ul>
          <div class="blur"></div>
       </header>
       <section id="contents">
 
          <!-- contents -->
-         <div class="car-list pin">
-            <div class="swiper carSwiper">
+         <div class="header-navi pin">
+            <div class="swiper header-navi-swiper">
                <div class="swiper-wrapper">
                   <div class="swiper-slide active">
                      <a href="javascript: changStep2Menu(0);">옵션</a>
