@@ -48,37 +48,9 @@
          </div>
       </div>
    </div>
+
    <script type="text/javascript">
-      var gallerySwiper;
-      $(function (){
-         if(gallerySwiper) gallerySwiper.destroy(true, true);
-         gallerySwiper = new Swiper(".gallery", {
-            pagination: {
-               el: ".pagination .page",
-               type: "fraction",
-               formatFractionCurrent: function (number) {
-                  return ('0' + number).slice(-2);
-               },
-               formatFractionTotal: function (number) {
-                  return ('0' + number).slice(-2);
-               },
-               renderFraction: function (currentClass, totalClass) {
-                  return '<span class="' + currentClass + '"></span>' +
-                         '<span class="center">/</span>' +
-                         '<span class="' + totalClass + '"></span>';
-               }
-            },
-            navigation: {
-               nextEl: ".swiper-button-next",
-               prevEl: ".swiper-button-prev",
-            },
-         });
-         $(".pagination .button-prev").off("click").on("click", function () {
-            gallerySwiper.slidePrev();
-         });
-         $(".pagination .button-next").off("click").on("click", function () {
-            gallerySwiper.slideNext();
-         });
-      });
+      UI.setGallerySwiper();
    </script>
+   
 </body>

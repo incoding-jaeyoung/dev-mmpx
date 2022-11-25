@@ -4,6 +4,7 @@
    var UI = UI || {
 
       headerNaviSwiper: null,
+      gallerySwiper: null,
 
       /*
       * 레이어 팝업 오픈
@@ -60,6 +61,42 @@
             var len = $(".header-navi-swiper .swiper-slide").length - UI.headerNaviSwiper.snapGrid.length;
             if(len < idx) UI.headerNaviSwiper.slideTo(idx - len, 0);
          }
+      },
+
+      /*
+      * 갤러리 스와이퍼 생성
+      */
+      setGallerySwiper: function () {
+         $(function (){
+            if(UI.gallerySwiper) UI.gallerySwiper.destroy(true, true);
+            UI.gallerySwiper = new Swiper(".gallery", {
+               pagination: {
+                  el: ".pagination .page",
+                  type: "fraction",
+                  formatFractionCurrent: function (number) {
+                     return ('0' + number).slice(-2);
+                  },
+                  formatFractionTotal: function (number) {
+                     return ('0' + number).slice(-2);
+                  },
+                  renderFraction: function (currentClass, totalClass) {
+                     return '<span class="' + currentClass + '"></span>' +
+                           '<span class="center">/</span>' +
+                           '<span class="' + totalClass + '"></span>';
+                  }
+               },
+               navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+               },
+            });
+            $(".pagination .button-prev").off("click").on("click", function () {
+               UI.gallerySwiper.slidePrev();
+            });
+            $(".pagination .button-next").off("click").on("click", function () {
+               UI.gallerySwiper.slideNext();
+            });
+         });
       },
 
       /*
