@@ -4,7 +4,6 @@
    var UI = UI || {
 
       headerNaviSwiper: null,
-      gallerySwiper: null,
 
       /*
       * 레이어 팝업 오픈
@@ -36,7 +35,10 @@
       * 레이어 팝업 클로즈
       */
       closeLayer: function () {
-         $('.popup-wrap').empty()
+         $('.popup-wrap .gallery').each(function (){
+            $(this).data("gallerySwiper").destroy(true, true);
+         })
+         $('.popup-wrap').empty();
          $('.popup-wrap').removeAttr('style').hide();
          $('.overlay').hide().removeAttr('style');
          $('body').css('overflow','');
@@ -67,35 +69,38 @@
       * 갤러리 스와이퍼 생성
       */
       setGallerySwiper: function () {
-         $(function (){
-            if(UI.gallerySwiper) UI.gallerySwiper.destroy(true, true);
-            UI.gallerySwiper = new Swiper(".gallery", {
-               pagination: {
-                  el: ".pagination .page",
-                  type: "fraction",
-                  formatFractionCurrent: function (number) {
-                     return ('0' + number).slice(-2);
+         $(".gallery").each(function () {
+            if(!$(this).data("gallerySwiper")){
+               var gallerySwiper = new Swiper($(this)[0], {
+                  pagination: {
+                     el:$(this).find(".pagination .page")[0],
+                     type: "fraction",
+                     formatFractionCurrent: function (number) {
+                        return ('0' + number).slice(-2);
+                     },
+                     formatFractionTotal: function (number) {
+                        return ('0' + number).slice(-2);
+                     },
+                     renderFraction: function (currentClass, totalClass) {
+                        return '<span class="' + currentClass + '"></span>' +
+                              '<span class="center">/</span>' +
+                              '<span class="' + totalClass + '"></span>';
+                     }
                   },
-                  formatFractionTotal: function (number) {
-                     return ('0' + number).slice(-2);
+                  navigation: {
+                     nextEl: ".swiper-button-next",
+                     prevEl: ".swiper-button-prev",
                   },
-                  renderFraction: function (currentClass, totalClass) {
-                     return '<span class="' + currentClass + '"></span>' +
-                           '<span class="center">/</span>' +
-                           '<span class="' + totalClass + '"></span>';
-                  }
-               },
-               navigation: {
-                  nextEl: ".swiper-button-next",
-                  prevEl: ".swiper-button-prev",
-               },
-            });
-            $(".pagination .button-prev").off("click").on("click", function () {
-               UI.gallerySwiper.slidePrev();
-            });
-            $(".pagination .button-next").off("click").on("click", function () {
-               UI.gallerySwiper.slideNext();
-            });
+               });
+               $(this).find(".pagination .button-prev").off("click").on("click", function () {
+                  gallerySwiper.slidePrev();
+               });
+               $(this).find(".pagination .button-next").off("click").on("click", function () {
+                  gallerySwiper.slideNext();
+               });
+
+               $(this).data("gallerySwiper", gallerySwiper);
+            }
          });
       },
 
@@ -153,6 +158,7 @@
    function initUi() {
       UI.setAcoddion();
       UI.setCustomSelect();
+      UI.setGallerySwiper();
    }
 
 
