@@ -49,11 +49,11 @@
       </header>
       <aside class="page-nav">
          <ul>
-            <li class="active"><a href="#section-01">The forum</a></li>
-            <li class=""><a href="#section-02">art piece</a></li>
-            <li class=""><a href="#section-03">artwork</a></li>
-            <li class=""><a href="#section-04">The square</a></li>
-            <li class=""><a href="#section-05">Interior</a></li>
+            <li class=""><a href="#page-01" class="active">The forum</a></li>
+            <li class=""><a href="#page-02">art piece</a></li>
+            <li class=""><a href="#page-03">artwork</a></li>
+            <li class=""><a href="#page-04">The square</a></li>
+            <li class=""><a href="#page-05">Interior</a></li>
          </ul>
       </aside>
       <aside class="mob-menu">
@@ -80,7 +80,7 @@
                      </video>
                   </div>
 				</section>
-            <div class="section-content">
+            
                <section class="section section-01">
                   <div class="row">
                      <div class="text-block">
@@ -102,6 +102,7 @@
                      </div>
                   </div>
                </section>
+            <div class="section-content">
                <section id="page-01" class="section section-02 ">
                   <div class="row">
                      <div class="section-contents">
@@ -301,26 +302,41 @@
                   </div>
                   <script>
                      var ww = $(window).width();
-                     if (ww > 768) {
+                     function initSwiper() {
                         mySwiper = new Swiper(".mySwiper", {
                            slidesPerView: "auto",
                            spaceBetween: 20,
                            freeMode: true,
                         });
-                     } else if (ww <= 768) {
-                        // swiper 호출 안함
                      }
-                     </script>
+                     if (ww < 768) {
+                        initSwiper();
+                     } else if (ww >= 768) {
+                        mySwiper = new Swiper(".mySwiper", {
+                           slidesPerView: "auto",
+                           spaceBetween: 20,
+                           freeMode: true,
+                        });
+                     }
+                     $(window).on('resize', function () {
+                        ww = $(window).width();
+                        if (ww >= 768) {
+                           initSwiper();
+                        }
+                     });
+                  </script>
                </div>
+               <footer id="footer">
+                  <div class="row">
+                     Copyright Hyundai Department Store  All rights Reserved
+                  </div>
+               </footer>
             </section>
          <!-- //contents -->
       </section>
+      
    </div>
-   <footer id="footer">
-      <div class="row">
-         Copyright Hyundai Department Store  All rights Reserved
-      </div>
-   </footer>
+   
    <!-- POPUP -->
    <div class="popup-wrap" id="popup" tabindex="0"></div>
    <!-- //POPUP -->

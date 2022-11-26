@@ -38,10 +38,10 @@ window.onload = function () {
           });
 
         $('.page-nav').each(function (e) {
-            gsap.to($(this), 0.5, {
+            gsap.to($(this), 0.4, {
                 scrollTrigger: {
                     trigger: $('.section-content'),
-                    start: "0 50%", // 앞 : 객체 , 뒤 : 페이지 전체
+                    start: "0 80%", // 앞 : 객체 , 뒤 : 페이지 전체
                     end: 'bottom 100%',
                     // scrub: true, //스크롤에 반응 (없으면 자동재생)
                     // markers: true,
@@ -55,15 +55,41 @@ window.onload = function () {
         if (winw > 768) {
             
         } else if (winw <= 768) {
-            $('.page-nav li.active').on('click',function (){
-                $('.page-nav').addClass('on')
+            $('.page-nav').on('click',function (){
+                $(this).toggleClass('open')
             });
+            
             $('.m-menu a').on('click',function (){
                 $('.mob-menu').addClass('active')
             });
             $('.mob-menu .close a').on('click',function (){
                 $('.mob-menu').removeClass('active')
             });
+        }
+
+
+        let links = gsap.utils.toArray(".page-nav li a");
+        links.forEach(a => {
+        let element = document.querySelector(a.getAttribute("href")),
+            linkST = ScrollTrigger.create({
+                    trigger: element,
+                    start: "top top"
+                });
+        ScrollTrigger.create({
+            trigger: element,
+            start: "top center",
+            end: "bottom center",
+            onToggle: self => self.isActive && setActive(a)
+        });
+        a.addEventListener("click", e => {
+            e.preventDefault();
+            gsap.to(window, {duration: 1, scrollTo: linkST.start, overwrite: "auto"});
+        });
+        });
+
+        function setActive(link) {
+        links.forEach(el => el.classList.remove("active"));
+        link.classList.add("active");
         }
     ///});
 }
@@ -429,7 +455,16 @@ function commonTween() {
                         toggleActions: "play pause pause reverse",
                     },
                 });
+                gsap.set($('.mySwiper .swiper-slide'), {
+                    y:'0px',
+                    x: '0%',
+                    opacity: 1,
+                    onComplete: function () {
+        
+                    }
+                })
                 gsap.set(text, {
+                    y:'0px',
                     x: '50%',
                     opacity: 0,
                     onComplete: function () {
@@ -444,9 +479,18 @@ function commonTween() {
             })
         },
         "(max-width:767px)": function () {
-            $('.right-slide').each(function (e) {
+            $('.right-slide .swiper-slide').each(function (e) {
                 var stagger = $(this)
+                gsap.set($('.mySwiper'), {
+                    x: '0%',
+                    opacity: 1,
+                    onComplete: function () {
+        
+                    }
+                })
                 gsap.set(stagger, {
+                    y:'20px',
+                    x: '0%',
                     opacity: 0,
                     onComplete: function () {
         
@@ -460,6 +504,7 @@ function commonTween() {
                         // markers: true,
                         toggleActions: "play none none reverse",
                     },
+                    y:'0px',
                     opacity:1,
                     stagger: 0.1,
                     ease: 'Power1.easeOut'
