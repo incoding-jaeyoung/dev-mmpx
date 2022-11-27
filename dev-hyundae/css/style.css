@@ -554,3 +554,7 @@ img{width: 100%;}
 
     .mob-menu{display: flex;}
 }
+
+
+.floor-menu{display: flex; position:fixed; background: #C876FF; width: 65rem; left: 0; top: 0; bottom: 0;}
+.floor-contents{padding-left: 65rem; font-size: 5rme;}
