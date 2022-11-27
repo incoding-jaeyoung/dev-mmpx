@@ -208,8 +208,8 @@ a:hover{color:inherit;}
 }
 /* added:end */
 ::-webkit-scrollbar {width: 0.5rem; height: 0.2rem; }
-::-webkit-scrollbar-thumb {background: #4560d3; border-radius: 10px; }
-::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2);}
+::-webkit-scrollbar-thumb {background: #C876FF; border-radius: 10px; }
+::-webkit-scrollbar-track { background:#fff;}
 
 
 /* common */
@@ -556,5 +556,45 @@ img{width: 100%;}
 }
 
 
-.floor-menu{display: flex; position:fixed; background: #C876FF; width: 65rem; left: 0; top: 0; bottom: 0;}
+.floor-menu{display: flex; position:fixed; background: #C876FF; width: 65rem; left: 0; top: 0; bottom: 0; padding: 10rem 3.6rem 6rem 3.6rem; flex-direction: column;}
+.floor-menu h2{font-size: 12rem; font-family:'euclid',sans-serif; padding-left: 2.4rem; line-height: 12rem;}
+.floor-menu .floor-nav {margin-top: auto;}
+.floor-menu .floor-nav li a{ display: flex; height: 6.2rem; align-items: center; justify-content:space-between; font-size: 2.8rem; padding:0 4rem 0 3rem; border-radius: 3.1rem;}
+.floor-menu .floor-nav li.active a{background-color: #fff; padding: 0 3rem;}
+.floor-menu .floor-nav li a:hover{padding: 0 3rem;}
 .floor-contents{padding-left: 65rem; font-size: 5rme;}
+.floor-title{height: 100vh; align-items: center; justify-content: center; display: flex; flex-direction: column; position: relative;}
+.floor-title h3{font-family:'euclid',sans-serif; text-transform: uppercase; font-size: 12rem; line-height:100%; text-align: center;}
+.floor-title .sub-title{text-align: center; margin-top: 6rem; font-size: 2.4rem; line-height: 3.4rem;}
+.floor-title .scroll-down{text-transform: uppercase; line-height: 100%; display: flex; align-items:center; position: absolute; bottom:6rem; left: 50%; transform: translateX(-50%);}
+.floor-title .scroll-down img{width: 2.6rem; margin-left: 0.8rem;}
+.page-menu{position: fixed; bottom: 6rem; right: 3.6rem;}
+.page-menu li{margin-top: 1.6rem;}
+.page-menu li a {display: flex; border: 0.3rem solid #000000; border-radius: 50%; width: 6.4rem; height: 6.4rem; align-items: center; justify-content: center;}
+.page-menu li a img{width: 3.2rem;}
+
+.floor-list{padding: 12rem 11.5rem 20rem 15.4rem;}
+.floor-info{background-color: #000; color: #fff; padding: 10rem 7.5rem 0 7.5rem;}
+.floor-info dl{padding-bottom: 24rem;}
+.floor-info dl dt{font-size: 2.8rem; margin-bottom: 5rem; line-height: 3.8rem;}
+.floor-info dl li{display: flex; height: 7.3rem; justify-content: space-between; align-items: center; border-bottom: 0.2rem solid rgba(255, 255, 255, 0.15); font-size: 2rem; padding: 0 0.5rem;}
+.floor-list ul{display: flex; flex-direction: column;}
+.floor-list ul li:nth-child(even){align-self: flex-end;}
+.floor-list ul li img{width: 35.3rem; padding: 1.6rem ; background: #FFE84C; margin-bottom: 1rem;}
+.floor-list ul li{display: flex; flex-direction: column; font-size: 2rem; line-height: 3rem;}
+.floor-list ul li:nth-child(1){margin-left: 7.7rem;}
+.floor-list ul li:nth-child(2){margin-top: -33.5rem;}
+.floor-list ul li:nth-child(3){margin-top: -10rem;}
+.floor-list ul li:nth-child(4){margin-top: -11.5rem; margin-right: 7.7rem;}
+.floor-list ul li:nth-child(5){margin-top: -14rem;}
+.floor-list ul li:nth-child(6){margin-top: -11.7rem;}
+
+
+
+
+
+
+
+
+.ff-euclid{font-family:'euclid',sans-serif;}
+.ff-Roslindale{font-family:'Roslindale',sans-serif;}
