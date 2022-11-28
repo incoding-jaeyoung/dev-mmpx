@@ -23,8 +23,8 @@
             $('.overlay').show();
             $('body').css('overflow','hidden');
             if(animation === 'up'){
-               gsap.set($(this).find('.modal'), {y: $(window).height()});
-               gsap.to($(this).find('.modal'), 0.8, { y: 0, ease: Cubic.easeInOut });
+               gsap.set($(this).find('.modal-dialog'), {y: $(window).height()});
+               gsap.to($(this).find('.modal-dialog'), 0.8, { y: 0, ease: Cubic.easeInOut });
             }
             initUi();
          });
