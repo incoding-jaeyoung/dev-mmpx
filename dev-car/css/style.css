@@ -848,11 +848,12 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 }
 
 @media (max-width: 767px) {
-    .step3{padding: 0 0 5rem 0}
+    .step3{padding: 0 0 6rem 0}
     .step3 .agree-form{padding: 0 2.5rem 3rem 2.5rem}
-    .step3 .logo{margin-top: 4rem}
-    .step3 .info-title{margin-top: 2rem;font-size: 1.6rem;}
-    .step3 .info-desc{margin-top: 2rem;font-size: 1.4rem;}
+    .step3 .logo{margin-top: 4rem;margin-left:2.5rem;margin-right:2.5rem}
+    .step3 .info-title{margin-top: 2rem;font-size: 1.6rem;margin-left:2.5rem;margin-right:2.5rem}
+    .step3 .info-desc{margin-top: 2rem;font-size: 1.4rem;margin-left:2.5rem;margin-right:2.5rem}
+    .step3 .progress-con{padding: 0 2.5rem}
     .step3 .progress-con ol li{width: 100%}
     .step3 .progress-con .tit{font-size: 1.6rem}
     .step3 .progress-con ol li > h4{font-size: 1.8rem};
@@ -860,12 +861,14 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .step3 .progress-con ol li:before{top: 4.5rem}
     .step3 .date-con{font-size: 1.4rem}
     .step3 .top-title{font-size: 1.6rem;margin-top: 3rem;padding:0 0 1.7rem 0;margin: 3rem 2.5rem 0 2.5rem}
-    .step3 .sub-title{font-size: 1.4rem;margin-top: 2rem}
-    .step3 .all-check{margin: 3rem 0 3rem 0.1rem;}
+    .step3 .sub-title{font-size: 1.4rem;margin-top: 2rem;margin-left:2.5rem;margin-right:2.5rem}
+    .step3 .all-check{margin: 3rem 2.5rem 3rem 2.5rem;}
+    .step3 .agree-box{margin-left:2.5rem;margin-right:2.5rem}
     .step3 .agree-box .box-content .radio label p{font-size: 1.4rem;}
     .step3 .agree-box .box-head{font-size: 1.4rem;padding: 0 8rem 0 2rem;display: flex;align-items: center;line-height: 1.5;}
     .step3 .agree-box .box-head .btn{right: -3rem;font-size: 1.2rem;}
     .step3 .agree-box .box-head .btn:after{right: 1rem}
+    .step3 .agree-box.white{margin-left:2.5rem;margin-right:2.5rem}
     .step3 .agree-box.white .box-head .btn{right: -5rem}
     .step3 .agree-box.white .box-head{font-size: 1.4rem;padding: 0 8rem 0 0;display: flex;align-items: center;line-height: 1.5;}
     .step3 .agree-box .box-content .text{font-size: 1.2rem;line-height: 1.5;}
