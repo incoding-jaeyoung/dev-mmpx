@@ -769,6 +769,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .step2 .select-box .check-list,
     .step2 .select-box .list-wrap .field-areas .area,
     .step2 .select-box .list-wrap .field-areas.ml .area{width: 100%}
+    .step2 .select-box .list-wrap .field-areas.two .area{width: calc(50% - 0.5rem);}
     .step2 .select-box .check-list{margin: 0.7rem 0}
     .step2 .select-box .check-list .title,
     .step2 .select-box .check-list .price{font-size: 1.4rem;}
@@ -789,7 +790,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .step2 .select-box .list-wrap .field-areas .area:first-child > p{margin-top:0}
     .step2 .select-box .list-wrap .field-areas input[type="text"]{font-size: 1.4rem;}
     .step2 .select-box .list-wrap .tab-btns{justify-content: space-between;}
-    .step2 .select-box .list-wrap .tab-btns .btn{width:calc(50% - 1rem)}
+    .step2 .select-box .list-wrap .tab-btns .btn{width: calc(50% - 0.5rem);}
     .step2 .select-box .list-wrap .tab-btns .btn:first-child{margin-right: 0;}
     .step2 .select-box .list-wrap .check-con label{font-size: 1.4rem;text-indent: 0.5rem}
     .step2 .select-box .list-wrap .blue-box{margin: 3.5rem -2.5rem 0 -2.5rem;padding: 2.5rem}
