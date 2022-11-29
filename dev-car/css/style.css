@@ -106,7 +106,7 @@ input[type=checkbox]+label.round:after{border-radius: 50%;background-color: #fff
     .input-box .intpu-container.three .custom-select,
     .input-box .intpu-container.three .select-con{width: 32%;}
     .input-box .intpu-container.three .select-con .custom-select{width: 100%}
-    
+    .input-box .intpu-container .double-input input{width: 47%}
     
 }
 
@@ -123,6 +123,7 @@ input[type=checkbox]+label.round:after{border-radius: 50%;background-color: #fff
     .input-box .intpu-container input{width: 100%;}
     .input-box .guide{font-size: 1.3rem;line-height: 1.6;}
     .input-box .guide:before{top: 0.1rem}
+    .file-list{width: 100%;}
 }
 
 
@@ -373,6 +374,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 #header h1 a{display: flex; width:18rem; height: 4.2rem; background: url(../img/img-logo.png) no-repeat; background-size: 18rem auto; text-indent: -9999px; overflow: hidden;}
 #header .back{display: none;}
 #header .blur{width:18rem;}
+#header .close img{width: 3rem;height: 3rem}
 #contents{ display: flex; flex-direction: column; height: 100%; }
 
 .step-line{display: flex; font-size: 1.6rem;}
@@ -462,6 +464,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     #header h1 a{width: 5rem; margin-right: 7rem;}
     #header .back{display:none;}
     #header .blur{display: none;}
+    #header .close{position:absolute;right: 1rem}
     .step-line{display: flex; font-size: 1.6rem;}
     .header-navi-swiper .swiper-slide{width:auto; margin: 0 1rem; min-width: 20rem;}
     .header-navi-swiper .swiper-slide.active a{border-bottom: 2px solid #000e3d; color: #000e3d;}
@@ -514,6 +517,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     #header h1 a{width: 5rem;margin-right: 0rem;}
     #header .back{display:inline-flex;}
     #header .blur{display: none;}
+    #header .close{position:absolute;right: 1rem}
     .step-line{display: flex; font-size: 1.6rem;}
     .step-line li{display: none;}
     .step-line li:after{display: none;}
@@ -828,6 +832,8 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .step3 .agree-form .location1{width: 50rem}
 .step3 .agree-form .remove-btn{position: absolute;top:0;right: 0;min-width: 13rem}
 .step3 .agree-form .remove-btn:before{content:'';width: 1.5rem;height:1.6rem;display: inline-block;background:url('../img/ico-trash.svg') no-repeat;background-size: 100%;margin-right: 1rem;}
+.step3 .agree-form .num-mobile{display: none;}
+
 
 
 @media (max-width: 1200px){
@@ -843,7 +849,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 
 @media (max-width: 767px) {
     .step3{padding: 0 0 5rem 0}
-    .step3 .agree-form{padding: 0 2.5rem 0 2.5rem}
+    .step3 .agree-form{padding: 0 2.5rem 3rem 2.5rem}
     .step3 .logo{margin-top: 4rem}
     .step3 .info-title{margin-top: 2rem;font-size: 1.6rem;}
     .step3 .info-desc{margin-top: 2rem;font-size: 1.4rem;}
@@ -853,7 +859,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .step3 .progress-con ol li{padding: 3rem 3rem 3rem 6rem;}
     .step3 .progress-con ol li:before{top: 4.5rem}
     .step3 .date-con{font-size: 1.4rem}
-    .step3 .top-title{font-size: 1.6rem;margin-top: 3rem;padding:0 2.5rem 1.7rem 2.5rem}
+    .step3 .top-title{font-size: 1.6rem;margin-top: 3rem;padding:0 0 1.7rem 0;margin: 3rem 2.5rem 0 2.5rem}
     .step3 .sub-title{font-size: 1.4rem;margin-top: 2rem}
     .step3 .all-check{margin: 3rem 0 3rem 0.1rem;}
     .step3 .agree-box .box-content .radio label p{font-size: 1.4rem;}
@@ -867,8 +873,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .step3 .agree-box2 .text{font-size: 1.4rem;}
     .step3 .agree-box2 .date{margin-top: 0.2rem;font-size: 1.4rem}
     .step3 .agree-box .box-content .check-con label p{font-size: 1.3rem;}
-    .step3 .agree-box2{margin-left: -2.5rem;margin-right: -2.5rem}
-    .step3 .agree-form dl{flex-direction: column;}
+    .step3 .agree-form dl{flex-direction: column;margin-top: 3rem}
     .step3 .agree-form dt{font-size: 1.5rem;margin-bottom: 1.5rem}
     .step3 .agree-form .radio-btn input[type=radio]+label{width: 50%;}
     .step3 .btn-upload{width: 100%;}
@@ -876,15 +881,22 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .step3 .input-box .intpu-container input.email1{display: block;width:100%;margin-bottom: 1rem;}
     .step3 .input-box .intpu-container input.email2{width: calc(50% - 1rem);}
     .step3 .input-box .intpu-container .custom-select{width: calc(50% - 1rem);}
-    .step3 .input-box .intpu-container.location{flex-wrap: wrap;}
+    .step3 .input-box .intpu-container.location,
+    .step3 .input-box .intpu-container.manager{flex-wrap: wrap;}
     .step3 .input-box .intpu-container.location .select1,
-    .step3 .input-box .intpu-container.location .select2{width: calc(50% - 1rem);}
-    .step3 .input-box .intpu-container.location .select3{width: 100%;margin-top: 1rem}
+    .step3 .input-box .intpu-container.location .select2{width: calc(50% - 0.5rem);}
+    .step3 .input-box .intpu-container.location .select2{margin:0 !important}
+    .step3 .input-box .intpu-container.location .select3{width: 100%;margin-top: 1rem;display: block;}
+    .step3 .input-box .intpu-container.manager .location1{width: 100%;margin-bottom: 1rem;display: block;margin-right: 0;}
+    .step3 .input-box .intpu-container.manager .location2{width: calc(100% - 14.7rem)}
     .step3 .mR20{margin-right: 1rem}
     .step3 .mL20{margin-left: 1rem}
     .step3 .agree-form .remove-btn{border:none;min-width: 1.5rem;padding: 0;margin: 0}
     .step3 .agree-form .remove-btn span{display: none;}
     .step3 .agree-form .add-btn{width: 100%;}
+    .step3 .agree-form.last{border-bottom: none;}
+    .step3 .double-input{display: none;}
+    .step3 .agree-form .num-mobile{display: block;}
     
 }
 
