@@ -60,6 +60,7 @@ input[type=checkbox]+label.round:after{border-radius: 50%;background-color: #fff
 .radio-btn input[type=radio]+label::after{display:none;}
 .radio-btn input[type=radio]+label::before{display:none;}
 .radio-btn.dark input[type=radio]:checked+label{background-color: #000;color: #fff;border-color: #000;}
+.radio-btn.alone  input[type=radio]+label{border-radius: 0.4rem;}
 
 
 .switch-chk{position: absolute; opacity: 0;}
