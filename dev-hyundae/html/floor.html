@@ -76,6 +76,52 @@
                         <li class="active"><a href="#">크리에이티브 그라운드<span>B2F</span></a></li>
                     </ul>
                 </div>
+                <div class="floor-menu-m">
+                  <div class="swiper mySwiper">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#">B2</a></div>
+                        <div class="swiper-slide"><a href="#">B1</a></div>
+                        <div class="swiper-slide"><a href="#">1F</a></div>
+                        <div class="swiper-slide"><a href="#">2F</a></div>
+                        <div class="swiper-slide"><a href="#">3F</a></div>
+                        <div class="swiper-slide"><a href="#">4F</a></div>
+                        <div class="swiper-slide"><a href="#">5F</a></div>
+                        <div class="swiper-slide"><a href="#">6F</a></div>
+                        <div class="swiper-slide"><a href="#">7F</a></div>
+                        <div class="swiper-slide"><a href="#">8F</a></div>
+                        <div class="swiper-slide active"><a href="#">9F</a></div>
+                     </div>
+                  </div>
+                  <script>
+                     var ww = $(window).width();
+                     var mySwiper = new Swiper(".mySwiper", {
+                        slidesPerView: "auto",
+                        spaceBetween: 0,
+                        freeMode: true,
+                     })
+                     if (ww < 768) {
+                        var mySwiper = new Swiper(".mySwiper", {
+                              slidesPerView: "auto",
+                              spaceBetween: 0,
+                              freeMode: true,
+                        })
+                     } else if (ww >= 768) {
+                        mySwiper.destroy();
+                     }
+                     $(window).on('resize', function () {
+                        ww = $(window).width();
+                        if (ww < 768) {
+                           mySwiper = new Swiper(".mySwiper", {
+                                 slidesPerView: "auto",
+                                 spaceBetween: 0,
+                                 freeMode: true,
+                           })
+                        }
+                     });
+                     var indexNum = $(".mySwiper .swiper-slide.active").index()
+                     mySwiper.slideTo(indexNum)
+                  </script>
+                </div>
                 <div class="floor-contents">
                      <div class="floor-title">
                         <h3>creative<br>ground</h3>
@@ -85,10 +131,15 @@
                         <p class="scroll-down">SCROLL<img src="../img/D_Arrow_Down.svg" alt=""></p>
                         
                      </div>
-                     <ul class="page-menu">
-                        <li><a href="#"><img src="../img/Icon_BrandSearch.svg" alt=""></a></li>
-                        <li><a href="#"><img src="../img/Icon_FloorMap.svg" alt=""></a></li>
-                     </ul>
+                     <dl>
+                        <dt></dt>
+                        <dd>
+                           <ul class="page-menu">
+                              <li><a href="#"><img src="../img/Icon_BrandSearch.svg" alt=""></a></li>
+                              <li><a href="#"><img src="../img/Icon_FloorMap.svg" alt=""></a></li>
+                           </ul>
+                        </dd>
+                     </dl>
                      <div class="floor-list">
                         <ul>
                            <li><img src="../img/brand/brand-b2-01.png" alt="">마뗑킴</li>

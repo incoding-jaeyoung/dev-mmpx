@@ -259,11 +259,13 @@ video[poster]{object-fit:contain;}
 #header.has-scrolled h1 a{background: url(../img/img-logo-w.svg) no-repeat; background-size: 100%;}
 #header.has-scrolled .row ul li a{color: #fff;}
 .page-nav{position: fixed; bottom:3rem; display: flex; justify-content: center; width: 100%; opacity: 0; transition: all 1s ease; pointer-events: none; z-index: 100;}
+.page-nav ul:after{content:""; display:flex; position: absolute; z-index: -1; border: 0.3rem solid #000; width: 100%; height: 5rem; background-color: #fff; border-radius: 2.5rem; box-sizing: border-box;}
 .page-nav.active{opacity: 1; pointer-events: auto;}
-.page-nav ul{display: flex;  border:2px solid #000; border-radius: 3rem; background-color: #fff;}
+.page-nav ul{display: flex;  border-radius: 3rem; position: relative;}
 .page-nav ul li{height: 5rem;}
-.page-nav ul li a{text-transform: uppercase; font-size: 1.8rem; display: flex; padding: 0 3rem; height:100%; align-items: center; border-radius: 3rem; transition: all 1s ease;}
+.page-nav ul li a{text-transform: uppercase; font-size: 1.8rem; display: flex; padding: 0 3rem; height:100%; align-items: center; border-radius: 3rem; transition: all 1s ease; transition:all 0.2s ease ; border: 0.3rem solid rgba(255,255,255,0);}
 .page-nav ul li a.active{color: #fff; background-color: #000; }
+.page-nav.forum ul li a.active{color: #000; background-color:#FFE84C; display: flex; border: 0.3rem solid #000; flex: none;}
 .index.video-block {display: flex; height: 100vh; width: 100%;}
 .index.video-block  > div{height: 100%; display: flex; width: 100%;}
 .index.video-block video{height: 100%; object-fit:cover; width: 100%;}
@@ -422,6 +424,9 @@ img{width: 100%;}
     .page-nav.open ul li a{display: flex; pointer-events:auto;}
 
     .page-nav.on ul li{display:block ;}
+
+
+
     .index.video-block {display: flex; height:100vh; width: 100%;}
     .index.video-block  > div{height: 100%; display: flex; width: 100%;}
     .index.video-block video{height: 100%; object-fit:cover; width: 100%;}
@@ -562,7 +567,7 @@ img{width: 100%;}
 .floor-menu .floor-nav li a{ display: flex; height: 6.2rem; align-items: center; justify-content:space-between; font-size: 2.8rem; padding:0 4rem 0 3rem; border-radius: 3.1rem;}
 .floor-menu .floor-nav li.active a{background-color: #fff; padding: 0 3rem;}
 .floor-menu .floor-nav li a:hover{padding: 0 3rem;}
-.floor-contents{padding-left: 65rem; font-size: 5rme;}
+.floor-contents{padding-left: 65rem; }
 .floor-title{height: 100vh; align-items: center; justify-content: center; display: flex; flex-direction: column; position: relative;}
 .floor-title h3{font-family:'euclid',sans-serif; text-transform: uppercase; font-size: 12rem; line-height:100%; text-align: center;}
 .floor-title .sub-title{text-align: center; margin-top: 6rem; font-size: 2.4rem; line-height: 3.4rem;}
@@ -589,9 +594,84 @@ img{width: 100%;}
 .floor-list ul li:nth-child(5){margin-top: -14rem;}
 .floor-list ul li:nth-child(6){margin-top: -11.7rem;}
 
+.floor-menu-m{height: 6.4rem; display: flex; align-items: center; display: none;  margin-left: -1rem;}
+.floor-menu-m .mySwiper{width: 100%;}
+.floor-menu-m .swiper-slide{width:auto;}
+.floor-menu-m .swiper-slide a{display:flex; width: 4.6rem; height: 4.6rem; align-items: center; justify-content: center; color: #BABABA;}
+.floor-menu-m .swiper-slide.active a{color: #000; background-color: #C876FF;  border-radius: 50%;}
+
+@media (max-width: 768px) {
+    .floor-wrap{padding: 0 2rem; padding-top: 6rem; overflow: hidden;}
+    .floor-menu{display: none;}
+    .floor-menu-m{display: flex;}
+    .floor-contents{padding-left:0rem;}
+    .floor-title{height: auto; display: block; margin-top: 1.8rem;  padding-right: 6rem;}
+    .floor-title h3{font-size: 4rem; line-height:100%; text-align:left;}
+    .floor-title .sub-title{text-align:left; margin-top: 3rem; font-size:1.6rem; line-height: 2.4rem;}
+    .floor-title .sub-title br{display: none;}
+    .floor-title .scroll-down{display:none;}
+    .floor-title .scroll-down img{width: 2.6rem; margin-left: 0.8rem;}
+    .page-menu{position: fixed; bottom: 6rem; right: 3.6rem;}
+    .page-menu li{margin-top: 1.6rem;}
+    .page-menu li a {display: flex; border: 0.3rem solid #000000; border-radius: 50%; width: 6.4rem; height: 6.4rem; align-items: center; justify-content: center;}
+    .page-menu li a img{width: 3.2rem;}
+    
+    .floor-list{padding:0; margin-top: 6rem; width: 100%; padding-bottom: 8rem;}
+    .floor-info{background-color: #000; color: #fff; padding: 8rem 2rem 0 2rem; margin-left: -2rem; margin-right: -2rem;}
+    .floor-info dl{padding-bottom: 8rem;}
+    .floor-info dl dt{font-size: 1.8rem; margin-bottom: 1.7rem; line-height: 2.6rem;}
+    .floor-info dl li{display: flex; height: 5.3rem; justify-content: space-between; align-items: center; border-bottom: 0.2rem solid rgba(255, 255, 255, 0.15); font-size: 1.5rem; padding: 0;}
+    .floor-list ul{display: flex; flex-direction: column;}
+    .floor-list ul li:nth-child(even){align-self: flex-start;}
+    .floor-list ul li:nth-child(odd){align-self: flex-end;}
+    .floor-list ul li img{width: 18.8rem; padding: 0.6rem ; background: #FFE84C; margin-bottom: 1rem;}
+    .floor-list ul li{display: flex; flex-direction: column; font-size: 1.2rem; line-height: 1.5rem; margin-bottom: 4rem; margin-top: auto;}
+    .floor-list ul li:nth-child(1){margin-left:auto;}
+    .floor-list ul li:nth-child(2){margin-top: auto;}
+    .floor-list ul li:nth-child(3){margin-top: auto; margin-right: 4rem;}
+    .floor-list ul li:nth-child(4){margin-top: auto;}
+    .floor-list ul li:nth-child(5){margin-top: auto;}
+    .floor-list ul li:nth-child(6){margin-top: auto; margin-left: 4rem;}
 
 
+}
 
+.section-forum .section-contents{padding-bottom: 19rem;}
+h2.tit-forum{font-size: 16rem; line-height: 100%; margin-bottom: 2rem;}
+.section.forum{background-color: #fff;}
+.section.forum h2{font-size: 12rem; line-height: 100%;}
+.section .sub-title-forum{font-size: 2.4rem; line-height: 3.4rem; text-align: center; margin-top: 3rem;}
+.forum-nav{width: 130.1rem; height: 85.4rem; display: flex; margin-top: 19.5rem; margin-left: auto; margin-right: auto; position: relative;}
+.forum-nav ul li{position: absolute;}
+.forum-nav ul li a{display: flex;}
+.forum-nav ul li:nth-child(1){left: -7.2rem; top: -1.2rem; width: 35.6rem;}
+.forum-nav ul li:nth-child(1) span{left:10rem; top: 19rem;}
+.forum-nav ul li:nth-child(2){left: 68.6rem; top: -8.8rem; width: 38.5rem;}
+.forum-nav ul li:nth-child(2) span{left:22rem; top: 21rem;}
+.forum-nav ul li:nth-child(3){left: -9.1rem; top: 42.4rem; width: 22rem;}
+.forum-nav ul li:nth-child(3) span{left:4.2rem; top: 28.2rem;}
+.forum-nav ul li:nth-child(4){left:43.5rem; top: 21.3rem; width: 21.2rem;}
+.forum-nav ul li:nth-child(4) span{left:4.1rem; top: 29.2rem;}
+.forum-nav ul li:nth-child(5){right:-9.3rem; top: 16.6rem; width: 23.6rem;}
+.forum-nav ul li:nth-child(5) span{left:4rem; top: 30rem;}
+.forum-nav ul li a span{position: absolute; height: 7rem; background-color: #fff; border: 0.3rem solid #000; border-radius: 3.5rem; display:flex; align-items: center; justify-content: center; text-transform: uppercase; font-size: 2.4rem; padding: 0 3rem;  white-space:nowrap; flex-wrap: nowrap; white-space:; transition: all 0.2s ease;}
+.forum-nav ul li a span img{width: 2.4rem; margin-left: 1rem; width: 0;}
+.forum-nav ul li a img{transition: all 0.2s ease;}
+.forum-nav ul li a:hover>img{transform: rotateZ(5deg);}
+.forum-nav ul li a:hover span{transform: translateX(-1.2rem);}
+.forum-nav ul li a:hover span img{width: 2.4rem;}
+.forum-nav ul li:nth-child(1) a:hover span{background: #00AF33;}
+.forum-nav ul li:nth-child(2) a:hover span{background: #F5BD13;}
+.forum-nav ul li:nth-child(3) a:hover span{background: #3BBBEA;}
+.forum-nav ul li:nth-child(4) a:hover span{background: #FF97D0;}
+.forum-nav ul li:nth-child(5) a:hover span{background: #C876FF;}
+
+.section.forum .number {display: flex; width: 18.7rem; height: 9.4rem; align-items: center; justify-content: center; margin: auto; margin-bottom: 2.5rem; transform: rotateZ(-10deg); border: 0.3rem solid #000; border-radius: 50%; font-family:'Roslindale',sans-serif; font-size: 3rem;}
+.section-forum-01 .number{background: #F5BD13;}
+.section-forum-02 .number{background: #FF97D0;}
+.section-forum-03 .number{background: #C876FF;}
+.section-forum-04 .number{background: #3BBBEA;}
+.section-forum-05 .number{background: #00AF33;}
 
 
 

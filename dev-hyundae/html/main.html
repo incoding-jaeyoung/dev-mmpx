@@ -311,18 +311,16 @@
                         });
                      }
                      if (ww < 768) {
-                        initSwiper();
+                        mySwiper.destroy();
                      } else if (ww >= 768) {
-                        mySwiper = new Swiper(".mySwiper", {
-                           slidesPerView: "auto",
-                           spaceBetween: 20,
-                           freeMode: true,
-                        });
+                        initSwiper()
                      }
                      $(window).on('resize', function () {
                         ww = $(window).width();
-                        if (ww >= 768) {
-                           initSwiper();
+                        if (ww < 768) {
+                           mySwiper.destroy();
+                        } else if (ww >= 768) {
+                           initSwiper()
                         }
                      });
                   </script>
