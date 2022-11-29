@@ -637,19 +637,20 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .step2 .select-box .check-wrap{display: flex;flex-direction: row;justify-content: space-between;margin-top: 3rem;flex-wrap: wrap;}
 .step2 .select-box .check-list{width:38rem;margin: 1rem 0;display: flex; align-items: center}
 .step2 .select-box .check-list label{width: 100%;box-sizing: border-box; padding: 1.5rem 0 1.5rem 1.5rem;border: solid 1px #ccc;height:6rem;position:relative}
-.step2 .select-box .check-list label:after{left: 1.9rem;top: 2.4rem;}
+.step2 .select-box .check-list label:before{top: 50%;margin-top: -1rem;}
+.step2 .select-box .check-list label:after{left: 1.9rem;top: 50%;margin-top: -0.6rem;}
 .step2 .select-box .check-list label.round:after{left: 2rem;}
 .step2 .select-box .check-list input[type="checkbox"]:checked+label{border-color: #4560d3;white-space:wrap;}
 .step2 .select-box .check-list .info{width: 100%;position: relative;/* line-height: 6rem; */}
 .step2 .select-box .check-list .title{float:left;margin-left: 1rem;font-size: 1.8rem;font-weight: 400;}
-.step2 .select-box .check-list .price {float: right;text-align: right;font-family: 'Lato';font-size: 1.8rem;font-weight: 600}
+.step2 .select-box .check-list .price {float: right;text-align: right;font-family: 'Lato';font-size: 1.8rem;font-weight: 600;position: relative;top: -0.6rem;}
 .step2 .select-box .check-list.image label{height: 13.8rem}
 .step2 .select-box .check-list.image .thumb{width: 15.7rem;height: 9.7rem;margin-left: 1.2rem;}
 .step2 .select-box .check-list.image .thumb > img{width: 9.7rem;height: 9.7rem;}
 .step2 .select-box .check-list.image .thumb.no-image{background: url('../img/no-image.png') no-repeat;background-size: 9.7rem 9.7rem;}
 .step2 .select-box .check-list.image .info{line-height: 1.8rem;}
 .step2 .select-box .check-list.image .title{float: none;height: 10rem;margin-left: 1.5rem;display: block;}
-.step2 .select-box .check-list.image .price{float: none;text-align: left;position: absolute;left: 1.5rem;top: 7rem;width: 100%;}
+.step2 .select-box .check-list.image .price{float: none;text-align: left;position: absolute;left: 1.5rem;top: 7.5rem;width: 100%;}
 .step2 .select-box .check-list.image .price button{position: absolute;right: 1.7rem;top: -1rem;}
 .step2 .select-box .ex-info{margin-top: 20px;font-size: 1.5rem;color: #6f6f6f;font-weight: 300;position: relative;padding-left: 1.7rem}
 .step2 .select-box .ex-info:before{content:'※';position: absolute;left:0rem;top:0rem}
