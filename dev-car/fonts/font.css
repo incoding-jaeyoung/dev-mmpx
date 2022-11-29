@@ -27,6 +27,15 @@
   font-weight:500;
 }
 
+/* Lato-Bold */
+@font-face {
+  font-family:'Lato';
+  font-style: normal;
+  src:local('※'),  
+  url('Lato/Lato-Black.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight:900;
+}
+
 /* noto-sans-kr 100  */
 @font-face {
   font-family: 'Noto Sans KR';
