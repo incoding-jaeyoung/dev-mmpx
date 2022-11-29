@@ -21,12 +21,12 @@ body {
 /* common */
 * { -webkit-overflow-scrolling: touch;  word-break: keep-all; box-sizing: border-box;}
 input[type=text].datepicker{display: inline-flex; position: relative; background: url(../img/calendar.svg) no-repeat right 0.8rem center;}
-input[type=text],input[type=email],input[type=password],textarea, select {-webkit-appearance: none;border: .1rem solid #d6d6d7;background-color: #fff;height: 5rem;padding: 0 2rem;font-size: 1.4rem;box-sizing: border-box;font-family:'Lato', 'Noto Sans KR', sans-serif;width: 100%;vertical-align: middle;color:#333;}
+input[type=text],input[type=email],input[type=password],textarea, select {-webkit-appearance: none;border: .1rem solid #d6d6d7;background-color: #fff;height: 5rem;padding: 0 2rem;font-size: 1.4rem;box-sizing: border-box;font-family:'Lato', 'Noto Sans KR', sans-serif;width: 100%;vertical-align: middle;color:#333; font-weight: 400;}
 input[type=text]:disabled,input[type=password]:disabled{background-color: #f8f8f8;color:#0b0b1b}
 select:disabled{background-color: #fff;color:#0b0b1b}
 textarea{width: 100%; padding-top: 1.3rem;  padding-bottom: 1.3rem; height:30rem; font-size: 1.4rem; background: none; border: none; border: 1px solid #ddd;}
 select::-ms-expand {display: none;}
-button{outline: none; box-shadow: none; border: none; background: none;font-family:'Lato', 'Noto Sans KR', sans-serif; cursor: pointer; transition: all 0.2s ease;}
+button{outline: none; box-shadow: none; border: none; background: none; font-family:'Lato', 'Noto Sans KR', sans-serif; cursor: pointer; transition: all 0.2s ease;}
 .clearfix:after{content: ""; display: block; clear: both;}
 em{font-style: normal;}
 input:focus,textarea:focus, select:focus{outline: none !important; box-shadow: none; border-color: #888;}
@@ -183,6 +183,7 @@ input[type=checkbox]+label.round:after{border-radius: 50%;background-color: #fff
 .btn-upload{width:28rem;position:relative;color: #1b1c1d;height: 5rem;align-items: center;font-size: 1.4rem;font-weight: 400;background-color: #fff;border: solid 1px #1b1c1d;padding:0;cursor: pointer;}
 .btn-upload input{opacity: 0;position: absolute;left: 0;top: 0;width: 100%;height: 100%}
 .btn-upload label{width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;cursor: pointer;}
+.btn:disabled{background-color: #ccc;}
 
 
 
@@ -919,4 +920,38 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .modal.step2-02 .modal-body .info-list dt{font-size: 1.2rem;}
     .modal.step2-02 .modal-body .info-list dd{font-size: 1.2rem}  
     .modal.step2-02 .modal-body .info-list dt:before{top:0.7rem} 
+}
+
+
+
+
+/* 로그인 */
+.login-wrap{width: 118rem; margin: auto; position: relative;}
+.login-con{ width: 34.2rem; margin: auto; height: 100vh; display: flex; flex-direction: column; justify-content: center; padding-bottom: 6rem;}
+.login-con .close{position: absolute; right: 0; top: 1.3rem;}
+.login-con h1 {text-align: center; margin-bottom: 3rem;} 
+.login-con h1 img{width: 18rem;} 
+.login-con input{height: 5.5rem; border: none; border-bottom: 0.1rem solid #d6d6d7; font-size: 1.6rem; padding-left: 0; font-weight:500;}
+.login-con input.error{border-color: #973937;}
+.login-con .upw{margin-top: 2rem;}
+.login-con .login{margin-top: 4rem;}
+.login-con .login-menu{margin-top: 2rem; display: flex; justify-content: space-between; font-size: 1.3rem;}
+.login-con .login-menu a{color: rgba(0, 0, 0, 0.8); display: flex; align-items: center;}
+.login-con .login-menu p{display: flex;}
+.login-con .login-menu p:last-of-type a:first-of-type::after{content: ""; display: block; width: 0.1rem; height:1.4rem; background-color: #ccc; margin: 0 1rem;}
+.login-wrap .btn{width: 100%;}
+.login-con .login-form span{font-size: 1.2rem; color: #973937; line-height: 0.15rem; letter-spacing: -0.03rem; margin-top: 0.75rem;}
+.policy{display: flex; justify-content: center; font-size: 1.4rem; position: absolute; bottom: 4rem; width: 100%; left: 0;}
+.policy a:first-of-type{color: #000; opacity: 0.5; display: flex; align-items: center;}
+.policy a:first-of-type:after{content: ""; display: block; width: 0.1rem; height:1.4rem; background-color: #ccc; margin: 0 2rem;}
+.policy a:last-of-type{color: #2185d0;}
+@media (max-width: 1200px){
+    .login-wrap{width:100%;}
+    .login-con .close{right:5rem; top:4rem;}
+}
+
+@media (max-width: 767px) {
+    .login-con{ width:100%; padding-left: 2.4rem; padding-right: 2.4rem;}
+    .login-con .close{position: absolute; right: 2.5rem; top: 1.3rem;}
+    .policy{font-size: 1.2rem;}
 }
