@@ -159,6 +159,10 @@ function headerScroll() {
 }
 
 function init() {
+    $('.float-menu dt button').on('click', function () {
+        $('.float-menu-wrap').toggleClass('active')
+
+    })
     ScrollTrigger.matchMedia({
         "(min-width:601px)": function () {
             gsap.to($(".float"),{

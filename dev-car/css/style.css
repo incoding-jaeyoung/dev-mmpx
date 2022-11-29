@@ -430,7 +430,8 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .select-block h3{font-size: 2rem; margin-top: 1.5rem; letter-spacing: -0.05rem;}
 .select-block hr{height: 0.1rem; margin-top: 4rem; margin-bottom: 3rem;}
 .radio-select{display: flex; flex-wrap: wrap; justify-content: space-between; padding-right: 7.5rem;}
-.radio-select dl:last-of-type{margin-top: 2rem;}
+.radio-select dl{margin-bottom: 2rem;}
+.radio-select dl:last-of-type{margin-bottom: 0;}
 .radio-select dl dt{font-size: 1.4rem;}
 .radio-select dl dd{}
 
