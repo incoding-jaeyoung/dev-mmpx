@@ -144,6 +144,34 @@
                });
             }
          });
+      },
+
+      // gotoTop
+      gotoTop: function () {
+         $("html, body").scrollTop(0);
+      },
+
+      setPriceSelect: function () {
+         $(".price-select .total-price").on("click", function ( e ) {
+            if(!$(".price-select .total-price").is(".active")){
+               $(".price-select .total-list").slideDown();
+               setTimeout(function () {$(".price-select .total-price").addClass("active")}, 100);
+            } else {
+               $(".price-select .total-list").slideUp();
+               setTimeout(function () {$(".price-select .total-price").removeClass("active")}, 100);
+            }
+            e.preventDefault();
+            e.stopPropagation();
+         });
+         $(".price-select .total-list .list").on("click", function () {
+            $(".price-select .total-list .list").removeClass("active");
+            $(this).addClass("active");
+            $(".price-select .total-price .name").text($(this).find(".name").text());
+            $(".price-select .total-price .price .text").text($(this).find(".price .text").text());
+            $(".price-select .total-list").slideUp();
+            setTimeout(function () {$(".price-select .total-price").removeClass("active")}, 100);
+            $(".price-select").trigger("change", $(this).attr("value"));
+         });
       }
    }
 
@@ -152,6 +180,23 @@
    $(document).ready(function () {
       initUi();
       UI.sethaderNavi();
+      UI.setPriceSelect();
+
+      var oldWinTop = 0;
+      $(window).on("scroll", function () {
+         var winTop = $(window).scrollTop();
+         if(oldWinTop < winTop){
+            if(!$(".goto-top").is(":visible")){
+               $(".goto-top").show();
+            }
+         } else {
+            if($(".goto-top").is(":visible")){
+               $(".goto-top").hide();
+            }
+         }
+         oldWinTop = winTop;
+      });
+      
    });
 
 

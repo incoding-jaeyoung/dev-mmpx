@@ -78,9 +78,9 @@
                      <dt>결제 수단</dt>
                      <dd>
                         <p class="radio-btn dark">
-                           <input type="radio" name="type-01" id="type-01-01" checked="">
+                           <input type="radio" name="type-01" id="type-01-01">
                            <label for="type-01-01">신용카드</label>
-                           <input type="radio" name="type-01" id="type-01-02">
+                           <input type="radio" name="type-01" id="type-01-02" checked>
                            <label for="type-01-02">무통장 입금</label>
                         </p>
                         <div class="input-box mT20">
@@ -92,20 +92,30 @@
                            </div>
                         </div>
                         <div class="input-box card mT20">
-                           <div class="title">카드번호</div>
+                           <div class="title">입금은행</div>
                            <div class="intpu-container">
-                              <input type="text" maxlength="4">
-                              <input type="text" maxlength="4">
-                              <input type="password" maxlength="4">
-                              <input type="text" maxlength="4">
+                              <select class="custom-select" placeholder="선택해 주세요">
+                                 <option>우리은행</option>
+                                 <option>국민은행</option>
+                                 <option>신한은행</option>
+                              </select>
                            </div>
                         </div>
-                        <div class="input-box date mT20">
-                           <div class="title">유효기간</div>
+                        <div class="input-box mT20">
+                           <div class="title">입금계좌</div>
                            <div class="intpu-container">
-                              <input type="text" placeholder="MM/YY">
+                              <input type="text" value="국민 75739014027929">
                            </div>
-                           <div class="guide">인도금(선수금) 결제 전까지 계약을 취소하시면 계약금은 전액환불 됩니다. 계약자 본인 명의 카드로만 결제가 가능합니다.</div>
+                        </div>
+                        <div class="input-box mT20">
+                           <div class="title">예금주</div>
+                           <div class="intpu-container">
+                              <input type="text" value="홍길동">
+                           </div>
+                           <div class="guide">인도금(선수금) 결제 전까지 계약을 취소하시면 계약금은 전액환불 됩니다.<br />입금 기한 내 입금하지 않는 경우 계약은 자동 취소됩니다. 선택한 결제자 성명으로 입금해 주세요.</div>
+                        </div>
+                        <div class="mT50 bank-btn">
+                           <button class="btn btn-white" type="button">입금 계좌 정보 복사</button>
                         </div>
                      </dd>
                   </dl>
@@ -115,6 +125,7 @@
                   <button class="btn btn-blue" type="sumit">계약금 결제</button>
                </div>
             </form>
+            <div class="toast">입금 계좌 정보가 복사되었습니다.<button class="close" type="button"></button></div>
          </div>
          <!-- step4 -->
          

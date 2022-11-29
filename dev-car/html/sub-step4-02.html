@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="Author" content="쌍용자동차" />
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+   <meta property="og:image" content="../img/img-og.png">
+   <meta property="og:url" content="">
+   <meta property="og:description" content="">
+   <meta property="og:title" content="쌍용자동차">
+
+   <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+   <title>쌍용자동차</title>
+   <link rel="stylesheet" href="../css/style.css" />
+
+   <script src="../js/jquery-3.3.1.min.js"></script>
+   <script src="../js/gsap.min.js"></script>
+   <script src="../js/swiper-bundle.min.js"></script>
+   <script src="../js/jquery.custom-select.js"></script>
+   <script src="../js/ui.js"></script>
+</head>
+<body>
+   <div class="accessbility"><a href="#contents">본문바로가기</a></div>
+   <div id="wrapper">
+      <header id="header">
+         <h1><a href="#">쌍용자동차</a></h1>
+         <p class="back"><a href="#"><img src="../img/ico-prev.svg" alt="뒤로"></a></p>
+         <ul class="step-line">
+            <li><span>STEP 1 :</span> 내 차 디자인</li>
+            <li><span>STEP 2 :</span> 옵션 및 결제 방법</li>
+            <li><span>STEP 3 :</span> 계약서 작성</li>
+            <li class="active"><span>STEP 4 :</span> 계약금 결제</li>
+         </ul>
+         <div class="blur"></div>
+         <button type="button" class="close"><img src="../img/btn-close.svg" alt=""></button>
+      </header>
+      <section id="contents">
+
+         <!-- step4 -->
+         <div class="step4">
+               <div class="logo"><img src="../img/img-logo.png"></div>
+               <h2 class="info-title">쌍용자동차를 구매해 주셔서 감사합니다.</h2>
+               <p class="info-desc">
+                  담당 오토매니저가 작성하신 계약 정보를 기반으로 할인 및 판매조건을 추가하여 자동차 매매 계약서를 전달 드리도록 하겠습니다. <br />
+                  마이페이지로 이동하시면 현재 작성한 자동차 계약 정보를 확인하실 수 있습니다.  <br /><br />
+
+                  최고의 품질로 최선의 서비스가 될 수 있도록 하겠습니다.<br /><br />
+
+                  감사합니다.
+               </p>
+
+               <div class="foot-btn">
+                  <button class="btn btn-black" type="button">메인 화면으로 이동</button>
+                  <button class="btn btn-blue" type="button">마이페이지로 이동</button>
+               </div>
+         </div>
+         <!-- step4 -->
+         
+         <!-- //contents -->
+      </section>
+      <button class="goto-top" type="button" onClick="UI.gotoTop()"><img src="../img/goto-top.svg" /></button>
+   </div>
+   
+   <!-- POPUP -->
+   <div class="popup-wrap" id="popup" tabindex="0"></div>
+   <!-- //POPUP -->
+
+   
+</body>
+
+</html>

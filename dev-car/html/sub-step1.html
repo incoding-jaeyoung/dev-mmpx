@@ -27,7 +27,13 @@
    <script src="../js/swiper-bundle.min.js"></script>
    <script src="../js/jquery.custom-select.js"></script>
    <script src="../js/ui.js"></script>
-   <script src="../js/ui.js"></script>
+   <script type="text/javascript">
+      $(function () {
+         $(".price-select").on("change", function (e, val){
+            alert("트림변경 : " + val);
+         })
+      });
+   </script>
 </head>
 
 <body>
@@ -76,10 +82,32 @@
                </div>
             </div>
          </div>
-         <div class="total-price">
-            <p class="name">와일드</p>
-            <p class="price">29,900,000 원 ~ <a href="#"><img src="../img/ico-down-s.svg" alt=""></a></p>
+         <div class="price-select">
+            <div class="total-price">
+               <p class="name">와일드</p>
+               <p class="price"><span class="text">29,900,000 원</span> ~ <span class="arrow"><img src="../img/ico-down-s.svg" alt=""></span></p>
+            </div>
+
+            <div class="total-list">
+               <div class="list active" value="1">
+                  <p class="name">와일드</p>
+                  <p class="price"><span class="text">29,900,000 원</span> ~ <span class="arrow"></span></p>
+               </div>
+               <div class="list" value="2">
+                  <p class="name">어드밴스</p>
+                  <p class="price"><span class="text">30,900,000 원</span> ~ <span class="arrow"></span></p>
+               </div>
+               <div class="list" value="3">
+                  <p class="name">프레스티지</p>
+                  <p class="price"><span class="text">31,900,000 원</span> ~ <span class="arrow"></span></p>
+               </div>
+               <div class="list" value="4">
+                  <p class="name">노블레스</p>
+                  <p class="price"><span class="text">32,900,000 원</span> ~ <span class="arrow"></span></p>
+               </div>
+            </div>
          </div>
+
          <div class="select-block mob-view">
             <h2>REXTON SPORTS</h2>
             <div class="radio-select">
