@@ -6,9 +6,47 @@ gsap.registerPlugin(ScrollTrigger);
 // JavaScript Document
 window.onload = function () {
     //$('body').imagesLoaded().done(function (instance) {
+        $('#header').addClass('load')
         setTimeout(function(){
-            $('#header').addClass('load')
+            $('.page-nav').each(function (e) {
+                gsap.to($(this), 0, {
+                    scrollTrigger: {
+                        trigger: $('.section-content'),
+                        start: "0 80%", // 앞 : 객체 , 뒤 : 페이지 전체
+                        end: 'bottom 100%',
+                        // scrub: true, //스크롤에 반응 (없으면 자동재생)
+                        // markers: true,
+                        toggleActions: "play none none reverse",
+                        toggleClass: {targets:".page-nav", className: "active"},
+                    },
+                    ease: 'Power3.easeOut'
+                })
+            })
+            let links = gsap.utils.toArray(".page-nav li a");
+            links.forEach(a => {
+            let element = document.querySelector(a.getAttribute("href")),
+                linkST = ScrollTrigger.create({
+                        trigger: element,
+                        start: "top top"
+                    });
+            ScrollTrigger.create({
+                trigger: element,
+                start: "top center",
+                end: "bottom center",
+                onToggle: self => self.isActive && setActive(a)
+            });
+            a.addEventListener("click", e => {
+                e.preventDefault();
+                gsap.to(window, {duration: 1, scrollTo: linkST.start, overwrite: "auto"});
+            });
+            });
+    
+            function setActive(link) {
+            links.forEach(el => el.classList.remove("active"));
+            link.classList.add("active");
+            }
         },500)
+        forum()
         const sections = gsap.utils.toArray('.data-black-header');
         sections.forEach(section => {
             ScrollTrigger.create({
@@ -27,7 +65,7 @@ window.onload = function () {
         init();
         // headerScroll();
         // navTrigger()
-        gsap.utils.toArray(".section").forEach((panel, i) => {
+        gsap.utils.toArray(".section-index").forEach((panel, i) => {
             ScrollTrigger.create({
               trigger: panel,
               start: "bottom bottom", 
@@ -37,20 +75,7 @@ window.onload = function () {
             });
           });
 
-        $('.page-nav').each(function (e) {
-            gsap.to($(this), 0.4, {
-                scrollTrigger: {
-                    trigger: $('.section-content'),
-                    start: "0 80%", // 앞 : 객체 , 뒤 : 페이지 전체
-                    end: 'bottom 100%',
-                    // scrub: true, //스크롤에 반응 (없으면 자동재생)
-                    // markers: true,
-                    toggleActions: "play none none reverse",
-                    toggleClass: {targets:".page-nav", className: "active"},
-                },
-                ease: 'Power3.easeOut'
-            })
-        })
+        
         var winw = $(window).width();
         if (winw > 768) {
             
@@ -68,32 +93,90 @@ window.onload = function () {
         }
 
 
-        let links = gsap.utils.toArray(".page-nav li a");
-        links.forEach(a => {
-        let element = document.querySelector(a.getAttribute("href")),
-            linkST = ScrollTrigger.create({
-                    trigger: element,
-                    start: "top top"
-                });
-        ScrollTrigger.create({
-            trigger: element,
-            start: "top center",
-            end: "bottom center",
-            onToggle: self => self.isActive && setActive(a)
-        });
-        a.addEventListener("click", e => {
-            e.preventDefault();
-            gsap.to(window, {duration: 1, scrollTo: linkST.start, overwrite: "auto"});
-        });
-        });
-
-        function setActive(link) {
-        links.forEach(el => el.classList.remove("active"));
-        link.classList.add("active");
-        }
+       
     ///});
 }
+//층별안내 스와이퍼
+function floor(){
+    var ww = $(window).width();
+    if (ww < 768) {
+        
+        var mySwiper = new Swiper(".floor-btn", {
+            slidesPerView: "auto",
+            spaceBetween: 0,
+            freeMode: true,
+        })
+        setTimeout(function(){
+            mySwiper.update();
+            mySwiper.slideTo(indexNum)
+        },500)
+        
+    console.log(ww)
+        
+    } else if (ww >= 768) {
+        mySwiper.destroy();
+    }
+    $(window).on('resize', function () {
+        ww = $(window).width();
+       
+        if (ww < 768) {
+            mySwiper.destroy();
+            mySwiper = new Swiper(".floor-btn", {
+                slidesPerView: "auto",
+                spaceBetween: 0,
+                freeMode: true,
+            })
+            setTimeout(function(){
+                mySwiper.update();
+                mySwiper.slideTo(indexNum)
+            },500)
+            
+        }
+    });
+    var indexNum = $(".mySwiper .swiper-slide.active").index()
+    
+}
 
+// 포럼메인
+function forum() {
+    ScrollTrigger.matchMedia({
+        "(min-width:768px)": function () {
+            
+        },
+        "(max-width:767px)": function () {
+            let tl = gsap.timeline({
+                // yes, we can add it to an entire timeline!
+                scrollTrigger: {
+                    trigger: ".section-forum",
+                    pin: true,   // pin the trigger element while active
+                    start: "top top", // when the top of the trigger hits the top of the viewport
+                    end: "100% 0", // end after scrolling 500px beyond the start
+                    scrub: 0.3, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                    // markers: true,
+                    pinSpacing:1,
+                    scrub: true,
+                    anticipatePin: 1
+                }
+                });
+            
+                // add animations and labels to the timeline
+                tl.addLabel("start")
+                .to(".tit-forum", {scale: 0.8},'shape')
+                .to(".section-forum .sub-title", {scale: 0.8, y:'-10%'},'shape')
+                .from(".shape-01", {opacity:1, y:'-70%', x:'-50%'},'shape+=0.1')
+                .from(".shape-02", {opacity:1, y:'-50%', x:'-100%'},'shape+=0.1')
+                .from(".shape-03", {opacity:1, y:'-80%', x:'100%'},'shape+=0.1')
+                .from(".shape-04", {opacity:1, y:'-80%', x:'100%'},'shape+=0.1')
+                .from(".shape-05", {opacity:1, y:'50%', x:'-100%'},'shape+=0.1')
+                .from(".shape-06", {opacity:1, y:'50%', x:'100%'},'shape+=0.1')
+                .from(".shape-07", {opacity:1, y:'50%', x:'-50%'},'shape+=0.1')
+                .from(".shape-08", {opacity:1, y:'50%', x:'50%'},'shape+=0.1')
+        },
+    })
+
+    
+    
+}
 // 데이트피커
 $(document).ready(function () {
     $("body").append('<script src="../js/jquery-ui/jquery-ui.min.js"></script>');
@@ -187,9 +270,9 @@ function init() {
         "(min-width:851px)": function () {
             var ran = gsap.timeline ()
             .to('.obj-move',{
-                x: "random(-30, 30)", 
+                //x: "random(-30, 30)", 
                 y: "random(-30, 30)",
-                scale: "random(0.9, 1)",
+                // scale: "random(0.9, 1)",
                 duration:3,
                 ease:"none",
                 repeat:-1,
@@ -306,11 +389,11 @@ function commonTween() {
         });
         upmotion.to(tada, 0.5, {
             opacity: 1,
-            scale:1.2,
+            scale:1,
             ease: "power3.out",
         })
         .to(tada, 0.5, {
-            scale:1,
+            scale:0.9,
             ease: "power3.out",
         })
 
@@ -318,7 +401,7 @@ function commonTween() {
     $('.fade, .section h2').each(function (e) {
         let text = $(this)
         gsap.set(text, {
-            opacity: 0,
+            opacity:0,
         })
         const upmotion = gsap.timeline({
             scrollTrigger: {
@@ -366,7 +449,7 @@ function commonTween() {
         let target = text.find('.over-text-con')
         gsap.set(target, {
             y:40,
-            opacity: 0,
+            opacity: 1,
         })
         const upmotion = gsap.timeline({
             scrollTrigger: {
@@ -627,52 +710,5 @@ function closeModal(no) {
     $('.modal-inside').hide();
 }
 
-function counter() {
-    var counter = {
-        var: 0
-    };
-    var tal = document.getElementById("cx1");
-
-    TweenMax.to(counter, 3, {
-        var: 1000000,
-        onUpdate: function () {
-            tal.innerHTML = numberWithCommas(Math.ceil(counter.var));
-        },
-        ease: 'Power4.easeOut'
-    });
-
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-}
-
-function setAcoddion() {
-    $(".accodion").each(function () {
-        var owner = $(this);
-        var header = $(this).find(".accodion-header");
-        var body = $(this).find(".accodion-body");
-        header.on("click", function () {
-            if(!owner.is(".active")){
-                owner.addClass("active");
-                body.slideDown();
-            } else {
-                owner.removeClass("active");
-                body.slideUp();
-            }
-        });
-    })
-}
-
-$(document).ready(function(){
-    var winWidth = $(window).width()
-    if(winWidth <= 600){
-      $('.zoom img').on('click',function(){
-        $('.sub-contents .row').addClass('active')
-      })
-      new Zooming({
-      }).listen('.zoom img')
-    }
-    setAcoddion();
-});
 
 

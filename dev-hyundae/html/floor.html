@@ -105,6 +105,10 @@
                               spaceBetween: 0,
                               freeMode: true,
                         })
+                        setTimeout(function(){
+                           mySwiper.update();
+                           mySwiper.slideTo(indexNum)
+                        },500)
                      } else if (ww >= 768) {
                         mySwiper.destroy();
                      }
@@ -116,6 +120,10 @@
                                  spaceBetween: 0,
                                  freeMode: true,
                            })
+                           setTimeout(function(){
+                              mySwiper.update();
+                              mySwiper.slideTo(indexNum)
+                           },500)
                         }
                      });
                      var indexNum = $(".mySwiper .swiper-slide.active").index()
@@ -144,7 +152,7 @@
                            <dd>
                               <ul class="page-menu">
                                  <li><a href="#"><img src="../img/Icon_BrandSearch.svg" alt=""></a><span>브랜드 검색</span></li>
-                                 <li><a href="#"><img src="../img/Icon_FloorMap.svg" alt=""></a><span>층 안내도</span></li>
+                                 <li><a href="javascript:void(0)" onclick="openLayer('#popup', 'popup-floor.html'); return false;"><img src="../img/Icon_FloorMap.svg" alt=""></a><span>층 안내도</span></li>
                               </ul>
                            </dd>
                         </dl>
