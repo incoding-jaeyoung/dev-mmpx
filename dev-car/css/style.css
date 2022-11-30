@@ -1135,18 +1135,24 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .mypage .top-menu h3{font-size: 3rem;font-weight: 500;margin-left: 1rem}
 .mypage .car-list{display: flex;flex-direction: row;justify-content: center;margin: 8rem -1rem 0 -1rem;}
 .mypage .car-card{width: 38rem;height: 53.7rem;border: solid 1px #ccc;margin: 0 1rem;position: relative;display: flex;flex-direction: row;}
+.mypage .car-card.card2{height: 56.8rem}
 .mypage .car-card .card-wrap{padding: 4.2rem 3rem;width: 100%;}
 .mypage .car-card.off .card-wrap{opacity: 0.4}
 .mypage .car-card .close{position: absolute; right: 1rem; top: 1rem}
 .mypage .car-card .close > img {width: 3rem;height: 3rem}
 .mypage .car-card .date{font-family: 'Lato';font-size: 1.2rem;color: #67abf1}
+.mypage .car-card .number{font-family: 'Lato';font-size: 1.2rem;color: #fff;height: 2.5rem;text-align:center;border-radius: 1.25rem;background-color: #2b61e2;width: 15.5rem;line-height: 2.5rem;margin-bottom: 2rem;}
 .mypage .car-card .title{font-size: 2rem;font-weight: 600;margin-top: 0.8rem}
 .mypage .car-card .desc{font-size: 1.4rem;margin-top: 0.5rem}
+.mypage .car-card .desc2{font-size: 1.2rem}
+.mypage .car-card .desc2 img{vertical-align: middle;margin-right: 0.5rem}
 .mypage .car-card .car-img{text-align: center;}
 .mypage .car-card .car-img > img {width: auto;height: 15rem}
 .mypage .car-card .price dl{display: flex;flex-direction: row;justify-content: space-between;padding: 1rem 0;border-bottom: solid 1px #f2f2f2}
 .mypage .car-card .price dl dt{font-size: 1.4rem;}
 .mypage .car-card .price dl dd{font-family: 'Lato'; font-size: 1.4rem;}
+.mypage .car-card .price dl dd.noto{font-family: 'Noto Sans KR';}
+.mypage .car-card .price dl.blue{color: #67abf1;border-bottom: none}
 .mypage .car-card .btn{position: absolute;min-width: calc(100% - 4rem);bottom: 4rem;left: 2rem;height: 5rem}
 .mypage .off-info{position: absolute;top:50%;left:50%;width: 16rem;height: 2.6rem;line-height: 2.6rem;background-color: #79828b;border-radius: 0.5rem;margin-left:-8rem;font-size: 1.2rem;font-weight: 100;color: #fff;text-align: center;}
 .mypage .off-info:before{content:'';display: inline-block;width: 2rem;height: 2rem;background: url('../img/info-white-icon.png') no-repeat;background-size: 100%;vertical-align: middle;position:relative;top: -0.2rem;margin-right: 0.1rem;}
@@ -1203,6 +1209,8 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .mypage .detail-con .accodion-header .price{font-size: 1.4rem;}
     .mypage .detail-con .accodion-body li .text,
     .mypage .detail-con .accodion-body li .price{font-size: 1.2rem}
+    .mypage .guide{font-size: 1.3rem;line-height: 1.6;}
+    .mypage .guide:before{top: 0.1rem}
 }
 
 
