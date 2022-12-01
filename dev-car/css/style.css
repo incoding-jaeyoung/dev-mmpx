@@ -45,7 +45,7 @@ input[type=radio]:disabled+label{cursor:default;}
 input[type=checkbox]{width: 1.1rem; height: 1.1rem; position: absolute; opacity: 0;}
 input[type=checkbox]+label{display: inline-flex;position: relative;cursor: pointer;align-items: flex-start;vertical-align: middle;font-size: 1.6rem;color: #333333;position: relative}
 input[type=checkbox]+label:before{content: "";display: inline-block;width: 2rem;height: 2rem;border-radius: 4px;border: solid 1px #ccc;background-color: #fff;cursor: pointer;position: relative;z-index: 1;margin-right: .4rem;vertical-align: top;box-sizing: border-box;flex: none;top: 0.5rem;}
-input[type=checkbox]:checked+label:after{content: "";display: inline-block;width: 1.2rem;height: 1.2rem;border-radius: 2px;cursor: pointer;position: absolute;z-index: 2;box-sizing: border-box;flex: none;background-color: #4560d3;left: 0.4rem;top: 0.9rem;}
+input[type=checkbox]:checked+label:after{content: "";display: inline-block;width: 1.2rem;height: 1.2rem;border-radius: 2px;cursor: pointer;position: absolute;z-index: 2;box-sizing: border-box;flex: none;background-color: #4560d3;left: 0.4rem;top: 1rem;}
 input[type=checkbox]+label.round:before{border-radius: 50%;}
 input[type=checkbox]:checked+label.round:before{background-color: #4560d3;}
 input[type=checkbox]+label.round:after{border-radius: 50%;background-color: #fff;width: 1rem;height: 1rem;left: 0.5rem;}
@@ -100,6 +100,18 @@ input[type=checkbox]+label.round:after{border-radius: 50%;background-color: #fff
 .double-input{border: 0.1rem solid #d6d6d7;width: 38rem;}
 .double-input .hline{display: inline-block;width:1rem;height: 1px;background-color: #d6d6d7;vertical-align: middle;}
 .intpu-container .double-input input{border: none;width: 18rem;}
+
+
+.sign-con .tit{font-size: 1.8rem;font-weight: 500;margin-top: 3rem;padding-bottom: 2rem;border-bottom: solid 1px rgba(0,0,0,0.5)}
+.sign-con .sign-wrap{margin-top:3rem;display: flex;flex-direction: row;justify-content: space-between;}
+.sign-con .sign-box{width: 38.5rem;}
+.sign-con .top{display: flex;flex-direction: row;justify-content: space-between;}
+.sign-con .top span{font-size: 1.4rem;}
+.sign-con .top button{margin-right:1rem}
+.sign-con .box{height: 16rem;border: solid 1px #e1e1e2;margin-top: 1rem;}
+.sign-con .guide{font-size: 1.3rem;color: #6f6f6f;padding-left: 2.5rem;position: relative;margin-top: 1rem}
+.sign-con .guide:before{position: absolute;content: '';display: inline-block;width:2rem;height:2rem;background: url('../img/info-light-icon.svg') no-repeat;background-size: 100%;vertical-align: middle;margin-right: 0.3rem;position: absolute;left: 0;top: 0.5rem}
+
 
 @media (max-width: 1200px){
     .input-box .intpu-container input{width:51%}
@@ -727,7 +739,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .step2 .select-box .check-list{width:38rem;margin: 1rem 0;display: flex; align-items: center}
 .step2 .select-box .check-list label{width: 100%;box-sizing: border-box; padding: 1.5rem 0 1.5rem 1.5rem;border: solid 1px #ccc;height:6rem;position:relative}
 .step2 .select-box .check-list label:before{top: 50%;margin-top: -1rem;}
-.step2 .select-box .check-list label:after{left: 1.9rem;top: 50%;margin-top: -0.6rem;}
+.step2 .select-box .check-list label:after{left: 1.9rem;top: 50%;margin-top: -0.5rem;}
 .step2 .select-box .check-list label.round:after{left: 2rem;}
 .step2 .select-box .check-list input[type="checkbox"]:checked+label{border-color: #4560d3;white-space:wrap;}
 .step2 .select-box .check-list .info{width: 100%;position: relative;/* line-height: 6rem; */}
@@ -768,7 +780,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .step2 .select-box .list-wrap .check-con{position: relative;margin-top: 2.5rem}
 .step2 .select-box .list-wrap .check-con label{text-indent: 0.8rem;vertical-align: top;font-size: 1.6rem;font-weight: 400}
 .step2 .select-box .list-wrap .check-con label:before{border-radius: 2px;}
-.step2 .select-box .list-wrap .check-con label:after{background: url('../img/ico-chk-black.png') no-repeat; background-size: 100%;width: 2rem; height: 2rem; overflow: hidden; border-radius: 2px;left: 0}
+.step2 .select-box .list-wrap .check-con label:after{background: url('../img/ico-chk-black.png') no-repeat;background-size: 100%;width: 2rem;height: 2rem;overflow: hidden;border-radius: 2px;left: 0;top: 0.4rem;}
 .step2 .select-box .list-wrap .blue-box{padding: 3rem;background-color: #f7f9fa;margin-top: 3.5rem}
 .step2 .select-box .list-wrap .blue-box > p{font-size: 16px;font-weight: 400;color: rgba(0, 0, 0, 0.8);margin-bottom: 1rem;}
 .step2 .select-box .list-wrap .blue-box input[type="text"]{text-align: right;padding: 2rem;font-family: 'Lato';font-size: 1.6rem;font-weight: bold;color: #0b0b1b;width:33.5rem}
@@ -921,7 +933,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .step3 .agree-box .box-head.noline{border-bottom: none;}
 .step3 .agree-box .box-head > span{color: #973937}
 .step3 .agree-box .box-head > span.choice{color: rgba(0, 0, 0, 0.5)}
-.step3 .agree-box .box-head .btn{position: absolute;right: 1rem;top: 0.7rem;color: #adadae;font-size: 1.6rem;}
+.step3 .agree-box .box-head .btn{position: absolute;right: -1rem;top: 0.7rem;color: #adadae;font-size: 1.6rem;}
 .step3 .agree-box .box-head .btn:after{content:'';background: url('../img/../img/ico-setp-right.svg') no-repeat center;width:4.4rem;height:4.4rem;position: relative;top:0.1rem;}
 .step3 .agree-box .box-content{padding: 2rem 2rem;}
 .step3 .agree-box .box-content .text{font-size: 1.6rem;font-weight: 400;color: rgba(0,0,0,0.4)}
@@ -948,7 +960,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .step3 .agree-form dd{flex: 1;}
 .step3 .agree-form .radio-btn label{width: 17rem}
 .step3 .agree-form .info-box{padding: 1.2rem 3rem;background-color: #fffaf3;color: #7a4d05;font-size: 1.6rem;}
-.step3 .agree-form .info-box:before{content:'*';position: relative;top: 0.5rem;left:}
+.step3 .agree-form .info-box:before{content:'*';position: relative;top: 0.5rem;left: -1rem;}
 .step3 .agree-form .line{margin-top: 5rem;width: 100%;height: 1px;background-color: rgb(204, 204, 204, 0.5)}
 .step3 .agree-form .add-btn{width: 34.2rem}
 .step3 .agree-form .location1{width: 50rem}
@@ -1134,7 +1146,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .mypage .top-menu{padding-bottom: 1.3rem;border-bottom: solid 1px rgba(0,0,0,0.5);display: flex;flex-direction: row}
 .mypage .top-menu h3{font-size: 3rem;font-weight: 500;margin-left: 1rem}
 .mypage .car-list{display: flex;flex-direction: row;justify-content: center;margin: 8rem -1rem 0 -1rem;}
-.mypage .car-card{width: 38rem;height: 53.7rem;border: solid 1px #ccc;margin: 0 1rem;position: relative;display: flex;flex-direction: row;}
+.mypage .car-card{width: 38rem;height: 53.7rem;border: solid 1px #ccc;margin: 0 1rem;position: relative;}
 .mypage .car-card.card2{height: 56.8rem}
 .mypage .car-card .card-wrap{padding: 4.2rem 3rem;width: 100%;}
 .mypage .car-card.off .card-wrap{opacity: 0.4}
@@ -1158,9 +1170,23 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .mypage .off-info:before{content:'';display: inline-block;width: 2rem;height: 2rem;background: url('../img/info-white-icon.png') no-repeat;background-size: 100%;vertical-align: middle;position:relative;top: -0.2rem;margin-right: 0.1rem;}
 .mypage .guide{font-size: 1.5rem;color: #6f6f6f;padding-left: 2.5rem;position: relative;margin-top: 1.5rem}
 .mypage .guide:before{position: absolute;content:'';display: inline-block;width:2rem;height:2rem;background: url('../img/info-light-icon.svg') no-repeat;background-size: 100%;vertical-align: middle;margin-right: 0.3rem;position: absolute;left: 0;top: 0.5rem}
-.mypage .car-detail{display: flex;flex-direction: row;justify-content: space-between;margin-top: 4rem;}
+.mypage .car-detail{display: flex;flex-direction: row;justify-content: space-between;margin-top: 5rem;}
 .mypage .car-detail .car-card{margin: 0;width: 30rem}
 .mypage .car-detail .car-card .car-img > img{height: 13rem;margin-bottom: 1rem;}
+.mypage .car-detail .car-card.blue{width: 34.1rem;height: auto;border: none}
+.mypage .car-detail .car-card.blue .card-wrap{background-color: #f7f9fa;padding-bottom: 0;}
+.mypage .car-card .progress{margin-top: 3rem;}
+.mypage .car-card .progress .tit{font-size: 1.5rem;font-weight: 500;}
+.mypage .car-card .progress > ul{margin-top: 0.5rem;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;}
+.mypage .car-card .progress > ul > li{width: 9.8rem;height:8.6rem;border: solid 1px #e4e4e5;border-radius: 0.4rem;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 1rem 0}
+.mypage .car-card .progress > ul > li.active{border: solid 1px #67abf1;}
+.mypage .car-card .progress .text{font-size: 1.2rem;line-height: 1.5;}
+.mypage .car-card .progress .text > span{font-size: 1rem;color: #67abf1;display: block;}
+.mypage .car-card .info-box{margin-top: 2rem;padding: 2rem;background-color: #f5f5f5;}
+.mypage .car-card .info-box dl{display: flex;flex-direction: row;justify-content: space-between;font-size: 1.4rem;}
+.mypage .car-card .bottom-btn{margin-top: 3rem;}
+.mypage .car-card .bottom-btn .btn{position: static;width: 100%;}
+.mypage .car-card .cancel-btn{position: absolute;right: 2rem;top: 4rem;height: 3.7rem;width: 7.7rem;font-size: 1.4rem;color: #545d63;background-color: #fff;border-radius: 0.6rem;border: solid 1px rgba(187, 198, 203, 0.5);}
 .mypage .detail-con{width: 75rem}
 .mypage .detail-con .accodion-header{padding:0 2.9rem;cursor: pointer;position: relative}
 .mypage .detail-con .accodion-header:after{position: absolute;content:'';width:2rem;height:2rem;background: url('../img/ico-arrow.svg') no-repeat;right: 2rem;top: 1.8rem;}
@@ -1176,6 +1202,56 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .mypage .detail-con .accodion-body li .text{font-size: 14px;font-weight: 400;flex:1}
 .mypage .detail-con .accodion-body li .price{font-size: 1.4rem;font-family: 'Lato';font-weight: 600;width: 14rem;text-align: right;letter-spacing: -0.04rem}
 .mypage .detail-con .accodion-body li .price a{font-size: 1.1rem;font-weight: 300;color: #67abf1;text-decoration: underline;}
+.mypage .detail-con2{width: 79rem}
+.mypage .detail-con2 .tab-menu{display: flex;flex-direction: row;}
+.mypage .detail-con2 .tab-menu li{flex:1;display: flex;align-items: center;justify-content: center;height: 4.3rem;border-bottom: solid 1px #000}
+.mypage .detail-con2 .tab-menu li.active{border: solid 1px #000;border-bottom: none;}
+.mypage .detail-con2 .tab-menu li a{font-size: 1.6rem;color: rgba(0,0,0,0.5)}
+.mypage .detail-con2 .tab-menu li.active a{color: #000}
+.mypage .detail-con2 .content1 .car-info{margin-top: 5rem;position: relative;}
+.mypage .detail-con2 .content1 .car-info h4{font-size: 2.4rem;font-weight: 900;}
+.mypage .detail-con2 .content1 .car-info p{font-size: 1.6rem;line-height: 1.5;margin-top: 1rem;}
+.mypage .detail-con2 .content1 .car-info .down-btn{position: absolute;right:0;top: 2.5rem;width: 11.6rem;height: 3.7rem;background-color: #0c0d0e;border-radius: 1.85rem;color: #fff;font-size: 1.2rem;font-weight: 500;}
+.mypage .detail-con2 .content1 .price-con dl{display: flex;flex-direction: row;justify-content: space-between;margin-top: 1rem}
+.mypage .detail-con2 .content1 .price-con dt{font-size: 1.6rem;}
+.mypage .detail-con2 .content1 .price-con dd{font-size: 1.6rem;font-weight: 'Lato';}
+.mypage .detail-con2 .content1 .price-con dl:first-child dt,
+.mypage .detail-con2 .content1 .price-con dl:first-child dd{font-size: 1.8rem;font-weight: 600;}
+.mypage .detail-con2 .content1 .price-con.blue dl{color: #233975}
+.mypage .detail-con2 .content1 .h-line{width: 100%;height:1px;background-color: rgba(0,0,0,0.5)}
+.mypage .detail-con2 .content1 .h-line2{width: 100%;height:5px;background-color: #edeef0}
+.mypage .detail-con2 .content1 .price-box{padding: 2rem;background-color: #fafafa}
+.mypage .detail-con2 .content1 .price-box dl{display: flex;flex-direction: row;justify-content: space-between;margin-top: 1rem;color: #535965}
+.mypage .detail-con2 .content1 .price-box dt{font-size: 1.4rem;font-weight: 300;}
+.mypage .detail-con2 .content1 .price-box dd{font-size: 1.4rem;font-weight: 'Lato';font-weight: 300;}
+.mypage .detail-con2 .content1 .price-list .list-header{padding: 0 2rem 0 2.9rem;}
+.mypage .detail-con2 .content1 .price-list .list-header dl{display: flex;flex-direction: row;border-top: solid 1px #f2f2f2;padding: 1.5rem 0;justify-content: space-between;}
+.mypage .detail-con2 .content1 .price-list .list-header dt{font-size: 1.8rem;font-weight: 400;}
+.mypage .detail-con2 .content1 .price-list .list-header dd{font-size: 1.8rem;font-weight: 600;font-family: 'Lato';}
+.mypage .detail-con2 .content1 .price-list .list-body{background-color: #f7f9fa;padding: 0 2rem 0 3.9rem;}
+.mypage .detail-con2 .content1 .price-list .list-body dl{display: flex;flex-direction: row;justify-content: space-between;border-top: solid 1px #f2f2f2;padding: 1rem 0}
+.mypage .detail-con2 .content1 .price-list .list-body dl:first-child{border-top:none}
+.mypage .detail-con2 .content1 .price-list .list-body dt{font-size: 14px;font-weight: 400;flex:1}
+.mypage .detail-con2 .content1 .price-list .list-body dd{font-size: 1.4rem;font-family: 'Lato';font-weight: 600;width: 14rem;text-align: right;letter-spacing: -0.04rem}
+.mypage .detail-con2 .content2 .agree-form{margin-top: 3rem;padding-bottom: 4rem;border-bottom: solid 0.5rem #edeef0;position: relative;}
+.mypage .detail-con2 .content2 .agree-form.last{border-bottom: none;}
+.mypage .detail-con2 .content2 .agree-form dt{font-size: 2rem;font-weight: 500;}
+.mypage .detail-con2 .content2 .agree-form dd{margin-top: 3rem;}
+.mypage .detail-con2 .content2 .agree-form .radio-btn label{width: 17rem;}
+.mypage .detail-con2 .content2 .agree-form dt > span{color: #2185d0;font-size: 1.4rem;vertical-align: middel;position:relative;top:-0.3rem;left: 1rem;font-weight: 300;}
+.mypage .detail-con2 .content2 .agree-form dt > span:before{content:'◀';font-size: 1px;margin-right: 0.5rem;position:relative;top: -0.1rem;transform: scale(0.5);}
+.mypage .detail-con2 .content2 .agree-form dd{flex: 1;}
+.mypage .detail-con2 .content2 .agree-form .info-box{padding: 1.2rem 3rem;background-color: #fffaf3;color: #7a4d05;font-size: 1.6rem;}
+.mypage .detail-con2 .content2 .agree-form .info-box:before{content:'*';position: relative;top: 0.5rem;left: -1rem}
+.mypage .detail-con2 .content2 .agree-form .addr{width: 52.7rem}
+.mypage .detail-con2 .content2 .agree-form .line{margin-top: 3rem;width: 100%;height: 1px;background-color: rgb(204, 204, 204, 0.5)}
+.mypage .detail-con2 .content2 .agree-form .chk-box label p{font-size: 1.4rem;}
+.mypage .detail-con2 .content2 .agree-box2 {padding: 2rem 2rem;background-color: #f8f8f9;margin-top: 3rem} 
+.mypage .detail-con2 .content2 .agree-box2 p{font-size: 1.8rem;}
+.mypage .detail-con2 .content2 .agree-box2 .text{font-weight: 400;}
+.mypage .detail-con2 .content2 .agree-box2 .date{margin-top: 1rem;text-align: right;}
+.mypage .detail-con2 .content2 .form-btn{text-align: center;margin-top: 4rem;}
+.mypage .detail-con2 .content2 .form-btn .btn{width: 33.2rem}
 
 
 @media (max-width: 1200px){

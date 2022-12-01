@@ -41,7 +41,7 @@
             <li><a href="#">자주 묻는 질문</a></li>
             <li><a href="#">이벤트</a></li>
          </ul>
-         <div class="m-title">계약</div>
+         <div class="m-title"><a href="#"><img src="../img/ico-prev.svg" alt="뒤로"></a>계약 상세</div>
          <button type="button" class="login">로그아웃</button>
          <button type="button" class="m-menu"><img src="../img/mobile-menu.svg"></button>
       </header>
@@ -51,20 +51,22 @@
          <!-- mypage -->
          <div class="mypage">
 
-            <!-- top=title -->
-            <div class="top-title">
-               <h3>계약</h3>
-               <p>계약의 진행상태와 완료된 계약서를 <span>확인하실 수 있습니다.</span></p>
+            <!-- top-menu -->
+            <div class="top-menu">
+               <button type="button"><img src="../img/ico-right-arrow.svg"></button>
+               <h3>계약 상세</h3>
             </div>
-            <!-- //top=title -->
+            <!-- //top-menu -->
 
-            <div class="car-list">
-               <div class="car-card card2">
+            <div class="car-detail">
+
+               <div class="car-card blue">
+                  
                   <div class="card-wrap">
-                     <button type="button" class="close"><img src="../img/btn-close.svg" alt=""></button>
+                     <button class="cancel-btn" type="button">계약 해지</button>
                      <p class="number">계약 번호 : SE123456789</p>
                      <h4 class="title">REXTON SPORTS<br />렉스턴 스포츠</h4>
-                     <p class="desc2"><img src="../img/ico-green-check.svg" />계약서 (작성중)</p>
+                     <p class="desc2"><img src="../img/ico-green-check.svg" />계약금 결제 (대기중)</p>
                      <div class="car-img">
                         <img src="../img/thumb/@GRAND WHITE(WAA)_000.png" alt="REXTON SPORTS" />
                      </div>
@@ -81,73 +83,73 @@
                            <dt>결제 금액</dt>
                            <dd>33,710,000 원</dd>
                         </dl>
-                        <dl class="blue">
-                           <dt>계약 정보 유효 기한</dt>
-                           <dd>~ 2022-10-25</dd>
-                        </dl>
                      </div>
                   </div>
+
+                  <div class="progress">
+                     <h4 class="tit">진행 상태</h4>
+                     <ul>
+                        <li class="active">
+                           <div class="ico"><img src="../img/progress-icon-1.svg" /></div>
+                           <p class="text">계약서 작성<span>계약서 (작성중)</span></p>
+                        </li>
+                        <li>
+                           <div class="ico"><img src="../img/progress-icon-2.svg" /></div>
+                           <p class="text">계약금 결제</p>
+                        </li>
+                        <li>
+                           <div class="ico"><img src="../img/progress-icon-3.svg" /></div>
+                           <p class="text">최종 계약서 확인</p>
+                        </li>
+                        <li>
+                           <div class="ico"><img src="../img/progress-icon-4.svg" /></div>
+                           <p class="text">인도금 결제</p>
+                        </li>
+                        <li>
+                           <div class="ico"><img src="../img/progress-icon-5.svg" /></div>
+                           <p class="text">배송</p>
+                        </li>
+                        <li>
+                           <div class="ico"><img src="../img/progress-icon-6.svg" /></div>
+                           <p class="text">차량인수</p>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="info-box">
+                     <dl>
+                        <dt>담당대리점</dt>
+                        <dd>평택북부대리점</dd>
+                     </dl>
+                     <dl>
+                        <dt>대리점 전화번호</dt>
+                        <dd>031-5555-9999</dd>
+                     </dl>
+                     <dl>
+                        <dt>담당 오토매니저</dt>
+                        <dd>미정</dd>
+                     </dl>
+                  </div>
+
+                  <div class="bottom-btn">
+                     <button class="btn btn-white" type="button">계약금 결제</button>
+                  </div>
+
                </div>
-               <div class="car-card card2">
-                  <div class="card-wrap">
-                     <button type="button" class="close"><img src="../img/btn-close.svg" alt=""></button>
-                     <p class="number">계약 번호 : SE123456789</p>
-                     <h4 class="title">TIVOLI<br />티볼리</h4>
-                     <p class="desc2"><img src="../img/ico-green-check.svg" />계약금 결제 (대기중)</p>
-                     <div class="car-img">
-                        <img src="../img/thumb/@X150 360VR_Dandy Blue_000.png" alt="REXTON SPORTS" />
-                     </div>
-                     <div class="price">
-                        <dl>
-                           <dt>트림</dt>
-                           <dd class="noto">노블레스 + 파퓰러 패키지</dd>
-                        </dl>
-                        <dl>
-                           <dt>색상</dt>
-                           <dd class="noto">그랜드 화이트</dd>
-                        </dl>
-                        <dl>
-                           <dt>결제 금액</dt>
-                           <dd>33,710,000 원</dd>
-                        </dl>
-                        <dl class="blue">
-                           <dt>계약 정보 유효 기한</dt>
-                           <dd>~ 2022-10-25</dd>
-                        </dl>
-                     </div>
+
+               <div class="detail-con2">
+                  <ul class="tab-menu">
+                     <li><a href="#">계약 차량</a></li>
+                     <li><a href="#">계약서</a></li>
+                     <li class="active"><a href="#">결제</a></li>
+                     <li><a href="#">배송/인수</a></li>
+                  </ul>
+                  <div class="content3">
+                     
                   </div>
                </div>
-               <div class="car-card card2">
-                  <div class="card-wrap">
-                     <button type="button" class="close"><img src="../img/btn-close.svg" alt=""></button>
-                     <p class="number">계약 번호 : SE123456789</p>
-                     <h4 class="title">TIVOLI air<br />티볼리 에어</h4>
-                     <p class="desc2"><img src="../img/ico-green-check.svg" />최종 계약서 (확인중))</p>
-                     <div class="car-img">
-                        <img src="../img/thumb/@X151_Cherry RED (RAM)_000.png" alt="REXTON SPORTS" />
-                     </div>
-                     <div class="price">
-                        <dl>
-                           <dt>트림</dt>
-                           <dd class="noto">노블레스 + 파퓰러 패키지</dd>
-                        </dl>
-                        <dl>
-                           <dt>색상</dt>
-                           <dd class="noto">그랜드 화이트</dd>
-                        </dl>
-                        <dl>
-                           <dt>결제 금액</dt>
-                           <dd>33,710,000 원</dd>
-                        </dl>
-                        <dl class="blue">
-                           <dt>계약 정보 유효 기한</dt>
-                           <dd>~ 2022-10-25</dd>
-                        </dl>
-                     </div>
-                  </div>
-               </div>
+               
             </div>
-            <div class="guide">계약서 및 계약금 결제의 유효기간이 만료된 계약은 목록에서 자동으로 삭제됩니다.</div>
 
          </div>
          <!-- mypage -->
