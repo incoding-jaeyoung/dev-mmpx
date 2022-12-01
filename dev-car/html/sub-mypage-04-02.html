@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="Author" content="쌍용자동차" />
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+   <meta property="og:image" content="../img/img-og.png">
+   <meta property="og:url" content="">
+   <meta property="og:description" content="">
+   <meta property="og:title" content="쌍용자동차">
+
+   <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+   <title>쌍용자동차</title>
+   <link rel="stylesheet" href="../css/style.css" />
+
+   <script src="../js/jquery-3.3.1.min.js"></script>
+   <script src="../js/gsap.min.js"></script>
+   <script src="../js/swiper-bundle.min.js"></script>
+   <script src="../js/jquery.custom-select.js"></script>
+   <script src="../js/ui.js"></script>
+</head>
+<body>
+   <div class="accessbility"><a href="#contents">본문바로가기</a></div>
+   <div id="wrapper">
+      <header id="header" class="pin">
+         <h1><a href="#">쌍용자동차</a></h1>
+         <ul class="navi-list">
+            <li><a href="#">온라인 견적/구매방법</a></li>
+            <li><a href="#">모델<img class="arrow" src="../img/ico-arrow-down.svg"></a></li>
+            <li><a href="#">이 달의 구매 혜택</a></li>
+            <li><a href="#">가격표/카탈로그</a></li>
+            <li><a href="#">자주 묻는 질문</a></li>
+            <li><a href="#">이벤트</a></li>
+         </ul>
+         <div class="m-title"><a href="#"><img src="../img/ico-prev.svg" alt="뒤로"></a>계약 상세</div>
+         <button type="button" class="login">로그아웃</button>
+         <button type="button" class="m-menu"><img src="../img/mobile-menu.svg"></button>
+      </header>
+
+      <section id="contents">
+
+         <!-- mypage -->
+         <div class="mypage">
+
+            <!-- top-menu -->
+            <div class="top-menu">
+               <button type="button"><img src="../img/ico-right-arrow.svg"></button>
+               <h3>계약 상세</h3>
+            </div>
+            <!-- //top-menu -->
+
+            <div class="car-detail">
+
+               <div class="car-card blue">
+                  
+                  <div class="card-wrap">
+                     <button class="cancel-btn" type="button">계약 해지</button>
+                     <p class="number">계약 번호 : SE123456789</p>
+                     <h4 class="title">REXTON SPORTS<br />렉스턴 스포츠</h4>
+                     <p class="desc2"><img src="../img/ico-green-check.svg" />계약금 결제 (대기중)</p>
+                     <div class="car-img">
+                        <img src="../img/thumb/@GRAND WHITE(WAA)_000.png" alt="REXTON SPORTS" />
+                     </div>
+                     <div class="price">
+                        <dl>
+                           <dt>트림</dt>
+                           <dd class="noto">노블레스 + 파퓰러 패키지</dd>
+                        </dl>
+                        <dl>
+                           <dt>색상</dt>
+                           <dd class="noto">그랜드 화이트</dd>
+                        </dl>
+                        <dl>
+                           <dt>결제 금액</dt>
+                           <dd>33,710,000 원</dd>
+                        </dl>
+                     </div>
+                  </div>
+
+                  <div class="progress">
+                     <h4 class="tit">진행 상태</h4>
+                     <ul>
+                        <li class="active">
+                           <div class="ico"><img src="../img/progress-icon-1.svg" /></div>
+                           <p class="text">계약서 작성<span>계약서 (작성중)</span></p>
+                        </li>
+                        <li>
+                           <div class="ico"><img src="../img/progress-icon-2.svg" /></div>
+                           <p class="text">계약금 결제</p>
+                        </li>
+                        <li>
+                           <div class="ico"><img src="../img/progress-icon-3.svg" /></div>
+                           <p class="text">최종 계약서 확인</p>
+                        </li>
+                        <li>
+                           <div class="ico"><img src="../img/progress-icon-4.svg" /></div>
+                           <p class="text">인도금 결제</p>
+                        </li>
+                        <li>
+                           <div class="ico"><img src="../img/progress-icon-5.svg" /></div>
+                           <p class="text">배송</p>
+                        </li>
+                        <li>
+                           <div class="ico"><img src="../img/progress-icon-6.svg" /></div>
+                           <p class="text">차량인수</p>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="info-box">
+                     <dl>
+                        <dt>담당대리점</dt>
+                        <dd>평택북부대리점</dd>
+                     </dl>
+                     <dl>
+                        <dt>대리점 전화번호</dt>
+                        <dd>031-5555-9999</dd>
+                     </dl>
+                     <dl>
+                        <dt>담당 오토매니저</dt>
+                        <dd>미정</dd>
+                     </dl>
+                  </div>
+
+                  <div class="bottom-btn">
+                     <button class="btn btn-white" type="button">계약금 결제</button>
+                  </div>
+
+               </div>
+
+               <div class="detail-con2">
+                  <ul class="tab-menu">
+                     <li><a href="#">계약 차량</a></li>
+                     <li class="active"><a href="#">계약서</a></li>
+                     <li><a href="#">결제</a></li>
+                     <li><a href="#">배송/인수</a></li>
+                  </ul>
+                  <div class="content2">
+                     <form action="">
+                        <fieldset>
+                           <legend>자동차 계약서 폼</legend>
+                        </fieldset>
+
+                        <div class="agree-form">
+                           <dl>
+                              <dt>출고 유형</dt>
+                              <dd>
+                                 <p class="radio-btn dark">
+                                    <input type="radio" name="type-01" id="type-01-01">
+                                    <label for="type-01-01">개인</label>
+                                    <input type="radio" name="type-01" id="type-01-02" checked>
+                                    <label for="type-01-02">개인사업자</label>
+                                 </p>
+                              </dd>
+                           </dl>
+                        </div>
+
+                        <!-- 매수인1 -->
+                        <div class="agree-form">
+                           <dl>
+                              <dt>매수인 1<span>주계약자</span></dt>
+                              <dd>
+                                 <div class="info-box">주 계약자에게 알림 톡이 수신됩니다.</div>
+
+                                 <div class="radio-btn mT30">
+                                    <input type="radio" name="type-02" id="type-02-01" checked>
+                                    <label for="type-02-01">내국인</label>
+                                    <input type="radio" name="type-02" id="type-02-02">
+                                    <label for="type-02-02">외국인</label>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">성명</div>
+                                    <div class="intpu-container">
+                                       <input type="text" value="홍길동">
+                                       <button class="btn btn-dark-blue mL20" type="button" disabled>본인인증</button>
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">주민등록번호<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <div class="double-input">
+                                          <input type="text" value="901125">
+                                          <span class="hline"></span>
+                                          <input type="text" value="1●●●●●●">
+                                       </div>
+                                       <button class="btn btn-dark-blue mL20" type="button" disabled style="font-size: 1.25rem">주민번호인증</button>
+                                    </div>
+                                 </div>
+
+                                 <div class="mT20">
+                                    <div class="btn btn-upload">
+                                       <input id="file-01" type="file" accept="image/png, image/jpeg">
+                                       <label for="file-01">+ 신분증 파일 업로드</label>
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">휴대전화<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <input type="text" value="010-5555-6666">
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title"> 이메일<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <input class="mR20 email1" type="text" value="Gildong.hong@gmail.com">
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title"> 주소<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <input class="addr" type="text" value="경기도 평택시 동삭로 455-12">
+                                    </div>
+                                    <div class="intpu-container mT10">
+                                       <input class="addr" type="text" value="750-1">
+                                    </div>
+                                 </div>
+
+                                 <div class="line"></div>
+
+                                 <div class="input-box mT30">
+                                    <div class="title">개인정보수집·이용·제공 동의</div>
+                                    <div class="chk-box full">
+                                       <input type="checkbox" name="check-01-01" id="check-01-01">
+                                       <label class="round" for="check-01-01"><p>개인정보수집·이용·제공에 관한 동의가 필요합니다.</p></label>
+                                       <button class="btn" type="button"></button>
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">자동차 교환·환불 중재제도 안내</div>
+                                    <div class="chk-box full">
+                                       <input type="checkbox" name="check-01-02" id="check-01-02">
+                                       <label class="round" for="check-01-02"><p>자동차 교환·환불 중재제도 안내에 관하여 확인이 필요합니다.</p></label>
+                                       <button class="btn" type="button"></button>
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">자동차 매매 계약서 계약 조항</div>
+                                    <div class="chk-box full">
+                                       <input type="checkbox" name="check-01-03" id="check-01-03">
+                                       <label class="round" for="check-01-03"><p>자동차 매매 계약서 계약 조항에 관하여 확인이 필요합니다.</p></label>
+                                       <button class="btn" type="button"></button>
+                                    </div>
+                                 </div>
+
+                                 <div class="agree-box2">
+                                    <p class="text">상기 사항과 같이 계약을 체결합니다.</p>
+                                    <p class="date">2022년 10월 4일</p>
+                                 </div>
+
+                                 <div class="sign-con">
+                                    <h4 class="tit">매수인 1</h4>
+                                    <div class="sign-wrap">
+                                       <div class="sign-box">
+                                          <div class="top">
+                                             <span>성명</span>
+                                             <button type="button"><img src="../img/ico-trash.svg" /></button>
+                                          </div>
+                                          <div class="box"></div>
+                                          <div class="guide">성명을 바르고 크게 써 주세요.</div>
+                                       </div>
+                                       <div class="sign-box">
+                                          <div class="top">
+                                             <span>성명</span>
+                                             <button type="button"><img src="../img/ico-trash.svg" /></button>
+                                          </div>
+                                          <div class="box"></div>
+                                          <div class="guide">성명을 바르고 크게 써 주세요.</div>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                              </dd>
+                           </dl>
+                        </div>
+                        <!-- //매수인1 -->
+
+                        <!-- 매수인2 -->
+                        <div class="agree-form">
+                           <dl>
+                              <dt>매수인 2</dt>
+                              <dd>
+                                 <div class="radio-btn mT30">
+                                    <input type="radio" name="type-02" id="type-02-01" checked>
+                                    <label for="type-02-01">내국인</label>
+                                    <input type="radio" name="type-02" id="type-02-02">
+                                    <label for="type-02-02">외국인</label>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">주 계약자와의 관계</div>
+                                    <div class="intpu-container">
+                                       <input type="text" value="부모">
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">성명</div>
+                                    <div class="intpu-container">
+                                       <input type="text" value="홍길동">
+                                       <button class="btn btn-dark-blue mL20" type="button" disabled>본인인증</button>
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">주민등록번호<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <div class="double-input">
+                                          <input type="text" value="901125">
+                                          <span class="hline"></span>
+                                          <input type="text" value="1●●●●●●">
+                                       </div>
+                                       <button class="btn btn-dark-blue mL20" type="button" disabled style="font-size: 1.25rem">주민번호인증</button>
+                                    </div>
+                                 </div>
+
+                                 <div class="mT20">
+                                    <div class="btn btn-upload">
+                                       <input id="file-01" type="file" accept="image/png, image/jpeg">
+                                       <label for="file-01">+ 신분증 파일 업로드</label>
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">휴대전화<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <input type="text" value="010-5555-6666">
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title"> 이메일<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <input class="mR20 email1" type="text" value="Gildong.hong@gmail.com">
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title"> 주소<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <input class="addr" type="text" value="경기도 평택시 동삭로 455-12">
+                                    </div>
+                                    <div class="intpu-container mT10">
+                                       <input class="addr" type="text" value="750-1">
+                                    </div>
+                                 </div>
+
+                                 <div class="line"></div>
+
+                                 <div class="input-box mT30">
+                                    <div class="title">개인정보수집·이용·제공 동의</div>
+                                    <div class="chk-box full">
+                                       <input type="checkbox" name="check-01-01" id="check-01-01">
+                                       <label class="round" for="check-01-01"><p>개인정보수집·이용·제공에 관한 동의가 필요합니다.</p></label>
+                                       <button class="btn" type="button"></button>
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">자동차 매매 계약서 계약 조항</div>
+                                    <div class="chk-box full">
+                                       <input type="checkbox" name="check-01-03" id="check-01-03">
+                                       <label class="round" for="check-01-03"><p>자동차 매매 계약서 계약 조항에 관하여 확인이 필요합니다.</p></label>
+                                       <button class="btn" type="button"></button>
+                                    </div>
+                                 </div>
+
+                                 <div class="agree-box2">
+                                    <p class="text">상기 사항과 같이 계약을 체결합니다.</p>
+                                    <p class="date">2022년 10월 4일</p>
+                                 </div>
+
+                                 <div class="sign-con">
+                                    <h4 class="tit">매수인 1</h4>
+                                    <div class="sign-wrap">
+                                       <div class="sign-box">
+                                          <div class="top">
+                                             <span>성명</span>
+                                             <button type="button"><img src="../img/ico-trash.svg" /></button>
+                                          </div>
+                                          <div class="box"></div>
+                                          <div class="guide">성명을 바르고 크게 써 주세요.</div>
+                                       </div>
+                                       <div class="sign-box">
+                                          <div class="top">
+                                             <span>성명</span>
+                                             <button type="button"><img src="../img/ico-trash.svg" /></button>
+                                          </div>
+                                          <div class="box"></div>
+                                          <div class="guide">성명을 바르고 크게 써 주세요.</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 
+                              </dd>
+                           </dl>
+                        </div>
+                        <!-- //매수인2 -->
+                        
+                        <!-- 매수인3 -->
+                        <div class="agree-form last">
+                           <dl>
+                              <dt>매수인 3</dt>
+                              <dd>
+                                 <div class="radio-btn mT30">
+                                    <input type="radio" name="type-02" id="type-02-01" checked>
+                                    <label for="type-02-01">내국인</label>
+                                    <input type="radio" name="type-02" id="type-02-02">
+                                    <label for="type-02-02">외국인</label>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">주 계약자와의 관계</div>
+                                    <div class="intpu-container">
+                                       <input type="text" value="부모">
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">성명</div>
+                                    <div class="intpu-container">
+                                       <input type="text" value="홍길동">
+                                       <button class="btn btn-dark-blue mL20" type="button" disabled>본인인증</button>
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">주민등록번호<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <div class="double-input">
+                                          <input type="text" value="901125">
+                                          <span class="hline"></span>
+                                          <input type="text" value="1●●●●●●">
+                                       </div>
+                                       <button class="btn btn-dark-blue mL20" type="button" disabled style="font-size: 1.25rem">주민번호인증</button>
+                                    </div>
+                                 </div>
+
+                                 <div class="mT20">
+                                    <div class="btn btn-upload">
+                                       <input id="file-01" type="file" accept="image/png, image/jpeg">
+                                       <label for="file-01">+ 신분증 파일 업로드</label>
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">휴대전화<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <input type="text" value="010-5555-6666">
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title"> 이메일<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <input class="mR20 email1" type="text" value="Gildong.hong@gmail.com">
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title"> 주소<span class="star">*</span></div>
+                                    <div class="intpu-container">
+                                       <input class="addr" type="text" value="경기도 평택시 동삭로 455-12">
+                                    </div>
+                                    <div class="intpu-container mT10">
+                                       <input class="addr" type="text" value="750-1">
+                                    </div>
+                                 </div>
+
+                                 <div class="line"></div>
+
+                                 <div class="input-box mT30">
+                                    <div class="title">개인정보수집·이용·제공 동의</div>
+                                    <div class="chk-box full">
+                                       <input type="checkbox" name="check-01-01" id="check-01-01">
+                                       <label class="round" for="check-01-01"><p>개인정보수집·이용·제공에 관한 동의가 필요합니다.</p></label>
+                                       <button class="btn" type="button"></button>
+                                    </div>
+                                 </div>
+
+                                 <div class="input-box mT20">
+                                    <div class="title">자동차 매매 계약서 계약 조항</div>
+                                    <div class="chk-box full">
+                                       <input type="checkbox" name="check-01-03" id="check-01-03">
+                                       <label class="round" for="check-01-03"><p>자동차 매매 계약서 계약 조항에 관하여 확인이 필요합니다.</p></label>
+                                       <button class="btn" type="button"></button>
+                                    </div>
+                                 </div>
+
+                                 <div class="agree-box2">
+                                    <p class="text">상기 사항과 같이 계약을 체결합니다.</p>
+                                    <p class="date">2022년 10월 4일</p>
+                                 </div>
+
+                                 <div class="sign-con">
+                                    <h4 class="tit">매수인 1</h4>
+                                    <div class="sign-wrap">
+                                       <div class="sign-box">
+                                          <div class="top">
+                                             <span>성명</span>
+                                             <button type="button"><img src="../img/ico-trash.svg" /></button>
+                                          </div>
+                                          <div class="box"></div>
+                                          <div class="guide">성명을 바르고 크게 써 주세요.</div>
+                                       </div>
+                                       <div class="sign-box">
+                                          <div class="top">
+                                             <span>성명</span>
+                                             <button type="button"><img src="../img/ico-trash.svg" /></button>
+                                          </div>
+                                          <div class="box"></div>
+                                          <div class="guide">성명을 바르고 크게 써 주세요.</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 
+                              </dd>
+                           </dl>
+                        </div>
+                        <!-- //매수인3 -->
+
+                        <div class="form-btn">
+                           <button class="btn btn-blue" type="submit">확인</button>
+                        </div>
+
+                     </form>
+                  </div>
+               </div>
+               
+            </div>
+
+         </div>
+         <!-- mypage -->
+         
+      </section>
+
+      <footer id="footer">
+         <div class="footer-menu">
+            <div>
+               <a class="logo" href="#"><img src="../img/foot-logo.png" alt="쌍용자동차" /></a>
+               <ul>
+                  <li><a href="#">온라인 견적/구매방법</a></li>
+                  <li><a href="#">이 달의 구매 혜택</a></li>
+                  <li><a href="#">가격표/카탈로그</a></li>
+                  <li><a href="#">자주 묻는 질문</a></li>
+                  <li><a href="#">이벤트</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="footer-middle">
+            <div>
+               <ul class="menu">
+                  <li class="first"><a href="#">이용약관</a></li>
+                  <li><a href="#">개인정보처리방침</a></li>
+                  <span>
+                     <li><a href="http://www.smotor.com/kr/" target="_blank">쌍용자동차 홈페이지</a></li>
+                     <li><a href="tel:080-500-5582">사이트 이용상담 : 080-500-5582</a></li>
+                  </span>
+               </ul>
+               <ul class="sns">
+                  <li><a href="#"><img src="../img/ico-sns-1.png" alt="페이스북" /></a></li>
+                  <li><a href="#"><img src="../img/ico-sns-2.png" alt="인스타그램" /></a></li>
+                  <li><a href="#"><img src="../img/ico-sns-3.png" alt="트위터" /></a></li>
+                  <li><a href="#"><img src="../img/ico-sns-4.png" alt="유투브" /></a></li>
+                  <li><a href="#"><img src="../img/ico-sns-5.png" alt="블로그" /></a></li>
+                  <li><a href="#"><img src="../img/ico-sns-6.png" alt="브런치" /></a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="footer-info">
+            <div>
+               <ul>
+                  <li class="first">사업자 : 쌍용자동차</li>
+                  <li>대표 : 정용원, 곽재선</li>
+                  <span>
+                     <li>사업자등록번호 : 125-81-14248</li>
+                     <li>통신판매업신고 : 4444-55555</li>
+                  </span>
+                  <span>
+                     <li>주소 : 17749, 경기도 평택시 동삭로 455-12</li>
+                  </span>
+               </ul>
+               <p class="copyright">© 2011 SSANGYONG MOTOR COMPANY. ALL RIGHTS RESERVED.</p>
+            </div>
+         </div>
+      </footer>
+      <button class="goto-top" type="button" onClick="UI.gotoTop()"><img src="../img/goto-top.svg" /></button>
+   </div>
+   
+   <!-- POPUP -->
+   <div class="popup-wrap" id="popup" tabindex="0"></div>
+   <!-- //POPUP -->
+
+   
+</body>
+
+</html>
