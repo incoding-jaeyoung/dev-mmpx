@@ -4,6 +4,7 @@
    var UI = UI || {
 
       headerNaviSwiper: null,
+      progressSwiper: null,
 
       /*
       * 레이어 팝업 오픈
@@ -62,6 +63,21 @@
             var idx = $(".header-navi-swiper .swiper-slide.active").index();
             var len = $(".header-navi-swiper .swiper-slide").length - UI.headerNaviSwiper.snapGrid.length;
             if(len < idx) UI.headerNaviSwiper.slideTo(idx - len, 0);
+         }
+      },
+
+      /*
+      * 마이페이지 진행상태 스와이퍼
+      */
+      setProgressSwiper: function () {
+         if($(".progress-swiper")) {
+            UI.progressSwiper = new Swiper(".progress-swiper", {
+               slidesPerView: "auto",
+               freeMode: true,
+            });
+            var idx = $(".progress-swiper .swiper-slide.active").index();
+            var len = $(".progress-swiper .swiper-slide").length - UI.progressSwiper.snapGrid.length;
+            if(len < idx) UI.progressSwiper.slideTo(idx - len, 0);
          }
       },
 
@@ -196,6 +212,24 @@
          }
          oldWinTop = winTop;
       });
+
+      $(window).on("resize", function () {
+         var winWidth = $(window).width();
+         if(winWidth > 880){
+            if(UI.progressSwiper) {
+               UI.progressSwiper.destroy();
+               UI.progressSwiper = null;
+            }
+         } else {
+            if(!UI.progressSwiper) {
+               UI.setProgressSwiper();
+            } else {
+               UI.progressSwiper.update();
+            }
+         }
+      });
+
+      $(window).trigger("resize");
       
    });
 
