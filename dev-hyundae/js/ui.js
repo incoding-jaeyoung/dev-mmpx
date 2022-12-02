@@ -48,16 +48,15 @@ window.onload = function () {
         },500)
         forum()
         const sections = gsap.utils.toArray('.data-black-header');
-        sections.forEach(section => {
+        sections.forEach(sections => {
             ScrollTrigger.create({
                 trigger: sections,
-                start: 'top 10%',
+                start: '0% 0%',
                 end: 'bottom 0%',
                 toggleClass: {
                     targets: '#header',
                     className: 'has-scrolled'
                 },
-                
             })
             
         });
