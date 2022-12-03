@@ -388,8 +388,8 @@ img{width: 100%;}
 .mob-menu .close{text-align: right; height: 6rem; display: flex; justify-content: flex-end; padding: 0 2rem; align-items:center; font-size: 1.6rem; position: absolute; right: 0; top: 0; }
 .mob-menu .close a{font-weight: 400;}
 .mob-menu a{color: #fff;}
-.mob-menu .footer{text-transform: uppercase; text-align: center; padding-bottom: 2rem; position: absolute; left: 0; right: 0; bottom:0;}
-.mob-menu .footer span:first-of-type{font-size: 1.6rem;  font-family:'Roslindale',sans-serif;}
+.mob-menu .footer{text-align: center; padding-bottom: 2rem; position: absolute; left: 0; right: 0; bottom:0;}
+/* .mob-menu .footer span:first-of-type{font-size: 1.6rem;  font-family:'Roslindale',sans-serif;} */
 .mob-menu .footer span:last-of-type{font-size: 1.8rem; font-family:'euclid',sans-serif;}
 .mob-menu .m-gnb{display: flex; flex-direction: column; align-items: center;}
 .mob-menu .m-gnb li{margin-bottom: 1.6rem; font-size: 3rem;}
@@ -824,8 +824,10 @@ h2.tit-forum{font-size: 16rem; line-height: 100%; margin-bottom: 2rem;}
 .service-list li{display: flex; background-color: #fff; width: 76.4rem; height: 22rem; align-items: center; padding: 0 4rem; margin-bottom: 1.2rem;}
 .service-list img{width: 14rem; margin-right: 5rem;}
 .service-list dl{}
-.service-list dl dt{font-size: 2.4rem; text-transform: uppercase;}
-.service-list dl dd{margin-top: 1.2rem; font-size: 1.8rem; line-height: 2.6rem; text-transform: uppercase;}
+.service-list dl dt{font-size: 2.4rem; text-transform: uppercase; margin-bottom: 1.2rem;}
+.service-list dl dd{font-size: 1.8rem; line-height: 2.6rem; text-transform: uppercase;}
+.service-list dl dd:first-of-type{ margin-bottom: 1.2rem;}
+
 .section.section-service .section-contents{padding-top: 12rem; padding-bottom: 12rem;}
 .section-service .service-info{display: flex; justify-content:space-between; flex-wrap: wrap;}
 .section-service .service-info .info{display: flex; flex-direction: column;}
@@ -839,9 +841,10 @@ h2.tit-forum{font-size: 16rem; line-height: 100%; margin-bottom: 2rem;}
 .section-service-02 .service-info .info:nth-of-type(2){margin-left: auto; margin-top: 18.2rem;}
 .section-service-02 .service-info .info:nth-of-type(3){margin-left: 15.4rem; margin-top: -6rem;}
 
+.section-service-03 .service-info{flex-direction: row-reverse;}
 .section-service-03 .service-info .info img{background-color:#FF97D0; }
-.section-service-03 .service-info .info:nth-of-type(1){width: 58.4rem; margin-top: 24rem;}
-.section-service-03 .service-info .info:nth-of-type(2){width: 58.4rem; margin-left: auto;}
+.section-service-03 .service-info .info:nth-of-type(1){width: 58.4rem; }
+.section-service-03 .service-info .info:nth-of-type(2){width: 58.4rem; margin-right: auto; margin-top: 24rem;}
 .section-service-03 .service-info .info:nth-of-type(3){width: 73.8rem; margin-left:auto;}
 
 .ch-block{background-color: #fff; padding: 12.2rem 15.4rem 16rem 15.4rem;}
@@ -867,12 +870,13 @@ h2.tit-forum{font-size: 16rem; line-height: 100%; margin-bottom: 2rem;}
     .section.section-service-01 .sub-title{margin-top: 4rem; text-align: left; font-size: 1.8rem; line-height: 2.6rem; margin-bottom: 4rem;}
     .section.section-service-01 .sub-title br{display: none;}
     .service-list{display: flex; flex-wrap: wrap; justify-content: space-between;}
-    .service-list li{display: flex; background-color: #fff; width:100%; height: 15rem; align-items: flex-start; padding:1rem 2rem 0 0.8rem; margin-bottom: 0.6rem;}
+    .service-list li{display: flex; background-color: #fff; width:100%; height: auto; align-items: flex-start; padding:1rem 2rem 2rem 0.8rem; margin-bottom: 0.6rem;}
     .service-list img{width: 6rem; margin-right: 0.8rem;}
     .service-list dl{padding-top: 0.8rem;}
     .service-list dl dt{font-size:1.6rem; }
     .service-list dl dd:first-of-type{margin-top: 0.6rem; font-size: 1.3rem; line-height: 1.9rem;}
-    .service-list dl dd:last-of-type{margin-top:1rem; font-size: 1.2rem; line-height: 1.7rem;}
+    .service-list dl dd:last-of-type{font-size: 1.2rem; line-height: 1.7rem;}
+    .service-list dl dd:nth-of-type(2){font-size: 1.2rem; line-height: 1.7rem;}
     .service-list dl dd br{display: none;}
     .section.section-service .section-contents{padding-top: 5rem; padding-bottom: 5rem;}
     .section-service .service-info{display: flex; justify-content:space-between; flex-wrap: wrap;}
@@ -888,10 +892,10 @@ h2.tit-forum{font-size: 16rem; line-height: 100%; margin-bottom: 2rem;}
     .section-service-02 .service-info .info:nth-of-type(1){}
     .section-service-02 .service-info .info:nth-of-type(2){margin-left: auto; margin-top:6rem;}
     .section-service-02 .service-info .info:nth-of-type(3){margin-left:0; margin-top:6rem;}
-
+    .section-service-03 .service-info {flex-direction: column;}
     .section-service-03 .service-info .info img{background-color:#FF97D0; }
     .section-service-03 .service-info .info:nth-of-type(1){width: 28rem; margin-top:0;}
-    .section-service-03 .service-info .info:nth-of-type(2){width: 28rem; margin-left: auto; margin-top: 6rem;}
+    .section-service-03 .service-info .info:nth-of-type(2){width: 28rem; margin-left: auto; margin-top: 6rem; margin-right: 0;}
     .section-service-03 .service-info .info:nth-of-type(3){width:100%; margin-left:auto; margin-top: 6rem;}
 
     .section.section-service.section-service-04 .section-contents{padding-bottom: 0;}
