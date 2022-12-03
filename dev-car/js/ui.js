@@ -4,6 +4,7 @@
    var UI = UI || {
 
       headerNaviSwiper: null,
+      progressSwiper: null,
 
       /*
       * 레이어 팝업 오픈
@@ -45,6 +46,22 @@
       },
 
       /*
+      * 메인 네비 생성
+      */
+      setMainNavi: function () {
+         $("#header.main-hader .navi-list").on("mouseenter", function () {
+            gsap.to($(".main-navi"), 0.6, {height: 268, ease: Cubic.easeOut});
+            $("#header .login").hide();
+            $("#header .navi-close").show();
+         });
+         $("#header .navi-close").on("click", function () {
+            gsap.to($(".main-navi"), 0.6, {height: 0, ease: Cubic.easeOut});
+            $("#header .login").show();
+            $("#header .navi-close").hide();
+         });
+      },
+
+      /*
       * 헤더 네비 스와이퍼 생성
       */
       sethaderNavi: function () {
@@ -62,6 +79,36 @@
             var idx = $(".header-navi-swiper .swiper-slide.active").index();
             var len = $(".header-navi-swiper .swiper-slide").length - UI.headerNaviSwiper.snapGrid.length;
             if(len < idx) UI.headerNaviSwiper.slideTo(idx - len, 0);
+         }
+      },
+
+      setMobileNavi: function () {
+         $("#header .m-menu").on("click", function ( e ) {
+            $(".mobile-navi").show();
+            $('body').css('overflow','hidden');
+            gsap.set($(".mobile-navi .navi-wrap"), {x: $(window).width()});
+            gsap.to($(".mobile-navi .navi-wrap"), 0.6, {x: 0, ease: Cubic.easeInOut});
+         });
+         $(".mobile-navi .close").on("click", function ( e ) {
+            gsap.to($(".mobile-navi .navi-wrap"), 0.6, {x: $(window).width(), ease: Cubic.easeOut, onComplete: function () {
+               $(".mobile-navi").hide();
+               $('body').css('overflow','');
+            }});
+         });
+      },
+
+      /*
+      * 마이페이지 진행상태 스와이퍼
+      */
+      setProgressSwiper: function () {
+         if($(".progress-swiper")) {
+            UI.progressSwiper = new Swiper(".progress-swiper", {
+               slidesPerView: "auto",
+               freeMode: true,
+            });
+            var idx = $(".progress-swiper .swiper-slide.active").index();
+            var len = $(".progress-swiper .swiper-slide").length - UI.progressSwiper.snapGrid.length;
+            if(len < idx) UI.progressSwiper.slideTo(idx - len, 0);
          }
       },
 
@@ -151,6 +198,7 @@
          $("html, body").scrollTop(0);
       },
 
+      // 스텝1 트림 셀렉트 
       setPriceSelect: function () {
          $(".price-select .total-price").on("click", function ( e ) {
             if(!$(".price-select .total-price").is(".active")){
@@ -179,6 +227,8 @@
 
    $(document).ready(function () {
       initUi();
+      UI.setMainNavi();
+      UI.setMobileNavi();
       UI.sethaderNavi();
       UI.setPriceSelect();
 
@@ -196,6 +246,24 @@
          }
          oldWinTop = winTop;
       });
+
+      $(window).on("resize", function () {
+         var winWidth = $(window).width();
+         if(winWidth > 880){
+            if(UI.progressSwiper) {
+               UI.progressSwiper.destroy();
+               UI.progressSwiper = null;
+            }
+         } else {
+            if(!UI.progressSwiper) {
+               UI.setProgressSwiper();
+            } else {
+               UI.progressSwiper.update();
+            }
+         }
+      });
+
+      $(window).trigger("resize");
       
    });
 

@@ -31,7 +31,7 @@
 <body>
    <div class="accessbility"><a href="#contents">본문바로가기</a></div>
    <div id="wrapper">
-      <header id="header" class="pin">
+      <header id="header" class="pin main-hader">
          <h1><a href="#">쌍용자동차</a></h1>
          <ul class="navi-list">
             <li><a href="#">온라인 견적/구매방법</a></li>
@@ -43,8 +43,37 @@
          </ul>
          <div class="m-title"><a href="#"><img src="../img/ico-prev.svg" alt="뒤로"></a>계약 상세</div>
          <button type="button" class="login">로그아웃</button>
+         <button type="button" class="navi-close"><img src="../img/btn-close.svg" alt=""></button>
          <button type="button" class="m-menu"><img src="../img/mobile-menu.svg"></button>
       </header>
+      
+      <div class="main-navi login">
+         <div class="navi-wrap">
+            <ul>
+               <li><a href="#">TORRES<span>토레스</span></a></li>
+            </ul>
+            <ul>
+               <li><a href="#">TIVOLI<span>티볼리</span></a></li>
+               <li><a href="#">TIVOLI</a></li>
+               <li><a href="#">TIVOLI air</a></li>
+            </ul>
+            <ul>
+               <li><a href="#">KORANDO<span>코란도</span></a></li>
+            </ul>
+            <ul>
+               <li><a href="#">REXTON<span>렉스턴</span></a></li>
+               <li><a href="#">REXTON SPORTS</a></li>
+               <li><a href="#">REXTON SPORTS KHAN</a></li>
+               <li><a href="#">REXTON(5인승)</a></li>
+               <li><a href="#">REXTON(7인승)</a></li>
+            </ul>
+            <ul class="my">
+               <li><a href="#">마이페이지</a></li>
+               <li><a href="#">견적</a></li>
+               <li><a href="#">계약</a></li>
+            </ul>
+         </div>
+      </div>
 
       <section id="contents">
 
@@ -88,32 +117,34 @@
 
                   <div class="progress">
                      <h4 class="tit">진행 상태</h4>
-                     <ul>
-                        <li class="active">
-                           <div class="ico"><img src="../img/progress-icon-1.svg" /></div>
-                           <p class="text">계약서 작성<span>계약서 (작성중)</span></p>
-                        </li>
-                        <li>
-                           <div class="ico"><img src="../img/progress-icon-2.svg" /></div>
-                           <p class="text">계약금 결제</p>
-                        </li>
-                        <li>
-                           <div class="ico"><img src="../img/progress-icon-3.svg" /></div>
-                           <p class="text">최종 계약서 확인</p>
-                        </li>
-                        <li>
-                           <div class="ico"><img src="../img/progress-icon-4.svg" /></div>
-                           <p class="text">인도금 결제</p>
-                        </li>
-                        <li>
-                           <div class="ico"><img src="../img/progress-icon-5.svg" /></div>
-                           <p class="text">배송</p>
-                        </li>
-                        <li>
-                           <div class="ico"><img src="../img/progress-icon-6.svg" /></div>
-                           <p class="text">차량인수</p>
-                        </li>
-                     </ul>
+                     <div class="swiper progress-swiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide active">
+                              <div class="ico"><img src="../img/progress-icon-1.svg" /></div>
+                              <p class="text">계약서 작성<span>계약서 (작성중)</span></p>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="ico"><img src="../img/progress-icon-2.svg" /></div>
+                              <p class="text">계약금 결제</p>
+                           </div>
+                           <div class="swiper-slide ">
+                              <div class="ico"><img src="../img/progress-icon-3.svg" /></div>
+                              <p class="text">최종 계약서 확인</p>
+                           </div>
+                           <div class="swiper-slide ">
+                              <div class="ico"><img src="../img/progress-icon-4.svg" /></div>
+                              <p class="text">인도금 결제</p>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="ico"><img src="../img/progress-icon-5.svg" /></div>
+                              <p class="text">배송</p>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="ico"><img src="../img/progress-icon-6.svg" /></div>
+                              <p class="text">차량인수</p>
+                           </div>
+                        </div>
+                     </div>
                   </div>
 
                   <div class="info-box">
@@ -145,7 +176,31 @@
                      <li><a href="#">배송/인수</a></li>
                   </ul>
                   <div class="content3">
-                     
+                     <div class="top-title">계약금 결제 정보</div>
+                     <div class="bill-box">
+                        <div class="box-header">
+                           <div class="thumb"><img src="../img/thumb/@rexton-round-thumb.png" /></div>
+                           <div class="text-con">
+                              <h4>REXTON SPORTS</h4>
+                              <p>계약금 결제 <strong>(대기중)</strong></p>
+                           </div>
+                        </div>
+                        <div class="box-body">
+                           <dl>
+                              <dt>결제자</dt>
+                              <dd>홍길동</dd>
+                           </dl>
+                           <dl>
+                              <dt>결제 방법</dt>
+                              <dd>-</dd>
+                           </dl>
+                           <dl>
+                              <dt>결제 금액</dt>
+                              <dd>-</dd>
+                           </dl>
+                        </div>
+                        <button class="btn btn-blue" disabled>계약금 결제</button>
+                     </div>
                   </div>
                </div>
                
@@ -213,7 +268,139 @@
    <div class="popup-wrap" id="popup" tabindex="0"></div>
    <!-- //POPUP -->
 
-   
+   <!-- mobile-navi -->
+   <div class="mobile-navi">
+      <div class="blind"></div>
+      <div class="navi-wrap">
+         <div class="navi-header">
+            <h1><a href="#">쌍용자동차</a></h1>
+            <button type="button" class="close"><img src="../img/btn-close.svg" alt=""></button>
+         </div>
+         <div class="navi-login">
+            <div class="text">
+               <h4>로그인 후</h4>
+               <p>더 많은 서비스를 즐기세요.</p>
+            </div>
+            <button type="button" class="btn btn-dark-blue">로그인</button>
+         </div>
+         <div class="navi-menu">
+
+            <div class="menu"><a href="#">온라인 견적/구매방법</a></div>
+
+            <div class="menu accodion">
+               <a class="accodion-header" href="javascript:void(0);">TORRES<span>토레스</span></a>
+               <div class="sub-menu accodion-body">
+                  <div class="menu">
+                     <a href="#">
+                        <div class="thumb"><img src="../img/menu_torres.png" alt="TORRES"></div>
+                        <div class="text">
+                           <h4>TORRES</h4>
+                           <p>26,000,000 won ~</p>
+                        </div>
+                        <div class="btn btn-white">내차 디자인</div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="menu accodion">
+               <a class="accodion-header" href="javascript:void(0);">TIVOLI<span>티볼리</span></a>
+               <div class="sub-menu accodion-body">
+                  <div class="menu">
+                     <a href="#">
+                        <div class="thumb"><img src="../img/menu_tivoli.png" alt="TIVOLI"></div>
+                        <div class="text">
+                           <h4>TIVOLI</h4>
+                           <p>18,000,000 won ~</p>
+                        </div>
+                        <div class="btn btn-white">내차 디자인</div>
+                     </a>
+                  </div>
+                  <div class="menu">
+                     <a href="#">
+                        <div class="thumb"><img src="../img/menu_tivoli_air.png" alt="TIVOLI air"></div>
+                        <div class="text">
+                           <h4>TIVOLI air</h4>
+                           <p>18,000,000 won ~</p>
+                        </div>
+                        <div class="btn btn-white">내차 디자인</div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="menu accodion">
+               <a class="accodion-header" href="javascript:void(0);">KORANDO<span>코란도</span></a>
+               <div class="sub-menu accodion-body">
+                  <div class="menu">
+                     <a href="#">
+                        <div class="thumb"><img src="../img/menu_korando.png" alt="KORANDO"></div>
+                        <div class="text">
+                           <h4>KORANDO</h4>
+                           <p>26,000,000 won ~</p>
+                        </div>
+                        <div class="btn btn-white">내차 디자인</div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="menu accodion">
+               <a class="accodion-header" href="javascript:void(0);">REXTON<span>렉스턴</span></a>
+               <div class="sub-menu accodion-body">
+                  <div class="menu">
+                     <a href="#">
+                        <div class="thumb"><img src="../img/menu_rexton_sports.png" alt="REXTON SPORTS"></div>
+                        <div class="text">
+                           <h4>REXTON SPORTS</h4>
+                           <p>26,000,000 won ~</p>
+                        </div>
+                        <div class="btn btn-white">내차 디자인</div>
+                     </a>
+                  </div>
+                  <div class="menu">
+                     <a href="#">
+                        <div class="thumb"><img src="../img/menu_rexton_khan.png" alt="REXTON SPORTS KHAN"></div>
+                        <div class="text">
+                           <h4>REXTON SPORTS KHAN</h4>
+                           <p>26,000,000 won ~</p>
+                        </div>
+                        <div class="btn btn-white">내차 디자인</div>
+                     </a>
+                  </div>
+                  <div class="menu">
+                     <a href="#">
+                        <div class="thumb"><img src="../img/menu_rexton_5.png" alt="REXTON SPORTS KHAN"></div>
+                        <div class="text">
+                           <h4>REXTON(5인승)</h4>
+                           <p>26,000,000 won ~</p>
+                        </div>
+                        <div class="btn btn-white">내차 디자인</div>
+                     </a>
+                  </div>
+                  <div class="menu">
+                     <a href="#">
+                        <div class="thumb"><img src="../img/menu_rexton_7.png" alt="REXTON SPORTS KHAN"></div>
+                        <div class="text">
+                           <h4>REXTON(7인승)</h4>
+                           <p>26,000,000 won ~</p>
+                        </div>
+                        <div class="btn btn-white">내차 디자인</div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="menu"><a href="#">이 달의 구매 혜택</a></div>
+            <div class="menu"><a href="#">가격표/카탈로그</a></div>
+            <div class="menu"><a href="#">자주 묻는 질문</a></div>
+            <div class="menu"><a href="#">이벤트</a></div>
+
+         </div>
+      </div>
+   </div>
+   <!-- //mobile-navi -->
+
 </body>
 
 </html>
