@@ -82,6 +82,9 @@
          }
       },
 
+      /*
+      * 모바일 네비 생성
+      */
       setMobileNavi: function () {
          $("#header .m-menu").on("click", function ( e ) {
             $(".mobile-navi").show();
