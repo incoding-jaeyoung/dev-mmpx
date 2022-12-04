@@ -1,0 +1,18 @@
+
+<body> 
+   <div class="modal" tabindex="-1" aria-hidden="true">
+      <div class="overlay" onclick="UI.closeDialog(false);"><span>닫기</span></div>   
+      <div class="modal-dialog modal-dialog-centered confirm">
+         <div class="modal-content">
+            <div class="modal-body">
+               지금까지 선택된 정보는 보관되지 않습니다.<br />
+               <strong>[다음] 버튼을 선택하여 견적을 완성하시고 저장</strong>하실 수 있습니다. 취소 하시겠습니까?
+            </div>
+            <div class="modal-btn">
+               <button class="btn enter" type="button" onclick="UI.closeDialog(true);">확인</button>
+               <button class="btn cancel" type="button" onclick="UI.closeDialog(false);">취소</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>

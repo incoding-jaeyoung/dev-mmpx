@@ -5,23 +5,22 @@
 
       headerNaviSwiper: null,
       progressSwiper: null,
+      dialogCallback: null,
 
       /*
       * 레이어 팝업 오픈
       * @params
-      *   selector : string 팝업 로드 컨테이너
       *   href : string 팝업 호출 경로
       *   animation : 'up' | null 팝업 애니메이션
       *
       */
-      openLayer: function(selector, href, animation) {
-         var flag = selector;
-         flag = $(flag);
-         flag.load(href, function () {
+      openPopup: function(href, animation) {
+         var target = $("#popup");
+         target.load(href, function () {
             $(this).show();
             $(this).find('.modal').css('transition', 'none');
             $(this).find('.modal').show().addClass('scroll')
-            $('.overlay').show();
+            $(this).find('.overlay').show();
             $('body').css('overflow','hidden');
             if(animation === 'up'){
                gsap.set($(this).find('.modal-dialog'), {y: $(window).height()});
@@ -35,13 +34,56 @@
       /*
       * 레이어 팝업 클로즈
       */
-      closeLayer: function () {
-         $('.popup-wrap .gallery-swiper').each(function (){
+      closePopup: function () {
+         $('#popup .gallery-swiper').each(function (){
             $(this).data("gallerySwiper").destroy(true, true);
-         })
-         $('.popup-wrap').empty();
-         $('.popup-wrap').removeAttr('style').hide();
-         $('.overlay').hide().removeAttr('style');
+         });
+         var target = $('#popup');
+         target.empty();
+         target.removeAttr('style').hide();
+         target.find('.overlay').hide().removeAttr('style');
+         $('body').css('overflow','');
+      },
+
+      /*
+      * 다이알로그 오픈
+      * @params
+      *   href : string 팝업 호출 경로
+      *   callback :콜백
+      */
+      openDialog: function(href, callback) {
+         var target = $("#dialog");
+         UI.dialogCallback = callback;
+         target.load(href, function () {
+            $(this).show();
+            $(this).find('.modal').css('transition', 'none');
+            $(this).find('.modal').show().addClass('scroll')
+            $(this).find('.overlay').show();
+            $('body').css('overflow','hidden');
+            if(animation === 'up'){
+               gsap.set($(this).find('.modal-dialog'), {y: $(window).height()});
+               gsap.to($(this).find('.modal-dialog'), 0.8, { y: 0, ease: Cubic.easeInOut });
+            }
+            initUi();
+         });
+         return false;
+      },
+
+      /*
+      * 다이알로그 클로즈
+      */
+      closeDialog: function ( enter ) {
+         $('#popup .gallery-swiper').each(function (){
+            $(this).data("gallerySwiper").destroy(true, true);
+         });
+         var target = $('#dialog');
+         target.empty();
+         target.removeAttr('style').hide();
+         target.find('.overlay').hide().removeAttr('style');
+         if(UI.dialogCallback){
+            UI.dialogCallback(enter);
+            UI.dialogCallback = null;
+         }
          $('body').css('overflow','');
       },
 
