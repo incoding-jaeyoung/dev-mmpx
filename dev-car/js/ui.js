@@ -6,23 +6,27 @@
       headerNaviSwiper: null,
       progressSwiper: null,
       dialogCallback: null,
+      device: 'pc',
 
       /*
       * 레이어 팝업 오픈
       * @params
       *   href : string 팝업 호출 경로
+      * @options
       *   animation : 'up' | null 팝업 애니메이션
-      *
+      *   customSelector : #popup이 아닌 다른곳에 열어야 할 경우 
       */
-      openPopup: function(href, animation) {
-         var target = $("#popup");
+      openPopup: function( href, option ) {
+         var opt = option || {};
+         console.log(opt)
+         var target = $(opt.customSelector ? opt.customSelector : "#popup");
          target.load(href, function () {
             $(this).show();
             $(this).find('.modal').css('transition', 'none');
             $(this).find('.modal').show().addClass('scroll')
             $(this).find('.overlay').show();
             $('body').css('overflow','hidden');
-            if(animation === 'up'){
+            if(opt.animation === 'up') {
                gsap.set($(this).find('.modal-dialog'), {y: $(window).height()});
                gsap.to($(this).find('.modal-dialog'), 0.8, { y: 0, ease: Cubic.easeInOut });
             }
@@ -34,11 +38,11 @@
       /*
       * 레이어 팝업 클로즈
       */
-      closePopup: function () {
+      closePopup: function ( customSelector ) {
          $('#popup .gallery-swiper').each(function (){
             $(this).data("gallerySwiper").destroy(true, true);
          });
-         var target = $('#popup');
+         var target = $(customSelector ? customSelector : '#popup');
          target.empty();
          target.removeAttr('style').hide();
          target.find('.overlay').hide().removeAttr('style');
@@ -294,6 +298,13 @@
 
       $(window).on("resize", function () {
          var winWidth = $(window).width();
+         if(winWidth > 1200) {
+            UI.device = "pc";
+         } else if(winWidth < 1200 && winWidth > 767) {
+            UI.device = "tablet";
+         } else {
+            UI.device = "mobile";
+         }
          if(winWidth > 880){
             if(UI.progressSwiper) {
                UI.progressSwiper.destroy();

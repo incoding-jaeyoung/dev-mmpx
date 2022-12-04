@@ -354,14 +354,16 @@
                   </div>
                </div>
                <div class="submit-block">
-                  <p class="price-info">선택 차량 가격 <b>33,710,000 원</b> <a href="#"><img src="../img/ico-price-up.svg"
-                           alt=""></a></p>
+                  <p class="price-info">
+                     선택 차량 가격 <b>33,710,000 원</b> <a href="javascript: UI.openPopup('popup-step1-06.html', {animation:'up', customSelector: UI.device === 'pc' ? '#pc-popup' : '#popup'});"><img src="../img/ico-price-up.svg" alt=""></a>
+                  </p>
                   <p class="btn-select">
                      <button class="btn btn-black" type="button">취소</button>
                      <button class="btn btn-blue" type="button">다음</button>
                   </p>
                </div>
             </div>
+            <div class="popup-wrap" id="pc-popup" tabindex="0"></div>
          </div>
          <!-- //contents -->
       </section>
