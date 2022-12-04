@@ -9,7 +9,7 @@ body {
   font-size: 62.5%;
   /* overflow-x: hidden; */
 }
- @media all and (max-width: 1000px) {
+ @media (min-width:1025px) and (max-width: 1200px){
     html {font-size:62.5%;}
  }
  @media all and (max-width: 767px) {
@@ -55,7 +55,7 @@ input[type=checkbox]+label.round:after{border-radius: 50%;background-color: #fff
 .radio-btn input[type=radio]+label{border: solid 1px #ebeded; font-size: 1.4rem;  color: rgba(32, 33, 36, 0.8); height: 4rem; width: 10rem; display: inline-flex; align-items: center; justify-content: center; border-left: none; transition: all 0.4s ease;}
 .radio-btn input[type=radio]:first-of-type+label{border: solid 1px #ebeded; border-radius: 0.4rem 0 0  0.4rem;}
 .radio-btn input[type=radio]:last-of-type+label{border-radius: 0 0.4rem 0.4rem 0;}
-.radio-btn input[type=radio]:checked+label{border: solid 1px #2185d0; background-color: #f2f9ff;}
+.radio-btn input[type=radio]:checked+label{border: solid 1px #2185d0; background-color: #f2f9ff; color: #2185d0;}
 .radio-btn input[type=radio]+label::after{display:none;}
 .radio-btn input[type=radio]+label::before{display:none;}
 .radio-btn.dark input[type=radio]:checked+label{background-color: #000;color: #fff;border-color: #000;}
@@ -516,13 +516,14 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .price-select .total-list .list:hover{background-color: #f8f8f8;}
 
 
-.option-select{display: flex;  position: relative; justify-content: space-between; overflow: hidden;}
-.option-select hr{background-color: #edeef0; height: 0.5rem;}
-.option-select .viewer{ background-color:#fafafa; width: 100%; }
+.option-select{display: block;  position: relative; flex-direction: column; justify-content: space-between; overflow: hidden; padding-left:calc(100% - 64.6rem) ; height:calc(100vh - 32.0rem); overflow-y: auto;}
+.option-contents hr{background-color: #edeef0; height: 0.5rem; display: block; border: none;}
+.viewer{ background-color:#fafafa; width: 100%; position: fixed; left: 0; top: 20rem; height: 100%; width: calc(100% - 64.6rem); z-index: 30;}
 .option-select .viewer img{}
-.option-select .option-block{display: flex; width:64.6rem; flex: none;  flex-direction: column; padding-bottom: 12rem;}
-.option-select .option-block .option-contents{height:calc(100vh - 33.0rem); overflow-y: auto; }
-.option-select .option-block .submit-block{position:absolute; width:64.6rem; right: 0; bottom: 0;}
+.option-select .color-select{}
+.option-select .option-block{display: flex; width:64.6rem; flex: none;  flex-direction: column;}
+.option-select .option-block .option-contents{ }
+.option-select .option-block .submit-block{position:fixed; width:64.6rem; right: 0; bottom: 0; z-index: 10;}
 .option-select .option-block .submit-block .price-info{display: flex; height:6rem; color: #fff; align-items: center; background-color: #000e3d; font-weight: 300; font-size: 2rem; align-items: center; justify-content: center;}
 .option-select .option-block .submit-block .price-info b{margin-left: 1rem;}
 .option-select .option-block .submit-block .price-info a{margin-left: 1rem;}
@@ -545,13 +546,14 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 
 .color-list {width: 100%;}
 .color-list li {margin-top: 2rem; position: relative;}
-.color-list li label{display: flex; border: 1px solid #ddd; height: 6rem; padding-left: 1.5rem; justify-content: space-between; align-items: center;}
-.color-list li label::after{left: 2.1rem; top: 50%; transform: translateY(-50%); transition: all 0.4s ease;}
+.color-list li label{display: flex; border: 1px solid #ddd; height: 6rem; padding-left: 1.3rem; justify-content: space-between; align-items: center;}
+.color-list li label::after{left: 1.9rem; top: 50%; transform: translateY(-50%); transition: all 0.4s ease;}
+.color-list li label::before{margin-right: 0;}
 .color-list li label *{ line-height: 100%;}
 .color-list li label img{width: 6.4rem; margin-left: 1.3rem;}
 .color-list li label .title{margin-right: auto; margin-left: 2rem; font-size: 1.8rem;}
 .color-list li label .price {font-weight: bold; font-size: 1.8rem;}
-.color-list li label .price img{width: 4.4rem;}
+.color-list li label .price img{width: 4.4rem; margin-left: 0;}
 .color-list li input:checked+label{border: solid 1px #4560d3;}
 
 .inter-list {width: 100%;}
@@ -579,9 +581,14 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     #header .m-title{display: block;}
     #header .login{display: none;}
     #header .m-menu{display: block;}
+
+    .price-select{position: sticky; top: 7rem; z-index: 10; background-color: #fff;}
+
     #header .navi-close{display: none !important}
+
     .navi-list{display: none;}
     .step-line{display: flex; font-size: 1.6rem;}
+    .header-navi{position: sticky; top: 0; z-index: 10;}
     .header-navi-swiper .swiper-slide{width:auto; margin: 0 1rem; min-width: 20rem;}
     .header-navi-swiper .swiper-slide.active a{border-bottom: 2px solid #000e3d; color: #000e3d;}
     .header-navi-swiper .swiper-slide a{display: flex; width: auto; padding: 0 2rem; border-bottom: 2px solid #f5f6f7; align-items: center; justify-content: center; color: #8a8f9c; font-size: 2rem; letter-spacing: -0.05rem;}
@@ -592,9 +599,9 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .radio-select dl{margin-right: 2rem;}
     .radio-select dl:last-of-type{margin-top: 0rem;}
     .caution-view{font-size: 1.2rem; display: flex; align-items: center; justify-content: center; padding: 2rem 0; color: #6f6f6f;}
-    .option-select{display: flex;  position: relative; flex-direction: column; overflow: hidden;}
+    .option-select{display: flex;  position: static; flex-direction: column; overflow: visible; padding-left: 0; height: auto;}
     .option-select hr{background-color: #edeef0; height: 0.5rem;}
-    .option-select .viewer{ background-color:#fafafa; width: 100%; height:63rem; }
+    .viewer{ background-color:#fafafa; width: 100%; height:63rem; position: sticky; top: 13rem; z-index:30; }
     .option-select .viewer img{}
     .option-select .option-block{display: flex; width:100%; flex: none;  flex-direction: column; padding-bottom:0;}
     .option-select .option-block .option-contents{height:auto; overflow-y: auto; }
@@ -645,13 +652,15 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .step-line li{display: none;}
     .step-line li:after{display: none;}
     .step-line li.active{display:flex;}
-
+    .header-navi{position: sticky; top: 0; z-index: 10;}
     .header-navi {padding: 0 2rem 0 0; background-color: #f5f6f7;}
     .header-navi-swiper {display: flex; align-items: center; justify-content: space-between;}
     .header-navi-swiper .swiper-slide{width:auto; margin: 0 0.6rem;}
     .header-navi-swiper .swiper-slide.active a{border-bottom: 2px solid #000e3d; color: #000e3d;}
     .header-navi-swiper .swiper-slide a{display: flex; width: auto; padding: 0 2rem; border-bottom: 2px solid #f5f6f7; height: 5rem; align-items: center; justify-content: center; color: #8a8f9c; font-size: 1.6rem;}
     
+    
+    .price-select {position: sticky; top: 5rem; z-index: 10; background-color: #fff;}
     .price-select .total-price{padding: 0 0 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 5rem;}
     .price-select .total-price .name{font-size: 1.4rem;}
     .price-select .total-price .price {font-size: 1.4rem;}
@@ -675,9 +684,9 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .radio-select dl{margin-right: 1.2rem; margin-bottom: 1rem;}
     .radio-select dl:last-of-type{margin-top: 0rem; margin-bottom: 0;}
     .caution-view{font-size: 1.2rem; display: flex; align-items: center; justify-content: center; padding: 2rem 0; color: #6f6f6f;}
-    .option-select{display: flex;  position: relative; flex-direction: column; overflow: hidden;}
+    .option-select{display: flex;  position: relative; flex-direction: column; overflow: visible; padding-left: 0; height:auto;}
     .option-select hr{background-color: #edeef0; height: 0.5rem;}
-    .option-select .viewer{ background-color:#fafafa; width: 100%; height: 42rem; }
+    .option-select .viewer{ background-color:#fafafa; width: 100%; height:39rem; position: sticky; top: 10rem; z-index: 10;}
     .option-select .viewer img{}
     .option-select .option-block{display: flex; width:100%; flex: none;  flex-direction: column; padding-bottom:0;}
     .option-select .option-block .option-contents{height:auto; overflow-y: auto; }
@@ -698,8 +707,8 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .color-list li label{display: flex; border: 1px solid #ddd; height: 6rem; padding-left: 1.4rem; justify-content: space-between; align-items: center;flex: none;}
     .color-list li label::after{left: 2rem; top: 50%; transform: translateY(-50%); transition: all 0.4s ease;}
     .color-list li label *{ line-height: 100%;}
-    .color-list li label img{width: 4rem; margin-left:0; height: 4rem;}
-    .color-list li label .title{margin-right: auto; margin-left:1rem; font-size: 1.4rem;}
+    .color-list li label img{width: 4rem; margin-left:1.4rem; height: 4rem;}
+    .color-list li label .title{margin-right: auto; margin-left:1rem; font-size: 1.4rem; line-height:normal; padding-right: 1.5rem;}
     .color-list li label .price {font-weight: bold; font-size: 1.4rem; display: flex; align-items: center;}
     .color-list li label .price img{width: 4.4rem;}
     .color-list li input:checked+label{border: solid 1px #4560d3;}
