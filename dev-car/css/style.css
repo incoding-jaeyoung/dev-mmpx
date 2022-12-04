@@ -233,6 +233,7 @@ a:hover{color:#003994;}
 
 /* modal */
 .popup-wrap{position: relative;}
+.dialog-wrap{position: relative;}
 .modal.modal-inside{transform: none; display: none;}
 .modal-dialog-centered{display: -ms-flexbox;
     display: flex;
