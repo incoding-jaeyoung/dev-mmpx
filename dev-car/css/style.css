@@ -240,7 +240,7 @@ a:hover{color:#003994;}
     -ms-flex-align: center;
     align-items: center;
     min-height: calc(100% - (0.5rem * 2));}
-.modal{ transition: all 0.4s ease; transform: translateY(5rem); z-index: 99999; position: fixed;
+.modal{ transition: all 0.4s ease; z-index: 99999; position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
