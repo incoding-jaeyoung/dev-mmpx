@@ -160,7 +160,7 @@
       * 마이페이지 진행상태 스와이퍼
       */
       setProgressSwiper: function () {
-         if($(".progress-swiper")) {
+         if($(".progress-swiper").length>0) {
             UI.progressSwiper = new Swiper(".progress-swiper", {
                slidesPerView: "auto",
                freeMode: true,
@@ -216,9 +216,27 @@
       setMainPhotoSwiper: function () {
          $(".main-photo-swiper").each(function () {
             var swiper = new Swiper($(this)[0], {
-               slidesPerView: 1,
-               spaceBetween: 20,
-               observer: true,
+               slidesPerView: 3,
+               spaceBetween: 10,
+               grid: {
+                  rows: 2,
+               },
+               breakpoints: {
+                  1200: {
+                     slidesPerView: 4,
+                     spaceBetween: 20,
+                     grid: {
+                        rows: 1,
+                     },
+                  },
+                  767: {
+                     slidesPerView: 4,
+                     spaceBetween: 20,
+                     grid: {
+                        rows: 2,
+                     },
+                  }
+               },
                pagination: {
                   el: ".main-photo .control .pagination",
                },
@@ -229,9 +247,46 @@
             });
 
             $(".main-photo .control .current").text('01');
-            $(".main-photo .control .total").text('0'+swiper.slidesGrid.length);
+            $(".main-photo .control .total").text(('0' + swiper.snapGrid.length).slice(-2));
             swiper.on("slideChange", function () {
-               $(".main-photo .control .current").text('0'+(swiper.activeIndex+1));
+               $(".main-photo .control .total").text(('0' + swiper.snapGrid.length).slice(-2));
+               $(".main-photo .control .current").text(('0' + (swiper.activeIndex+1)).slice(-2));
+            });
+            swiper.on("resize", function () {
+               $(".main-photo .control .total").text(('0' + swiper.snapGrid.length).slice(-2));
+               $(".main-photo .control .current").text(('0' + (swiper.activeIndex+1)).slice(-2));
+            })
+         });
+      },
+
+
+      /*
+      * 기본형 스와이퍼 생성
+      */
+      setDefaultSwiper: function () {
+         $(".default-swiper").each(function () {
+            var swiper = new Swiper($(this).find(".swiper")[0], {
+               slidesPerView: 1,
+               spaceBetween: 10,
+               breakpoints: {
+                  1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                  767: {
+                     slidesPerView: 2,
+                     spaceBetween: 20,
+                  }
+               },
+               
+               pagination: {
+                  el: $(this).find(".swiper-pagination")[0],
+                  clickable: true
+               },
+               navigation: {
+                  nextEl: $(this).find(".swiper-button-next")[0],
+                  prevEl: $(this).find(".swiper-button-prev")[0],
+               },
             });
          });
       },
@@ -310,13 +365,14 @@
 
    window.UI = UI;
 
-   $(document).ready(function () {
+   $(function () {
       initUi();
       UI.setMainNavi();
       UI.setMobileNavi();
       UI.sethaderNavi();
       UI.setPriceSelect();
       UI.setMainPhotoSwiper();
+      UI.setDefaultSwiper();
 
       var oldWinTop = 0;
       $(window).on("scroll", function () {
@@ -342,16 +398,18 @@
          } else {
             UI.device = "mobile";
          }
-         if(winWidth > 880){
-            if(UI.progressSwiper) {
-               UI.progressSwiper.destroy();
-               UI.progressSwiper = null;
-            }
-         } else {
-            if(!UI.progressSwiper) {
-               UI.setProgressSwiper();
+         if($(".progress-swiper").length > 0){
+            if(winWidth > 880){
+               if(UI.progressSwiper) {
+                  UI.progressSwiper.destroy();
+                  UI.progressSwiper = null;
+               }
             } else {
-               UI.progressSwiper.update();
+               if(!UI.progressSwiper) {
+                  UI.setProgressSwiper();
+               } else {
+                  UI.progressSwiper.update();
+               }
             }
          }
       });

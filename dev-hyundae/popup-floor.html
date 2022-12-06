@@ -26,10 +26,22 @@
                 </div>
                 <div class="modal-body">
                     <h1 class="map-title">creative<br>ground</h1>
-                    <div id="map" class="map">MAP API</div>
+                    <div id="map" class="map"></div>
                 </div>
                 <p class="close-popup"><button type="button" onclick="closeModal();"><img src="../img/Btn_X.svg" alt=""></button></p>
             </div>
         </div>
     </div>
+    
+    <script type="text/javascript">
+        $(async () => {
+            const dabeeoMaps = new dabeeo.Maps();
+            const mapData = await dabeeoMaps.getMapData({
+                clientId: '2F38V44Tkm4bOoIKJfu1i8',
+                clientSecret: 'b763edac57dfacd65c521f20a5d5c4b4'
+            });
+            const mapContainer = document.getElementById("map"); 
+            const map = await dabeeoMaps.showMap(mapContainer, {}, mapData);
+        });
+    </script>
 </body>
