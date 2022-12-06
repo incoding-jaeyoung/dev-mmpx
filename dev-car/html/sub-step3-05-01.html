@@ -101,7 +101,7 @@
                            <input type="radio" name="type-02" id="type-02-02">
                            <label for="type-02-02">외국인</label>
                         </div>
-
+                        <!-- 내국인 경우 -->
                         <div class="input-box mT40">
                            <div class="title">성명<span class="star">*</span></div>
                            <div class="intpu-container">
@@ -126,6 +126,78 @@
                               <label for="file-01">+ 신분증 파일 업로드</label>
                            </div>
                         </div>
+                        <!-- //내국인 경우 -->
+
+                        <!-- 외국인 경우 -->
+                        <div class="input-box mT40">
+                           <div class="title">성명<span class="star">*</span></div>
+                           <div class="intpu-container">
+                              <input type="text" placeholder="한글로 입력해 주세요" value="Gildong hong">
+                           </div>
+                           <div class="guide">로그인 사용자가 주계약자로 표기되며 신분증 상의 성명으로 변경이 필요할 경우 쌍용자동차 홈페이지의 마이페이지에서 변경해 주세요.</div>
+                        </div>
+
+                        <div class="input-box mT40">
+                           <div class="title">외국인등록번호<span class="star">*</span></div>
+                           <div class="intpu-container">
+                              <!-- pc -->
+                              <div class="double-input">
+                                 <input type="text">
+                                 <span class="hline"></span>
+                                 <input type="password">
+                              </div>
+                              <!-- pc -->
+                              <!-- mobile -->
+                              <input class="num-mobile" type="text" placeholder="숫자로만 입력해 주세요">
+                              <!-- mobile -->
+
+                              <button class="btn btn-dark-blue mL20" type="button">인증하기</button>
+                           </div>
+                           <div class="guide">외국인등록번호 13자리를 입력해 주세요.</div>
+                        </div>
+
+                        <div class="mT40">
+                           <div class="file-list">
+                              honggldng_20221015.png
+                              <button class="btn-del" type="button"></button></label>
+                           </div>
+                        </div>
+                        <!-- //외국인 경우 -->
+
+                        <!-- 개인사업자 경우 -->
+                        <div class="input-box mT40">
+                           <div class="title">사업자번호<span class="star">*</span></div>
+                           <div class="intpu-container">
+                              <input type="text" placeholder="숫자로만 입력해 주세요">
+                              <button class="btn btn-dark-blue mL20" type="button">사업자번호인증</button>
+                           </div>
+                        </div>
+
+                        <div class="mT20">
+                           <div class="btn btn-upload">
+                              <input id="file-02" type="file" accept="image/png, image/jpeg">
+                              <label for="file-02">+ 사업자등록증 파일 업로드</label>
+                           </div>
+                        </div>
+
+                         <div class="input-box mT40">
+                           <div class="title">사업자(상호)</div>
+                           <div class="intpu-container">
+                              <input type="text" placeholder="사업자등록증상의 상호로 입력해 주세요">
+                           </div>
+                           <div class="guide">사업자등록증 상의 상호명을 입력해 주세요.</div>
+                        </div>
+
+                        <div class="input-box mT40">
+                           <div class="title">업태/업종</div>
+                           <div class="intpu-container">
+                              <input class="mR20" type="text" placeholder="업태를 입력해 주세요">
+                              <input type="text" placeholder="업태를 입력해 주세요">
+                           </div>
+                           <div class="guide">사업자등록증 상의 업태, 업종 정보를 입력해 주세요.</div>
+                        </div>
+                        <!-- //개인사업자 경우 -->
+
 
                         <div class="input-box mT40">
                            <div class="title">휴대전화<span class="star">*</span></div>

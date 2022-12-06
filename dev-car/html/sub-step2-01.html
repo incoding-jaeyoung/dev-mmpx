@@ -375,34 +375,136 @@
                               <button class="btn active">현금/카드</button>
                               <button class="btn">할부</button>
                            </div>
+
+                           <!-- 할부일 경우 -->
+                           <div class="check-con">
+                              <input type="checkbox" name="pay-check-01" id="pay-check-01" checked>
+                              <label for="pay-check-01"><p><strong>커스터마이징</strong>의 지불을 할부 원금에 포함하여 결제합니다.</p></label>
+                           </div>
+                           <div class="check-con">
+                              <input type="checkbox" name="pay-check-02" id="pay-check-02" checked>
+                              <label for="pay-check-02"><p><strong>DECKTOP(데크탑)</strong>의 지불을 할부 원금에 포함하여 결제합니다.</p></label>
+                           </div>
+                           <!-- //할부일 경우 -->
+
                         </dd>
                      </dl>
+                     <!-- 현금/카드일 경우 -->
                      <dl>
                         <dt>결제 내역</dt>
                         <dd>
                            <div class="field-areas">
                               <div class="area">
                                  <p>총 차량 가격</p>
-                                 <input type="text" value="31,970,000 원" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="31,970,000"><span>원</span>
+                                 </div>
                               </div>
                               <div class="area">
                                  <p>계약금</p>
-                                 <input type="text" value="100,000 원" disabled>
+                                 <div class="number-input disabled">
+                                    <input type="text" value="100,000" disabled><span>원</span>
+                                 </div>
                               </div>
                            </div>
                            <div class="field-areas">
                               <div class="area">
                                  <p>인도금</p>
-                                 <input type="text" value="30,970,000 원" disabled>
+                                 <div class="number-input disabled">
+                                    <input type="text" value="30,970,000" disabled><span>원</span>
+                                 </div>
                               </div>
                               <div class="area">
                                  <p>선수율</p>
-                                 <input type="text" value="100.0 %" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="100.0" readonly><span>%</span>
+                                 </div>
                               </div>
                            </div>
                            <p class="ex-info">고객님의 이해를 돕기 위한 가상 견적으로 기본적인 할부 상품만 확인 가능합니다.</p>
                         </dd>
                      </dl>
+                     <!-- //현금/카드일 경우 -->
+
+                     <!-- 할부일 경우 -->
+                     <dl class="underline">
+                        <dt>할부 내역</dt>
+                        <dd>
+                           <div class="field-areas">
+                              <div class="area large">
+                                 <p>할부 상품</p>
+                                 <select class="custom-select" placeholder="선택해 주세요.">
+                                    <option value="">할부 상품 1</option>
+                                    <option value="">할부 상품 2</option>
+                                    <option value="">할부 상품 3</option>
+                                    <option value="">할부 상품 4</option>
+                                    <option value="">할부 상품 5</option>
+                                    <option value="">할부 상품 6</option>
+                                    <option value="">할부 상품 7</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="field-areas">
+                              <div class="area">
+                                 <p>할부 기간</p>
+                                 <select class="custom-select" placeholder="선택해 주세요.">
+                                    <option value="">할부 기간 1</option>
+                                    <option value="">할부 기간 2</option>
+                                    <option value="">할부 기간 3</option>
+                                    <option value="">할부 기간 4</option>
+                                    <option value="">할부 기간 5</option>
+                                    <option value="">할부 기간 6</option>
+                                    <option value="">할부 기간 7</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="field-areas">
+                              <div class="area">
+                                 <p>할부 원금</p>
+                                 <div class="number-input">
+                                    <input type="text" value="30,870,000" readonly><span>원</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="field-areas">
+                              <div class="area">
+                                 <p>월 할부금</p>
+                                 <div class="number-input">
+                                    <input type="text" value="918,060" readonly><span>원</span>
+                                 </div>
+                              </div>
+                              <div class="area">
+                                 <p>할부 금리</p>
+                                 <div class="number-input">
+                                    <input type="text" value="6.90" readonly><span>%</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </dd>
+                     </dl>
+                     <dl>
+                        <dt>선수금 내역</dt>
+                        <dd>
+                           <div class="field-areas">
+                              <div class="area">
+                                 <p>인도금</p>
+                                 <div class="number-input">
+                                    <input type="text" value="900,000" readonly><span>원</span>
+                                 </div>
+                              </div>
+                              <div class="area">
+                                 <p>선수율</p>
+                                 <div class="number-input">
+                                    <input type="text" value="3.10" readonly><span>%</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <p class="ex-info"><font color="#973937">고객님의 이해를 돕기 위한 가상 견적으로 기본적인 할부 상품만 확인 가능합니다.</font></p>
+                           <p class="ex-info">해당 항목에 관한 상세 부연 설명을 기술합니다.</p>
+                        </dd>
+                     </dl>
+                     <!-- //할부일 경우 -->
+
                   </div>
                </div>
                <!-- //결제방법  -->
@@ -423,17 +525,53 @@
                            </div>
                         </dd>
                      </dl>
+                     <!-- 탁송 의뢰일 경우 -->
+                     <dl class="underline">
+                        <dt>탁송 지역<em class="star">*</em></dt>
+                        <dd>
+                           <div class="field-areas two">
+                              <div class="area">
+                                 <select class="custom-select" placeholder="선택해 주세요.">
+                                    <option value="">탁송 지역 1</option>
+                                    <option value="">탁송 지역 2</option>
+                                    <option value="" selected>탁송 지역 3</option>
+                                    <option value="">탁송 지역 4</option>
+                                    <option value="">탁송 지역 5</option>
+                                    <option value="">탁송 지역 6</option>
+                                    <option value="">탁송 지역 7</option>
+                                 </select>
+                              </div>
+                              <div class="area">
+                                 <select class="custom-select" placeholder="선택해 주세요.">
+                                    <option value="" selected>탁송 지역 1</option>
+                                    <option value="">탁송 지역 2</option>
+                                    <option value="">탁송 지역 3</option>
+                                    <option value="">탁송 지역 4</option>
+                                    <option value="">탁송 지역 5</option>
+                                    <option value="">탁송 지역 6</option>
+                                    <option value="">탁송 지역 7</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </dd>
+                     </dl>
+                     <!-- //탁송 의뢰일 경우 -->
+
                      <dl>
                         <dt>부대비용</dt>
                         <dd>
                            <div class="field-areas">
                               <div class="area">
                                  <p>탁송료</p>
-                                 <input type="text" value="0 원" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="0" readonly><span>원</span>
+                                 </div>
                               </div>
                               <div class="area">
                                  <p>인지대</p>
-                                 <input type="text" value="0 원" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="0" readonly><span>원</span>
+                                 </div>
                               </div>
                            </div>
                            <div class="check-con">
@@ -442,7 +580,9 @@
                            </div>
                            <div class="blue-box">
                               <p>책임보험료</p>
-                              <input type="text" value="43,800 원" readonly>
+                              <div class="number-input">
+                                 <input type="text" value="43,800" readonly><span>원</span>
+                              </div>
                            </div>
                         </dd>
                      </dl>
@@ -506,7 +646,9 @@
                               </div>
                               <div class="area">
                                  <p>취득세</p>
-                                 <input type="text" value="1,905,500 원" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="1,905,500" readonly><span>원</span>
+                                 </div>
                               </div>
                            </div>
                         </dd>
@@ -525,11 +667,15 @@
                            <div class="field-areas ml">
                               <div class="area">
                                  <p>공채율(%)</p>
-                                 <input type="text" value="3.0 %" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="3.0" readonly><span>%</span>
+                                 </div>
                               </div>
                               <div class="area">
                                  <p>공채매입금액</p>
-                                 <input type="text" value="570,000 원" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="570,000" readonly><span>원</span>
+                                 </div>
                               </div>
                            </div>
                            <div class="radio-con">
@@ -539,17 +685,23 @@
                            <div class="field-areas ml">
                               <div class="area">
                                  <p>공채매입금액</p>
-                                 <input type="text" value="1,000,000 원" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="1,000,000" readonly><span>원</span>
+                                 </div>
                               </div>
                               <div class="area">
                                  <p>공채할인율(%)</p>
-                                 <input type="text" value="25.00 %" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="25.00" readonly><span>%</span>
+                                 </div>
                               </div>
                            </div>
                            <div class="field-areas ml">
                               <div class="area">
                                  <p>공채할인금액</p>
-                                 <input type="text" value="250,000 원" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="250,000" readonly><span>원</span>
+                                 </div>
                               </div>
                            </div>
                         </dd>
@@ -560,17 +712,23 @@
                            <div class="field-areas">
                               <div class="area">
                                  <p>등록 대행</p>
-                                 <input type="text" value="30,000 원" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="30,000" readonly><span>원</span>
+                                 </div>
                               </div>
                               <div class="area">
                                  <p>인지/증지대</p>
-                                 <input type="text" value="2,000 원" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="2,000" readonly><span>원</span>
+                                 </div>
                               </div>
                            </div>
                            <div class="field-areas">
                               <div class="area">
                                  <p>번호판대</p>
-                                 <input type="text" value="20,000 원" readonly>
+                                 <div class="number-input">
+                                    <input type="text" value="20,000" readonly><span>원</span>
+                                 </div>
                               </div>
                            </div>
                            <p class="ex-info"><font color="#973937">고객님의 이해를 돕기 위한 가상 견적으로 기본적인 할부 상품만 확인 가능합니다.</font></p>

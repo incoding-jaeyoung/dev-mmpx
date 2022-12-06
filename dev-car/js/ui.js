@@ -99,11 +99,21 @@
             gsap.to($(".main-navi"), 0.6, {height: 268, ease: Cubic.easeOut});
             $("#header .login").hide();
             $("#header .navi-close").show();
+            $("#header.main-hader").css("background-color", "#fff");
+            $("#header.transparent .navi-list li a").css("color", "#000");
+            $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down.svg");
+            $("#header.transparent h1 a").css("background-image", "url('../img/img-logo.png')");
+            $("#header.transparent .login").css("color", "#000");
          });
          $("#header .navi-close").on("click", function () {
             gsap.to($(".main-navi"), 0.6, {height: 0, ease: Cubic.easeOut});
             $("#header .login").show();
             $("#header .navi-close").hide();
+            $("#header.main-hader").css("background-color", "");
+            $("#header.transparent .navi-list li a").css("color", "");
+            $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down-white.svg");
+            $("#header.transparent h1 a").css("background-image", "url('../img/img-logo-white.png')");
+            $("#header.transparent .login").css("color", "");
          });
       },
 
@@ -201,6 +211,32 @@
       },
 
       /*
+      * 메인 포토 스와이퍼 생성
+      */
+      setMainPhotoSwiper: function () {
+         $(".main-photo-swiper").each(function () {
+            var swiper = new Swiper($(this)[0], {
+               slidesPerView: 1,
+               spaceBetween: 20,
+               observer: true,
+               pagination: {
+                  el: ".main-photo .control .pagination",
+               },
+               navigation: {
+                  nextEl: ".main-photo .control .button-next",
+                  prevEl: ".main-photo .control .button-prev",
+               },
+            });
+
+            $(".main-photo .control .current").text('01');
+            $(".main-photo .control .total").text('0'+swiper.slidesGrid.length);
+            swiper.on("slideChange", function () {
+               $(".main-photo .control .current").text('0'+(swiper.activeIndex+1));
+            });
+         });
+      },
+
+      /*
       * 아코디언 ui 생성
       */
       setAcoddion: function () {
@@ -280,6 +316,7 @@
       UI.setMobileNavi();
       UI.sethaderNavi();
       UI.setPriceSelect();
+      UI.setMainPhotoSwiper();
 
       var oldWinTop = 0;
       $(window).on("scroll", function () {
