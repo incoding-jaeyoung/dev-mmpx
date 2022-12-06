@@ -578,7 +578,7 @@ img{width: 100%;}
 .floor-info{background-color: #000; color: #fff; padding: 10rem 7.5rem 0 7.5rem;}
 .floor-info dl{padding-bottom: 24rem;}
 .floor-info dl dt{font-size: 2.8rem; margin-bottom: 5rem; line-height: 3.8rem;}
-.floor-info dl li{display: flex; height: 7.3rem; justify-content: space-between; align-items: center; border-bottom: 0.2rem solid rgba(255, 255, 255, 0.15); font-size: 2rem; padding: 0 0.5rem;}
+.floor-info dl li{display: flex; height: 7.3rem; justify-content: space-between; align-items: center; border-bottom: 0.2rem solid rgba(255, 255, 255, 0.15); font-size: 2rem; padding: 0 0.5rem; text-transform: uppercase;}
 .floor-list ul{display: flex; flex-direction: column;}
 .floor-list ul li:nth-child(even){align-self: flex-end;}
 .floor-list ul li img{width: 35.3rem; padding: 1.6rem ; background: #FFE84C; margin-bottom: 1rem;}
@@ -589,6 +589,21 @@ img{width: 100%;}
 .floor-list ul li:nth-child(4){margin-top: -11.5rem; margin-right: 7.7rem;}
 .floor-list ul li:nth-child(5){margin-top: -14rem;}
 .floor-list ul li:nth-child(6){margin-top: -11.7rem;}
+.floor-list ul li:nth-child(7){margin-top: -13rem;}
+.floor-list ul li:nth-child(8){margin-top: -11rem;}
+
+.floor-list-even{padding: 18rem 11.5rem 20rem 15.4rem;}
+.floor-list-even ul{display: flex; flex-direction: column;}
+.floor-list-even ul li:nth-child(even){align-self: flex-end;}
+.floor-list-even ul li img{width: 35.3rem; padding: 1.6rem ; background: #FFE84C; margin-bottom: 1rem;}
+.floor-list-even ul li{display: flex; flex-direction: column; font-size: 2rem; line-height: 3rem; margin-top: -3.5rem;}
+.floor-list-even ul li:nth-child(1){}
+.floor-list-even ul li:nth-child(2){}
+.floor-list-even ul li:nth-child(3){}
+.floor-list-even ul li:nth-child(4){}
+.floor-list-even ul li:nth-child(5){}
+.floor-list-even ul li:nth-child(6){}
+
 
 .floor-menu-m{height: 6.4rem; display: flex; align-items: center; display: none;  margin-left: -1rem;}
 .floor-menu-m .mySwiper{width: 100%;}
@@ -985,4 +1000,35 @@ h2.tit-forum{font-size: 16rem; line-height: 100%; margin-bottom: 2rem;}
     .follow .sns-list li{margin-top: 0.8rem;}
     .follow .sns-list li:first-child{margin-top: 0rem;}
     .follow .sns-list a{margin: 0 1rem; font-size:1.5rem;}
+}
+
+body.com{background-color: #000;}
+.coming{display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #000; width: 100%; height: 100vh; padding-bottom: 55px; padding-top:0rem; width: 850px; margin: auto;}
+.coming h1{width: 221px; margin-bottom: 55px;}
+.coming .viewer{width: 850px;}
+.coming .com-msg{font-size: 30px; line-height: 40px; color: #fff; text-transform: uppercase; text-align: center; margin-top: 55px;}
+.coming .com-foot{color: #666666; font-size: 16px; text-transform: uppercase; position:absolute; bottom: 30px; left: 0; width: 100%; text-align: center;}
+.viewer {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+}
+ 
+.viewer iframe,
+.viewer object,
+.viewer embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .coming {justify-content: flex-start; padding-top: 50px; padding-bottom: 20px; width: 100%;}
+    .coming h1{width: 188px; margin-bottom: 60px;}
+    .coming  .viewer {width: 100%;}
+    .coming .com-msg{font-size: 20px; line-height: 30px; color: #fff; text-transform: uppercase; text-align: center; margin-top: 60px;}
+    .coming .com-foot{color: #666666; font-size: 11px; text-transform: uppercase; position:static; bottom: 20px; left: 0; width: 100%; text-align: center; margin-top: auto;}    
 }

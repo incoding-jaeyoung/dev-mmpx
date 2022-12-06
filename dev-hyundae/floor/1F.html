@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="Author" content="현대백화점" />
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+   <meta property="og:image" content="../img/img-og.png">
+   <meta property="og:url" content="">
+   <meta property="og:description" content="">
+   <meta property="og:title" content="현대백화점">
+
+   <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+   <title>현대백화점</title>
+   <link rel="stylesheet" href="../css/style.css" />
+   <script src="../js/jquery-3.3.1.min.js"></script>
+   <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+   <script src="../js/imagesloaded.pkgd.min.js"></script>
+   <script src="../js/gsap.min.js"></script>
+   <script src="../js/ScrollTrigger.min.js"></script>
+   <script src="../js/swiper-bundle.min.js"></script>
+   <script src="../js/ScrollToPlugin3.min.js"></script>
+   <script src="../js/zoom.js"></script>
+   <script src="../js/ui.js"></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5K5K3SK7DP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5K5K3SK7DP');
+</script>
+<body>
+   <div class="accessbility"><a href="#contents">본문바로가기</a></div>
+   <div id="wrapper">
+      <header id="header">
+         <div class="row">
+            <h1><a href="/">THE HYUNDAI DAEGU</a></h1>
+            <ul class="gnb">
+               <li><a href="/floor/B2.html">층별소개</a></li>
+               <li><a href="/theforum/">더 포럼</a></li>
+               <li><a href="/service/">서비스</a></li>
+               <li><a href="/location/">오시는 길</a></li>
+               <li><a href="/location/">이벤트</a></li>
+            </ul>
+            <p class="m-menu"><a href="#">MENU</a></p>
+         </div>
+      </header>
+      
+      <aside class="mob-menu">
+         <p class="close"><a href="#">CLOSE</a></p>
+         <ul class="m-gnb">
+            <li><a href="/floor/B2.html">층별소개</a></li>
+            <li><a href="/theforum/">더 포럼</a></li>
+            <li><a href="/service/">서비스</a></li>
+            <li><a href="/location/">오시는 길</a></li>
+            <li><a href="/location/">이벤트</a></li>
+         </ul>
+         <p class="footer"><span>Create</span> <span>the future</span></p>
+      </aside>
+      <section id="contents">
+         <!-- contents -->
+            <div class="floor-wrap">
+                <div class="floor-menu">
+                    <h2>1F</h2>
+                    <ul class="floor-nav">
+                        <li><a href="9F.html">더 포럼<span>9F</span></a></li>
+                        <li><a href="8F.html">다이닝 & 컬처<span>8F</span></a></li>
+                        <li><a href="7F.html">리빙 셀렉션<span>7F</span></a></li>
+                        <li><a href="6F.html">라이프스타일 & 키즈<span>6F</span></a></li>
+                        <li><a href="5F.html">맨즈 패션<span>5F</span></a></li>
+                        <li><a href="4F.html">우먼스 패션 & 골프<span>4F</span></a></li>
+                        <li><a href="3F.html">우먼스 캐주얼<span>3F</span></a></li>
+                        <li><a href="2F.html">하이엔드 패션<span>2F</span></a></li>
+                        <li class="active"><a href="1F.html">럭셔리 & 뷰티<span>1F</span></a></li>
+                        <li><a href="B1.html">테이스티 대구<span>B1F</span></a></li>
+                        <li><a href="B2.html">크리에이티브 그라운드<span>B2F</span></a></li>
+                    </ul>
+                </div>
+                <div class="floor-menu-m">
+                  <div class="swiper mySwiper">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="B2.html">B2</a></div>
+                        <div class="swiper-slide"><a href="B1.html">B1</a></div>
+                        <div class="swiper-slide active"><a href="1F.html">1F</a></div>
+                        <div class="swiper-slide"><a href="2F.html">2F</a></div>
+                        <div class="swiper-slide"><a href="3F.html">3F</a></div>
+                        <div class="swiper-slide"><a href="4F.html">4F</a></div>
+                        <div class="swiper-slide"><a href="5F.html">5F</a></div>
+                        <div class="swiper-slide"><a href="6F.html">6F</a></div>
+                        <div class="swiper-slide"><a href="7F.html">7F</a></div>
+                        <div class="swiper-slide"><a href="8F.html">8F</a></div>
+                        <div class="swiper-slide"><a href="9F.html">9F</a></div>
+                     </div>
+                  </div>
+                  <script>
+                     var ww = $(window).width();
+                     var mySwiper = new Swiper(".mySwiper", {
+                        slidesPerView: "auto",
+                        spaceBetween: 0,
+                        freeMode: true,
+                     })
+                     if (ww < 768) {
+                        var mySwiper = new Swiper(".mySwiper", {
+                              slidesPerView: "auto",
+                              spaceBetween: 0,
+                              freeMode: true,
+                        })
+                        setTimeout(function(){
+                           mySwiper.update();
+                           mySwiper.slideTo(indexNum)
+                        },500)
+                     } else if (ww >= 768) {
+                        mySwiper.destroy();
+                     }
+                     $(window).on('resize', function () {
+                        ww = $(window).width();
+                        if (ww < 768) {
+                           mySwiper = new Swiper(".mySwiper", {
+                                 slidesPerView: "auto",
+                                 spaceBetween: 0,
+                                 freeMode: true,
+                           })
+                           setTimeout(function(){
+                              mySwiper.update();
+                              mySwiper.slideTo(indexNum)
+                           },500)
+                        }
+                     });
+                     var indexNum = $(".mySwiper .swiper-slide.active").index()
+                     mySwiper.slideTo(indexNum)
+                  </script>
+                </div>
+                <div class="floor-contents">
+                     <div class="floor-title">
+                        <h3>luxury <br>
+                            & Beauty</h3>
+                        <p class="sub-title">장르의 경계 없이 콘텐츠와 아트, 브랜드를 선보이는 큐레이션 <br>
+                            공간 더 스퀘어가 1F 중심에 탄생합니다. 유서 깊은 럭셔리 부티크와 <br>
+                            하이 퀄리티 뷰티 브랜드도 만나보세요.</p>
+                        <p class="scroll-down">SCROLL<img src="../img/D_Arrow_Down.svg" alt=""></p>
+                        
+                     </div>
+                     <div class="float-menu-wrap">
+                        <div class="bg"></div>
+                        <dl class="float-menu">
+                           <dt>
+                              <button type="button">
+                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 13V24H13V13H24V11H13V0H11V11H0V13H11Z" fill="black"/>
+                                 </svg>
+                              </button>
+                           </dt>
+                           <dd>
+                              <ul class="page-menu">
+                                 <li><a href="#"><img src="../img/Icon_BrandSearch.svg" alt=""></a><span>브랜드 검색</span></li>
+                                 <li><a href="javascript:void(0)" onclick="openLayer('#popup', 'popup-floor.html'); return false;"><img src="../img/Icon_FloorMap.svg" alt=""></a><span>층 안내도</span></li>
+                              </ul>
+                           </dd>
+                        </dl>
+                     </div>
+                     <div class="floor-list">
+                        <ul>
+                           <li><img src="../img/brand/1f-01.png" alt="">루이비통</li>
+                           <li><img src="../img/brand/1f-02.png" alt="">구찌</li>
+                           <li><img src="../img/brand/1f-03.png" alt="">보테가베네타</li>
+                           <li><img src="../img/brand/1f-04.png" alt="">티파니</li>
+                           <li><img src="../img/brand/1f-05.png" alt="">피아제 (타임밸리)</li>
+                           <li><img src="../img/brand/1f-06.png" alt="">버버리</li>
+                           <li><img src="../img/brand/1f-07.png" alt="">펜디</li>
+                           <li><img src="../img/brand/1f-08.png" alt="">젠틀몬스터</li>
+                        </ul>
+                     </div>
+                     <div class="floor-info">
+                        <dl>
+                           <dt>해외패션</dt>
+                           <dd>
+                              <ul>
+                                <li>구찌<span>053-245-2166</span></li>
+                                <li>버버리<span>053-245-2114</span></li>
+                                <li>펜디<span>053-245-2115</span></li>
+                                <li>토즈<span>053-245-2120</span></li>
+                                <li>루이비통<span>02-3432-1854</span></li>
+                                <li>보테가베네타<span>053-245-2116</span></li>
+                                <li>돌체앤가바나(여성)<span>053-245-2117</span></li>
+                                <li>페라가모<span>053-245-2164</span></li>
+                              </ul>
+                           </dd>
+                        </dl>
+                        <dl>
+                            <dt>럭셔리 워치 & 주얼리</dt>
+                            <dd>
+                               <ul>
+                                <li>iwc<span>053-245-2196</span></li>
+                                <li>랑에 운트 죄네<span>053-245-2196</span></li>
+                                <li>로저드뷔<span>053-245-2196</span></li>
+                                <li>바쉐론 콘스탄틴<span>053-245-2196</span></li>
+                                <li>보메 메르시에<span>053-245-2196</span></li>
+                                <li>예얼거 르쿨트르<span>053-245-2196</span></li>
+                                <li>티파니<span>053-212-7651</span></li>
+                                <li>파네라이<span>053-245-2196</span></li>
+                                <li>피아제<span>053-245-2196</span></li>
+                               </ul>
+                            </dd>
+                         </dl>
+                         <dl>
+                            <dt>화장품</dt>
+                            <dd>
+                               <ul>
+                                <li>베네피트<span>053-245-2122</span></li>
+                                <li>블루밍앰버<span>053-245-2177</span></li>
+                                <li>디올<span>053-245-2124</span></li>
+                                <li>설화수<span>053-245-2125</span></li>
+                                <li>샤넬 코스메틱<span>053-245-2126</span></li>
+                                <li>바비브라운<span>053-245-2127</span></li>
+                                <li>SK-II<span>053-245-2128</span></li>
+                                <li>숨37<span>053-245-2129</span></li>
+                                <li>클라랑스<span>053-245-2131</span></li>
+                                <li>아베다<span>053-245-2132</span></li>
+                                <li>프레쉬<span>053-245-2133</span></li>
+                                <li>끌레드뽀 보떼<span>053-245-2134</span></li>
+                                <li>라프레리<span>053-245-2135</span></li>
+                                <li>시세이도<span>053-245-2136</span></li>
+                                <li>라메르<span>053-245-2137</span></li>
+                                <li>비오템<span>053-245-2138</span></li>
+                                <li>크리니크<span>053-245-2139</span></li>
+                                <li>키엘<span>053-245-2140</span></li>
+                                <li>나스<span>053-245-2141</span></li>
+                                <li>시슬리<span>053-245-2142</span></li>
+                                <li>랑콤<span>053-245-2143</span></li>
+                                <li>랩시리즈<span>053-245-2144</span></li>
+                                <li>에스티 로더<span>053-245-2145</span></li>
+                                <li>헤라<span>053-245-2146</span></li>
+                                <li>오휘/후<span>053-245-2148</span></li>
+                                <li>코엑퍼퓸<span>053-245-2149</span></li>
+                                <li>mac<span>053-245-2153</span></li>
+                                <li>겔랑<span>053-245-2169</span></li>
+                                <li>딥디크<span>053-245-2151</span></li>
+                                <li>라부르켓<span>053-245-2123</span></li>
+                                <li>메이크업포에버<span>053-245-2193</span></li>
+                                <li>바이레도<span>053-245-3159</span></li>
+                                <li>빌리프<span>053-245-2168</span></li>
+                                <li>아쿠아 디 파르마<span>053-245-3163</span></li>
+                                <li>아틀리에 코롱<span>053-245-2130</span></li>
+                                <li>오피신 유니버셀 불리<span>053-245-3166</span></li>
+                                <li>이솝<span>053-245-2152</span></li>
+                                <li>입생로랑<span>053-245-2190</span></li>
+                                <li>조르지오 아르마니<span>053-245-3160</span></li>
+                                <li>크리드<span>053-245-2156</span></li>
+                                <li>톰포드<span>053-245-2195</span></li>
+                                <li>프리메라<span>053-245-2158</span></li>
+                               </ul>
+                            </dd>
+                         </dl>
+                         <dl>
+                            <dt>주얼리/액세서리/시계</dt>
+                            <dd>
+                               <ul>
+                                <li>골든 듀<span>053-245-2155</span></li>
+                                <li>스톤헨지<span>053-245-2160</span></li>
+                                <li>스와로브스키<span>053-245-2162</span></li>
+                                <li>제이에스티나<span>053-245-2163</span></li>
+                                <li>뮤젤<span>053-245-3422</span></li>
+                                <li>젠틀몬스터<span>053-245-2147</span></li>
+                                <li>티쏘/미도<span>053-245-3418</span></li>
+                               </ul>
+                            </dd>
+                         </dl>
+                     </div>
+                </div>
+            </div>
+         <!-- //contents -->
+      </section>
+      
+   </div>
+   
+   <!-- POPUP -->
+   <div class="popup-wrap" id="popup" tabindex="0"></div>
+   <!-- //POPUP -->
+   <div class="overlay" onclick="closeLayer();"><span>닫기</span></div>
+</body>
+
+</html>
