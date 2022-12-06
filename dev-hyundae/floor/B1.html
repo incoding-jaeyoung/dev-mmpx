@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="Author" content="현대백화점" />
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+   <meta property="og:image" content="../img/img-og.png">
+   <meta property="og:url" content="">
+   <meta property="og:description" content="">
+   <meta property="og:title" content="현대백화점">
+
+   <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+   <title>현대백화점</title>
+   <link rel="stylesheet" href="../css/style.css" />
+   <script src="../js/jquery-3.3.1.min.js"></script>
+   <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+   <script src="../js/imagesloaded.pkgd.min.js"></script>
+   <script src="../js/gsap.min.js"></script>
+   <script src="../js/ScrollTrigger.min.js"></script>
+   <script src="../js/swiper-bundle.min.js"></script>
+   <script src="../js/ScrollToPlugin3.min.js"></script>
+   <script src="../js/zoom.js"></script>
+   <script src="../js/ui.js"></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5K5K3SK7DP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5K5K3SK7DP');
+</script>
+<body>
+   <div class="accessbility"><a href="#contents">본문바로가기</a></div>
+   <div id="wrapper">
+      <header id="header">
+         <div class="row">
+            <h1><a href="/">THE HYUNDAI DAEGU</a></h1>
+            <ul class="gnb">
+               <li><a href="/floor/B2.html">층별소개</a></li>
+               <li><a href="/theforum/">더 포럼</a></li>
+               <li><a href="/service/">서비스</a></li>
+               <li><a href="/location/">오시는 길</a></li>
+               <li><a href="/location/">이벤트</a></li>
+            </ul>
+            <p class="m-menu"><a href="#">MENU</a></p>
+         </div>
+      </header>
+      
+      <aside class="mob-menu">
+         <p class="close"><a href="#">CLOSE</a></p>
+         <ul class="m-gnb">
+            <li><a href="/floor/B2.html">층별소개</a></li>
+            <li><a href="/theforum/">더 포럼</a></li>
+            <li><a href="/service/">서비스</a></li>
+            <li><a href="/location/">오시는 길</a></li>
+            <li><a href="/location/">이벤트</a></li>
+         </ul>
+         <p class="footer"><span>Create</span> <span>the future</span></p>
+      </aside>
+      <section id="contents">
+         <!-- contents -->
+            <div class="floor-wrap">
+                <div class="floor-menu">
+                    <h2>B1</h2>
+                    <ul class="floor-nav">
+                        <li><a href="9F.html">더 포럼<span>9F</span></a></li>
+                        <li><a href="8F.html">다이닝 & 컬처<span>8F</span></a></li>
+                        <li><a href="7F.html">리빙 셀렉션<span>7F</span></a></li>
+                        <li><a href="6F.html">라이프스타일 & 키즈<span>6F</span></a></li>
+                        <li><a href="5F.html">맨즈 패션<span>5F</span></a></li>
+                        <li><a href="4F.html">우먼스 패션 & 골프<span>4F</span></a></li>
+                        <li><a href="3F.html">우먼스 캐주얼<span>3F</span></a></li>
+                        <li><a href="2F.html">하이엔드 패션<span>2F</span></a></li>
+                        <li><a href="1F.html">럭셔리 & 뷰티<span>1F</span></a></li>
+                        <li class="active"><a href="B1.html">테이스티 대구<span>B1F</span></a></li>
+                        <li><a href="B2.html">크리에이티브 그라운드<span>B2F</span></a></li>
+                    </ul>
+                </div>
+                <div class="floor-menu-m">
+                  <div class="swiper mySwiper">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="B2.html">B2</a></div>
+                        <div class="swiper-slide active"><a href="B1.html">B1</a></div>
+                        <div class="swiper-slide"><a href="1F.html">1F</a></div>
+                        <div class="swiper-slide"><a href="2F.html">2F</a></div>
+                        <div class="swiper-slide"><a href="3F.html">3F</a></div>
+                        <div class="swiper-slide"><a href="4F.html">4F</a></div>
+                        <div class="swiper-slide"><a href="5F.html">5F</a></div>
+                        <div class="swiper-slide"><a href="6F.html">6F</a></div>
+                        <div class="swiper-slide"><a href="7F.html">7F</a></div>
+                        <div class="swiper-slide"><a href="8F.html">8F</a></div>
+                        <div class="swiper-slide"><a href="9F.html">9F</a></div>
+                     </div>
+                  </div>
+                  <script>
+                     var ww = $(window).width();
+                     var mySwiper = new Swiper(".mySwiper", {
+                        slidesPerView: "auto",
+                        spaceBetween: 0,
+                        freeMode: true,
+                     })
+                     if (ww < 768) {
+                        var mySwiper = new Swiper(".mySwiper", {
+                              slidesPerView: "auto",
+                              spaceBetween: 0,
+                              freeMode: true,
+                        })
+                        setTimeout(function(){
+                           mySwiper.update();
+                           mySwiper.slideTo(indexNum)
+                        },500)
+                     } else if (ww >= 768) {
+                        mySwiper.destroy();
+                     }
+                     $(window).on('resize', function () {
+                        ww = $(window).width();
+                        if (ww < 768) {
+                           mySwiper = new Swiper(".mySwiper", {
+                                 slidesPerView: "auto",
+                                 spaceBetween: 0,
+                                 freeMode: true,
+                           })
+                           setTimeout(function(){
+                              mySwiper.update();
+                              mySwiper.slideTo(indexNum)
+                           },500)
+                        }
+                     });
+                     var indexNum = $(".mySwiper .swiper-slide.active").index()
+                     mySwiper.slideTo(indexNum)
+                  </script>
+                </div>
+                <div class="floor-contents">
+                     <div class="floor-title">
+                        <h3>tasty <br>
+                            daegu</h3>
+                        <p class="sub-title">소문난 로컬 맛집부터 방방곡곡 트렌디한 메뉴를 한데 모아 <br>
+                            큐레이션 했습니다. 400여 가지 치즈와 신선한 식재료까지 <br>
+                            테이스티 대구에서 확인하세요.</p>
+                        <p class="scroll-down">SCROLL<img src="../img/D_Arrow_Down.svg" alt=""></p>
+                        
+                     </div>
+                     <div class="float-menu-wrap">
+                        <div class="bg"></div>
+                        <dl class="float-menu">
+                           <dt>
+                              <button type="button">
+                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 13V24H13V13H24V11H13V0H11V11H0V13H11Z" fill="black"/>
+                                 </svg>
+                              </button>
+                           </dt>
+                           <dd>
+                              <ul class="page-menu">
+                                 <li><a href="#"><img src="../img/Icon_BrandSearch.svg" alt=""></a><span>브랜드 검색</span></li>
+                                 <li><a href="javascript:void(0)" onclick="openLayer('#popup', 'popup-floor.html'); return false;"><img src="../img/Icon_FloorMap.svg" alt=""></a><span>층 안내도</span></li>
+                              </ul>
+                           </dd>
+                        </dl>
+                     </div>
+                     <div class="floor-list-even">
+                        <ul>
+                           <li><img src="../img/brand/b1-01.png" alt="">테이스티마켓</li>
+                           <li><img src="../img/brand/b1-02.png" alt="">프로마쥬리H</li>
+                           <li><img src="../img/brand/b1-03.png" alt="">와인웍스</li>
+                           <li><img src="../img/brand/b1-04.png" alt="">텍사스로드하우스</li>
+                           <li><img src="../img/brand/b1-05.png" alt="">초이다이닝</li>
+                           <li><img src="../img/brand/b1-06.png" alt="">폴트버거</li>
+                           <li><img src="../img/brand/b1-07.png" alt="">베키욘방</li>
+                           <li><img src="../img/brand/b1-08.png" alt="">SAAP</li>
+                        </ul>
+                     </div>
+                     <div class="floor-info">
+                        <dl>
+                           <dt>농산물</dt>
+                           <dd>
+                              <ul>
+                                 <li>과일 바구니 코너<span>053-245-2943</span></li>
+                                 <li>청과/야채 코너<span>053-245-2913</span></li>
+                                 <li>프로마쥬리H<span>-</span></li>
+                              </ul>
+                           </dd>
+                        </dl>
+                        <dl>
+                            <dt>수산물</dt>
+                            <dd>
+                               <ul>
+                                  <li>수산 코너<span>053-245-2943</span></li>
+                               </ul>
+                            </dd>
+                         </dl>
+                         <dl>
+                            <dt>축산물</dt>
+                            <dd>
+                               <ul>
+                                  <li>정육 코너<span>053-245-2947</span></li>
+                               </ul>
+                            </dd>
+                         </dl>
+                         <dl>
+                            <dt>일반식품</dt>
+                            <dd>
+                               <ul>
+                                  <li>gnc<span>053-245-2951</span></li>
+                                  <li>금양와인<span>053-245-2976</span></li>
+                                  <li>나라와인<span>053-245-2903</span></li>
+                                  <li>뉴트라라이프<span>053-256-5325</span></li>
+                                  <li>닥터엘리자베스<span>053-245-2945</span></li>
+                                  <li>동국제약<span>053-245-2944</span></li>
+                                  <li>레뱅드메일 와인<span>053-245-2941</span></li>
+                                  <li>롯데와인<span>053-245-2953</span></li>
+                                  <li>명인명촌<span>053-245-2942</span></li>
+                                  <li>솔가<span>053-252-7191</span></li>
+                                  <li>신동와인<span>053-245-2954</span></li>
+                                  <li>비노h<span>053-245-2903</span></li>
+                                  <li>오설록<span>053-245-2904</span></li>
+                                  <li>정관장<span>053-421-3304</span></li>
+                                  <li>퓨리탄스프라이드<span>053-245-2856</span></li>
+                               </ul>
+                            </dd>
+                         </dl>
+                         <dl>
+                            <dt>조리식품</dt>
+                            <dd>
+                               <ul>
+                                    <li>770철판<span>053-245-2864</span></li>
+                                    <li>MOON<span>053-245-2865</span></li>
+                                    <li>OOOA<span>053-245-2997</span></li>
+                                    <li>SAAP<span>053-245-2924</span></li>
+                                    <li>강호연파<span>053-245-2990</span></li>
+                                    <li>건강밥상<span>053-245-2868</span></li>
+                                    <li>그래인스쿠키<span>053-245-2830</span></li>
+                                    <li>달크랩<span>053-245-2990</span></li>
+                                    <li>더반<span>053-245-2977</span></li>
+                                    <li>돈까스1985<span>053-245-2904</span></li>
+                                    <li>돌쇠떡집<span>053-245-2853</span></li>
+                                    <li>드레스바이콤비니<span>053-245-2984</span></li>
+                                    <li>라푀유크로아상<span>053-245-2988</span></li>
+                                    <li>랑만<span>053-245-2994</span></li>
+                                    <li>메이루<span>053-245-2870</span></li>
+                                    <li>명덕빵앗간<span>053-245-2972</span></li>
+                                    <li>배키욘방<span>053-245-2996</span></li>
+                                    <li>버틀러커피<span>053-245-2993</span></li>
+                                    <li>베즐리<span>053-245-2973</span></li>
+                                    <li>보정당<span>053-245-2981</span></li>
+                                    <li>본가스시<span>053-245-2870</span></li>
+                                    <li>비첸향<span>053-245-2855</span></li>
+                                    <li>삼오거리분식<span>053-245-2985</span></li>
+                                    <li>슈퍼말차<span>053-245-2993</span></li>
+                                    <li>슈르르카<span>053-245-2980</span></li>
+                                    <li>시오톤<span>053-245-2998</span></li>
+                                    <li>아이엠바오<span>053-245-2987</span></li>
+                                    <li>언니가숨겨놓은과자상자<span>053-245-2982</span></li>
+                                    <li>오오제이136길육미<span>053-245-2957</span></li>
+                                    <li>와인웍스<span>053-245-2925</span></li>
+                                    <li>올빚만두<span>053-245-2978</span></li>
+                                    <li>유부로<span>053-245-2986</span></li>
+                                    <li>조앤더주스<span>053-245-2824</span></li>
+                                    <li>초이다이닝<span>053-245-2866</span></li>
+                                    <li>카이린데판야끼<span>053-245-2995</span></li>
+                                    <li>커스텀델리<span>053-245-2991</span></li>
+                                    <li>탕미엔<span>053-245-2829</span></li>
+                                    <li>태극당<span>053-245-2979</span></li>
+                                    <li>텍사스로드하우스<span>053-245-2981</span></li>
+                                    <li>티키티키윙앤스틱<span>053-245-2989</span></li>
+                                    <li>폴바셋<span>053-245-2811</span></li>
+                                    <li>폴트버거<span>053-245-2867</span></li>
+                                    <li>한솥냉면<span>053-245-2966</span></li>
+                                    <li>호랑이빵집<span>053-245-2974</span></li>
+                                    <li>호안느<span>053-245-2868</span></li>
+                               </ul>
+                            </dd>
+                         </dl>
+                         <dl>
+                            <dt>편의시설</dt>
+                            <dd>
+                               <ul>
+                                  <li>교환환불코너<span>053-245-2923</span></li>
+                                  <li>수운플라워<span>053-245-2903</span></li>
+                               </ul>
+                            </dd>
+                         </dl>
+                     </div>
+                </div>
+            </div>
+         <!-- //contents -->
+      </section>
+      
+   </div>
+   
+   <!-- POPUP -->
+   <div class="popup-wrap" id="popup" tabindex="0"></div>
+   <!-- //POPUP -->
+   <div class="overlay" onclick="closeLayer();"><span>닫기</span></div>
+</body>
+
+</html>

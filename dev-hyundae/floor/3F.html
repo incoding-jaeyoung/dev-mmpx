@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="Author" content="현대백화점" />
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+   <meta property="og:image" content="../img/img-og.png">
+   <meta property="og:url" content="">
+   <meta property="og:description" content="">
+   <meta property="og:title" content="현대백화점">
+
+   <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+   <title>현대백화점</title>
+   <link rel="stylesheet" href="../css/style.css" />
+   <script src="../js/jquery-3.3.1.min.js"></script>
+   <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+   <script src="../js/imagesloaded.pkgd.min.js"></script>
+   <script src="../js/gsap.min.js"></script>
+   <script src="../js/ScrollTrigger.min.js"></script>
+   <script src="../js/swiper-bundle.min.js"></script>
+   <script src="../js/ScrollToPlugin3.min.js"></script>
+   <script src="../js/zoom.js"></script>
+   <script src="../js/ui.js"></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5K5K3SK7DP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5K5K3SK7DP');
+</script>
+<body>
+   <div class="accessbility"><a href="#contents">본문바로가기</a></div>
+   <div id="wrapper">
+      <header id="header">
+         <div class="row">
+            <h1><a href="/">THE HYUNDAI DAEGU</a></h1>
+            <ul class="gnb">
+               <li><a href="/floor/B2.html">층별소개</a></li>
+               <li><a href="/theforum/">더 포럼</a></li>
+               <li><a href="/service/">서비스</a></li>
+               <li><a href="/location/">오시는 길</a></li>
+               <li><a href="/location/">이벤트</a></li>
+            </ul>
+            <p class="m-menu"><a href="#">MENU</a></p>
+         </div>
+      </header>
+      
+      <aside class="mob-menu">
+         <p class="close"><a href="#">CLOSE</a></p>
+         <ul class="m-gnb">
+            <li><a href="/floor/B2.html">층별소개</a></li>
+            <li><a href="/theforum/">더 포럼</a></li>
+            <li><a href="/service/">서비스</a></li>
+            <li><a href="/location/">오시는 길</a></li>
+            <li><a href="/location/">이벤트</a></li>
+         </ul>
+         <p class="footer"><span>Create</span> <span>the future</span></p>
+      </aside>
+      <section id="contents">
+         <!-- contents -->
+            <div class="floor-wrap">
+                <div class="floor-menu">
+                    <h2>3F</h2>
+                    <ul class="floor-nav">
+                        <li><a href="9F.html">더 포럼<span>9F</span></a></li>
+                        <li><a href="8F.html">다이닝 & 컬처<span>8F</span></a></li>
+                        <li><a href="7F.html">리빙 셀렉션<span>7F</span></a></li>
+                        <li><a href="6F.html">라이프스타일 & 키즈<span>6F</span></a></li>
+                        <li><a href="5F.html">맨즈 패션<span>5F</span></a></li>
+                        <li><a href="4F.html">우먼스 패션 & 골프<span>4F</span></a></li>
+                        <li class="active"><a href="3F.html">우먼스 캐주얼<span>3F</span></a></li>
+                        <li><a href="2F.html">하이엔드 패션<span>2F</span></a></li>
+                        <li><a href="1F.html">럭셔리 & 뷰티<span>1F</span></a></li>
+                        <li><a href="B1.html">테이스티 대구<span>B1F</span></a></li>
+                        <li><a href="B2.html">크리에이티브 그라운드<span>B2F</span></a></li>
+                    </ul>
+                </div>
+                <div class="floor-menu-m">
+                  <div class="swiper mySwiper">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="B2.html">B2</a></div>
+                        <div class="swiper-slide"><a href="B1.html">B1</a></div>
+                        <div class="swiper-slide"><a href="1F.html">1F</a></div>
+                        <div class="swiper-slide"><a href="2F.html">2F</a></div>
+                        <div class="swiper-slide active"><a href="3F.html">3F</a></div>
+                        <div class="swiper-slide"><a href="4F.html">4F</a></div>
+                        <div class="swiper-slide"><a href="5F.html">5F</a></div>
+                        <div class="swiper-slide"><a href="6F.html">6F</a></div>
+                        <div class="swiper-slide"><a href="7F.html">7F</a></div>
+                        <div class="swiper-slide"><a href="8F.html">8F</a></div>
+                        <div class="swiper-slide"><a href="9F.html">9F</a></div>
+                     </div>
+                  </div>
+                  <script>
+                     var ww = $(window).width();
+                     var mySwiper = new Swiper(".mySwiper", {
+                        slidesPerView: "auto",
+                        spaceBetween: 0,
+                        freeMode: true,
+                     })
+                     if (ww < 768) {
+                        var mySwiper = new Swiper(".mySwiper", {
+                              slidesPerView: "auto",
+                              spaceBetween: 0,
+                              freeMode: true,
+                        })
+                        setTimeout(function(){
+                           mySwiper.update();
+                           mySwiper.slideTo(indexNum)
+                        },500)
+                     } else if (ww >= 768) {
+                        mySwiper.destroy();
+                     }
+                     $(window).on('resize', function () {
+                        ww = $(window).width();
+                        if (ww < 768) {
+                           mySwiper = new Swiper(".mySwiper", {
+                                 slidesPerView: "auto",
+                                 spaceBetween: 0,
+                                 freeMode: true,
+                           })
+                           setTimeout(function(){
+                              mySwiper.update();
+                              mySwiper.slideTo(indexNum)
+                           },500)
+                        }
+                     });
+                     var indexNum = $(".mySwiper .swiper-slide.active").index()
+                     mySwiper.slideTo(indexNum)
+                  </script>
+                </div>
+                <div class="floor-contents">
+                     <div class="floor-title">
+                        <h3>woman’s <br>
+                           casual</h3>
+                        <p class="sub-title">모던하고 감각적인 여성을 위한 각양각색의 의류 브랜드와 슈즈, <br>
+                           액세서리의 향연이 이어집니다. 4곳의 프리미엄 매장에서는 <br>
+                           의류 관리 서비스(해피니스랩)를 운영합니다.
+                           </p>
+                        <p class="scroll-down">SCROLL<img src="../img/D_Arrow_Down.svg" alt=""></p>
+                        
+                     </div>
+                     <div class="float-menu-wrap">
+                        <div class="bg"></div>
+                        <dl class="float-menu">
+                           <dt>
+                              <button type="button">
+                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 13V24H13V13H24V11H13V0H11V11H0V13H11Z" fill="black"/>
+                                 </svg>
+                              </button>
+                           </dt>
+                           <dd>
+                              <ul class="page-menu">
+                                 <li><a href="#"><img src="../img/Icon_BrandSearch.svg" alt=""></a><span>브랜드 검색</span></li>
+                                 <li><a href="javascript:void(0)" onclick="openLayer('#popup', 'popup-floor.html'); return false;"><img src="../img/Icon_FloorMap.svg" alt=""></a><span>층 안내도</span></li>
+                              </ul>
+                           </dd>
+                        </dl>
+                     </div>
+                     <div class="floor-list">
+                        <ul>
+                           <li><img src="../img/brand/3f-01.png" alt="">타임</li>
+                           <li><img src="../img/brand/3f-02.png" alt="">랑방컬렉션</li>
+                           <li><img src="../img/brand/3f-03.png" alt="">띠어리</li>
+                           <li><img src="../img/brand/3f-04.png" alt="">톰보이</li>
+                           <li><img src="../img/brand/3f-05.png" alt="">시스템</li>
+                           <li><img src="../img/brand/3f-06.png" alt="">위크엔드막스마라</li>
+                        </ul>
+                     </div>
+                     <div class="floor-info">
+                        <dl>
+                           <dt>컨템포러리</dt>
+                           <dd>
+                              <ul>
+                                 <li>ash<span>053-245-2374</span></li>
+                                 <li>ba&sh<span>053-245-2393</span></li>
+                                 <li>dkny<span>053-245-2361</span></li>
+                                 <li>n ground<span>053-245-2343</span></li>
+                                 <li>띠어리<span>053-245-2356</span></li>
+                                 <li>랄프로렌<span>053-245-2357</span></li>
+                                 <li>랙앤본<span>053-245-2351</span></li>
+                                 <li>마쥬<span>053-245-2368</span></li>
+                                 <li>바네사브루노<span>053-245-2366</span></li>
+                                 <li>베르니스<span>053-245-2316</span></li>
+                                 <li>빈폴레이디스<span>053-245-2358</span></li>
+                                 <li>산드로<span>053-245-2370</span></li>
+                                 <li>아르티리소<span>053-245-2378</span></li>
+                                 <li>위크엔드막스마라<span>053-245-2369</span></li>
+                                 <li>쟈딕앤볼테르<span>053-245-2363</span></li>
+                                 <li>준지(여성)<span>053-245-2326</span></li>
+                                 <li>질스튜어트<span>053-245-2362</span></li>
+                                 <li>타미 힐피거(여성)<span>053-245-2360</span></li>
+                                 <li>톰그레이하운드<span>053-245-2353</span></li>
+                                 <li>한스타일슈(프리미아타,필립모델外)<span>053-245-2364</span></li>
+                                 <li>헤지스(여성)<span>053-245-2359</span></li>
+                              </ul>
+                           </dd>
+                        </dl>
+                        <dl>
+                            <dt>영캐릭터</dt>
+                            <dd>
+                               <ul>
+                                 <li>CC collect<span>053-245-3042</span></li>
+                                 <li>sjsj<span>053-245-2312</span></li>
+                                 <li>vov<span>053-245-2311</span></li>
+                                 <li>듀엘<span>053-245-2310</span></li>
+                                 <li>라코스테우먼<span>053-245-2331</span></li>
+                                 <li>럭키슈에뜨<span>053-245-2323</span></li>
+                                 <li>베네통<span>053-245-3040</span></li>
+                                 <li>스튜디오 톰보이<span>053-245-3048</span></li>
+                                 <li>시스템<span>053-245-2313</span></li>
+                                 <li>시슬리<span>053-245-2314</span></li>
+                                 <li>써스데이아일랜드<span>053-245-3090</span></li>
+                                 <li>잇미샤<span>053-245-3055</span></li>
+                                 <li>쥬크<span>053-245-2320</span></li>
+                                 <li>지컷<span>053-245-2322</span></li>
+                                 <li>케네스레이디<span>053-245-3045</span></li>
+                                 <li>클럽모나코<span>053-245-2318</span></li>
+                                 <li>폼더스토어<span>053-245-2365</span></li>
+                               </ul>
+                            </dd>
+                         </dl>
+                         <dl>
+                            <dt>잡화</dt>
+                            <dd>
+                               <ul>
+                                 <li>디에스퍼<span>053-245-2262</span></li>
+                                 <li>만다리나덕<span>053-245-2333</span></li>
+                                 <li>분크<span>053-245-2394</span></li>
+                                 <li>선글라스/모자/양말/손수건/스카프/스타킹/우산/양산<span>053-245-2165</span></li>
+                                 <li>씨크릿우먼<span>053-245-2465</span></li>
+                               </ul>
+                            </dd>
+                         </dl>
+                         <dl>
+                            <dt>캐릭터</dt>
+                            <dd>
+                               <ul>
+                                 <li>구호<span>053-245-2348</span></li>
+                                 <li>더캐시미어<span>053-245-2324</span></li>
+                                 <li>데무<span>053-245-2336</span></li>
+                                 <li>도호<span>053-245-2380</span></li>
+                                 <li>랑방컬렉션<span>053-245-2342</span></li>
+                                 <li>린<span>053-245-2354</span></li>
+                                 <li>마인<span>053-245-2347</span></li>
+                                 <li>모조에스핀<span>053-245-2321</span></li>
+                                 <li>미샤<span>053-245-2375</span></li>
+                                 <li>쉬즈미스<span>053-245-2325</span></li>
+                                 <li>오브제<span>053-245-2315</span></li>
+                                 <li>타임<span>053-245-2346</span></li>
+                               </ul>
+                            </dd>
+                         </dl>
+                         
+                     </div>
+                </div>
+            </div>
+         <!-- //contents -->
+      </section>
+      
+   </div>
+   
+   <!-- POPUP -->
+   <div class="popup-wrap" id="popup" tabindex="0"></div>
+   <!-- //POPUP -->
+   <div class="overlay" onclick="closeLayer();"><span>닫기</span></div>
+</body>
+
+</html>
