@@ -7,7 +7,7 @@
                 <div class="modal-header">
                     <div class="swiper floor-btn">
                         <div class="swiper-wrapper">
-                           <div class="swiper-slide"><a href="#">B2</a></div>
+                           <div class="swiper-slide active"><a href="#">B2</a></div>
                            <div class="swiper-slide"><a href="#">B1</a></div>
                            <div class="swiper-slide"><a href="#">1F</a></div>
                            <div class="swiper-slide"><a href="#">2F</a></div>
@@ -15,7 +15,7 @@
                            <div class="swiper-slide"><a href="#">4F</a></div>
                            <div class="swiper-slide"><a href="#">5F</a></div>
                            <div class="swiper-slide"><a href="#">6F</a></div>
-                           <div class="swiper-slide active"><a href="#">7F</a></div>
+                           <div class="swiper-slide"><a href="#">7F</a></div>
                            <div class="swiper-slide"><a href="#">8F</a></div>
                            <div class="swiper-slide"><a href="#">9F</a></div>
                         </div>
@@ -25,7 +25,22 @@
                      </script>
                 </div>
                 <div class="modal-body">
-                    <h1 class="map-title">creative<br>ground</h1>
+                    <div class="map-title-block">
+                        <h1 class="map-title">creative<br>ground</h1>
+                        <h1 class="map-title">tasty<br>daegu</h1>
+                        <h1 class="map-title">luxury<br>& Beauty</h1>
+                        <h1 class="map-title">high-end <br>Fashion</h1>
+                        <h1 class="map-title">woman’s <br>casual</h1>
+                        <h1 class="map-title">woman’s <br>fashion & golf</h1>
+                        <h1 class="map-title">man’S<br>fashion</h1>
+                        <h1 class="map-title">lifestyle <br>& Kids</h1>
+                        <h1 class="map-title">living<br>selection</h1>
+                        <h1 class="map-title">dining <br>& culture</h1>
+                        <h1 class="map-title">the forum</h1>
+                    </div>
+                    <script>
+                        
+                    </script>
                     <div id="map" class="map"></div>
                 </div>
                 <p class="close-popup"><button type="button" onclick="closeModal();"><img src="../img/Btn_X.svg" alt=""></button></p>
@@ -34,6 +49,9 @@
     </div>
     
     <script type="text/javascript">
+        var indexNum = $(".floor-btn .swiper-slide.active").index()
+        $('.map-title-block h1').removeClass('active')
+        $('.map-title-block h1').eq(indexNum).addClass('active')
         $(async () => {
             const dabeeoMaps = new dabeeo.Maps();
             const mapData = await dabeeoMaps.getMapData({

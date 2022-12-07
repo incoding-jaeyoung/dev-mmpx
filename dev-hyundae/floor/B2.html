@@ -9,7 +9,7 @@
    <meta name="viewport"
       content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-   <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
    <meta property="og:image" content="../img/img-og.png">
    <meta property="og:url" content="">
    <meta property="og:description" content="">
@@ -30,6 +30,7 @@
    <script src="../js/ScrollToPlugin3.min.js"></script>
    <script src="../js/zoom.js"></script>
    <script src="../js/ui.js"></script>
+   <script type="text/javascript" src="https://assets.dabeeomaps.com/upload/library/dabeeomaps-04.06.01.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5K5K3SK7DP"></script>
@@ -51,20 +52,20 @@
                <li><a href="/theforum/">더 포럼</a></li>
                <li><a href="/service/">서비스</a></li>
                <li><a href="/location/">오시는 길</a></li>
-               <li><a href="/location/">이벤트</a></li>
+               <li><a href="/location/#event">이벤트</a></li>
             </ul>
-            <p class="m-menu"><a href="#">MENU</a></p>
+            <p class="m-menu"><button type="button">MENU</button></p>
          </div>
       </header>
       
       <aside class="mob-menu">
-         <p class="close"><a href="#">CLOSE</a></p>
+         <p class="close"><button type="button">CLOSE</button></p>
          <ul class="m-gnb">
             <li><a href="/floor/B2.html">층별소개</a></li>
             <li><a href="/theforum/">더 포럼</a></li>
             <li><a href="/service/">서비스</a></li>
             <li><a href="/location/">오시는 길</a></li>
-            <li><a href="/location/">이벤트</a></li>
+            <li><a href="/location/#event">이벤트</a></li>
          </ul>
          <p class="footer"><span>Create</span> <span>the future</span></p>
       </aside>
@@ -162,8 +163,8 @@
                            </dt>
                            <dd>
                               <ul class="page-menu">
-                                 <li><a href="#"><img src="../img/Icon_BrandSearch.svg" alt=""></a><span>브랜드 검색</span></li>
-                                 <li><a href="javascript:void(0)" onclick="openLayer('#popup', 'popup-floor.html'); return false;"><img src="../img/Icon_FloorMap.svg" alt=""></a><span>층 안내도</span></li>
+                                 <li><a href="https://www.ehyundai.com/newPortal/search/search.do?code=B00146000&searchWord" target="_blank"><img src="../img/Icon_BrandSearch.svg" alt=""><span>브랜드 검색</span></a></li>
+                                 <li><a href="javascript:void(0)" onclick="openLayer('#popup', 'popup-floor.html'); return false;"><img src="../img/Icon_FloorMap.svg" alt=""><span>층 안내도</span></a></li>
                               </ul>
                            </dd>
                         </dl>
@@ -178,7 +179,7 @@
                            <li><img src="../img/brand/brand-b2-06.png" alt="">호텔더일마</li>
                         </ul>
                      </div>
-                     <div class="floor-info">
+                     <div class="floor-info data-black-header">
                         <dl>
                            <dt>진/스포츠</dt>
                            <dd>
