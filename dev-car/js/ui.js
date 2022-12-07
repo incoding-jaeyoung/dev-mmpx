@@ -5,6 +5,7 @@
 
       headerNaviSwiper: null,
       progressSwiper: null,
+      channelSwiper: null,
       dialogCallback: null,
       device: 'pc',
 
@@ -292,6 +293,23 @@
       },
 
       /*
+      * channel 스와이퍼 생성
+      */
+      setChannelSwiper: function () {
+         $(".channel-swiper").each(function () {
+            UI.channelSwiper = new Swiper($(this)[0], {
+               slidesPerView: 1,
+               spaceBetween: 10,
+               pagination: {
+                  el: ".channel-wrap .swiper-pagination",
+                  clickable: true
+               },
+               
+            });
+         });
+      },
+
+      /*
       * 아코디언 ui 생성
       */
       setAcoddion: function () {
@@ -373,6 +391,7 @@
       UI.setPriceSelect();
       UI.setMainPhotoSwiper();
       UI.setDefaultSwiper();
+      UI.setChannelSwiper();
 
       var oldWinTop = 0;
       $(window).on("scroll", function () {
@@ -409,6 +428,20 @@
                   UI.setProgressSwiper();
                } else {
                   UI.progressSwiper.update();
+               }
+            }
+         }
+         if($(".channel-swiper").length > 0){
+            if(winWidth > 767){
+               if(UI.channelSwiper) {
+                  UI.channelSwiper.destroy();
+                  UI.channelSwiper = null;
+               }
+            } else {
+               if(!UI.channelSwiper) {
+                  UI.setChannelSwiper();
+               } else {
+                  UI.channelSwiper.update();
                }
             }
          }
