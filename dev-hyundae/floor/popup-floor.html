@@ -7,17 +7,17 @@
                 <div class="modal-header">
                     <div class="swiper floor-btn">
                         <div class="swiper-wrapper">
-                           <div class="swiper-slide active"><a href="#">B2</a></div>
-                           <div class="swiper-slide"><a href="#">B1</a></div>
-                           <div class="swiper-slide"><a href="#">1F</a></div>
-                           <div class="swiper-slide"><a href="#">2F</a></div>
-                           <div class="swiper-slide"><a href="#">3F</a></div>
-                           <div class="swiper-slide"><a href="#">4F</a></div>
-                           <div class="swiper-slide"><a href="#">5F</a></div>
-                           <div class="swiper-slide"><a href="#">6F</a></div>
-                           <div class="swiper-slide"><a href="#">7F</a></div>
-                           <div class="swiper-slide"><a href="#">8F</a></div>
-                           <div class="swiper-slide"><a href="#">9F</a></div>
+                           <div class="swiper-slide active"><a href="javascript:void(0);">B2</a></div>
+                           <div class="swiper-slide"><a href="javascript:void(0);">B1</a></div>
+                           <div class="swiper-slide"><a href="javascript:void(0);">1F</a></div>
+                           <div class="swiper-slide"><a href="javascript:void(0);">2F</a></div>
+                           <div class="swiper-slide"><a href="javascript:void(0);">3F</a></div>
+                           <div class="swiper-slide"><a href="javascript:void(0);">4F</a></div>
+                           <div class="swiper-slide"><a href="javascript:void(0);">5F</a></div>
+                           <div class="swiper-slide"><a href="javascript:void(0);">6F</a></div>
+                           <div class="swiper-slide"><a href="javascript:void(0);">7F</a></div>
+                           <div class="swiper-slide"><a href="javascript:void(0);">8F</a></div>
+                           <div class="swiper-slide"><a href="javascript:void(0);">9F</a></div>
                         </div>
                      </div>
                      <script>
@@ -49,17 +49,46 @@
     </div>
     
     <script type="text/javascript">
-        var indexNum = $(".floor-btn .swiper-slide.active").index()
-        $('.map-title-block h1').removeClass('active')
-        $('.map-title-block h1').eq(indexNum).addClass('active')
+        
+
         $(async () => {
+            const maps = [
+                'FL-qhnc44bodstt0473',
+                'FL-qdqidxksklkm0452',
+                'FL-1h7fvkz784x150428',
+                'FL-1iv9b8lqxn59i0409',
+                'FL-1iauxpn246vkx0385',
+                'FL-1iesq9u8mh0860359',
+                'FL-1jenq1ojqp6440333',
+                'FL-u82fq0bivcrn0314',
+                'FL-1ib5yh9hjhvsi0281',
+                'FL-rhdu7dfct1et0263',
+                'FL-1iv1k9ck709d00252',
+            ];
+
+            var indexNum = $(".floor-btn .swiper-slide.active").index()
+
+            $('.map-title-block h1').removeClass('active')
+            $('.map-title-block h1').eq(indexNum).addClass('active')
+
             const dabeeoMaps = new dabeeo.Maps();
             const mapData = await dabeeoMaps.getMapData({
                 clientId: '2F38V44Tkm4bOoIKJfu1i8',
                 clientSecret: 'b763edac57dfacd65c521f20a5d5c4b4'
             });
             const mapContainer = document.getElementById("map"); 
-            const map = await dabeeoMaps.showMap(mapContainer, {}, mapData);
+            const map = await dabeeoMaps.showMap(mapContainer, {floor: maps[indexNum]}, mapData);
+
+            $(".floor-btn .swiper-slide").each(function ( i ) {
+                $(this).off("click").on("click", function () {
+                    $('.map-title-block h1').removeClass('active');
+                    $('.map-title-block h1').eq(i).addClass('active');
+                    $(".floor-btn .swiper-slide.active").removeClass("active");
+                    $(".floor-btn .swiper-slide").eq(i).addClass('active');
+                    map.context.changeFloor(maps[i]);
+                })
+            })
+
         });
     </script>
 </body>
