@@ -1461,14 +1461,32 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 
 
 /* main */
-.main .main-visual{height: 84.5rem;margin-top: -7rem;position:relative}
-.main .main-visual.torres{background: url('../img/main_visual_rorres.png') no-repeat center bottom;background-size: cover;}
-.main .main-visual:after{content:'';position: fixed;left: 0;top: 0;width: 100%;height: 39rem;opacity: 0.3;background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));pointer-events: none;}
-.main .main-visual .top-info{padding-top: 17rem;width: 78.5rem;margin: 0 auto;display: flex;justify-content: center;flex-direction: column;align-items: center;z-index: 1;position: relative;}
-.main .main-visual .top-info h3{font-family: 'Lato';font-size: 6rem;font-weight: 900;color: #fff}
-.main .main-visual .top-info .btn-con{margin-top: 5rem}
+.main .main-visual{height: 107.5rem;margin-top: -7rem;position:relative}
+.main .main-visual .bg{position: absolute;left:0;top:0;width: 100%;height:100%}
+.main .main-visual .bg.car1{background: url('../img/main_visual_torres.png') no-repeat center bottom;background-size: cover;z-index: 1;}
+.main .main-visual .bg.car2{background: url('../img/main_visual_rexton7.jpg') no-repeat center bottom;background-size: cover;}
+.main .main-visual .bg.car3{background: url('../img/main_visual_rexton5.jpg') no-repeat center bottom;background-size: cover;}
+.main .main-visual .bg.car4{background: url('../img/main_visual_rexton_sports_khan.jpg') no-repeat center bottom;background-size: cover;}
+.main .main-visual .bg.car5{background: url('../img/main_visual_rexton_sports.jpg') no-repeat center bottom;background-size: cover;}
+.main .main-visual .bg.car6{background: url('../img/main_visual_korando.jpg') no-repeat center bottom;background-size: cover;}
+.main .main-visual .bg.car7{background: url('../img/main_visual_tivoli_air.jpg') no-repeat center bottom;background-size: cover;}
+.main .main-visual .bg.car8{background: url('../img/main_visual_tivoli.jpg') no-repeat center bottom;background-size: cover;}
+.main .main-visual:after{content:'';position: fixed;left: 0;top: 0;width: 100%;height: 39rem;opacity: 0.3;background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));pointer-events: none;z-index: 4;}
+.main .main-visual .top-info{padding-top: 11rem;width: 78.5rem;margin: 0 auto;display: flex;justify-content: center;flex-direction: column;align-items: center;z-index: 1;position: relative;z-index: 5;}
+.main .main-visual .top-info h3{font-family: 'Lato';font-size: 6rem;font-weight: 900;color: #fff;text-align: center;line-height: 1;}
+.main .main-visual .top-info .btn-con{margin-top: 3rem;}
 .main .main-visual .top-info .btn-con .btn{color: #fff;min-width: 18rem;height: 5rem;align-items: center;font-size: 1.6rem;font-weight: 500;background-color: #233975}
 .main .main-visual .top-info .btn-con .btn:nth-child(2){background-color: #fff;color:#000;margin-left: 2rem}
+.main .main-visual .controller{position: absolute;width: 100%;height: 100%;z-index: 3;left:0;top:0}
+.main .main-visual .controller .control{position: absolute;left: 50%;bottom: 10rem;}
+.main .main-visual .controller .control .line{height: 209px;margin-left: -50%;}
+.main .main-visual .controller .control button{position: absolute;left:0;bottom: -22px;transition: none;}
+.main .main-visual .controller .control button img{width:44px;height:44px;margin-left: -22px}
+.main .main-visual .car-con{position:absolute;left:0;top: 7rem;width:100%;height:100%;z-index: 4;pointer-events: none;}
+.main .main-visual .car-con .swiper-slide{display: flex;align-items: center;justify-content: center;width: 90rem;}
+.main .main-visual .car-con .swiper-slide img{transform: scale(0.7);}
+.main .main-visual .car-con .swiper-slide-active img{transform: scale(1);transition: transform 0.3s ease-out;}
+
 
 .main .main-photo{width: 118rem;margin:5rem auto 0 auto;padding-bottom: 9rem;}
 .main .main-photo .top-con{display: flex;flex-direction: row;justify-content: space-between;}
@@ -1566,6 +1584,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
 .main .default-swiper .swiper-pagination-bullet-active{background-color: #1a2762;border-color: #1a2762;}
 
 
+
 @media (max-width: 1200px) {
     .main .main-photo{width: 100%;padding: 3rem 5rem;margin-top: 0rem}
     .main .main-photo .swiper-wrapper{flex-wrap: wrap;}
@@ -1585,6 +1604,11 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .main .event-con .swiper-slide .thumb img{width: 100%;}
     .main .default-swiper .swiper-button-next{right: 5rem}
     .main .default-swiper .swiper-button-prev{left: 3rem}
+    .main .main-visual{height: 94.5rem;}
+    .main .main-visual .controller .control .line{width: 1004px}
+    .main .main-visual .car-con .swiper-slide{width: 70rem;}
+    .main .main-visual .car-con .swiper-slide img{transform: scale(0.6);}
+    .main .main-visual .car-con .swiper-slide-active img{transform: scale(0.9);transition: transform 0.3s ease-out;}
 }
 
 @media (max-width: 767px) {
@@ -1592,7 +1616,7 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .main .main-photo .swiper-slide > a{margin: 0.5rem 0}
     .main .main-visual:after{height: 22.7rem;}
     .main .main-visual .top-info{width: 100%;}
-    .main .main-visual{height: 53.5rem;}
+    .main .main-visual{height: 48rem;}
     .main .main-visual .top-info h3{font-size: 3.5rem;}
     .main .main-visual .top-info .btn-con{margin-top: 2rem}
     .main .main-visual .top-info .btn-con .btn{min-width: 1.06rem;height: 4rem;font-size: 1.2rem;}
@@ -1630,6 +1654,14 @@ body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04re
     .main .event-con .event{margin-left:0;margin-right: 0;overflow-x: visible;}
     .main .event-con .more-btn{display: none;}
     .main .channel-wrap .swiper-pagination, .main .default-swiper .swiper-pagination{width: calc(100% - 5rem);}
+    .main .main-visual .controller .control{bottom: 3.5rem;}
+    .main .main-visual .controller .control .line{width: 500px;height: 100px;}
+    .main .main-visual .controller .control button{bottom:-10px}
+    .main .main-visual .controller .control button img{width: 20px;height: 20px;margin-left: -20px}
+    .main .main-visual .car-con .swiper-slide{width: 20rem;}
+    .main .main-visual .car-con .swiper-slide img{transform: scale(0.2);}
+    .main .main-visual .car-con .swiper-slide-active{z-index: 1;}
+    .main .main-visual .car-con .swiper-slide-active img{transform: scale(0.4);transition: transform 0.3s ease-out;}
 }
 
 
