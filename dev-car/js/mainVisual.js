@@ -27,16 +27,6 @@ $(function (){
    var activeIndex = 0;
    var prevIndex = 0;
    
-   var carTitles = [
-      "TORRES", 
-      "REXTON (7인승)", 
-      "REXTON (5인승)", 
-      "REXTON SPORTS<br />KHAN", 
-      "REXTON SPORTS", 
-      "KORANDO", 
-      "TIVOLI AIR", 
-      "TIVOLI"
-   ];
 
    button.on(touchstart, $.proxy(onTouchStart, owner));
    $(window).on(touchmove, $.proxy(onTouchMove, owner));
@@ -103,14 +93,14 @@ $(function (){
       if(arrow === "next") {
          activeIndex++;
          swiper.slideNext();
-         if(activeIndex === carTitles.length) {
+         if(activeIndex === 8) {
             activeIndex = 0;
          }
       } else {
          activeIndex--;
          swiper.slidePrev();
          if(activeIndex === -1) {
-            activeIndex = carTitles.length-1;
+            activeIndex = 7;
          }
       }
       
@@ -119,7 +109,8 @@ $(function (){
       $(".main-visual .bg.car"+(activeIndex+1)).css("z-index", 2);
       gsap.set($(".main-visual .bg.car"+(activeIndex+1)), {opacity: 0});
       gsap.to($(".main-visual .bg.car"+(activeIndex+1)), 0.4, {opacity: 1});
-      $(".main-visual .top-info h3").html(carTitles[activeIndex]);
+      $(".main-visual .top-info").css("display", "none");
+      $(".main-visual .top-info.car"+(activeIndex+1)).css("display", "flex");
       $(".main-visual .swiper-slide").removeClass("active").eq(activeIndex).addClass("active");
       
       prevIndex = activeIndex;
