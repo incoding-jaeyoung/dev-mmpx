@@ -378,6 +378,30 @@
             setTimeout(function () {$(".price-select .total-price").removeClass("active")}, 100);
             $(".price-select").trigger("change", $(this).attr("value"));
          });
+      },
+
+      // 3D쇼룸 열기
+      show3dShowrooom: function () {
+         gsap.to($("#wrapper"), 0.8, {y: $(window).height(), onComplete: function () {
+            $("#wrapper").hide();
+         }});
+         $(".showroom-banner").hide();
+         $('body').css('overflow','hidden');
+      },
+
+      // 3D쇼룸배너 닫기
+      hide3dShowrooomBanner: function () {
+         $(".showroom-banner").hide();
+         $('body').removeClass("show-banner");
+      },
+
+      // 3D쇼룸 닫기
+      hide3dShowrooom: function () {
+         $("#wrapper").show();
+         gsap.to($("#wrapper"), 0.8, {y: 0, onComplete: function () {
+             $(".showroom-banner").show();
+         }});
+         $('body').css('overflow','');
       }
    }
 

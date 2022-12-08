@@ -64,21 +64,19 @@ $(function (){
       if(isTouch) {
          var pageX = e.originalEvent.changedTouches ? e.originalEvent.changedTouches[0].clientX : e.pageX;
          var targetX = pageX - ($(window).width()/2);
-         var maxMove = (line.width()/2) - ($(window).width() < 767 ? 50 : 100);
+         var maxMove = (line.width()/2) - ($(window).width() < 767 ? 60 : 100);
          
          if(targetX <= -maxMove) targetX = -maxMove;
          if(targetX >= maxMove) targetX = maxMove;
-         if(targetX <= -($(window).width()/2)+50) targetX = -($(window).width()/2)+ ($(window).width() < 767 ? 30 : 50);
-         if(targetX >= ($(window).width()/2)-50) targetX = ($(window).width()/2)- ($(window).width() < 767 ? 30 : 50);
-         var ro = $(window).width() > 1200 ? 68 : $(window).width() > 767 ? 60 : 75;
+         if(targetX <= -($(window).width()/2)+50) targetX = -($(window).width()/2)+ ($(window).width() < 767 ? 40 : 50);
+         if(targetX >= ($(window).width()/2)-50) targetX = ($(window).width()/2)- ($(window).width() < 767 ? 40 : 50);
+         var ro = $(window).width() > 1200 ? 68 : $(window).width() > 767 ? 60 : 70;
          var rotation = toRadian(ro * Math.abs(targetX/maxMove));
          gsap.to(button, 0.2, {
             x: targetX, 
+            y: (line.height()/2-20) * Math.cos(rotation)-($(window).width() <= 767 ? 30 : 85),
             rotation:toDegree(targetX > 0 ? -rotation: rotation)/7, 
             ease:Cubic.easeOut,
-            onUpdate: function () {
-               gsap.set(button, { y: (line.height()/2-20) * Math.cos(rotation)-($(window).width() <= 767 ? 30 : 85)});
-            }
          });
          xPercent = targetX/maxMove;
       }
@@ -88,7 +86,7 @@ $(function (){
       isTouch = false;
       gsap.to(button, 0.6, {x: 0, rotation:0, ease:Cubic.easeOut, onUpdate: function () {
          var ro = $(window).width() > 1200 ? 68 : $(window).width() > 767 ? 60 : 75;
-         var maxMove = (line.width()/2) - ($(window).width() < 767 ? 50 : 100);
+         var maxMove = (line.width()/2) - ($(window).width() < 767 ? 60 : 100);
          var targetX = parseInt(button[0]._gsap.x);
          var rotation = toRadian(ro * Math.abs(targetX/maxMove));
          gsap.set(button, { y: (line.height()/2-20) * Math.cos(rotation)-($(window).width() <= 767 ? 30 : 85)});
@@ -99,8 +97,8 @@ $(function (){
 
    function onUpdate() {
       if(time >= 60) {
-         if(xPercent > 0.3)         changeCar('next');
-         else if(xPercent < -0.3)   changeCar('prev');
+         if(xPercent > 0.2)         changeCar('next');
+         else if(xPercent < -0.2)   changeCar('prev');
          time = 0;
       }
       time++;
