@@ -24,7 +24,6 @@ $(function (){
    var isTouch = false;
    var timer = null;
    var xPercent = 0;
-   var time = 0;
    var activeIndex = 0;
    var prevIndex = 0;
    
@@ -54,8 +53,8 @@ $(function (){
 
    function onTouchStart(e){
       isTouch = true;
-      timer = 59;
-      timer = setInterval($.proxy(onUpdate, owner), 1000/60);
+      timer = setInterval($.proxy(onUpdate, owner), 800);
+      setTimeout($.proxy(onUpdate, owner), 100);
       e.preventDefault();
       e.stopPropagation();
    }
@@ -96,12 +95,8 @@ $(function (){
    }
 
    function onUpdate() {
-      if(time >= 60) {
-         if(xPercent > 0.2)         changeCar('next');
-         else if(xPercent < -0.2)   changeCar('prev');
-         time = 0;
-      }
-      time++;
+      if(xPercent > 0.2)         changeCar('next');
+      else if(xPercent < -0.2)   changeCar('prev');
    }
 
    function changeCar( arrow ) {
