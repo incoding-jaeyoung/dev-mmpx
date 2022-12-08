@@ -1627,7 +1627,7 @@ body.show-banner #header.pin{top:70px}
     .main .main-photo{width: 100%;padding: 0 2rem}
     .main .main-photo .swiper-slide > a{margin: 0.5rem 0}
     .main .main-visual:after{height: 22.7rem;}
-    .main .main-visual .top-info{width: 100%;}
+    .main .main-visual .top-info{width: 100%;padding-top: 11rem;}
     .main .main-visual{height: 48rem;}
     .main .main-visual .top-info h3{font-size: 3.5rem;}
     .main .main-visual .top-info .btn-con{margin-top: 2rem}
