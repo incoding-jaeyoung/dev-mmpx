@@ -54,7 +54,7 @@ $(function (){
 
    function onTouchStart(e){
       isTouch = true;
-      timer = 0;
+      timer = 59;
       timer = setInterval($.proxy(onUpdate, owner), 1000/60);
       e.preventDefault();
       e.stopPropagation();
