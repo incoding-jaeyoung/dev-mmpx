@@ -27,11 +27,68 @@
    <script src="../js/swiper-bundle.min.js"></script>
    <script src="../js/jquery.custom-select.js"></script>
    <script src="../js/ui.js"></script>
+   <script src="../js/vr360.js"></script>
    <script type="text/javascript">
       $(function () {
+
          $(".price-select").on("change", function (e, val){
             alert("트림변경 : " + val);
-         })
+         });
+
+         // vr 차량이미지 정보
+         // 이미지 경로, 이미지 이름
+         var vr360Info = [
+            {
+               source: "../img/vr360/REXTON/Y450_EXT_DOMESTIC_WEB_VR/Y450_Ext_Dom_ATLANTIC BLUE",
+               name: "Y450_Ext_Dom_ATLANTIC BLUE_"
+            },
+            {
+               source: "../img/vr360/REXTON/Y450_EXT_DOMESTIC_WEB_VR/Y450_Ext_Dom_BLACK Edition",
+               name: "Y450_Ext_Dom_BLACK Edition_"
+            },
+            {
+               source: "../img/vr360/REXTON/Y450_EXT_DOMESTIC_WEB_VR/Y450_Ext_Dom_ELEMENTAL GRAY",
+               name: "Y450_Ext_Dom_ELEMENTAL GRAY_"
+            },
+            {
+               source: "../img/vr360/REXTON/Y450_EXT_DOMESTIC_WEB_VR/Y450_Ext_Dom_FINE SILVER",
+               name: "Y450_Ext_Dom_Y450_Ext_Dom_FINE SILVER_"
+            },
+            {
+               source: "../img/vr360/REXTON/Y450_EXT_DOMESTIC_WEB_VR/Y450_Ext_Dom_Grand White",
+               name: "Y450_Ext_Dom_Grand White_"
+            },
+            {
+               source: "../img/vr360/REXTON/Y450_EXT_DOMESTIC_WEB_VR/Y450_Ext_Dom_Marble Gray",
+               name: "Y450_Ext_Dom_Marble Gray_"
+            },
+            {
+               source: "../img/vr360/REXTON/Y450_EXT_DOMESTIC_WEB_VR/Y450_Ext_Dom_SILKY WHITE PEARL",
+               name: "Y450_Ext_Dom_SILKY_WHITE_PEARL_"
+            },
+            {
+               source: "../img/vr360/REXTON/Y450_EXT_DOMESTIC_WEB_VR/Y450_Ext_Dom_SPACE BLACK",
+               name: "Y450_Ext_Dom_SPACE BLACK_000_000L_"
+            }
+         ];
+
+         // vr360 생성
+         $("#vr360").vr360();
+
+         // vr360 차량이미지 로드
+         $("#vr360").vr360("loadCar", vr360Info[0]);
+
+         // vr360 로드완료
+         $("#vr360").on("loadcomplete", function () {
+            console.log('loadcomplete')
+         });
+         console.log($("input[name='color-type']"))
+         $("input[name='color-type']").each(function (i) {
+            $(this).on("change", function () {
+               $("#vr360").vr360("loadCar", vr360Info[i]);
+            })
+         });
+
       });
    </script>
 </head>
@@ -157,9 +214,7 @@
 
             </div>
             <div class="viewer">
-               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/E11p66uJVMY?autoplay=1&mute=1"
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen=""></iframe>
+               <div id="vr360"></div>
             </div>
             <p class="caution-view mob-view">사이트 내 이미지는 참고용이며 실제 차량과는 다를 수 있습니다.</p>
             <div class="option-block">
