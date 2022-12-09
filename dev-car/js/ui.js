@@ -514,24 +514,24 @@ function headerScroll() {
        var st = $(window).scrollTop();
        lastScrollTop = st;
        if (st <= 10) {
-           $('header').addClass('nav-default')
-           $('header').removeClass('nav-down')
+           $('.transparent').addClass('nav-default')
+           $('.transparent').removeClass('nav-down')
            if($('.main-navi').hasClass('open')){
-                  $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down.svg");
-                  $("#header.transparent h1 a").css("background-image", "url('../img/img-logo.png')");
+                  $(".transparent .navi-list li a img").attr("src", "../img/ico-arrow-down.svg");
+                  $(".transparent h1 a").css("background-image", "url('../img/img-logo.png')");
             }else{
-                  $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down-white.svg");
-                  $("#header.transparent h1 a").css("background-image", "url('../img/img-logo-white.png')");
+                  $(".transparent .navi-list li a img").attr("src", "../img/ico-arrow-down-white.svg");
+                  $(".transparent h1 a").css("background-image", "url('../img/img-logo-white.png')");
             }
        } else {
-           $('header').removeClass('nav-default')
-           $('header').addClass('nav-down')
+           $('.transparent').removeClass('nav-default')
+           $('.transparent').addClass('nav-down')
            if($('.main-navi').hasClass('open')){
-               $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down.svg");
-               $("#header.transparent h1 a").css("background-image", "url('../img/img-logo.png')");
+               $(".transparent .navi-list li a img").attr("src", "../img/ico-arrow-down.svg");
+               $(".transparent h1 a").css("background-image", "url('../img/img-logo.png')");
             }else{
-               $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down.svg");
-               $("#header.transparent h1 a").css("background-image", "url('../img/img-logo.png')");
+               $(".transparent .navi-list li a img").attr("src", "../img/ico-arrow-down.svg");
+               $(".transparent h1 a").css("background-image", "url('../img/img-logo.png')");
             }
        }
        
