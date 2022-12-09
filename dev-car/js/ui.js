@@ -1,6 +1,6 @@
 (function ($) {
    'use strict'
-
+   headerScroll()
    var UI = UI || {
 
       headerNaviSwiper: null,
@@ -97,6 +97,7 @@
       */
       setMainNavi: function () {
          $("#header.main-hader .navi-list").on("mouseenter", function () {
+            $(".main-navi").addClass('open')
             gsap.to($(".main-navi"), 0.6, {height: 268, ease: Cubic.easeOut});
             $("#header .login").hide();
             $("#header .navi-close").show();
@@ -107,6 +108,7 @@
             $("#header.transparent .login").css("color", "#000");
          });
          $("#header .navi-close").on("click", function () {
+            $(".main-navi").removeClass('open')
             gsap.to($(".main-navi"), 0.6, {height: 0, ease: Cubic.easeOut});
             $("#header .login").show();
             $("#header .navi-close").hide();
@@ -487,3 +489,51 @@
 
 })(jQuery);
 
+function headerScroll() {
+    
+
+   var didScroll;
+   var lastScrollTop = 0;
+   var delta = 5;
+   var navbarHeight = $('#header').outerHeight();
+   
+   console.log(navbarHeight)
+   $(window).scroll(function (event) {
+       didScroll = true;
+   });
+
+   setInterval(function () {
+       if (didScroll) {
+           hasScrolled();
+           didScroll = false;
+           
+       }
+   }, 0);
+
+   function hasScrolled() {
+       var st = $(window).scrollTop();
+       lastScrollTop = st;
+       if (st <= 10) {
+           $('header').addClass('nav-default')
+           $('header').removeClass('nav-down')
+           if($('.main-navi').hasClass('open')){
+                  $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down.svg");
+                  $("#header.transparent h1 a").css("background-image", "url('../img/img-logo.png')");
+            }else{
+                  $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down-white.svg");
+                  $("#header.transparent h1 a").css("background-image", "url('../img/img-logo-white.png')");
+            }
+       } else {
+           $('header').removeClass('nav-default')
+           $('header').addClass('nav-down')
+           if($('.main-navi').hasClass('open')){
+               $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down.svg");
+               $("#header.transparent h1 a").css("background-image", "url('../img/img-logo.png')");
+            }else{
+               $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down.svg");
+               $("#header.transparent h1 a").css("background-image", "url('../img/img-logo.png')");
+            }
+       }
+       
+   }
+}
