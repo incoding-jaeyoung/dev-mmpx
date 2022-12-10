@@ -82,11 +82,12 @@
          $("#vr360").on("loadcomplete", function () {
             console.log('loadcomplete')
          });
-         console.log($("input[name='color-type']"))
+
+         // 차량 색상 변경
          $("input[name='color-type']").each(function (i) {
             $(this).on("change", function () {
                $("#vr360").vr360("loadCar", vr360Info[i]);
-            })
+            });
          });
 
       });
@@ -214,7 +215,50 @@
 
             </div>
             <div class="viewer">
+               <div class="line">
+                  <img class="pc" src="../img/vr-line.png" />
+                  <img class="mobile" src="../img/vr-line-m.png" />
+               </div>
                <div id="vr360"></div>
+               <div class="menu-bg"></div>
+               <div class="vr-menu">
+                  <ul>
+                     <li>
+                        <button type="button"><img src="../img/vr-menu1.svg"><span>외관사진</span></button>
+                        <div class="sub">
+                           <span>외관사진</span>
+                           <button type="button"><img src="../img/thumb/@vr-thum.png" alt="" /></button>
+                           <button type="button"><img src="../img/thumb/@vr-thum.png" alt="" /></button>
+                           <button type="button"><img src="../img/thumb/@vr-thum.png" alt="" /></button>
+                        </div>
+                     </li>
+                     <li>
+                        <button type="button"><img src="../img/vr-menu2.svg"><span>인테리어</span></button>
+                        <div class="sub">
+                           <span>인테리어</span>
+                           <button type="button"><img src="../img/thumb/@vr-thum.png" alt="" /></button>
+                           <button type="button"><img src="../img/thumb/@vr-thum.png" alt="" /></button>
+                           <button type="button"><img src="../img/thumb/@vr-thum.png" alt="" /></button>
+                           <button type="button"><img src="../img/thumb/@vr-thum.png" alt="" /></button>
+                        </div>
+                     </li>
+                     <li>
+                        <button type="button"><img src="../img/vr-menu3.svg"><span>컨셉 포토</span></button>
+                        <div class="sub">
+                           <span>컨셉 포토</span>
+                           <button type="button"><img src="../img/thumb/@vr-thum.png" alt="" /></button>
+                           <button type="button"><img src="../img/thumb/@vr-thum.png" alt="" /></button>
+                           <button type="button"><img src="../img/thumb/@vr-thum.png" alt="" /></button>
+                        </div>
+                     </li>
+                     <li>
+                        <button type="button"><img src="../img/vr-menu4.svg"><span>차량영상</span></button>
+                     </li>
+                     <li>
+                        <button type="button"><img src="../img/vr-menu5.svg"><span>차량영상</span></button>
+                     </li>
+                  </ul>
+               </div>
             </div>
             <p class="caution-view mob-view">사이트 내 이미지는 참고용이며 실제 차량과는 다를 수 있습니다.</p>
             <div class="option-block">

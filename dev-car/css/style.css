@@ -406,7 +406,7 @@ a:hover{color:#003994;}
 /* layout */
 html, body {scroll-behavior:smooth; color: #303030;} 
 body{font-size: 1.8rem;font-weight: 400;line-height:160%;letter-spacing: -0.04rem;overflow-x: hidden;}
-#wrapper{width: 100%;position:relative;transform: translate(0px, 0px);background-color: #fff;}
+#wrapper{width: 100%;position:relative;/* transform: translate(0px, 0px); */background-color: #fff;}
 #wrapper.car-select{overflow: hidden;}
 .mob-view {display:block;}
 .pc-view{display: none;}
@@ -418,7 +418,7 @@ body.show-banner #wrapper{top: 7rem}
 .showroom{position:fixed;left:0;top:0;width:100%;height: 100%;background-color: #000;}
 .showroom button{position: absolute;right: 5.7rem;top: 1.2rem;}
 
-.main-navi{position:sticky;top:7rem;left: 0;width:100%;height: 0;background-color: #fff;z-index: 88;display: flex;flex-direction: row;justify-content: center;background-color: #fff;overflow: hidden;}
+.main-navi{position: fixed;top:7rem;left: 0;width:100%;height: 0;background-color: #fff;z-index: 88;display: flex;flex-direction: row;justify-content: center;background-color: #fff;overflow: hidden;transform: translate(0, 0);}
 .main-navi.login{background-color: #f9fafb}
 .main-navi:before{content:'';position:absolute;left: 0;top:0;width: 50%;height: 100%;background-color: #fff;z-index: 0;}
 .main-navi .navi-wrap{position:relative;display: flex;margin-left: 32rem;width: 100rem;}
@@ -431,6 +431,7 @@ body.show-banner #wrapper{top: 7rem}
 .main-navi .navi-wrap ul li:first-child{font-size: 1.6rem;font-weight: 600;margin-top:0;margin-bottom: 1rem}
 .main-navi .navi-wrap ul li span{font-family: 'Noto Sans KR';font-size:1.4rem;font-weight: 400;margin-left: 1rem;color: rgba(11, 11, 27, 0.4);}
 .main-navi .navi-wrap ul li a:hover{color: #000}
+body.show-banner .main-navi{top: 14rem}
 
 .mobile-navi{position: fixed;width:100%;height: 100%;left:0;top:0;z-index: 999;display: none;}
 .mobile-navi .blind{position: absolute;left:0;top:0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);}
@@ -560,11 +561,24 @@ body.show-banner #header.pin{top:70px}
 
 .option-select{display: block;position: relative;flex-direction: column;justify-content: space-between;overflow: hidden;padding-left:calc(100% - 64.6rem);height: calc(100vh - 20rem);overflow-y: auto;}
 .option-contents hr{background-color: #edeef0; height: 0.5rem; display: block; border: none;}
-.viewer{background-color:#fafafa;width: 100%;position: fixed;left: 0;top: 20rem;height: calc(100% - 20rem);width: calc(100% - 64.6rem);z-index: 30;}
-#vr360{position: absolute;width: 100%;height: 100%;left:0;top:0;display: flex;align-items: center;justify-content: center;cursor: move}
-#vr360 img{width: 100%;height: auto;}
-.option-select .viewer img{}
-.option-select .color-select{}
+.viewer{background-color:#fafafa;width: 100%;position: fixed;left: 0;top: 20rem;height: calc(100% - 20rem);width: calc(100% - 64.6rem);z-index: 30;;background: url('../img/vr-bg.jpg') no-repeat center;background-size: cover;overflow: hidden;}
+.viewer .line{position: absolute;left: 50%;top:50%;margin-left: -36%;width: 75%;margin-top: 5%;}
+.viewer .line img{width: 100%}
+.viewer .line img.mobile{display: none;}
+.viewer #vr360{position: absolute;width: 100%;height: 100%;left:0;top:0;display: flex;align-items: center;justify-content: center;cursor: move}
+.viewer #vr360 img{width: 100%;height: auto;}
+.viewer .vr-menu{position: absolute;left: 5.8rem;top: 3rem;}
+.viewer .vr-menu ul{display: flex;flex-direction: column;}
+.viewer .vr-menu li{position: relative;margin:1rem 0}
+.viewer .vr-menu li > button{width: 8rem;height: 8rem;background-color: rgba(121, 130, 139, 0.8);border-radius: 50%;border: solid 2px #fff;display: flex;flex-direction: column;align-items: center;justify-content: center;font-size: 1.2rem;font-weight: 500;color:#fff}
+.viewer .vr-menu li > button:hover,
+.viewer .vr-menu li > button.active{background-color: rgba(40, 52, 67, 0.8);}
+.viewer .vr-menu .sub{position: absolute;left: 10rem;top: 1.5rem;display: none;flex-direction: row;}
+.viewer .vr-menu .sub > button{width: 5rem;height:5rem;overflow: hidden;border-radius: 50%;margin:0 0.5rem;opacity: 0;transition: none;}
+.viewer .vr-menu .sub > button img{width: 100%;height: 100%;}
+.viewer .vr-menu .sub > span{display: none;}
+.viewer .menu-bg{height:5.9rem;width: 100%;background-color: #79828b;position: absolute;bottom: 0;left:0;display: none;}
+
 .option-select .option-block{display: flex; width:64.6rem; flex: none;  flex-direction: column;}
 .option-select .option-block .option-contents{ }
 .option-select .option-block .submit-block{position:fixed; width:64.6rem; right: 0; bottom: 0; z-index: 10;}
@@ -620,6 +634,7 @@ body.show-banner #header.pin{top:70px}
     #header.pin{justify-content: space-between;}
     #header h1 a{width: 5rem;margin-right: 7rem;}
     #header.transparent h1 a{width: 4rem;}
+    #header.transparent.nav-down h1 a{width:5rem}
     #header .back{display:none;}
     #header .blur{display: none;}
     #header .close{position:absolute;right: 1rem}
@@ -677,12 +692,22 @@ body.show-banner #header.pin{top:70px}
     .inter-list li label *{ line-height: 100%;}
     .inter-list li label img{width: 9.7rem; margin-left: 1.3rem;}
     .inter-list li label .info{margin-left: 1.3rem; height: 100%; display: flex; flex-direction: column; justify-content:space-between;  width:auto; padding:0 0 0.5rem 0; flex: 1;}
+    .option-select .viewer{height: 45rem;}
+    .viewer .line{margin-top: -5px;}
+    .viewer #vr360{top: -8%;}
+    .viewer #vr360 img{width: 90%;height: auto;}
+    .viewer .vr-menu{top: 2rem;left:2.5rem}
+    .viewer .vr-menu li{margin: 0.5rem 0}
+    .viewer .vr-menu li > button{width:7rem;height: 7rem;font-size: 1.1rem;}
+    .viewer .vr-menu .sub{left: 9rem;top: 0.9rem;}
+    
 }
 
 @media (max-width: 1000px) {
     #header {padding: 0 2rem; justify-content:flex-start;}
     #header h1 a{width: 5rem;margin-right: 0rem;}
     #header.transparent h1 a{width: 4rem;}
+    #header.transparent.nav-down h1 a{width:5rem}
     #header .back{display:inline-flex;}
     #header .blur{display: none;}
     #header .close{position:absolute;right: 1rem}
@@ -772,10 +797,29 @@ body.show-banner #header.pin{top:70px}
     .inter-list li label .price img{width: 4.4rem; margin-bottom: -1.5rem;}
     .inter-list li input:checked+label{border: solid 1px #4560d3;}
     .header-navi.arrow .swiper-slide:after{top: 0.2rem}
+    .option-select .viewer{height: 45rem;}
 }
 
 @media (max-width: 767px) {
     #header .m-title{display: block;font-size: 1.6rem;}
+    .option-select .viewer{height: 39rem;}
+    .viewer .line{margin-top: -40px;}
+    .viewer #vr360{top: -15%;}
+    .viewer #vr360 img{width: 100%;}
+    .viewer .line img.mobile{display: block;}
+    .viewer .line img.pc{display: none;}
+    .viewer .vr-menu{bottom: 7rem;top:auto;left:0;width: 100%}
+    .viewer .menu-bg{display: block;}
+    .viewer .vr-menu ul{flex-direction: row;justify-content: center;width: 100%;}
+    .viewer .vr-menu li{margin: 0 1rem;position: static;}
+    .viewer .vr-menu li > button{width: 4rem;height: 4rem;}
+    .viewer .vr-menu li > button span{display: none;}
+    .viewer .vr-menu li > button img{transform: scale(0.8);}
+    .viewer .vr-menu .sub{left:0;top: 6.6rem;justify-content: center;width: 100%;align-items: center;}
+    .viewer .vr-menu .sub > button{width: 3rem;height: 3rem;margin: 0 1rem}
+    .viewer .vr-menu .sub > span{position: relative;display: block;font-size: 1.3rem;font-weight: 500;color:#fff;margin-right: 0.5rem;}
+    .viewer .vr-menu .sub > span:after{content: '';width:1px;height:9px;background-color: rgba(255,255,255,0.3);margin-left: 1.5rem;display: inline-block;}
+
 }
 
 
@@ -1874,6 +1918,8 @@ body.show-banner #header.pin{top:70px}
 .modal.type-01 .modal-body .table{margin-top: 2rem;}
 .modal.type-01 .modal-body .table thead td{text-align: center;background-color: #f9fafb;border: solid 1px #e2e2e3;padding: 1.2rem;font-family: 'Lato';font-size: 1.5rem; color: rgba(0,0,0,0.8)}
 .modal.type-01 .modal-body .table tbody td{text-align: center;border: solid 1px #e2e2e3;padding: 1.2rem;font-family: 'Lato';font-size: 1.5rem; color: rgba(0,0,0,0.8)}
+#pc-popup .modal-content{position: absolute;left:0;top:0;width:100%;height:100%;}
+#pc-popup .modal-body{height: 100%}
 @media (max-width: 767px) {
     .modal.type-01 .modal-body .text{font-size: 1.3rem;}
     .modal.type-01 .modal-body .table thead td,
