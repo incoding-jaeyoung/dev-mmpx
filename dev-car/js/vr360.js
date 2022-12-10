@@ -116,7 +116,7 @@
             }
 
             if(this.arrow == 'right') {
-               var frame = parseInt((targetX) / 10) + (this.startFrame == 0 ? 0 : (this.startFrame - this.totalFrames));
+               var frame = parseInt((targetX) / 20) + (this.startFrame == 0 ? 0 : (this.startFrame - this.totalFrames));
                this.currentFrame = ((this.totalFrames-1) + frame);
                if(this.currentFrame < 0){
                   this.currentFrame = 0;
