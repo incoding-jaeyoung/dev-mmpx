@@ -390,17 +390,18 @@
             $("#wrapper").hide();
          }});
          $(".showroom-banner").hide();
-         gsap.killTweensOf($(".main-navi"));
-         gsap.set($(".main-navi"), {height: 0});
-         $(".main-navi").removeClass('open')
-         $("#header .login").show();
-         $("#header .navi-close").hide();
-         $("#header.main-hader").css("background-color", "");
-         $("#header.transparent .navi-list li a").css("color", "");
-         $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down-white.svg");
-         $("#header.transparent h1 a").css("background-image", "url('../img/img-logo-white.png')");
-         $("#header.transparent .login").css("color", "");
-         $('body').css('overflow','hidden');
+         if(UI.device == "pc"){
+            gsap.killTweensOf($(".main-navi"));
+            gsap.set($(".main-navi"), {height: 0});
+            $(".main-navi").removeClass('open');
+            $("#header .navi-close").hide();
+            $("#header.main-hader").css("background-color", "");
+            $("#header.transparent .navi-list li a").css("color", "");
+            $("#header.transparent .navi-list li a img").attr("src", "../img/ico-arrow-down-white.svg");
+            $("#header.transparent h1 a").css("background-image", "url('../img/img-logo-white.png')");
+            $("#header.transparent .login").css("color", "");
+            $('body').css('overflow','hidden');
+         }
       },
 
       // 3D쇼룸배너 닫기
