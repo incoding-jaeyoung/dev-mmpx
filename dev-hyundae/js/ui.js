@@ -693,7 +693,7 @@ function navTrigger() {
 
 
 
-function openLayer(selector, href) {
+function openLayer(selector, href, floor) {
     var flag = selector,
         target = href;
     flag = $(flag);
@@ -701,6 +701,10 @@ function openLayer(selector, href) {
         $(this).show();
         $(this).find('.modal').show().addClass('scroll')
         $('.overlay').show();
+        if(floor){
+            $(this).find('.modal .modal-header .swiper-slide').removeClass("active").eq(floor).addClass("active");
+        }
+
         //        $('body').css('overflow','hidden');
     });
     //    $('body').addClass('scroll')
