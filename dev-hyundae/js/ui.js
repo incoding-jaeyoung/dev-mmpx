@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 window.onload = function () {
     $('body').imagesLoaded().done(function (instance) {
         $('body').addClass('load')
-        $('#header').addClass('load')
         setTimeout(function(){
             $('.page-nav').each(function (e) {
                 gsap.to($(this), 0, {
@@ -701,14 +700,13 @@ function openLayer(selector, href) {
         $(this).show();
         $(this).find('.modal').show().addClass('scroll')
         $('.overlay').show();
-        //        $('body').css('overflow','hidden');
+        $('body').css('overflow','hidden');
     });
     //    $('body').addClass('scroll')
     return false;
 }
 
 function closeLayer(no) {
-    alert('asdasd')
     var no = no;
     if (no) {
         $('#popup' + no).removeClass('show').hide().removeAttr('style');
@@ -716,23 +714,12 @@ function closeLayer(no) {
         $('.popup-wrap').empty()
         $('.popup-wrap').removeAttr('style').hide();
         $('.overlay').hide().removeAttr('style');
-        //        $('body').css('overflow','').removeAttr('style');
+        $('body').css('overflow','').removeAttr('style');
         $('.float-menu-wrap').removeClass('active')
     }
     //    $('body').removeClass('fixed')
 }
 
-function openModal(number) {
-    $('.overlay').show();
-    $('.modal-inside' + '.' + number).show();
-    return false;
-}
-
-function closeModal(no) {
-    $('.overlay').hide();
-    $('.modal-inside').hide();
-    $('.float-menu-wrap').removeClass('active')
-}
 
 
 
