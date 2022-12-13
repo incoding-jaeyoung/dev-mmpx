@@ -66,20 +66,20 @@ window.onload = function () {
         init();
         // headerScroll();
         // navTrigger()
-        gsap.utils.toArray(".section-index").forEach((panel, i) => {
-            ScrollTrigger.create({
-              trigger: panel,
-              start: "bottom bottom", 
-              pin: true, 
-              pinSpacing: false,
-              //markers: true
-            });
-          });
+        
 
         
         var winw = $(window).width();
         if (winw > 768) {
-            
+            gsap.utils.toArray(".section-index").forEach((panel, i) => {
+                ScrollTrigger.create({
+                  trigger: panel,
+                  start: "bottom bottom", 
+                  pin: true, 
+                  pinSpacing: false,
+                  //markers: true
+                });
+              });
         } else if (winw <= 768) {
             $('.page-nav').on('click',function (){
                 $(this).toggleClass('open')
@@ -239,7 +239,7 @@ function headerScroll() {
 function init() {
     var page_url = window.location.href;
     var page_id = page_url.substring(page_url.lastIndexOf("#") + 1);
-    // alert(page_id);
+    gsap.to('.scroll-down img', 1, {y:'0.5rem',yoyo: true,repeat: -1,})
 
     if (page_id == 'event') {
         $('html, body').animate({
