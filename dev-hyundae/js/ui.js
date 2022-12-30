@@ -7,7 +7,11 @@ gsap.registerPlugin(ScrollTrigger);
 window.onload = function () {
     $('body').imagesLoaded().done(function (instance) {
         $('body').addClass('load')
+        
+        init();
+        forum()
         setTimeout(function(){
+            commonTween()
             $('.page-nav').each(function (e) {
                 gsap.to($(this), 0, {
                     scrollTrigger: {
@@ -42,56 +46,56 @@ window.onload = function () {
             });
     
             function setActive(link) {
-            links.forEach(el => el.classList.remove("active"));
-            link.classList.add("active");
+                links.forEach(el => el.classList.remove("active"));
+                link.classList.add("active");
             }
+            $('.section-content + .pin-spacer').addClass('data-black-header')
+            const sections = gsap.utils.toArray('.data-black-header');
+            sections.forEach(sections => {
+                ScrollTrigger.create({
+                    trigger: sections,
+                    start: '-1 0%',
+                    end: '100% 0%',
+                    // markers: true,
+                    toggleClass: {
+                        targets: '#header',
+                        className: 'has-scrolled'
+                    },
+                })
+                
+            });
+            const sections_floor = gsap.utils.toArray('.data-header');
+            sections_floor.forEach(sections_floor => {
+                ScrollTrigger.create({
+                    trigger: sections_floor,
+                    start: '-1 0%',
+                    end: '100% 0%',
+                    // markers: true,
+                    toggleClass: {
+                        targets: '#header',
+                        className: 'has-floor'
+                    },
+                })
+                
+            });
         },500)
         
-        const sections = gsap.utils.toArray('.data-black-header');
-        sections.forEach(sections => {
-            ScrollTrigger.create({
-                trigger: sections,
-                start: '-1% 0%',
-                end: '100% 0%',
-                // markers: true,
-                toggleClass: {
-                    targets: '#header',
-                    className: 'has-scrolled'
-                },
-            })
-            
-        });
-        const sections_floor = gsap.utils.toArray('.data-header');
-        sections_floor.forEach(sections_floor => {
-            ScrollTrigger.create({
-                trigger: sections_floor,
-                start: '-1% 0%',
-                end: '100% 0%',
-                // markers: true,
-                toggleClass: {
-                    targets: '#header',
-                    className: 'has-floor'
-                },
-            })
-            
-        });
-        commonTween()
-        init();
-        forum()
+        
+       
 
         
         var winw = $(window).width();
         if (winw > 768) {
-            gsap.utils.toArray(".section-index").forEach((panel, i) => {
-                ScrollTrigger.create({
-                  trigger: panel,
-                  start: "bottom bottom", 
-                  pin: true, 
-                  pinSpacing: false,
-                  // markers: true
-                });
-              });
-              $(".artist .image img").each(function(){
+            // gsap.utils.toArray(".section-index").forEach((panel, i) => {
+            //     ScrollTrigger.create({
+            //         trigger: panel,
+            //         start: "bottom bottom", 
+            //         pin: true, 
+            //         pinSpacing: false,
+            //         // markers: true
+            //     });
+            // });
+            $(".artist .image img").each(function(){
                 $(this).attr("src", $(this).attr("src").replace("-m.png", ".png"))
             })
         } else if (winw <= 768) {
@@ -403,7 +407,7 @@ function commonTween() {
     })
     
     ScrollTrigger.matchMedia({
-        "(min-width:768px)": function () {
+        "(min-width:769px)": function () {
             $('.right-slide .swiper-wrapper').each(function (e){
                 let slideWidth = $(this).innerWidth()
                 let slide = $('.right-slide .swiper-wrapper .swiper-slide').width()
@@ -413,13 +417,12 @@ function commonTween() {
                 let text = $(this)
                 const leftMotion = gsap.timeline({
                     scrollTrigger: {
-                        trigger: $('.highlight .row'),
+                        trigger: $('.highlight'),
                         start: "0% 0%", // 앞 : 객체 , 뒤 : 페이지 전체
-                        end: "50% 0%",
+                        end: "100% 50%",
                         pin:true,
                         scrub: 1, //스크롤에 반응 (없으면 자동재생)
-                        markers: true,
-                        pinSpacing:false,
+                        // markers: true,
                     },
                 });
                 gsap.set(text, {
@@ -431,7 +434,7 @@ function commonTween() {
                 })
             })
         },
-        "(max-width:767px)": function () {
+        "(max-width:768px)": function () {
             $('.right-slide .swiper-slide').each(function (e) {
                 var stagger = $(this)
                 gsap.set($('.mySwiper'), {
